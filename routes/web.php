@@ -15,3 +15,30 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
+
+Route::prefix('admin')->group(function (){
+    /*
+     * Login admin
+     * */
+    Route::get('loginAdmin.html', 'Auth\Admin\AdminLoginController@index')->name('admin.login');
+    Route::post('loginAdmin', 'Auth\Admin\AdminLoginController@login')->name('admin.login.post');
+
+    /*
+     * Logout admin
+     * */
+    Route::get('logoutAdmin', 'Auth\Admin\AdminLoginController@logout')->name('admin.logout');
+
+    /*
+     * Admin
+     * */
+    Route::prefix('/')->middleware('auth:admin')->group(function (){
+        /*
+         * trang chủ admin
+         * */
+        Route::get('index.html', 'Auth\Admin\HomeAdminController@index')->name('admin.index');
+    });
+
+});
+Route::get('test', function (){
+    return view('admin.pages.trangcon');
+});
