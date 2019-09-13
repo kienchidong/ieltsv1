@@ -41,3 +41,6 @@ Route::prefix('admin')->group(function (){
 
 });
 Route::get('test', 'test@index');
+Route::get('/' , function(){
+    return view('pages.trangchu');
+});
