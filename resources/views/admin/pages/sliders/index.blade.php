@@ -20,20 +20,35 @@
                 Danh sách slider
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="{{route('slider.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">Slider</li>
             </ol>
         </section>
+        <div >
+            @if(count($errors) > 0)
+                <div class="alert alert-danger">
+                    @foreach($errors->all() as $err)
+                        {{$err}}<br>
+                    @endforeach
+
+                </div>
+
+            @endif
+            @if(session('thongbao'))
+                <div class="alert alert-success">
+                    {{session('thongbao')}}
+                </div>
+            @endif
+        </div>
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="box">
+
                         <div class="box-header">
                             <a href="{{route('slider.create')}}" class="btn btn-success">Thêm</a>
                         </div>
-                        <div class="box-header">
 
-                        </div>
                         <!-- /.box-header -->
                         <div class="box-body">
                             <table id="example1" class="table table-bordered table-hover">
@@ -66,20 +81,20 @@
                                                {{--onclick="thaotac({{$value->id}})">Thao tác</a>--}}
                                             <div>
                                                 <a class="btn btn-primary" id="edit"
-                                                   href="{{ url('admin/sliders/edit/'.$value->id) }}"
+                                                   href="{{ url('admin/slider/edit/'.$value->id) }}"
                                                    onclick="">Sửa</a>
 
                                                 <a class="btn btn-danger"
                                                    href="{{ url('admin/slider/destroy/'.$value->id) }}"
-                                                   onclick="return confirm('Hành động sẽ xóa web này! bạn có muốn tiếp tục?')">Xóa</a>
+                                                   onclick="return confirm('Hành động sẽ xóa slider này! bạn có muốn tiếp tục?')">Xóa</a>
                                                 @if($value->status==1)
                                                     <a class="btn btn-info"
                                                        href="{{ url('admin/slider/setactive/'.$value->id.'/0') }}"
-                                                       onclick="return confirm('Hành động sẽ ẩn Sản Phẩm này! bạn có muốn tiếp tục?')">Ẩn</a>
+                                                       onclick="return confirm('Hành động sẽ ẩn sliders này! bạn có muốn tiếp tục?')">Ẩn</a>
                                                 @else
                                                     <a class="btn btn-warning"
                                                        href="{{ url('admin/slider/setactive/'.$value->id.'/1') }}"
-                                                       onclick="return confirm('Hành động sẽ hiển thị Sản Phẩm mục này! bạn có muốn tiếp tục?')">Hiển
+                                                       onclick="return confirm('Hành động sẽ hiển thị slider mục này! bạn có muốn tiếp tục?')">Hiển
                                                         thị</a>
 
                                                 @endif

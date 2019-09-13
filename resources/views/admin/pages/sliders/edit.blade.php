@@ -1,16 +1,16 @@
 @extends('admin.layouts.master-layout')
 @section('title')
-    Thêm sliders
+    Sửa sliders
 @endsection
 @section('content')
 
     <section class="content-header">
         <h1>
-            Thêm sliders
+            Sửa sliders
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{route('slider.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Thêm sliders</li>
+            <li class="active">sliders</li>
         </ol>
     </section>
     <br>
@@ -70,8 +70,8 @@
             <!-- /.col -->
             <div class="col-md-9">
                 <div class="box box-primary">
-                    <h3 style="text-align: left; padding-left: 5px">Thêm sliders</h3>
-                    <form role="form" method="POST" action="{{route('slider.store')}}"
+                    <h3 style="text-align: left; padding-left: 5px">Sửa sliders</h3>
+                    <form role="form" method="POST" action="{{route('slider.update',$slider->id)}}"
                           enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
@@ -79,7 +79,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Tiêu đề</label>
                                 <input type="text" class="form-control" placeholder="Web bán hàng" name="title"
-                                       value="{{ old('title') }}">
+                                       value="{{$slider->title }}">
                             </div>
 
                             <div class="form-group">
@@ -89,34 +89,15 @@
                             <div class="form-group">
                                 <label for="" style="margin-left: 10px"> Hiển thị : </label>
                                 <div id="viewImg">
-
+                                    <img width="100px" height="150px" src="{{asset('')}}images/sliders/{{$slider->image}}">
                                 </div>
                             </div>
 
 
-                            {{--<div class="form-group">--}}
-                                {{--<label>Hiển thị</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input name="active" value="1" checked="" type="radio">Có--}}
-                                {{--</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input name="active" value="0" type="radio">Không--}}
-                                {{--</label>--}}
-                            {{--</div>--}}
-                            {{--Hết tiêu điểm--}}
-                            {{--Nổi bật--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label>Nổi bật</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input name="footer_hot" value="1" checked="" type="radio">Có--}}
-                                {{--</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input name="footer_hot" value="0" type="radio">Không--}}
-                                {{--</label>--}}
-                            {{--</div>--}}
-                            {{--Hết nối bật--}}
+
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Thêm</button>
+                                <a href="{{route('slider.index')}}" class="btn btn-warning">Quay lại</a>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
 
                         </div>
