@@ -132,9 +132,7 @@
 }
 
 .section-2{
-    background-image: url('../image/background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #fff;
 }
 
 .course-box {
@@ -215,6 +213,42 @@
 }
 .tree {
     width: 350px;
+    position: relative;
+    z-index: 99;
+}
+.tree-skill{
+    position: relative;
+
+}
+.skill {
+    max-width: 400px;
+    height: 1px;
+    position: relative;
+    background: #000;
+    right: -100px;
+    z-index: 9;
+}
+.skill-2 {
+    bottom: 100px;
+}
+.skill-3 {
+    bottom: 200px;
+}
+.skill-4 {
+    bottom: 300px;
+}
+.skill a{
+    position: absolute;
+    max-width: 200px;
+    min-width: 200px;
+    /* height: 50px; */
+    padding: 5px 30px;
+    font-weight: bold;
+    background-color: #ebd64f;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    right: 0;
+    bottom: -5px;
 }
 .menu-right  {
     position: fixed;
@@ -258,4 +292,178 @@
     opacity: 0.9;
     margin-bottom: 1px;
     -webkit-transition: width 2s;
+}
+.section-11 {
+
+    background-image: url('../image/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.work-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+    font-size: 30px;
+}
+.work-shop span:nth-child(1){
+    color: #ebd64f;
+    margin-right: 10px;
+}
+.work-shop a {
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border : 2px solid #ebd64f;
+    font-weight: 500;
+}
+.work-shop a:hover{
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+}
+.section-3{
+    background-image: url('../image/bg2.jpg');
+    background-size: cover;
+}
+.dk-online {
+    float: right;
+    margin-top: 20px;
+    color: #000;
+}
+a:hover {
+    text-decoration: none;
+}
+.section-4{
+    background: #ebd64f;
+}
+.statistic {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.statistic i{
+    color: black;
+}
+.statistic span {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.avatar-teacher {
+    width: 100%;
+    height: 250px;
+    background: #f2f2ec;
+    margin-bottom: 20px;
+}
+.avatar-teacher img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.teacher-name {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.teacher-info {
+    font-size: 14px;
+    margin : 10px 0;
+}
+.teacher {
+    border-bottom: 2px solid #ebd64f;
+    padding-top: 10px;
+}
+.order-1 {
+    text-align: right !important;
+}
+.title-blog {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: 3px;
+}
+.time-blog {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000;
+}
+.blog-img {
+    max-width: 320px;
+    min-width: 240px;
+    height: 160px;
+    border : 1px solid #dedede;
+    border-radius: 5px;
+}
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.blog-content {
+    display: flex;
+    position: relative;
+}
+.blog-content span {
+    margin-left: 20px;
+}
+.doctiep {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.section-6 {
+    background: #f4f6f8;
+}
+.blog {
+    padding: 10px 0;
+}
+.border-bottom {
+    width: 100%;
+    height: 1px;
+    background: #000;
+    margin-top: 5px;
+}
+.danhgia {
+    padding: 100px 0;
+}
+.section-7{
+    background-image: url('../image/bg3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.coment-box {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+.coment-member {
+    border-top: 1px solid #ebd64f;
+    padding-top: 10px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+.comment-avt {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.comment-avt img {
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.coment-name {
+    margin-left: 20px;
+}
+.star-check {
+    color: yellow;
 }

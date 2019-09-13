@@ -154,6 +154,9 @@
         width: 100%;
         margin: 10px 0;
     }
+    .library-left {
+        border-right: none !important;
+    }
 }
 @media only screen and (max-width: 687px) {
     .course-box {
@@ -179,6 +182,11 @@
         margin: 10px 0;
     }
 
+    .skill {
+        right: -200px;
+        width: 250px;
+        z-index: 999;
+    }
 }
 @media only screen and (max-width: 475px) {
     .course-box {
@@ -186,9 +194,20 @@
         width: 100%;
         margin: 10px 0;
     }
+    .blog-content {
+        flex-direction: column;
+    }
 
 }
 @media only screen and (max-width: 440px) {
+    .skill {
+        right: -155px;
+        width: 100px;
+        z-index: 999;
+    }
+    .tree {
+        width: 300px;
+    }
 
 }
 @media only screen and (max-width : 400px){
