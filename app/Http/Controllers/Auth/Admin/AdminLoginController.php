@@ -43,7 +43,7 @@ class AdminLoginController extends Controller
         if(Auth::guard('admin')-> attempt(['email' => $request->email, 'password' => $request->password], $request -> remember)){
 
             //nếu thành công thì chuyển hướng về view dashboard của admin
-            return redirect()-> intended(route('admin.dashboard'));
+            return redirect()-> intended(route('admin.index'));
 
         }
         else {
@@ -61,7 +61,7 @@ class AdminLoginController extends Controller
     public function logout(){
         Auth::guard('admin')-> logout();
 
-        return redirect()->route('admin.auth.login');
+        return redirect()->route('admin.login.login');
 
     }
 }
