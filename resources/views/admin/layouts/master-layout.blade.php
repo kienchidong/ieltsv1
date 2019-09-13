@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AdminLTE 2 | @yield('title')</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-kien.png') }}" />
-
-
-
     <!-- jQuery 3 -->
     <script src="{{asset('')}}admin_asset/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Tell the browser to be responsive to screen width -->
