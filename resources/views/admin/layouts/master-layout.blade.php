@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AdminLTE 2 | @yield('title')</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-kien.png') }}" />
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -15,7 +17,7 @@
     <!-- jvectormap -->
     <link rel="stylesheet" href="{{ asset('admin_asset/adminlte/bower_components/jvectormap/jquery-jvectormap.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('admin_asset') }}">
+    <link rel="stylesheet" href="{{ asset('admin_asset/adminlte/dist/css/AdminLTE.min.css') }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('admin_asset/adminlte/dist/css/skins/_all-skins.min.css')}}">

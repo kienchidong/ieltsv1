@@ -14,11 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Auth::routes();
 
 Route::prefix('admin')->group(function (){
     /*
-     * Login admin
+     *middleware Login admin
      * */
     Route::get('loginAdmin.html', 'Auth\Admin\AdminLoginController@index')->name('admin.login');
     Route::post('loginAdmin', 'Auth\Admin\AdminLoginController@login')->name('admin.login.post');
@@ -39,6 +40,4 @@ Route::prefix('admin')->group(function (){
     });
 
 });
-Route::get('test', function (){
-    return view('admin.pages.trangcon');
-});
+Route::get('test', 'test@index');

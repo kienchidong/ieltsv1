@@ -94,6 +94,11 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <h1>kiên hihi</h1>
+
+                @can('edit-profile')
+                    <h1>kiên</h1>
+                @endcan
             </div>
         </div>
     </body>
