@@ -38,6 +38,36 @@
                     <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
                 </ul>
             </li>
+            {{--Mẫu form--}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Form</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{url('admin/form/create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
+                    <li><a href="{{url('admin/form/index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
+
+                </ul>
+            </li>
+            {{--Slider ở trang chủ --}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Sliders</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('slider.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
+                    <li><a href="{{route('slider.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
+
+                </ul>
+            </li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
