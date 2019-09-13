@@ -6,6 +6,10 @@
     <title>AdminLTE 2 | @yield('title')</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-kien.png') }}" />
 
+
+
+    <!-- jQuery 3 -->
+    <script src="{{asset('')}}admin_asset/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -27,7 +31,9 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <!-- DataTables -->
+    <script src="{{asset('')}}admin_asset/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="{{asset('')}}admin_asset/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -69,5 +75,19 @@
 <script src="{{ asset('admin_asset/adminlte/dist/js/pages/dashboard2.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('admin_asset/adminlte/dist/js/demo.js')}}"></script>
+{{--Datatable--}}
+<script>
+    $(function () {
+        $('#example1').DataTable()
+        $('#example2').DataTable({
+            'paging'      : true,
+            'lengthChange': false,
+            'searching'   : false,
+            'ordering'    : true,
+            'info'        : true,
+            'autoWidth'   : false
+        })
+    })
+</script>
 </body>
 </html>
