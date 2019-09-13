@@ -36,7 +36,7 @@ Route::prefix('admin')->group(function (){
         /*
          * trang chủ admin
          * */
-        Route::get('index.html', 'Auth\Admin\HomeAdminController@index')->name('admin.index');
+        Route::get('/', 'Auth\Admin\HomeAdminController@index')->name('admin.index');
     });
 
 });
