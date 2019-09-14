@@ -13,6 +13,7 @@ class CourseTable extends Migration
      */
     public function up()
     {
+
         //Khoá học offline
         Schema::create('course_offlines',function (Blueprint $table)
         {
@@ -20,7 +21,7 @@ class CourseTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('image');
-            $table->text('detail')->nullable();
+
             $table->text('content');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

@@ -45,6 +45,9 @@ Route::prefix('admin')->group(function () {
             Route::get('index', 'Admins\FormController@index')->name('form.index');
             Route::get('create', 'Admins\FormController@create')->name('form.add');
         });
+        /*
+         * Phần slider của trang chủ
+         */
         Route::prefix('slider')->group(function () {
             Route::get('/list', 'Admins\SliderController@index')->name('slider.index');
             Route::get('/add', 'Admins\SliderController@create')->name('slider.create');
@@ -57,10 +60,38 @@ Route::prefix('admin')->group(function () {
             Route::get('/setactive/{id}/{status}', 'Admins\SliderController@setactive')->name('slider.setactive');
 
         });
+        /*
+         * Phần liên hệ trang chủ
+         */
+        Route::prefix('contact')->group(function () {
+            Route::get('/list', 'Admins\ContactController@index')->name('contact.index');
+            Route::get('/add', 'Admins\ContactController@create')->name('contact.create');
+            Route::post('/add', 'Admins\ContactController@store')->name('contact.store');
 
+            Route::get('/edit/{id}', 'Admins\ContactController@edit')->name('contact.edit');
+            Route::post('/edit/{id}', 'Admins\ContactController@update')->name('contact.update');
+            Route::get('/destroy/{id}', 'Admins\ContactController@destroy')->name('contact.destroy');
+
+            Route::get('/setactive/{id}/{status}', 'Admins\ContactController@setactive')->name('contact.setactive');
+
+        });
+
+        /*
+         * Khóa học offline
+         */
+        Route::prefix('course-offline')->group(function () {
+            Route::get('/list', 'Admins\CourseOfflineController@index')->name('course_offline.index');
+            Route::get('/add', 'Admins\CourseOfflineController@create')->name('course_offline.create');
+            Route::post('/add', 'Admins\CourseOfflineController@store')->name('course_offline.store');
+
+            Route::get('/edit/{id}', 'Admins\CourseOfflineController@edit')->name('course_offline.edit');
+            Route::post('/edit/{id}', 'Admins\CourseOfflineController@update')->name('course_offline.update');
+            Route::get('/destroy/{id}', 'Admins\CourseOfflineController@destroy')->name('course_offline.destroy');
+
+            Route::get('/setactive/{id}/{status}', 'Admins\CourseOfflineController@setactive')->name('course_offline.setactive');
+
+        });
     });
-
-
 });
 Route::get('test', 'test@index');
 Route::get('/' , function(){

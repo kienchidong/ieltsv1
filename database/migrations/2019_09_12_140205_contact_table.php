@@ -17,6 +17,7 @@ class ContactTable extends Migration
          * Liên hệ ở phần bên phải giao diện chính
          */
         Schema::create('contacts', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('icon');
             $table->text('link');
