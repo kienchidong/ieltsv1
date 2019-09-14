@@ -13,7 +13,7 @@ class test extends Controller
             echo "hihi";
         }
         else{
-            echo "không cho phép";
+            echo "không cho p4hép";
         }
     }
 

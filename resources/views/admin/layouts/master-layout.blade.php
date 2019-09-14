@@ -31,6 +31,7 @@
           href="{{asset('')}}admin_example/bower_components/bootstrap-daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{asset('')}}admin_example/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,6 +101,8 @@
 <script src="{{asset('')}}admin_example/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('')}}admin_example/dist/js/demo.js"></script>
+
+
 
 {{--Datatable--}}
 <script>
