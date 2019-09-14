@@ -1,7 +1,12 @@
 	<section class="banner-slider">
-		 {{-- <span style="position : absolute; top: 50%;z-index : 999">ahihihiihih cái con mẹ nhà mày</span> --}}
+
 			<div id="wowslider-container1">
+
 			<div class="ws_images"><ul>
+                <div class="title-silder">
+                    <h1>ahihihi</h1>
+                </div>
+
 				<li><img src="image/bg1.jpg" alt="banner-1" title="banner-1" id="wows1_0"/></li>
 				<li><img src="image/bg1.jpg" alt="banner-2" title="banner-2" id="wows1_1"/></li>
 				<li><img src="image/bg1.jpg" alt="banner-3" title="banner-3" id="wows1_2"/></li>

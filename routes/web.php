@@ -66,3 +66,20 @@ Route::get('test', 'test@index');
 Route::get('/' , function(){
     return view('pages.trangchu');
 });
+Route::get('/course',function(){
+    return view('pages.course');
+});
+Route::get('/dangky',function(){
+    return view('pages.dangky');
+});
+Route::get('/thuvien',function(){
+    return view('pages.thuvien');
+});
+
+Route::get('/blog',function(){
+    return view('pages.blog');
+});
+
+Route::get('/blog-detai',function(){
+    return view('pages.blog-detai');
+});

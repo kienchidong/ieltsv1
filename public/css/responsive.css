@@ -92,6 +92,12 @@
         top: 55px;
         left: 630px;
     }
+    #wowslider-container1{
+            top : 0 !important;
+    }
+    .section-banner{
+        top: 0;
+    }
 }
 @media only screen and (max-width: 830px) {
 
@@ -157,6 +163,30 @@
     .library-left {
         border-right: none !important;
     }
+    .blog-content span{
+        margin-bottom: 25px;
+    }
+    .book-library {
+        display: flex;
+        flex-wrap: wrap;
+        /* padding: 50px; */
+    }
+    .img-book {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    .content-book {
+        width: 100%;
+        background: #fff;
+        position: relative;
+    }
+    .content-content-book{
+        max-width: 100%;
+    }
+    .img-book img {
+        box-shadow: none;
+    }
 }
 @media only screen and (max-width: 687px) {
     .course-box {
@@ -187,6 +217,9 @@
         width: 250px;
         z-index: 999;
     }
+    .blog-content span{
+        margin-bottom: 75px;
+    }
 }
 @media only screen and (max-width: 475px) {
     .course-box {
@@ -208,7 +241,9 @@
     .tree {
         width: 300px;
     }
-
+    .library {
+        justify-content: center;
+    }
 }
 @media only screen and (max-width : 400px){
     .course-box {

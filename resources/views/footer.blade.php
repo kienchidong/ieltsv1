@@ -67,7 +67,7 @@
 	    <div class="d-flex flex-column">
 	        <a class="right-icon" href="">
 	            <div class="box-menu-right">
-	                <img src="image/icon-fb.png" alt="">
+	                <img src="image/logo.png" alt="">
 	            </div>
 	            <span class="right-icon-content">Xuân Phi Ielst</span>
 	        </a>
