@@ -94,6 +94,14 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+<<<<<<< HEAD
+                <h1>kiên hihi</h1>
+
+                @cannot('kien')
+                    <h1>kiên</h1>
+                @endcannot
+=======
+>>>>>>> 02d972df0c38796afe13c7be4f20d4a256b18b79
             </div>
         </div>
     </body>

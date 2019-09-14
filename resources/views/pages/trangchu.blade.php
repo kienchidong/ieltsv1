@@ -112,26 +112,34 @@
         <div class="container">
             <h4 class="section-title text-white">Thư viện</h4>
             <div class="library">
-                <div class="library-box">
-                    <span>Nghe</span>
-                    <i class="fa fa-headphones fa-3x text-center"></i>
-                </div>
-                <div class="library-box">
+                <a href="{{ url('thuvien') }}">
+                    <div class="library-box">
+                        <span>Nghe</span>
+                        <i class="fa fa-headphones fa-3x text-center"></i>
+                    </div>
+                </a>
+                <a href="{{ url('thuvien') }}">
+                    <div class="library-box">
                         <span>Nói</span>
                         <i class="fa fa-book fa-3x text-center"></i>
-                </div>
-                <div class="library-box">
+                    </div>
+                </a>
+                <a href="{{ url('thuvien') }}">
+                    <div class="library-box">
                         <span>Đọc</span>
                         <i class="fa fa-comment-dots  fa-3x"></i>
-                </div>
-                <div class="library-box">
+                    </div>
+                </a> <a href="{{ url('thuvien') }}">
+                    <div class="library-box">
                         <span>Viết</span>
                         <i class="fa fa-pencil-alt fa-3x"></i>
-                </div>
-                <div class="library-box">
+                    </div>
+                </a> <a href="{{ url('thuvien') }}">
+                    <div class="library-box">
                         <span>Tổng Hợp</span>
                         <i class="fa fa-list-alt fa-3x"></i>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -294,7 +302,7 @@
             </h4>
             <div class="blog">
                 <div class="d-flex justify-content-between">
-                    <a href="#" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
+                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
                     <div class="time-blog">
                         <i class="fa fa-calendar-alt"></i>
                         <span>13 Stb 2019</span>
@@ -309,7 +317,7 @@
                         chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
                         nào về Ielst
                     </span>
-                    <a href="" class="doctiep btn btn-outline-danger">
+                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
                         Đọc tiếp
                     </a>
                 </div>
@@ -319,7 +327,7 @@
             </div>
             <div class="blog">
                 <div class="d-flex justify-content-between">
-                    <a href="#" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
+                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
                     <div class="time-blog">
                         <i class="fa fa-calendar-alt"></i>
                         <span>13 Stb 2019</span>
@@ -334,7 +342,7 @@
                         chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
                         nào về Ielst
                     </span>
-                    <a href="" class="doctiep btn btn-outline-danger">
+                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
                         Đọc tiếp
                     </a>
                 </div>
@@ -344,7 +352,7 @@
             </div>
             <div class="blog">
                 <div class="d-flex justify-content-between">
-                    <a href="#" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
+                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
                     <div class="time-blog">
                         <i class="fa fa-calendar-alt"></i>
                         <span>13 Stb 2019</span>
@@ -359,7 +367,7 @@
                         chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
                         nào về Ielst
                     </span>
-                    <a href="" class="doctiep btn btn-outline-danger">
+                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
                         Đọc tiếp
                     </a>
                 </div>
@@ -369,7 +377,7 @@
             </div>
             <div class="blog">
                 <div class="d-flex justify-content-between">
-                    <a href="#" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
+                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
                     <div class="time-blog">
                         <i class="fa fa-calendar-alt"></i>
                         <span>13 Stb 2019</span>
@@ -384,7 +392,7 @@
                         chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
                         nào về Ielst
                     </span>
-                    <a href="" class="doctiep btn btn-outline-danger">
+                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
                         Đọc tiếp
                     </a>
                 </div>
@@ -496,30 +504,32 @@
 </section>
 
 <script type="text/javascript">
-        (function ($) {
-            function count($this) {
-                var current = parseInt($this.html(), 10);
-                current = current + 1;
-                $this.html(++current);
-                if (current > $this.data('count')) {
-                    $this.html($this.data('count'))
-                } else {
-                    setTimeout(function () {
-                        count($this)
-                    }, 50) // Tốc độ đếm số, số 1 là nhanh nhất
-                }
+    (function ($) {
+        function count($this) {
+            var current = parseInt($this.html(), 10);
+            current = current + 1;
+            $this.html(++current);
+            if (current > $this.data('count')) {
+                $this.html($this.data('count'))
+            } else {
+                setTimeout(function () {
+                    count($this)
+                }, 50) // Tốc độ đếm số, số 1 là nhanh nhất
             }
-            $(".stat-count").each(function () {
-                $(this).data('count', parseInt($(this).html(), 10));
-                $(this).html('0');
-                count($(this))
-            })
-        })(jQuery);
+        }
+        $(".stat-count").each(function () {
+            $(this).data('count', parseInt($(this).html(), 10));
+            $(this).html('0');
+            count($(this))
+        })
+    })(jQuery);
+
 </script>
 
-<script type="text/javascript" src="lib/jquery.min.js"></script>
+
 <script type="text/javascript" src="lib/OwlCarousel 2-2.3.4/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/doitac-carousel-config.js"></script>
+<script type="text/javascript" src="js/banner-carousel-config.js"></script>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
 </section>
 
 @endsection

@@ -102,7 +102,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nội dung (*)</label>
                                 <div class="form-group">
-                                        <textarea name="contentt" rows="10" placeholder="Nhập nội dung"
+                                        <textarea name="content" rows="10" placeholder="Nhập nội dung"
                                                   class="form-control">{{ old('contentt') }}</textarea>
                                 </div>
                             </div>
@@ -159,7 +159,14 @@
 
 
     <script>
-
+        CKEDITOR.replace('content', {
+            filebrowserBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Images',
+            filebrowserFlashBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Flash',
+            filebrowserUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+            filebrowserFlashUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+        });
         function showIMG() {
             var fileInput = document.getElementById('image');
             var filePath = fileInput.value; //lấy giá trị input theo id

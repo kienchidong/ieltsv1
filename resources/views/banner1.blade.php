@@ -46,7 +46,7 @@
                 </div>
                 <div class="item">
                     <div class="silder-image">
-                        <img src="https://cdn.trangcongnghe.com/uploads/posts/2017-02/viettel-cung-chuan-bi-khuyen-mai-the-nap_1.jpeg"
+                        <img src="image/bg1.jpg"
                             alt="First slide">
                     </div>
                 </div>

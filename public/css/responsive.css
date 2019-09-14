@@ -163,6 +163,30 @@
     .library-left {
         border-right: none !important;
     }
+    .blog-content span{
+        margin-bottom: 25px;
+    }
+    .book-library {
+        display: flex;
+        flex-wrap: wrap;
+        /* padding: 50px; */
+    }
+    .img-book {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    .content-book {
+        width: 100%;
+        background: #fff;
+        position: relative;
+    }
+    .content-content-book{
+        max-width: 100%;
+    }
+    .img-book img {
+        box-shadow: none;
+    }
 }
 @media only screen and (max-width: 687px) {
     .course-box {
@@ -192,6 +216,9 @@
         right: -200px;
         width: 250px;
         z-index: 999;
+    }
+    .blog-content span{
+        margin-bottom: 75px;
     }
 }
 @media only screen and (max-width: 475px) {
