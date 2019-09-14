@@ -95,6 +95,9 @@
     #wowslider-container1{
             top : 0 !important;
     }
+    .section-banner{
+        top: 0;
+    }
 }
 @media only screen and (max-width: 830px) {
 
@@ -211,7 +214,9 @@
     .tree {
         width: 300px;
     }
-
+    .library {
+        justify-content: center;
+    }
 }
 @media only screen and (max-width : 400px){
     .course-box {

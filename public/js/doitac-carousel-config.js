@@ -1,20 +1,20 @@
-$('.doitac-content-carousel').owlCarousel({
+$('.banner').owlCarousel({
     loop:true,
     margin:10,
     responsiveClass:true,
-    dots:false,
-    nav:false,
-    autoplay:true,
-    autoplayTimeout:3000,
+    dots:true,
+    nav:true,
+    autoplay:false,
+    autoplayTimeout : 5000,
     responsive:{
         0:{
-            items:3,
+            items:1,
         },
         600:{
-            items:5,
+            items:1,
         },
         1000:{
-            items:7,
+            items:1
         }
     }
 })
