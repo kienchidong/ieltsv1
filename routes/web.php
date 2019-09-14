@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::prefix('admin')->group(function (){
+Route::prefix('admin')->group(function () {
     /*
      *middleware Login admin
      * */
@@ -32,12 +32,37 @@ Route::prefix('admin')->group(function (){
     /*
      * Admin
      * */
-    Route::prefix('/')->middleware('auth:admin')->group(function (){
+    Route::prefix('/')->middleware('auth:admin')->group(function () {
         /*
          * trang chủ admin
          * */
         Route::get('/', 'Auth\Admin\HomeAdminController@index')->name('admin.index');
+        /*
+     * Form mẫu
+     */
+        Route::prefix('form')->group(function () {
+
+            Route::get('index', 'Admins\FormController@index')->name('form.index');
+            Route::get('create', 'Admins\FormController@create')->name('form.add');
+        });
+        Route::prefix('slider')->group(function () {
+            Route::get('/list', 'Admins\SliderController@index')->name('slider.index');
+            Route::get('/add', 'Admins\SliderController@create')->name('slider.create');
+            Route::post('/add', 'Admins\SliderController@store')->name('slider.store');
+
+            Route::get('/edit/{id}', 'Admins\SliderController@edit')->name('slider.edit');
+            Route::post('/edit/{id}', 'Admins\SliderController@update')->name('slider.update');
+            Route::get('/destroy/{id}', 'Admins\SliderController@destroy')->name('slider.destroy');
+
+            Route::get('/setactive/{id}/{status}', 'Admins\SliderController@setactive')->name('slider.setactive');
+
+        });
+
     });
+
 
 });
 Route::get('test', 'test@index');
+Route::get('/' , function(){
+    return view('pages.trangchu');
+});
