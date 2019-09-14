@@ -96,9 +96,9 @@
                 </div>
                 <h1>kiên hihi</h1>
 
-                @can('edit-profile')
+                @cannot('kien')
                     <h1>kiên</h1>
-                @endcan
+                @endcannot
             </div>
         </div>
     </body>
