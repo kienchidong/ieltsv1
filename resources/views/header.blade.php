@@ -17,20 +17,21 @@
 	                <ul class="nav-ul-lv-1">
 	                    <li><a href="/">Giới thiệu</a></li>
 	                    <li>
-	                        <a href="#khoahoc">khóa học</a>
+	                        <a href="#khoahoc">khóa học<i class="fa fa-sort-down"></i></a>
 	                        <ul class="nav-ul-lv-2">
 	                            <li><a href="{{ url('/course') }}">Offline</a></li>
 	                            <li><a href="#">Online</a></li>
 	                        </ul>
 	                    </li>
 	                    <li>
-	                        <a href="#thuvien">Thư viện</a>
+                            <a href="#thuvien">Thư viện<i class="fa fa-sort-down"></i></a>
+
 	                        <ul class="nav-ul-lv-2">
-	                            <li><a href="{{ url('thuvien') }}">Listening</a></li>
-	                            <li><a href="#">Speacking</a></li>
-                                <li><a href="#">Reading</a></li>
-                                <li><a href="#">Writing</a></li>
-                                <li><a href="#">For new Member</a></li>
+	                            <li><a href="{{ url('thuvien/nghe') }}">Listening</a></li>
+	                            <li><a href="{{ url('thuvien/noi') }}">Speacking</a></li>
+                                <li><a href="{{ url('thuvien/doc') }}">Reading</a></li>
+                                <li><a href="{{ url('thuvien/viet') }}">Writing</a></li>
+                                <li><a href="{{ url('thuvien/total') }}">For new Member</a></li>
 	                        </ul>
 	                    </li>
 	                    <li><a href="#blog">blog</a>
@@ -38,7 +39,10 @@
 	                    <li><a href="{{ url('lienhe') }}">liên hệ</a></li>
 	                </ul>
 	                <ul class="nav-ul-lv-1">
-	                    <li><a href="{{ url('dangky') }}">Đăng ký</a></li>
+                        <li><a href="{{ url('dangky') }}"
+                            style="    border: 3px solid #19687D;
+                            border-radius: 5px;"
+                            >Đăng ký</a></li>
 	                </ul>
 	            </div>
 	            <div class="menu-mobile-button"><i class="fas fa-bars"></i></div>
