@@ -49,7 +49,7 @@
                         <div class="overlay">
                             <div class="course-title">
                                 <span>
-                                    Dành cho những bạn đặt mục tiêu 5.5 – 6.5+ IELTS và cao hơn
+                                    Dành cho những bạn đặt mục tiêu 5.5 – 6.5+ IElst và cao hơn
                                     Khoá học bao gồm 24 buổi học, tuyển tập tài liệu bổ trợ miễn phí, chấm bài essay và
                                     kiểm
                                     tra hàng tuần
@@ -69,7 +69,7 @@
                         <div class="overlay">
                             <div class="course-title">
                                 <span>
-                                    Dành cho những bạn đặt mục tiêu 5.5 – 6.5+ IELTS và cao hơn
+                                    Dành cho những bạn đặt mục tiêu 5.5 – 6.5+ IElst và cao hơn
                                     Khoá học bao gồm 24 buổi học, tuyển tập tài liệu bổ trợ miễn phí, chấm bài essay và
                                     kiểm
                                     tra hàng tuần
@@ -89,7 +89,7 @@
                         <div class="overlay">
                             <div class="course-title">
                                 <span>
-                                    Dành cho những bạn đặt mục tiêu 5.5 – 6.5+ IELTS và cao hơn
+                                    Dành cho những bạn đặt mục tiêu 5.5 – 6.5+ IElst và cao hơn
                                     Khoá học bao gồm 24 buổi học, tuyển tập tài liệu bổ trợ miễn phí, chấm bài essay và
                                     kiểm
                                     tra hàng tuần
@@ -107,7 +107,7 @@
         </div>
     </div>
 </section>
-<section class="section-thuvien">
+<section id="thuvien" class="section-thuvien">
     <div class="container-fluid">
         <div class="container">
             <h4 class="section-title text-white">Thư viện</h4>
@@ -150,7 +150,7 @@
             <h4 class="section-title">Khóa học</h4>
             <div class="row pb-5">
                 <div class="col-md-6 library-left">
-                    <h5 class="section-title">Khóa Học Offline</h5>
+                    <h5 id="khoahoc" class="section-title">Khóa Học Offline</h5>
                     <div class="tree-skill">
                         <img class="tree" src="image/tree.png" alt="">
                         <div class="skill">
@@ -294,7 +294,7 @@
         </div>
     </div>
 </section>  --}}
-<section class="section-6 pb-4">
+<section id="blog" class="section-6 pb-4">
     <div class="container-fluid">
         <div class="container">
             <h4 class="section-title">
