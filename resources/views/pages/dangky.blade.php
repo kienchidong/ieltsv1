@@ -22,19 +22,26 @@
                                 <label for="name">Họ và Tên</label>
                                 <input type="text" class="form-control" id="name">
                             </div>
-                            <div class="form-group col-md-12">
+                            <div class="form-group col-md-6">
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" id="email">
                             </div>
-                            <div class="form-group col-md-12">
+                            <div class="form-group col-md-6">
                                 <label for="phone">Số Điên Thoại</label>
                                 <input type="number" class="form-control" id="phone">
                             </div>
                             <div class="form-group col-md-12">
-                                <label for="">Nội dung tin nhắn</label>
-                                <textarea class="form-control" id="" rows="7"></textarea>
-                                <small id="" class="form-text text-muted">Tin nhắn của bạn sẽ được gửi trực tiếp về Xuân Phi</small>
-                            </div>
+                                <label for="select">Khóa học</label>
+                                <select class="form-control" id="select">
+                                  <option>Cơ bản</option>
+                                  <option>Nâng cao</option>
+                                  <option>datastructure and algorithms</option>
+
+                                </select>
+                                <small id="select" class="form-text text-muted">
+                                    Thông tin của bạn sẽ được chúng tôi kiểm tra và phản hồi sớm nhất !
+                                  </small
+                              </div>
                         </div>
                         {{--  <div class="form-group">
                             <div class="form-check">
@@ -45,7 +52,7 @@
                             </div>
                         </div>  --}}
 
-                        <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+                        <button type="submit" class="btn btn-primary">Đăng Ký</button>
                     </form>
                     <iframe class="mt-4"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1
