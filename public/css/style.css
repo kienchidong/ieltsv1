@@ -392,7 +392,6 @@
     bottom: -5px;
 }
 .skill a:hover{
-
     -webkit-transform: scale(1.5,1.5);
     -moz-transform: scale(1.5,1.5);
     -o-transform: scale(1.5,1.5);
@@ -407,20 +406,27 @@
     transition: 1s;
 
 }
-.menu-right:hover {
-    transition: 1s;
-    width: 240px;
+.menu-right:hover .right-icon{
+    -webkit-transition: width 1s;
+    transition: 1000ms;
+    width: 250px;
     text-decoration: none;
 }
+
 .menu-right:hover .right-icon-content{
     display: block;
     margin-left: 20px;
     text-decoration: none;
     color: #fff;
+    width: 250px;
     transition: 1s;
 }
 .right-icon-content{
     display: none;
+    position: absolute;
+    width: 200px;
+    left: 30px;
+    transition: 100ms;
 }
 .box-menu-right{
     width: 30px;
@@ -432,6 +438,7 @@
     object-fit: contain;
 }
 .right-icon {
+    width: 50px;
     transition: 1s;
     padding: 10px;
     background-color: #fff;
@@ -776,4 +783,12 @@ a:hover {
 } */
 .diachi {
     font-weight: 600;
+}
+.hover-bot {
+    content : '' ;
+    width: 100px;
+    height: 1px;
+    background: red;
+    position: relative;
+    bottom: -5px;
 }
