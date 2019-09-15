@@ -53,6 +53,22 @@
 
                 </ul>
             </li>
+            {{--Librarys --}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Thư viện</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('library.create')}}"><i class="fa fa-circle-o"></i> Thêm thư viện</a></li>
+                    <li><a href="{{route('library.index')}}"><i class="fa fa-circle-o"></i> Danh sách thư viện </a></li>
+                    <li><a href="{{route('cate_library.create')}}"><i class="fa fa-circle-o"></i> Thêm thể loại</a></li>
+
+                </ul>
+            </li>
             {{--Slider ở trang chủ --}}
             <li class="treeview">
                 <a href="#">

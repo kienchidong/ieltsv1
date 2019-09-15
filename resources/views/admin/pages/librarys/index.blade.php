@@ -1,6 +1,6 @@
 @extends('admin.layouts.master-layout')
 @section('title')
-    Danh sách khóa học offline
+    Danh sách thư viện
 @endsection
 
 @section('content')
@@ -17,11 +17,11 @@
 
         <section class="content-header">
             <h1>
-                Danh sách khóa học offline
+                Danh sách thư viện
             </h1>
             <ol class="breadcrumb">
-                <li><a href="{{route('course_offline.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active">khóa học offline</li>
+                <li><a href="{{route('library.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">thư viện</li>
             </ol>
         </section>
         <div >
@@ -46,7 +46,7 @@
                     <div class="box">
 
                         <div class="box-header">
-                            <a href="{{route('course_offline.create')}}" class="btn btn-success">Thêm</a>
+                            <a href="{{route('library.create')}}" class="btn btn-success">Thêm</a>
                         </div>
 
                         <!-- /.box-header -->
@@ -55,23 +55,23 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Khóa học </th>
+                                    <th>Thể loại </th>
+                                    <th>Bài viết</th>
                                     <th>Hình ảnh</th>
-
                                     <th>Trạng thái</th>
                                     <th class="col-md-3">Hành động</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($course_offlines as $value)
+                                @foreach($librarys as $value)
                                     <tr class="odd gradeX" align="center">
                                         <td>{{$value->id}}</td>
+                                        <td>{{$value->cate_library}}</td>
                                         <td>{!! $value->name !!}</td>
 
                                         <td><img width="100px" height="100px"
-                                                 src="{{asset('')}}images/course_offlines/{{$value->image}}">
+                                                 src="{{asset('')}}images/library/{{$value->image}}">
                                         </td>
-
 
                                         <td>
                                             @if($value->status==1)
@@ -84,20 +84,20 @@
 
                                             <div>
                                                 <a class="btn btn-primary" id="edit"
-                                                   href="{{ url('admin/course-offline/edit/'.$value->id) }}"
+                                                   href="{{ url('admin/library/edit/'.$value->id) }}"
                                                    onclick="">Sửa</a>
 
                                                 <a class="btn btn-danger"
-                                                   href="{{ url('admin/course-offline/destroy/'.$value->id) }}"
-                                                   onclick="return confirm('Hành động sẽ xóa khóa học offline này! bạn có muốn tiếp tục?')">Xóa</a>
+                                                   href="{{ url('admin/library/destroy/'.$value->id) }}"
+                                                   onclick="return confirm('Hành động sẽ xóa thư viện này! bạn có muốn tiếp tục?')">Xóa</a>
                                                 @if($value->status==1)
                                                     <a class="btn btn-info"
-                                                       href="{{ url('admin/course-offline/setactive/'.$value->id.'/0') }}"
-                                                       onclick="return confirm('Hành động sẽ ẩn khóa học offline này! bạn có muốn tiếp tục?')">Ẩn</a>
+                                                       href="{{ url('admin/library/setactive/'.$value->id.'/0') }}"
+                                                       onclick="return confirm('Hành động sẽ ẩn thư viện này! bạn có muốn tiếp tục?')">Ẩn</a>
                                                 @else
                                                     <a class="btn btn-warning"
-                                                       href="{{ url('admin/course-offline/setactive/'.$value->id.'/1') }}"
-                                                       onclick="return confirm('Hành động sẽ hiển thị khóa học offline mục này! bạn có muốn tiếp tục?')">Hiển
+                                                       href="{{ url('admin/library/setactive/'.$value->id.'/1') }}"
+                                                       onclick="return confirm('Hành động sẽ hiển thị thư viện mục này! bạn có muốn tiếp tục?')">Hiển
                                                         thị</a>
 
                                                 @endif

@@ -2,22 +2,18 @@
 
 namespace App\Http\Controllers\Admins;
 
-use CKSource\CKFinder\Filesystem\File\File;
-use function GuzzleHttp\Psr7\str;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class SliderController extends Controller
+class LibraryController extends Controller
 {
-    /*
-     * View Share
-     */
     public function __construct()
     {
-        $data['slider_count'] = DB::table('sliders')->count();
+        $data['cate_library_count'] = DB::table('cate_librarys')->count();
+        $data['library_count'] = DB::table('librarys')->count();
+
         view()->share($data);
     }
 
@@ -28,9 +24,15 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $data['sliders'] = DB::table('sliders')->orderByDesc('id')->get();
-        return view('admin.pages.sliders.index', $data);
+
+        $data['librarys'] = DB::table('librarys')
+            ->select('librarys.*','cate_librarys.name as cate_library')
+            ->join('cate_librarys','librarys.cate_id','=','cate_librarys.id')
+            ->orderByDesc('id')->get();
+
+        return view('admin.pages.librarys.index', $data);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -39,7 +41,8 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.sliders.create');
+        $data['cate_librarys'] = DB::table('cate_librarys')->orderByDesc('id')->get();
+        return view('admin.pages.librarys.create',$data);
     }
 
     /**
@@ -62,10 +65,10 @@ class SliderController extends Controller
 
             $name = $file->getClientOriginalName();
             $image = Str::random(7) . "_image_" . $name;
-            while (file_exists('images/sliders/' . $image)) {
+            while (file_exists('images/librarys/' . $image)) {
                 $image = Str::random(7) . "_image_" . $name;
             }
-            $file->move('images/sliders/', $image);
+            $file->move('images/librarys/', $image);
             $file_name = $image;
 
         } else {
@@ -73,7 +76,7 @@ class SliderController extends Controller
         }
 
 
-        DB::table('sliders')->insert([
+        DB::table('librarys')->insert([
             'title' => $request->title,
             'image' => $file_name,
             'status' => 1,
@@ -102,8 +105,8 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        $data['slider'] = DB::table('sliders')->find($id);
-        return view('admin.pages.sliders.edit', $data);
+        $data['slider'] = DB::table('librarys')->find($id);
+        return view('admin.pages.librarys.edit', $data);
     }
 
     /**
@@ -115,7 +118,7 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $image_update = DB::table('sliders')->where('id', '=', $id)->pluck('image');
+        $image_update = DB::table('librarys')->where('id', '=', $id)->pluck('image');
 
         $this->validate($request, [
             'title' => 'min:3',
@@ -129,20 +132,20 @@ class SliderController extends Controller
 
             $name = $file->getClientOriginalName();
             $image = Str::random(4) . "_image_" . $name;
-            while (file_exists('images/sliders/' . $image)) {
+            while (file_exists('images/librarys/' . $image)) {
                 $image = Str::random(4) . "_image_" . $name;
             }
-            $file->move('images/sliders/', $image);
+            $file->move('images/librarys/', $image);
             $file_name = $image;
-            if (file_exists('images/sliders/' . $image_update[0]) && $image_update[0] != '') {
-                unlink('images/sliders/' . $image_update[0]);
+            if (file_exists('images/librarys/' . $image_update[0]) && $image_update[0] != '') {
+                unlink('images/librarys/' . $image_update[0]);
             }
 
         } else {
-            $file_name = DB::table('sliders')->where('id', $id)->pluck('image')->first();
+            $file_name = DB::table('librarys')->where('id', $id)->pluck('image')->first();
         }
 
-        DB::table('sliders')->where('id', $id)->update([
+        DB::table('librarys')->where('id', $id)->update([
             'title' => $request->title,
             'image' => $file_name,
             'updated_at' => now()
@@ -159,12 +162,12 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        $image = DB::table('sliders')->where('id', '=', $id)->pluck('image')->first();
+        $image = DB::table('librarys')->where('id', '=', $id)->pluck('image')->first();
 
-        if (file_exists('images/sliders/' . $image)) {
-            unlink('images/sliders/' . $image);
+        if (file_exists('images/librarys/' . $image)) {
+            unlink('images/librarys/' . $image);
         }
-        DB::table('sliders')->where('id', '=', $id)->delete();
+        DB::table('librarys')->where('id', '=', $id)->delete();
 
         return redirect()->back()->with('thongbao', 'Xóa thành công');
     }
@@ -175,10 +178,72 @@ class SliderController extends Controller
 
     public function setactive($id, $status)
     {
-        DB::table('sliders')->where('id', '=', $id)->update([
+        DB::table('librarys')->where('id', '=', $id)->update([
+            'status' => $status,
+        ]);
+        return redirect()->back()->with('thanhcong', 'Thành công');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function cate_create()
+    {
+        $data['cate_librarys'] = DB::table('cate_librarys')->orderByDesc('id')->get();
+        return view('admin.pages.librarys.cate_create', $data);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function cate_store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'min:5',
+        ], [
+            'name.min' => 'Tên không được ít hơn 10 kí tự',
+        ]);
+
+
+        DB::table('cate_librarys')->insert([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name . "-" . time()),
+            'status' => 1,
+            'created_at' => now()
+        ]);
+
+        return redirect()->back()->with('thongbao', 'Thành công');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function cate_destroy($id)
+    {
+        DB::table('cate_librarys')->where('id', '=', $id)->delete();
+
+        return redirect()->back()->with('thongbao', 'Xóa thành công');
+    }
+
+    /*
+     * Thực hiện ẩn hay hiện cái slider
+     */
+
+    public function cate_setactive($id, $status)
+    {
+        DB::table('cate_librarys')->where('id', '=', $id)->update([
             'status' => $status,
         ]);
         return redirect()->back()->with('thongbao', 'Thành công');
     }
+
 
 }

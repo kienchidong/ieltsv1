@@ -54,6 +54,7 @@
                             <table id="example1" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th>Tên</th>
                                     <th>Icon</th>
                                     <th>Đường dẫn</th>
@@ -64,6 +65,7 @@
                                 <tbody>
                                 @foreach($contact as $value)
                                     <tr class="odd gradeX" align="center">
+                                        <td>{{$value->id}}</td>
                                         <td>{!! $value->name !!}</td>
 
                                         <td><img width="100px" height="100px"

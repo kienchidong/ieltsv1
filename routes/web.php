@@ -91,6 +91,29 @@ Route::prefix('admin')->group(function () {
             Route::get('/setactive/{id}/{status}', 'Admins\CourseOfflineController@setactive')->name('course_offline.setactive');
 
         });
+
+        /*
+         * Thư viện
+         */
+        Route::prefix('library')->group(function () {
+            Route::get('/add-cate', 'Admins\LibraryController@cate_create')->name('cate_library.create');
+            Route::post('/add-cate', 'Admins\LibraryController@cate_store')->name('cate_library.store');
+
+            Route::get('/destroy-cate/{id}', 'Admins\LibraryController@cate_destroy')->name('cate_library.destroy');
+
+            Route::get('/setactive-cate/{id}/{status}', 'Admins\LibraryController@cate_setactive')->name('cate_library.setactive');
+
+            Route::get('/list', 'Admins\LibraryController@index')->name('library.index');
+            Route::get('/add', 'Admins\LibraryController@create')->name('library.create');
+            Route::post('/add', 'Admins\LibraryController@store')->name('library.store');
+
+            Route::get('/edit/{id}', 'Admins\LibraryController@edit')->name('library.edit');
+            Route::post('/edit/{id}', 'Admins\LibraryController@update')->name('library.update');
+            Route::get('/destroy/{id}', 'Admins\LibraryController@destroy')->name('library.destroy');
+
+            Route::get('/setactive/{id}/{status}', 'Admins\LibraryController@setactive')->name('library.setactive');
+
+        });
     });
 });
 Route::get('test', 'test@index');

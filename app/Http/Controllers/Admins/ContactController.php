@@ -180,6 +180,6 @@ class ContactController extends Controller
         DB::table('contacts')->where('id', '=', $id)->update([
             'status' => $status,
         ]);
-        return redirect()->back()->with('thanhcong', 'Thành công');
+        return redirect()->back()->with('thongbao', 'Thành công');
     }
 }

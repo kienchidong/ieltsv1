@@ -54,6 +54,7 @@
                             <table id="example1" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th>Tên</th>
                                     <th>Hình ảnh</th>
                                     <th>Trạng thái</th>
@@ -63,6 +64,7 @@
                                 <tbody>
                                 @foreach($sliders as $value)
                                     <tr class="odd gradeX" align="center">
+                                        <td>{{$value->id}}</td>
                                         <td>{!! $value->title !!}</td>
 
                                         <td><img width="100px" height="100px"
