@@ -1,4 +1,7 @@
 @extends('master-layout')
+@section('title')
+    Chi Tiết Blog
+@endsection
 @section('content')
 <div class="container-fluid">
     <div class="container py-5">
