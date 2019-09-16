@@ -160,7 +160,11 @@ class SliderController extends Controller
     public function destroy($id)
     {
         $image = DB::table('sliders')->where('id', '=', $id)->pluck('image')->first();
-
+        if ($image == "logo.png")
+        {
+            DB::table('sliders')->where('id', '=', $id)->delete();
+            return redirect()->back()->with('thongbao', 'Xóa thành công');
+        }
         if (file_exists('images/sliders/' . $image)) {
             unlink('images/sliders/' . $image);
         }

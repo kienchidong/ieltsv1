@@ -53,10 +53,15 @@ class LibraryController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request, [
-            'title' => 'min:3',
+            'name' => 'required|min:10',
+            'contentt' => 'required|min:100',
         ], [
-            'title.min' => 'Tên không được ít hơn 3 kí tự',
+            'name.min' => 'Tên không được ít hơn 10 kí tự',
+            'contentt.min' => 'Tên không được ít hơn 100 kí tự',
+            'name.required'=> 'Tên bài viết không được để trống',
+            'contentt.required'=> 'Nội dung bài viết không được để trống',
         ]);
         //Kiểm tra định dạng ảnh
         if ($request->hasFile('image')) {
@@ -77,8 +82,11 @@ class LibraryController extends Controller
 
 
         DB::table('librarys')->insert([
-            'title' => $request->title,
+            'name' => $request->name,
+            'slug' => Str::slug($request->name."-".time()),
             'image' => $file_name,
+            'content' => $request->contentt,
+            'cate_id' => $request->cate_id,
             'status' => 1,
             'created_at' => now()
         ]);
@@ -105,7 +113,8 @@ class LibraryController extends Controller
      */
     public function edit($id)
     {
-        $data['slider'] = DB::table('librarys')->find($id);
+        $data['cate_librarys'] = DB::table('cate_librarys')->orderByDesc('id')->get();
+        $data['library'] = DB::table('librarys')->find($id);
         return view('admin.pages.librarys.edit', $data);
     }
 
@@ -118,12 +127,17 @@ class LibraryController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $image_update = DB::table('librarys')->where('id', '=', $id)->pluck('image');
 
         $this->validate($request, [
-            'title' => 'min:3',
+            'name' => 'required|min:10',
+            'contentt' => 'required|min:100',
         ], [
-            'title.min' => 'Tên không được ít hơn 3 kí tự',
+            'name.min' => 'Tên không được ít hơn 10 kí tự',
+            'contentt.min' => 'Tên không được ít hơn 100 kí tự',
+            'name.required'=> 'Tên bài viết không được để trống',
+            'contentt.required'=> 'Nội dung bài viết không được để trống',
         ]);
 
         if ($request->hasFile('image')) {
@@ -146,12 +160,16 @@ class LibraryController extends Controller
         }
 
         DB::table('librarys')->where('id', $id)->update([
-            'title' => $request->title,
+            'name' => $request->name,
+            'slug' => Str::slug($request->name."-".time()),
             'image' => $file_name,
-            'updated_at' => now()
+            'content' => $request->contentt,
+            'cate_id' => $request->cate_id,
+            'status' => 1,
+            'created_at' => now()
         ]);
 
-        return redirect()->route('slider.index')->with('thongbao', 'Sửa thành công');
+        return redirect()->route('library.index')->with('thongbao', 'Sửa thành công');
     }
 
     /**
@@ -163,7 +181,11 @@ class LibraryController extends Controller
     public function destroy($id)
     {
         $image = DB::table('librarys')->where('id', '=', $id)->pluck('image')->first();
-
+        if ($image == "logo.png")
+        {
+            DB::table('librarys')->where('id', '=', $id)->delete();
+            return redirect()->back()->with('thongbao', 'Xóa thành công');
+        }
         if (file_exists('images/librarys/' . $image)) {
             unlink('images/librarys/' . $image);
         }

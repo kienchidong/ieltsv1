@@ -33,7 +33,6 @@ class BlogsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('image');
-            $table->text('detail')->nullable();
             $table->text('content');
 
             $table->bigInteger('cate_id')->unsigned();

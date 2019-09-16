@@ -53,7 +53,7 @@
                             <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện
                                 </a></li>
                             <li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách thư viện</a></li>
+                                    sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>
                             <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại
                                     <span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>
 

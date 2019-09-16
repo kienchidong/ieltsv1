@@ -69,6 +69,22 @@
 
                 </ul>
             </li>
+            {{--Blogs --}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Tin tức</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('blog.create')}}"><i class="fa fa-circle-o"></i> Thêm tin tức</a></li>
+                    <li><a href="{{route('blog.index')}}"><i class="fa fa-circle-o"></i> Danh sách tin tức </a></li>
+                    <li><a href="{{route('cate_blog.create')}}"><i class="fa fa-circle-o"></i> Thêm thể loại</a></li>
+
+                </ul>
+            </li>
             {{--Slider ở trang chủ --}}
             <li class="treeview">
                 <a href="#">

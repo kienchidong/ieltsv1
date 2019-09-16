@@ -24,7 +24,7 @@
                 <li class="active">thư viện</li>
             </ol>
         </section>
-        <div >
+        <div>
             @if(count($errors) > 0)
                 <div class="alert alert-danger">
                     @foreach($errors->all() as $err)
@@ -55,7 +55,7 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Thể loại </th>
+                                    <th>Thể loại</th>
                                     <th>Bài viết</th>
                                     <th>Hình ảnh</th>
                                     <th>Trạng thái</th>
@@ -67,10 +67,10 @@
                                     <tr class="odd gradeX" align="center">
                                         <td>{{$value->id}}</td>
                                         <td>{{$value->cate_library}}</td>
-                                        <td>{!! $value->name !!}</td>
+                                        <td>{!! substr($value->name,0,255) !!}</td>
 
                                         <td><img width="100px" height="100px"
-                                                 src="{{asset('')}}images/library/{{$value->image}}">
+                                                 src="{{asset('')}}images/librarys/{{$value->image}}">
                                         </td>
 
                                         <td>
@@ -102,11 +102,6 @@
 
                                                 @endif
                                             </div>
-
-
-
-
-
                                     </tr>
                                 @endforeach
                                 </tbody>

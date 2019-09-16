@@ -102,11 +102,6 @@
 
                                                 @endif
                                             </div>
-
-
-
-
-
                                     </tr>
                                 @endforeach
                                 </tbody>

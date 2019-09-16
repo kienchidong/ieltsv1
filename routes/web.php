@@ -11,8 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('landing', function (){
+    return view('landingpage');
 });
 
 Auth::routes();
@@ -114,9 +117,54 @@ Route::prefix('admin')->group(function () {
             Route::get('/setactive/{id}/{status}', 'Admins\LibraryController@setactive')->name('library.setactive');
 
         });
+        /*
+         * Blog
+         */
+        Route::prefix('blog')->group(function () {
+            Route::get('/add-cate', 'Admins\BlogController@cate_create')->name('cate_blog.create');
+            Route::post('/add-cate', 'Admins\BlogController@cate_store')->name('cate_blog.store');
+
+            Route::get('/destroy-cate/{id}', 'Admins\BlogController@cate_destroy')->name('cate_blog.destroy');
+
+            Route::get('/setactive-cate/{id}/{status}', 'Admins\BlogController@cate_setactive')->name('cate_blog.setactive');
+
+            Route::get('/list', 'Admins\BlogController@index')->name('blog.index');
+            Route::get('/add', 'Admins\BlogController@create')->name('blog.create');
+            Route::post('/add', 'Admins\BlogController@store')->name('blog.store');
+
+            Route::get('/edit/{id}', 'Admins\BlogController@edit')->name('blog.edit');
+            Route::post('/edit/{id}', 'Admins\BlogController@update')->name('blog.update');
+            Route::get('/destroy/{id}', 'Admins\BlogController@destroy')->name('blog.destroy');
+
+            Route::get('/setactive/{id}/{status}', 'Admins\BlogController@setactive')->name('blog.setactive');
+
+        });
     });
 });
 Route::get('test', 'test@index');
 Route::get('/' , function(){
     return view('pages.trangchu');
+});
+Route::get('/course',function(){
+    return view('pages.course');
+});
+Route::get('/dangky',function(){
+    return view('pages.dangky');
+});
+Route::get('/thuvien',function(){
+    return view('pages.thuvien');
+});
+
+
+
+Route::get('/blog',function(){
+    return view('pages.blog');
+});
+
+Route::get('/blog-detai',function(){
+    return view('pages.blog-detai');
+});
+
+Route::get('/lienhe' , function(){
+    return view('pages.lienhe');
 });

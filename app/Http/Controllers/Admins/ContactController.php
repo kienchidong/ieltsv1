@@ -162,7 +162,11 @@ class ContactController extends Controller
     public function destroy($id)
     {
         $image = DB::table('contacts')->where('id', '=', $id)->pluck('icon')->first();
-
+        if ($image == "logo.png")
+        {
+            DB::table('contacts')->where('id', '=', $id)->delete();
+            return redirect()->back()->with('thongbao', 'Xóa thành công');
+        }
         if (file_exists('images/contacts/' . $image)) {
             unlink('images/contacts/' . $image);
         }

@@ -173,7 +173,11 @@ class CourseOfflineController extends Controller
     public function destroy($id)
     {
         $image = DB::table('course_offlines')->where('id', '=', $id)->pluck('image')->first();
-
+        if ($image == "logo.png")
+        {
+            DB::table('course_offlines')->where('id', '=', $id)->delete();
+            return redirect()->back()->with('thongbao', 'Xóa thành công');
+        }
         if (file_exists('images/course_offlines/' . $image)) {
             unlink('images/course_offlines/' . $image);
         }

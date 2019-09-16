@@ -101,8 +101,6 @@
                                 </div>
                             </div>
 
-
-
                             <div class="box-footer">
                                 <a href="{{route('course_offline.index')}}" class="btn btn-warning">Quay lại</a>
                                 <button type="submit" class="btn btn-primary">Lưu</button>

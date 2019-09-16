@@ -50,13 +50,13 @@
 
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
-
-                            <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm slider
+                            <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện
                                 </a></li>
-                            </a>
-                            </li>
                             <li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách<span class="label label-primary pull-right">{{$course_offline_count}}</span></a></li>
+                                    sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>
+                            <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại
+                                    <span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>
+
 
                         </ul>
                     </div>
@@ -70,14 +70,22 @@
             <!-- /.col -->
             <div class="col-md-9">
                 <div class="box box-primary">
-                    <h3 style="text-align: left; padding-left: 5px">Thêm thư viện</h3>
+                    <h3 style="text-align: left; padding-left: 5px">Thêm bài viết</h3>
                     <form role="form" method="POST" action="{{route('library.store')}}"
                           enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tên</label>
+                                <label>Thể loại bài viết (*)</label>
+                                <select class="form-control" name="cate_id">
+                                    @foreach($cate_librarys as $value)
+                                        <option value="{{$value->id}}">{{$value->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tên bài viết (*)</label>
                                 <input type="text" class="form-control" placeholder="Nhập vào đây" name="name"
                                        value="{{ old('name') }}">
                             </div>
