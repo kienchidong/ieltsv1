@@ -150,26 +150,26 @@
             <h4 class="section-title">Khóa học</h4>
             <div class="row pb-5">
                 <div class="col-md-6 library-left">
-                    <h5 id="khoahoc" class="section-title">Khóa Học Offline</h5>
+                    <a target="_blank" href="{{ url('landing') }}"><h5 id="khoahoc" class="section-title">Khóa Học Offline</h5></a>
                     <div class="tree-skill">
                         <img class="tree" src="image/tree.png" alt="">
                         <div class="skill">
-                            <a>
+                            <a target="_blank" href="{{ url('landing#khoa-re') }}">
                                 Khóa rễ
                             </a>
                         </div>
                         <div class="skill skill-2">
-                            <a>
+                            <a target="_blank" href="{{ url('landing#khoa-goc') }}">
                                 Khóa gốc
                             </a>
                         </div>
                         <div class="skill skill-3">
-                            <a>
+                            <a target="_blank" href="{{ url('landing#khoa-than') }}">
                                 Khóa thân
                             </a>
                         </div>
                         <div class="skill skill-4">
-                            <a>
+                            <a target="_blank" href="{{ url('landing#khoa-ngon') }}">
                                 Khóa ngọn
                             </a>
                         </div>
