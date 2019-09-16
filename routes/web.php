@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 Route::get('landing', function (){
     return view('landingpage');
-});
+})->name('landing');
 
 Auth::routes();
 

@@ -75,7 +75,8 @@
 </head>
 <body>
 <section class="header-landing" style="background-image: url('{{ asset('image/bg1.jpg') }}') !important;">
-    <div class="container-landing">
+    <div style="background: rgba(0,0,0,0.3)">
+        <div class="container-landing">
         <div class="row">
         <div class="col-12 col-lg-12 col-sm-12 col-md-12">
             <img src="{{ asset('image/logo.png') }}" alt="" width="8%">
@@ -116,7 +117,7 @@
         </div>
         <div class="col-7 col-lg-7 col-sm-7 col-md-7">
           <div class="landing-offline">
-              <h3>HỌC OFFLINE TRỰC TIẾP<br> <span style="text-align: center">CÙNG XUÂN PHI IELTS</span></h3>
+              <h3 style="color: white">HỌC OFFLINE TRỰC TIẾP<br> <span style="text-align: center">CÙNG XUÂN PHI IELTS</span></h3>
 
           </div>
             <hr>
@@ -166,6 +167,7 @@
             </div>
         </div>
     </div>
+    </div>
 </section>
 <section class="landing-lydo">
     <h1>5 Lý do chọn Xuân Phi IELTS</h1>
@@ -205,11 +207,12 @@
     </div>
 </section>
 <section class="landing-khoahoc">
-    <div class="khoahoc">
+    <div id="khoa-re" class="khoahoc">
         <div class="khoahoc-left" >
             <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
         </div>
         <div class="khoahoc-right">
+            <div class="khoahoc-content">
             <div>
                 <h3>KHOÁ RỄ</h3>
                 <h4>Pre-IELTS level 0</h4>
@@ -244,12 +247,13 @@
                     </li>
                 </ol>
             </div>
+            </div>
         </div>
-    </div>
-    <div class="khoahoc">
+    </div   >
+    <div id="khoa-goc" class="khoahoc">
 
         <div class="khoahoc-left">
-            <div>
+            <div class="khoahoc-content">
                 <div>
                     <h3>KHOÁ GỐC</h3>
                     <h4>Pre-IELTS level 1</h4>
@@ -292,12 +296,13 @@
             <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
         </div>
     </div>
-    <div class="khoahoc">
+    <div id="khoa-than" class="khoahoc">
         <div class="khoahoc-left" >
             <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
         </div>
         <div class="khoahoc-right">
-            <div>
+            <div class="khoahoc-content">
+                <div>
                 <h3>KHOÁ THÂN</h3>
                 <h4>Pre-IELTS level 2</h4>
                 <ol>
@@ -331,11 +336,13 @@
                     </li>
                 </ol>
             </div>
+            </div>
         </div>
     </div>
-    <div class="khoahoc">
+    <div id="khoa-ngon" class="khoahoc">
 
         <div class="khoahoc-left">
+            <div class="khoahoc-content">
             <div>
                 <h3>KHOÁ NGỌN</h3>
                 <h4>Pre-IELTS Chuyên sâu</h4>
@@ -372,6 +379,7 @@
                         </ul>
                     </li>
                 </ol>
+            </div>
             </div>
 
         </div>
@@ -490,7 +498,19 @@
         <div class="comment-content">
             <p>
                 <strong>Hà Đức Kiên:</strong>
-                <span>Như Lol</span>
+                <span>Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ muốn đi học cô tiếp :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa, cô cũng buồn cười nữa =)</span>
+            </p>
+        </div>
+        <div class="comment-content">
+            <p>
+                <strong>Hà Đức Kiên:</strong>
+                <span>Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ muốn đi học cô tiếp :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa, cô cũng buồn cười nữa =)</span>
+            </p>
+        </div>
+        <div class="comment-content">
+            <p>
+                <strong>Hà Đức Kiên:</strong>
+                <span>Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ muốn đi học cô tiếp :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa, cô cũng buồn cười nữa =)</span>
             </p>
         </div>
     </div>
