@@ -1,4 +1,7 @@
 @extends('master-layout')
+@section('title')
+    Đăng Ký
+@endsection
 @section('content')
 <section class="lienhe">
     <div class="container-fluid">
