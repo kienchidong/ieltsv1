@@ -1,4 +1,7 @@
 @extends('master-layout')
+@section('title')
+    Trang Chủ
+@endsection
 @section('content')
 @include('banner1')
 <section class="section-1">
@@ -31,7 +34,7 @@
     <div class="container-fluid">
         <div class="container work-shop">
             <div>
-                <span>The Ilest</span><span>Work Shop</span><br>
+                <span>The Ielts</span><span>Work Shop</span><br>
                 <a href="">Xem Thêm</a>
             </div>
 
@@ -41,7 +44,7 @@
 <section class="section-2">
     <div class="container-fluid">
         <div class="container">
-            <h3 class="section-title pt-4">Hot Pot</h3>
+            <h3 class="section-title pt-4">Hot Post</h3>
             <div class="row pb-5">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="course-box">
