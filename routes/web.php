@@ -79,10 +79,16 @@ Route::get('/thuvien',function(){
     return view('pages.thuvien');
 });
 
+
+
 Route::get('/blog',function(){
     return view('pages.blog');
 });
 
 Route::get('/blog-detai',function(){
     return view('pages.blog-detai');
+});
+
+Route::get('/lienhe' , function(){
+    return view('pages.lienhe');
 });
