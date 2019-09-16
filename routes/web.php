@@ -75,9 +75,9 @@ Route::get('/course',function(){
 Route::get('/dangky',function(){
     return view('pages.dangky');
 });
-Route::get('/thuvien',function(){
-    return view('pages.thuvien');
-});
+// Route::get('/thuvien',function(){
+//     return view('pages.thuvien');
+// });
 
 
 
@@ -91,4 +91,21 @@ Route::get('/blog-detai',function(){
 
 Route::get('/lienhe' , function(){
     return view('pages.lienhe');
+});
+Route::prefix('thuvien')->group(function () {
+    Route::get('/nghe', function(){
+        return view('pages.reading');
+    });
+    Route::get('/noi', function(){
+        return view('pages.speaking');
+    });
+    Route::get('/doc', function(){
+        return view('pages.reading');
+    });
+    Route::get('/viet', function(){
+        return view('pages.writing');
+    });
+    Route::get('/total', function(){
+        return view('pages.tonghop');
+    });
 });

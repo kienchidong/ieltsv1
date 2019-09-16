@@ -112,29 +112,29 @@
         <div class="container">
             <h4 class="section-title text-white">Thư viện</h4>
             <div class="library">
-                <a href="{{ url('thuvien') }}">
+                <a href="{{ url('thuvien/nghe') }}">
                     <div class="library-box">
                         <span>Nghe</span>
                         <i class="fa fa-headphones fa-3x text-center"></i>
                     </div>
                 </a>
-                <a href="{{ url('thuvien') }}">
+                <a href="{{ url('thuvien/noi') }}">
                     <div class="library-box">
                         <span>Nói</span>
                         <i class="fa fa-book fa-3x text-center"></i>
                     </div>
                 </a>
-                <a href="{{ url('thuvien') }}">
+                <a href="{{ url('thuvien/doc') }}">
                     <div class="library-box">
                         <span>Đọc</span>
                         <i class="fa fa-comment-dots  fa-3x"></i>
                     </div>
-                </a> <a href="{{ url('thuvien') }}">
+                </a> <a href="{{ url('thuvien/viet') }}">
                     <div class="library-box">
                         <span>Viết</span>
                         <i class="fa fa-pencil-alt fa-3x"></i>
                     </div>
-                </a> <a href="{{ url('thuvien') }}">
+                </a> <a href="{{ url('thuvien/total') }}">
                     <div class="library-box">
                         <span>Tổng Hợp</span>
                         <i class="fa fa-list-alt fa-3x"></i>
