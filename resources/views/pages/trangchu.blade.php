@@ -1,7 +1,7 @@
 @extends('master-layout')
 @section('content')
 @include('banner1')
-<section class="section-1">
+{{--  <section class="section-1">
     <div class="container">
         <h3 class="section-title">4 bước để chinh phục kỳ thi ielst</h3>
         <div class="process-bg">
@@ -26,13 +26,13 @@
             </div>
         </div>
     </div>
-</section>
+</section>  --}}
 <section class="section-11">
     <div class="container-fluid">
         <div class="container work-shop">
             <div>
                 <span>The Ilest</span><span>Work Shop</span><br>
-                <a href="">Xem Thêm</a>
+                {{--  <a href="">Xem Thêm</a>  --}}
             </div>
 
         </div>
@@ -41,7 +41,7 @@
 <section class="section-2">
     <div class="container-fluid">
         <div class="container">
-            <h3 class="section-title pt-4">Hot Pot</h3>
+            <h3 class="section-title pt-4">Host Pot</h3>
             <div class="row pb-5">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="course-box">
@@ -110,34 +110,41 @@
 <section id="thuvien" class="section-thuvien">
     <div class="container-fluid">
         <div class="container">
-            <h4 class="section-title text-white">Thư viện</h4>
+            <h3 class="section-title text-white">Thư viện</h3>
             <div class="library">
                 <a href="{{ url('thuvien/nghe') }}">
                     <div class="library-box">
+                        <div class="box-chu">
+
+                        </div>
                         <span>Nghe</span>
                         <i class="fa fa-headphones fa-3x text-center"></i>
                     </div>
                 </a>
                 <a href="{{ url('thuvien/noi') }}">
                     <div class="library-box">
+                        <div class="box-chu">
+
+                        </div>
                         <span>Nói</span>
                         <i class="fa fa-book fa-3x text-center"></i>
                     </div>
                 </a>
                 <a href="{{ url('thuvien/doc') }}">
                     <div class="library-box">
+                        <div class="box-chu">
+
+                        </div>
                         <span>Đọc</span>
                         <i class="fa fa-comment-dots  fa-3x"></i>
                     </div>
                 </a> <a href="{{ url('thuvien/viet') }}">
                     <div class="library-box">
+                        <div class="box-chu">
+
+                        </div>
                         <span>Viết</span>
                         <i class="fa fa-pencil-alt fa-3x"></i>
-                    </div>
-                </a> <a href="{{ url('thuvien/total') }}">
-                    <div class="library-box">
-                        <span>Tổng Hợp</span>
-                        <i class="fa fa-list-alt fa-3x"></i>
                     </div>
                 </a>
             </div>
@@ -147,53 +154,55 @@
 <section class="section-3">
     <div class="container-fluid">
         <div class="container">
-            <h4 class="section-title">Khóa học</h4>
+            <h3 class="section-title">Khóa học</h3>
             <div class="row pb-5">
+
                 <div class="col-md-6 library-left">
-                    <h5 id="khoahoc" class="section-title">Khóa Học Offline</h5>
-                    <div class="tree-skill">
-                        <img class="tree" src="image/tree.png" alt="">
-                        <div class="skill">
-                            <a>
-                                Khóa rễ
-                            </a>
-                        </div>
-                        <div class="skill skill-2">
-                            <a>
-                                Khóa gốc
-                            </a>
-                        </div>
-                        <div class="skill skill-3">
-                            <a>
-                                Khóa thân
-                            </a>
-                        </div>
-                        <div class="skill skill-4">
-                            <a>
-                                Khóa ngọn
-                            </a>
-                        </div>
-
-                    </div>
-
+                    <h5 id="khoahoc" class="section-title">Offline</h5>
+                    <a href="{{ url('landing') }}">
+                        <div class="tree-skill">
+                            <img class="tree" src="image/tree.png" alt="">
+                            <div class="skill">
+                                <a href="{{ url('landing') }}">
+                                    Khóa rễ
+                                </a>
+                            </div>
+                            <div class="skill skill-2">
+                                <a href="{{ url('landing') }}">
+                                    Khóa gốc
+                                </a>
+                            </div>
+                            <div class="skill skill-3">
+                                <a href="{{ url('landing') }}">
+                                    Khóa thân
+                                </a href="{{ url('landing') }}">
+                            </div>
+                            <div class="skill skill-4">
+                                <a href="{{ url('landing') }}">
+                                    Khóa ngọn
+                                </a>
+                            </div>
+                    </a>
                 </div>
-                <div class="col-md-6 library-right">
-                    <h5 class="section-title">Khóa Học Online</h5>
-                    <div class="row">
-                        <div class="col-md-12 mt-5">
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VBBrkpDp_3U"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                            <a class="dk-online btn btn-outline-secondary" href="">Đăng ký ngay</a>
-                        </div>
+
+            </div>
+            <div class="col-md-6 library-right">
+                <h5 class="section-title">Online</h5>
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VBBrkpDp_3U"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <a class="dk-online btn btn-outline-secondary" href="">Đăng ký ngay</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 </section>
-<section class="section-4">
+{{--  <section class="section-4">
     <div class="container-fluid">
         <div class="container">
             <div class="row">
@@ -220,11 +229,11 @@
             </div>
         </div>
     </div>
-</section>
+</section>  --}}
 {{--  <section class="section-5">
     <div class="container-fluid">
         <div class="container">
-            <h4 class="section-title">Giáo Viên Ielst</h4>
+            <h3 class="section-title">Giáo Viên Ielst</h3>
             <div class="row teacher">
                 <div class="col-md-3">
                     <div class="avatar-teacher">
@@ -297,9 +306,9 @@
 <section id="blog" class="section-6 pb-4">
     <div class="container-fluid">
         <div class="container">
-            <h4 class="section-title">
-                Blog Tiếng anh
-            </h4>
+            <h3 class="section-title">
+                Blog Chia Sẻ
+            </h3>
             <div class="blog">
                 <div class="d-flex justify-content-between">
                     <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
@@ -375,41 +384,15 @@
 
                 </div>
             </div>
-            <div class="blog">
-                <div class="d-flex justify-content-between">
-                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
-                    <div class="time-blog">
-                        <i class="fa fa-calendar-alt"></i>
-                        <span>13 Stb 2019</span>
-                    </div>
-                </div>
-                <div class="blog-content">
-                    <div class="blog-img">
-                        <img src="image/blog1.png" class="img-reponsive" alt="">
-                    </div>
-                    <span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst
-                        ? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu
-                        chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
-                        nào về Ielst
-                    </span>
-                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
-                        Đọc tiếp
-                    </a>
-                </div>
-                <div class="border-bottom">
-
-                </div>
-            </div>
-            <a href="" class="btn btn-outline-danger">
-                Xem thêm blog
-            </a>
         </div>
+    </div>
     </div>
 </section>
 <section class="section-7">
+    <div class="back-ground"></div>
     <div class="container-fluid">
         <div class="container danhgia">
-            <h4 class="section-title text-white">Cảm nhận của học viên về Xuan Phi Ielst</h4>
+            <h3 class="section-title text-dark">Cảm nhận của học viên về Xuan Phi Ielst</h3>
             <div class="row">
                 <div class="col-md-4">
                     <div class="coment-box">
