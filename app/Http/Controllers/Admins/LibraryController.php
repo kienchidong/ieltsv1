@@ -26,8 +26,8 @@ class LibraryController extends Controller
     {
 
         $data['librarys'] = DB::table('librarys')
-            ->select('librarys.*','cate_librarys.name as cate_library')
-            ->join('cate_librarys','librarys.cate_id','=','cate_librarys.id')
+            ->select('librarys.*', 'cate_librarys.name as cate_library')
+            ->join('cate_librarys', 'librarys.cate_id', '=', 'cate_librarys.id')
             ->orderByDesc('id')->get();
 
         return view('admin.pages.librarys.index', $data);
@@ -42,7 +42,7 @@ class LibraryController extends Controller
     public function create()
     {
         $data['cate_librarys'] = DB::table('cate_librarys')->orderByDesc('id')->get();
-        return view('admin.pages.librarys.create',$data);
+        return view('admin.pages.librarys.create', $data);
     }
 
     /**
@@ -60,8 +60,8 @@ class LibraryController extends Controller
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
             'contentt.min' => 'Tên không được ít hơn 100 kí tự',
-            'name.required'=> 'Tên bài viết không được để trống',
-            'contentt.required'=> 'Nội dung bài viết không được để trống',
+            'name.required' => 'Tên bài viết không được để trống',
+            'contentt.required' => 'Nội dung bài viết không được để trống',
         ]);
         //Kiểm tra định dạng ảnh
         if ($request->hasFile('image')) {
@@ -83,7 +83,7 @@ class LibraryController extends Controller
 
         DB::table('librarys')->insert([
             'name' => $request->name,
-            'slug' => Str::slug($request->name."-".time()),
+            'slug' => Str::slug($request->name . "-" . time()),
             'image' => $file_name,
             'content' => $request->contentt,
             'cate_id' => $request->cate_id,
@@ -114,7 +114,9 @@ class LibraryController extends Controller
     public function edit($id)
     {
         $data['cate_librarys'] = DB::table('cate_librarys')->orderByDesc('id')->get();
-        $data['library'] = DB::table('librarys')->find($id);
+        $data['library'] = DB::table('librarys')
+            ->select('librarys.*', 'cate_librarys.name as cate_name', 'cate_librarys.id as cate_idd')
+            ->join('cate_librarys', 'librarys.cate_id', '=', 'cate_librarys.id')->where('librarys.id', $id)->first();
         return view('admin.pages.librarys.edit', $data);
     }
 
@@ -136,8 +138,8 @@ class LibraryController extends Controller
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
             'contentt.min' => 'Tên không được ít hơn 100 kí tự',
-            'name.required'=> 'Tên bài viết không được để trống',
-            'contentt.required'=> 'Nội dung bài viết không được để trống',
+            'name.required' => 'Tên bài viết không được để trống',
+            'contentt.required' => 'Nội dung bài viết không được để trống',
         ]);
 
         if ($request->hasFile('image')) {
@@ -161,7 +163,7 @@ class LibraryController extends Controller
 
         DB::table('librarys')->where('id', $id)->update([
             'name' => $request->name,
-            'slug' => Str::slug($request->name."-".time()),
+            'slug' => Str::slug($request->name . "-" . time()),
             'image' => $file_name,
             'content' => $request->contentt,
             'cate_id' => $request->cate_id,
@@ -181,8 +183,7 @@ class LibraryController extends Controller
     public function destroy($id)
     {
         $image = DB::table('librarys')->where('id', '=', $id)->pluck('image')->first();
-        if ($image == "logo.png")
-        {
+        if ($image == "logo.png") {
             DB::table('librarys')->where('id', '=', $id)->delete();
             return redirect()->back()->with('thongbao', 'Xóa thành công');
         }
@@ -234,7 +235,7 @@ class LibraryController extends Controller
 
         DB::table('cate_librarys')->insert([
             'name' => $request->name,
-            'slug' => Str::slug($request->name . "-" . time()),
+            'slug' => Str::slug($request->name),
             'status' => 1,
             'created_at' => now()
         ]);

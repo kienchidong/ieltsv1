@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,5 +27,14 @@ class AppServiceProvider extends ServiceProvider
     {
         
         Schema::defaultStringLength(191);
+        if(! $this->app->runningInConsole()) {
+
+            $data['cate_blogs'] = DB::table('cate_blogs')->orderBy('id', 'DESC')->get();
+            $data['cate_librarys'] = DB::table('cate_librarys')->orderBy('id', 'DESC')->get();
+
+            view()->share($data);
+
+
+        }
     }
 }

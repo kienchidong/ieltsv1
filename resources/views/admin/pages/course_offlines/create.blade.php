@@ -51,7 +51,7 @@
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
 
-                            <li><a href="{{route('course_offline.create')}}"><i class="fa fa-envelope-o"></i> Thêm slider
+                            <li><a href="{{route('course_offline.create')}}"><i class="fa fa-envelope-o"></i> Thêm khóa học offline
                                 </a></li>
                             </a>
                             </li>

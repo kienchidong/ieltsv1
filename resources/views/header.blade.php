@@ -27,11 +27,9 @@
                             <a href="#thuvien">Thư viện<i class="fa fa-sort-down"></i></a>
 
 	                        <ul class="nav-ul-lv-2">
-	                            <li><a href="{{ url('thuvien/nghe') }}">Listening</a></li>
-	                            <li><a href="{{ url('thuvien/noi') }}">Speacking</a></li>
-                                <li><a href="{{ url('thuvien/doc') }}">Reading</a></li>
-                                <li><a href="{{ url('thuvien/viet') }}">Writing</a></li>
-                                <li><a href="{{ url('thuvien/total') }}">For new Member</a></li>
+								@foreach($cate_librarys as $value)
+									<li><a href="{{ url('library').'/'.$value->slug}}">{{$value->name}}</a></li>
+								@endforeach
 	                        </ul>
 	                    </li>
 	                    <li><a href="#blog">blog</a>

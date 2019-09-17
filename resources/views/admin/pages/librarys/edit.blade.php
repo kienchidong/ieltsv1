@@ -53,8 +53,10 @@
                             <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện
                                 </a></li>
                             <li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>
-                            <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại
+                                    sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a>
+                            </li>
+                            <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể
+                                    loại
                                     <span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>
 
 
@@ -79,6 +81,8 @@
                             <div class="form-group">
                                 <label>Thể loại thư viện(*)</label>
                                 <select class="form-control" name="cate_id">
+                                    <option value="{{$library->cate_idd}}">{{$library->cate_name}}</option>
+
                                     @foreach($cate_librarys as $value)
                                         <option value="{{$value->id}}">{{$value->name}}</option>
                                     @endforeach
@@ -106,10 +110,10 @@
                             <div class="form-group">
                                 <label for="" style="margin-left: 10px"> Hiển thị : </label>
                                 <div id="viewImg">
-                                    <img width="100px" height="150px" src="{{asset('')}}images/librarys/{{$library->image}}">
+                                    <img width="100px" height="150px"
+                                         src="{{asset('')}}images/librarys/{{$library->image}}">
                                 </div>
                             </div>
-
 
 
                             <div class="box-footer">

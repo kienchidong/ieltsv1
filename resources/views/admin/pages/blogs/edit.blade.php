@@ -79,6 +79,7 @@
                             <div class="form-group">
                                 <label>Thể loại tin tức(*)</label>
                                 <select class="form-control" name="cate_id">
+                                    <option value="{{$blog->cate_idd}}">{{$blog->cate_name}}</option>
                                     @foreach($cate_blogs as $value)
                                         <option value="{{$value->id}}">{{$value->name}}</option>
                                     @endforeach

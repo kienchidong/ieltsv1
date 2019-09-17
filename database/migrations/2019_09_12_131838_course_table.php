@@ -26,7 +26,17 @@ class CourseTable extends Migration
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
+        //Khóa học đang tuyển
 
+//        Schema::create('course_enrolling',function (Blueprint $table)
+//        {
+//            $table->bigIncrements('id');
+//            $table->string('name');
+//            $table->string('image');
+//            $table->text('content');
+//            $table->tinyInteger('status')->default(1);
+//            $table->timestamps();
+//        });
         //Khóa học online
         Schema::create('course_onlines',function (Blueprint $table)
         {

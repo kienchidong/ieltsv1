@@ -14,11 +14,22 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('landing', function (){
+Route::get('landing', function () {
     return view('landingpage');
 })->name('landing');
 
 Auth::routes();
+Route::prefix('blogs')->group(function () {
+
+    Route::get('/{slug}', 'Client\BlogController@loaitintuc')->name('chi-tiet-tin-tuc');
+    Route::get('{cate}/{slug}', 'Client\BlogController@chitiettintuc')->name('chi-tiet-tin-tuc');
+});
+
+Route::prefix('library')->group(function () {
+
+    Route::get('{slug}', 'Client\LibraryController@loaithuvien')->name('loai-thu-vien');
+    Route::get('{cate}/{slug}', 'Client\LibraryController@chitietthuvien')->name('chi-tiet-thu-vien');
+});
 
 Route::prefix('admin')->group(function () {
     /*
@@ -142,13 +153,13 @@ Route::prefix('admin')->group(function () {
     });
 });
 Route::get('test', 'test@index');
-Route::get('/' , function(){
+Route::get('/', function () {
     return view('pages.trangchu');
 });
-Route::get('/course',function(){
+Route::get('/course', function () {
     return view('pages.course');
 });
-Route::get('/dangky',function(){
+Route::get('/dangky', function () {
     return view('pages.dangky');
 });
 // Route::get('/thuvien',function(){
@@ -156,32 +167,31 @@ Route::get('/dangky',function(){
 // });
 
 
-
-Route::get('/blog',function(){
+Route::get('/blog', function () {
     return view('pages.blog');
 });
 
-Route::get('/blog-detai',function(){
+Route::get('/blog-detai', function () {
     return view('pages.blog-detai');
 });
 
-Route::get('/lienhe' , function(){
+Route::get('/lienhe', function () {
     return view('pages.lienhe');
 });
 Route::prefix('thuvien')->group(function () {
-    Route::get('/nghe', function(){
+    Route::get('/nghe', function () {
         return view('pages.reading');
     });
-    Route::get('/noi', function(){
+    Route::get('/noi', function () {
         return view('pages.speaking');
     });
-    Route::get('/doc', function(){
+    Route::get('/doc', function () {
         return view('pages.reading');
     });
-    Route::get('/viet', function(){
+    Route::get('/viet', function () {
         return view('pages.writing');
     });
-    Route::get('/total', function(){
+    Route::get('/total', function () {
         return view('pages.tonghop');
     });
 });
