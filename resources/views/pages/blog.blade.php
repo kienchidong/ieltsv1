@@ -1,4 +1,7 @@
 @extends('master-layout')
+@section('title')
+    Blog
+@endsection
 @section('content')
 <div class="container-fluid">
     <div class="blog-page-img">

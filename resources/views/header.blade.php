@@ -15,12 +15,12 @@
 
 	                </div>
 	                <ul class="nav-ul-lv-1">
-	                    <li><a href="/">Giới thiệu</a></li>
+	                    <li><a href="{{ url('/course') }}">Giới thiệu</a></li>
 	                    <li>
 	                        <a href="#khoahoc">khóa học<i class="fa fa-sort-down"></i></a>
 	                        <ul class="nav-ul-lv-2">
-	                            <li><a href="{{ url('/course') }}">Offline</a></li>
-	                            <li><a href="#">Online</a></li>
+	                            <li><a href="{{ url('landing') }}">Offline</a></li>
+	                            <li><a href="#khoahoc">Online</a></li>
 	                        </ul>
 	                    </li>
 	                    <li>

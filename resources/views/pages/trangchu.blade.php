@@ -28,9 +28,10 @@
     </div>
 </section>  --}}
 <section class="section-11">
+    <div class="back-ground" style="background : #000"></div>
     <div class="container-fluid">
         <div class="container work-shop">
-            <div>
+            <div >
                 <span>The Ilest</span><span>Work Shop</span><br>
                 {{--  <a href="">Xem Thêm</a>  --}}
             </div>
@@ -118,7 +119,8 @@
 
                         </div>
                         <span>Nghe</span>
-                        <i class="fa fa-headphones fa-3x text-center"></i>
+                        {{--  <i class="fa fa-headphones fa-3x text-center"></i>  --}}
+                        <img src="image/nghe.png" alt="">
                     </div>
                 </a>
                 <a href="{{ url('thuvien/noi') }}">
@@ -127,7 +129,8 @@
 
                         </div>
                         <span>Nói</span>
-                        <i class="fa fa-book fa-3x text-center"></i>
+                        {{--  <i class="fa fa-book fa-3x text-center"></i>  --}}
+                        <img src="image/noi.png" alt="">
                     </div>
                 </a>
                 <a href="{{ url('thuvien/doc') }}">
@@ -136,7 +139,8 @@
 
                         </div>
                         <span>Đọc</span>
-                        <i class="fa fa-comment-dots  fa-3x"></i>
+                        {{--  <i class="fa fa-comment-dots  fa-3x"></i>  --}}
+                        <img src="image/doc.png" alt="">
                     </div>
                 </a> <a href="{{ url('thuvien/viet') }}">
                     <div class="library-box">
@@ -144,7 +148,8 @@
 
                         </div>
                         <span>Viết</span>
-                        <i class="fa fa-pencil-alt fa-3x"></i>
+                        {{--  <i class="fa fa-pencil-alt fa-3x"></i>  --}}
+                        <img src="image/viet.png" alt="">
                     </div>
                 </a>
             </div>
@@ -161,7 +166,7 @@
                     <h5 id="khoahoc" class="section-title">Offline</h5>
                     <a href="{{ url('landing') }}">
                         <div class="tree-skill">
-                            <img class="tree" src="image/tree.png" alt="">
+                            <img class="tree" src="image/tree1.png" alt="">
                             <div class="skill">
                                 <a href="{{ url('landing') }}">
                                     Khóa rễ

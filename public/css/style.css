@@ -125,18 +125,19 @@
 }
 @keyframes roi{
     from{
-        margin-bottom: 500px;
+        margin-right: 50px;
     }
     to {
-        margin-bottom: 0;
+        margin-right: 0;
     }
 }
 @keyframes show{
     from{ opacity: 0 ;
-            /* margin-top: 40px; */
+            margin-right: 40px;
     }
     to{ opacity: 1;
-        /* margin-top: 0px;} */}
+        margin-right: 0px;}
+    }
 }
 .footer-1{
     padding: 20px 0 30px 0;
@@ -461,10 +462,11 @@
 }
 .section-11 {
 
-    background-image: url('../image/background.jpg');
+    background-image: url('../image/workshop.jpg');
     background-size: cover;
     background-attachment: fixed;
     margin-top: -65px;
+    position: relative;
 }
 .work-shop {
     display: flex;
@@ -472,10 +474,16 @@
     align-items: center;
     text-align: center;
     height: 400px;
+    z-index: 20;
     font-size: 30px;
+    position: relative;
 }
 .work-shop span:nth-child(1){
     color: #ebd64f;
+    margin-right: 10px;
+}
+.work-shop span:nth-child(2){
+    color: #fff;
     margin-right: 10px;
 }
 .work-shop a {
@@ -604,10 +612,11 @@ a:hover {
     padding: 100px 0;
 }
 .section-7{
-    background-image: url('../image/bg3.jpg');
+    background-image: url('../image/coment.jpg');
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    background-size : cover ;
 }
 .back-ground {
     position: absolute;
@@ -664,6 +673,10 @@ a:hover {
      background-image: url('../image/library.jpg');
      padding: 40px 0 60px 0;
      background-attachment: fixed;
+     background-size: cover;
+ }
+ .library-box img {
+     width: 150px;
  }
 .library-box{
     height: 250px;
@@ -699,7 +712,7 @@ a:hover {
     display: none;
     /* margin-top: 10px; */
 }
-.library-box i{
+.library-box img{
     display: block;
 }
 .library-box:hover{
@@ -714,7 +727,7 @@ a:hover {
 .library-box:hover span {
     display: block;
 }
-.library-box:hover i {
+.library-box:hover img {
     display: none;
     transition: 1s;
 }
@@ -852,3 +865,72 @@ a:hover {
     position: relative;
     bottom: -5px;
 }
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+banner-title {
+	  text-align:center;
+	  background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+	  color:#555;
+	  font-family:'Roboto';
+	  font-weight:300;
+	  font-size:32px;
+	  padding-top:40vh;
+	  height:100vh;
+	  overflow:hidden;
+	  -webkit-backface-visibility: hidden;
+	  -webkit-perspective: 1000;
+	  -webkit-transform: translate3d(0,0,0);
+	}
+	.text {
+	  display:inline-block;
+	  overflow:hidden;
+      white-space:nowrap;
+      color : yellow;
+	}
+
+	.text:first-of-type {    /* For increasing performance
+	                       ID/Class should've been used.
+	                       For a small demo
+	                       it's okaish for now */
+	  animation: showup 7s infinite;
+	}
+
+	.text:last-of-type {
+	  width:0px;
+	  animation: reveal 7s infinite;
+	}
+
+	.text:last-of-type span {
+	  margin-left:-355px;
+	  animation: slidein 7s infinite;
+	}
+
+	@keyframes showup {
+	    0% {opacity:0;}
+	    20% {opacity:1;}
+	    80% {opacity:1;}
+	    100% {opacity:0;}
+	}
+
+	@keyframes slidein {
+	    0% { margin-left:-800px; }
+	    20% { margin-left:-800px; }
+	    35% { margin-left:0px; }
+	    100% { margin-left:0px; }
+	}
+
+	@keyframes reveal {
+	    0% {opacity:0;width:0px;}
+	    20% {opacity:1;width:0px;}
+	    30% {width:355px;}
+	    80% {opacity:1;}
+	    100% {opacity:0;width:355px;}
+	}
+
+	p {
+	  font-size:12px;
+	  color:#999;
+	  margin-top:200px;
+	}
