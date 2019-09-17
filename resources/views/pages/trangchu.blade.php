@@ -181,14 +181,15 @@
                             </div>
                             <div class="skill skill-3">
                                 <a href="{{ url('landing') }}">
-                                    Khóa thân
-                                </a href="{{ url('landing') }}">
+                                    Khóa thân</a>
+
                             </div>
                             <div class="skill skill-4">
                                 <a href="{{ url('landing') }}">
                                     Khóa ngọn
                                 </a>
                             </div>
+                        </div>
                     </a>
                 </div>
 
