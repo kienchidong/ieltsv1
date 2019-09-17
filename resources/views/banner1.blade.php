@@ -7,34 +7,11 @@
                             alt="First slide">
                     </div>
                     <div class="col-md-12 banner-title">
-                        <span class="delay-1">H</span>
-                        <span class="delay-2">ọ</span>
-                        <span class="delay-3">C</span>&nbsp
-                        <span class="delay-4">T</span>
-                        <span class="delay-5">i</span>
-                        <span class="delay-5">ế</span>
-                        <span class="delay-4">n</span>
-                        <span class="delay-4">g</span>&nbsp
-                        <span class="delay-2">A</span>
-                        <span class="delay-1">n</span>
-                        <span class="delay-3">h</span>&nbsp
-                        <span class="delay-1">c</span>
-                        <span class="delay-2">ù</span>
-                        <span class="delay-3">n</span>
-                        <span class="delay-4">g</span>&nbsp
-                        <span class="delay-5">X</span>
-                        <span class="delay-5">u</span>
-                        <span class="delay-4">â</span>
-                        <span class="delay-3">n</span>&nbsp
-                        <span class="delay-2">P</span>
-                        <span class="delay-1">h</span>
-                        <span class="delay-4">i</span>
-                        <span class="delay-1"i</span>&nbsp
-                        <span class="delay-2">i</span>
-                        <span class="delay-3">e</span>
-                        <span class="delay-4">l</span>
-                        <span class="delay-5">s</span>
-                        <span class="delay-1">t</span>
+                            <div class="text">English</div>
+                            <div class="text ml-3">
+                              <span>cùng Xuân Phi Ielts</span>
+                            </div class="text">
+                            </body>
                     </div>
                 </div>
                 <div class="item">
