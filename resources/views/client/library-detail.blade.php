@@ -1,6 +1,6 @@
 @extends('master-layout')
 @section('title')
-    Chi Tiết Blog
+    Chi Tiết Bài Viết
 @endsection
 @section('content')
     <div class="container-fluid">
@@ -8,26 +8,26 @@
             <div class="col-md-10 offset-md-1">
                 <h3 class="text-center border-bot">{{$library->name}}</h3>
                 <div class="d-flex flex-column course-content">
-                    <span>{{$library->content}}</span>
+                    <span>{!! $library->content !!}</span>
 
                 </div>
             </div>
             <div class="col-md-10 offset-md-1">
                 <h5 class="text-left border-bot">Các sách liên quan</h5>
                 <div class="blog-page owl-carousel owl-theme">
+                    @foreach($librarys as $key=> $value)
+                        <div class="item">
+                            <div class="silder-image">
+                                <img src="{{asset('')}}images/librarys/{{$value->image}}"
+                                     alt="First slide">
+                            </div>
+                            <div class="home-tt-text">
+                                <a href="">{{$value->name}}}</a><br>
+                            </div>
+                            <span style="font-size:10px">{{$value->created_at}}}</span>
 
-                    <div class="item">
-                        <div class="silder-image">
-                            <img src="https://res.cloudinary.com/vac-global-education-img/image/upload/v1555241496/ielts-banner.jpg"
-                                 alt="First slide">
                         </div>
-                        <div class="home-tt-text">
-                            <a href="#">Những điều cần biết về Ielst</a><br>
-                            <span style="font-size:10px">Thứ 2 ngày 20/06/2019 - GMT+7</span>
-                        </div>
-
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
 

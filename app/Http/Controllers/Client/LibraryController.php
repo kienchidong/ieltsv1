@@ -25,9 +25,11 @@ class LibraryController extends Controller
             ->join('cate_librarys','librarys.cate_id','=','cate_librarys.id')
             ->where('cate_librarys.slug','=',$cate)
             ->where('librarys.status','=',1)
-            ->get();
-        $data['library'] = DB::table('librarys')->where('slug', $slug)->get();
+            ->orderByDesc('librarys.id')
+            ->limit(6)->get();
 
-        return view('page.library-detail', $data);
+        $data['library'] = DB::table('librarys')->where('slug', $slug)->first();
+
+        return view('client.library-detail', $data);
     }
 }

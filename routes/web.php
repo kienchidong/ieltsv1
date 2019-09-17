@@ -89,6 +89,21 @@ Route::prefix('admin')->group(function () {
             Route::get('/setactive/{id}/{status}', 'Admins\ContactController@setactive')->name('contact.setactive');
 
         });
+        /*
+         * Giảng viên
+         */
+        Route::prefix('teacher')->group(function () {
+            Route::get('/list', 'Admins\TeacherController@index')->name('teacher.index');
+            Route::get('/add', 'Admins\TeacherController@create')->name('teacher.create');
+            Route::post('/add', 'Admins\TeacherController@store')->name('teacher.store');
+
+            Route::get('/edit/{id}', 'Admins\TeacherController@edit')->name('teacher.edit');
+            Route::post('/edit/{id}', 'Admins\TeacherController@update')->name('teacher.update');
+            Route::get('/destroy/{id}', 'Admins\TeacherController@destroy')->name('teacher.destroy');
+
+            Route::get('/setactive/{id}/{status}', 'Admins\TeacherController@setactive')->name('teacher.setactive');
+
+        });
 
         /*
          * Khóa học offline
