@@ -9,8 +9,8 @@
 	            <div class="d-flex justify-content-center">
 
 	                <div class="logo">
-	                    <a href="{{ url('') }}">
-	                        <img src="image/logo.png" alt="">
+	                    <a href="{{ url('/') }}">
+	                        <img src="image/logo11.png" alt="">
 	                    </a>
 
 	                </div>
