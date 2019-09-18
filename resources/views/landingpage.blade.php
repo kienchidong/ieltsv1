@@ -70,38 +70,48 @@
         function stop() {
             clearTimeout(timeout);
         }
-    </script>
-</head>
-<body>
-<section class="header-landing" style="background-image: url('{{ asset('image/bg1.jpg') }}') !important;">
+        </script>
+    </head>
+    <body>
+    <section class="header-landing" style="background-image: url('{{ asset('image/bg1.jpg') }}') !important;">
     <div style="background: rgba(0,0,0,0.3)">
         <div class="container-landing">
             <div class="row">
-                <div class="col-12 col-lg-12 col-sm-12 col-md-12">
+                <div class="col-12 col-sm-12  col-md-12 col-lg-12 col-xl-12">
                     <a href="{{ url('') }}">
-                        <img src="{{ asset('image/logo.png') }}" alt="" width="8%">
+                        <img src="{{ asset('image/logo.png') }}" alt="" width="15%">
                     </a>
                 </div>
-                <div class="col-5 col-lg-5 col-sm-5 col-md-5">
+                <div class="col-12 col-sm-12  col-md-6 col-lg-6 col-xl-6">
                     <div class="landing-count">
 
                         <div class="row count-content">
                             <h4 class="text-landing">Nhanh tay lên<br> Bạn muốn nhận được Ưu đãi</h4>
-                            <div class="col-3 col-lg-3 col-sm-3 col-md-3">
-                                <h5 class="text-landing">Ngày</h5>
-                                <span id="day-count" class="number-count" title="ngày">Ngày</span>
-                            </div>
-                            <div class="col-3 col-lg-3 col-sm-3 col-md-3">
-                                <h5 class="text-landing">Giờ</h5>
-                                <span id="hour-count" class="number-count" title="giờ">Giờ</span>
-                            </div>
-                            <div class="col-3 col-lg-3 col-sm-3 col-md-3">
-                                <h5 class="text-landing">Phút</h5>
-                                <span id="minute-count" class="number-count" title="phút">Phút</span>
-                            </div>
-                            <div class="col-3 col-lg-3 col-sm-3 col-md-3">
-                                <h5 class="text-landing">Giây</h5>
-                                <span id="second-count" class="number-count" title="giây">Giây</span>
+                            <div class="dem">
+                                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                                    <h5 class="text-landing">Ngày</h5>
+                                    <div class="count">
+                                        <span id="day-count" class="number-count" title="ngày">Ngày</span>
+                                    </div>
+                                </div>
+                                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                                    <h5 class="text-landing">Giờ</h5>
+                                    <div class="count">
+                                    <span id="hour-count" class="number-count" title="giờ">Giờ</span>
+                                    </div>
+                                </div>
+                                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                                    <h5 class="text-landing">Phút</h5>
+                                    <div class="count">
+                                    <span id="minute-count" class="number-count" title="phút">Phút</span>
+                                    </div>
+                                </div>
+                                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                                    <h5 class="text-landing">Giây</h5>
+                                    <div class="count">
+                                    <span id="second-count" class="number-count" title="giây">Giây</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="count-form col-12 col-lg-12 col-sm-12 col-md-12">
                                 <form action="" method="post">
@@ -119,7 +129,7 @@
                     </div>
 
                 </div>
-                <div class="col-7 col-lg-7 col-sm-7 col-md-7">
+                <div class="col-12 col-sm-12  col-md-6 col-lg-6 col-xl-6">
                     <div class="landing-offline">
                         <h3 style="color: white">HỌC OFFLINE TRỰC TIẾP<br> <span style="text-align: center">CÙNG XUÂN PHI IELTS</span>
                         </h3>
@@ -178,31 +188,25 @@
     <h1>5 Lý do chọn Xuân Phi IELTS</h1>
     <div class="container">
         <div class="row" style="text-align: center">
-            <div class="col-12 col-md-12 col-sm-4 col-lg-4 item-lydo">
+            <div class="col-12 col-md-12 col-sm-3 col-lg-3 item-lydo">
                 <div class="lydo">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <h4>Chương trình cá nhân hoá</h4>
                 </div>
             </div>
-            <div class="col-12 col-md-12 col-sm-4 col-lg-4 item-lydo">
+            <div class="col-12 col-md-12 col-sm-3 col-lg-3 item-lydo">
                 <div class="lydo">
                     <i class="fa fa-heart" aria-hidden="true"></i>
                     <h4>Giảng viên tận tâm</h4>
                 </div>
             </div>
-            <div class="col-12 col-md-12 col-sm-4 col-lg-4 item-lydo">
+            <div class="col-12 col-md-12 col-sm-3 col-lg-3 item-lydo">
                 <div class="lydo">
                     <i class="fa fa-book" aria-hidden="true"></i>
                     <h4>Tài liệu cập nhật</h4>
                 </div>
             </div>
-            <div class="col-12 col-md-12 col-sm-6 col-lg-6 item-lydo">
-                <div class="lydo">
-                    <i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i>
-                    <h4>Hỗ trợ 1 - 1</h4>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-sm-6 col-lg-6 item-lydo">
+            <div class="col-12 col-md-12 col-sm-3 col-lg-3 item-lydo">
                 <div class="lydo">
                     <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                     <h4>Truyền đạt dễ hiểu</h4>
