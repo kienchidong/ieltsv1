@@ -31,7 +31,7 @@
 							<li><a href="{{ url('thuvien/noi') }}">Speacking</a></li>
 							<li><a href="{{ url('thuvien/doc') }}">Reading</a></li>
 							<li><a href="{{ url('thuvien/viet') }}">Writing</a></li>
-							<li><a href="{{ url('thuvien/total') }}">For new Member</a></li>
+							{{--  <li><a href="{{ url('thuvien/total') }}">For new Member</a></li>  --}}
 						</ul>
 					</li>
 					<li><a href="#blog" id="blog-li">blog</a>
