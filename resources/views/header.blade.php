@@ -6,25 +6,25 @@
 	    <div class="background-header"></div>
 	    <div class="nav-horizontal-container container">
 	        <div class="nav-horizontal-content">
-	            <div class="d-flex justify-content-center">
+	            <div class="d-flex justify-content-center menu">
 
 	                <div class="logo">
-	                    <a href="{{ url('') }}">
-	                        <img src="image/logo.png" alt="">
+	                    <a href="{{ url('/') }}">
+	                        <img src="image/logo11.png" alt="">
 	                    </a>
 
 	                </div>
 	                <ul class="nav-ul-lv-1">
 	                    <li><a href="{{ url('/course') }}">Giới thiệu</a></li>
-	                    <li>
-	                        <a href="#khoahoc">khóa học<i class="fa fa-sort-down"></i></a>
+	                    <li >
+	                        <a href="#khoahoc" id="khoahoc-li">khóa học<i class="fa fa-sort-down"></i></a>
 	                        <ul class="nav-ul-lv-2">
 	                            <li><a href="{{ url('landing') }}">Offline</a></li>
 	                            <li><a href="#khoahoc">Online</a></li>
 	                        </ul>
 	                    </li>
-	                    <li>
-                            <a href="#thuvien">Thư viện<i class="fa fa-sort-down"></i></a>
+	                    <li >
+                            <a href="#thuvien" id="library-li">Thư viện<i class="fa fa-sort-down"></i></a>
 
 	                        <ul class="nav-ul-lv-2">
 	                            <li><a href="{{ url('thuvien/nghe') }}">Listening</a></li>
@@ -36,7 +36,7 @@
 	                    </li>
 	                    <li><a href="#blog">blog</a>
 	                    </li>
-	                    <li><a href="{{ url('lienhe') }}">liên hệ</a></li>
+						<li id="contact-li"><a href="#">liên hệ</a></li>
 	                </ul>
 	                <ul class="nav-ul-lv-1">
                         <li><a href="{{ url('dangky') }}"
@@ -68,36 +68,20 @@
 	                        <li><a href="/">Giới thiệu</a></li>
 	                        <li>
 	                            <a href="#khoahoc">khóa học</a>
-	                            {{-- <i class="fas fa-plus"></i>
-	                            <ul class="menu-left-ul-lv-child">
-	                                <li><a href="#">Lĩnh vực 1</a></li>
-	                                <li><a href="#">Lĩnh vực 2</a></li>
-	                                <li><a href="#">Lĩnh vực 3</a></li>
-	                            </ul> --}}
+
 	                        </li>
 	                        <li>
 	                            <a href="#thuvien">thư viện</a>
-	                            {{-- <i class="fas fa-plus"></i>
-                                    <ul class="menu-left-ul-lv-child">
-                                        <li><a href="#">Lĩnh vực 1</a></li>
-                                        <li><a href="#">Lĩnh vực 2</a></li>
-                                        <li><a href="#">Lĩnh vực 3</a></li>
-                                    </ul> --}}
+
 	                        </li>
 	                        <li><a href="#blog">blog</a>
-	                            {{-- <i class="fas fa-plus"></i>
-	                            <ul class="menu-left-ul-lv-child">
-	                                <li>
-	                                    <a href="#">Thư viện</a>
-	                                </li>
-	                            </ul> --}}
+
 	                        </li>
-	                        {{--  <li><a href="#">wall of fame</a></li>  --}}
 	                        <li><a href="{{ url('lienhe') }}">liên hệ</a></li>
 	                    </ul>
 
-	                </div> <!-- menu-left-content -->
-	            </div> <!-- menu-left -->
+	                </div>
+	            </div>
 	            <script type="text/javascript" src="js/menu-left-js.js"></script>
 	        </div>
 	    </div>
