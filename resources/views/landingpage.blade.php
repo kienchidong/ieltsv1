@@ -9,16 +9,18 @@
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="{{asset('')}}admin_example/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('')}}admin_example/bower_components/font-awesome/css/font-awesome.min.css">
+    {{--  <link rel="stylesheet" href="{{asset('')}}admin_example/bower_components/font-awesome/css/font-awesome.min.css">  --}}
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{asset('')}}admin_example/bower_components/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="{{asset('')}}css/landing-page.css">
-    {{--  <link rel="stylesheet" href="{{asset('')}}css/style.css">  --}}
+    {{--  <link rel="stylesheet" href="{{asset('')}}css/style.css"> --}}
     <link rel="stylesheet" href="{{asset('owl-carousel/owlcarousel/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('owl-carousel/owlcarousel/assets/owl.theme.default.min.css')}}">
 
+    <link rel="stylesheet" type="text/css" href="lib/fontawesome.5.7.2/css/all.min.css">
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <script src="{{asset('owl-carousel/owlcarousel/owl.carousel.js')}}"></script>
+    <script src="https://kit.fontawesome.com/2476b12f4d.js"></script>
     <script language="javascript">
         $(document).ready(function () {
             start();
@@ -76,7 +78,7 @@
     </script>
 </head>
 
-<body>
+<body style="background-color: #f4f6f8">
     <section class="header-landing" style="background-image: url('{{ asset('image/bg1.jpg') }}') !important;">
         <div style="background: rgba(0,0,0,0.3)">
             <div class="container-landing">
@@ -125,7 +127,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="landing-offline">
-                            <h3 style="color: white">HỌC OFFLINE TRỰC TIẾP<br> <span style="text-align: center">CÙNG
+                            <h3 class="title-ss" style="color: white">HỌC OFFLINE TRỰC TIẾP<br> <span style="text-align: center">CÙNG
                                     XUÂN PHI IELTS</span>
                             </h3>
 
@@ -137,44 +139,46 @@
                             <a class="btn btn-dangky" href="#">Đăng Ký</a>
                         </div>
                     </div>
-                     <div class="col-12 col-sm-12 col-lg-12 col-md-12 landing-infor">
-                    <div class="row">
-                        <div class="col-4 col-md-4 col-lg-4 col-sm-4">
-                            <div class="left">
-                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
-                            </div>
-                            <div class="right">
-                            <span>
-                            <strong>HotLine:</strong><br>
-                            <span>096 8907276</span>
-                        </span>
-                            </div>
+                    <div class="col-12 col-sm-12 col-lg-12 col-md-12 landing-infor">
+                        <div class="row">
+                            <div class="col-4 col-md-4 col-lg-4 col-sm-4">
+                                <div class="left">
+                                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="right">
+                                    <span>
+                                        <strong>HotLine:</strong><br>
+                                        <span>096 8907276</span>
+                                    </span>
+                                </div>
 
-                        </div>
-                        <div class="col-4 col-md-4 col-lg-4 col-sm-4">
-                            <div class="left">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
                             </div>
-                            <div class="right">
-                            <span>
-                            <strong>Địa Điểm:</strong><br>
-                            <span>Số 9A, Ngõ 9, Hoàng cầu</span>
-                        </span>
-                            </div>
+                            <div class="col-4 col-md-4 col-lg-4 col-sm-4">
+                                <div class="left">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <div class="right">
+                                    <span>
+                                        <strong>Địa Điểm:</strong><br>
+                                        <span>Số 9A, Ngõ 9, Hoàng cầu</span>
+                                    </span>
+                                </div>
 
-                        </div>
-                        <div class="col-4 col-md-4 col-lg-4 col-sm-4">
-                            <div class="left">
-                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
                             </div>
-                            <div class="right">
-                                <h3><a href="#" style="color: black;">FaceBook</a></h3>
-                                </span>
-                            </div>
+                            <div class="col-4 col-md-4 col-lg-4 col-sm-4">
+                                <div class="left">
+                                    <i class="fab fa-facebook-square"></i>
+                                </div>
+                                <div class="right">
+                                    <span>
+                                        <strong>Facebook:</strong><br>
+                                        <span><a style="color : black" href="">Xuân Phi</a></span>
+                                    </span>
+                                </div>
 
+                            </div>
                         </div>
                     </div>
-                </div>  
                 </div>
             </div>
         </div>
@@ -210,63 +214,56 @@
             </div>
         </div>
     </section>
-    <section class="landing-khoahoc">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 order-1">
-                    <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
-                </div>
-                <div class="col-md-6 order-0">
-                    <div class="khoahoc-content">
-                        <div>
-                            <h3>KHOÁ RỄ</h3>
-                            <h4>Pre-IELTS level 0</h4>
-                            <ol>
+    <section class="section-khoahoc">
+        <div class="container-fluid container-kh">
+            <div class="khoahoc">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>KHOÁ RỄ</h3>
+                        <h4>Pre-IELTS level 0</h4>
+                        <ol>
 
-                                <li>
-                                    <span>ĐỐI TƯỢNG:</span>
-                                    <ul>
-                                        <li>Đã có khả năng tiếng Anh cơ bản</li>
-                                        <li>Các kỹ năng Nghe - Đọc còn chậm, vốn từ hạn chế</li>
-                                        <li>Phản xạ Nói chậm, chưa biết cách viết luận tiếng Anh</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span>MỤC TIÊU:</span>
-                                    <ul>
-                                        <li>Có phản xạ Nghe - Nói trực tiếp tiếng Anh không thông qua tiếng Việt</li>
-                                        <li>Tự tin giao tiếp sử dụng tiếng Anh trong môi trường làm việc, trả lời phỏng
-                                            vấn
-                                        </li>
-                                        <li>Có khả năng nói - viết câu tiếng Anh rõ ý, đúng ngữ pháp</li>
-                                        <li>Có khả năng sử dụng linh hoạt vốn từ vựng trong các kỹ năng</li>
-                                        <li>Tự tin ôn luyện IELTS mục tiêu 6.0+ trong vòng 3-4 tháng tiếp theo</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span>THÔNG TIN KHÓA HỌC:</span>
-                                    <ul>
-                                        <li>Thời lượng: 20 buổi (15 buổi kỹ năng + 5 buổi chuyên sâu phát âm và phản xạ
-                                            nói)
-                                        </li>
-                                        <li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 – 21.00 các buổi tối</li>
-                                        <li>Địa điểm: Tòa nhà Dream house, ngõ 136 phố Chùa Láng, Hà Nội</li>
-                                        <li>Học phí: 4,800,000</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
+                            <li>
+                                <span>ĐỐI TƯỢNG:</span>
+                                <ul>
+                                    <li>Đã có khả năng tiếng Anh cơ bản</li>
+                                    <li>Các kỹ năng Nghe - Đọc còn chậm, vốn từ hạn chế</li>
+                                    <li>Phản xạ Nói chậm, chưa biết cách viết luận tiếng Anh</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>MỤC TIÊU:</span>
+                                <ul>
+                                    <li>Có phản xạ Nghe - Nói trực tiếp tiếng Anh không thông qua tiếng Việt</li>
+                                    <li>Tự tin giao tiếp sử dụng tiếng Anh trong môi trường làm việc, trả lời phỏng vấn
+                                    </li>
+                                    <li>Có khả năng nói - viết câu tiếng Anh rõ ý, đúng ngữ pháp</li>
+                                    <li>Có khả năng sử dụng linh hoạt vốn từ vựng trong các kỹ năng</li>
+                                    <li>Tự tin ôn luyện IELTS mục tiêu 6.0+ trong vòng 3-4 tháng tiếp theo</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>THÔNG TIN KHÓA HỌC:</span>
+                                <ul>
+                                    <li>Thời lượng: 20 buổi (15 buổi kỹ năng + 5 buổi chuyên sâu phát âm và phản xạ nói)
+                                    </li>
+                                    <li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 – 21.00 các buổi tối</li>
+                                    <li>Địa điểm: Tòa nhà Dream house, ngõ 136 phố Chùa Láng, Hà Nội</li>
+                                    <li>Học phí: 4,800,000</li>
+                                </ul>
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
+            <div class="container-fluid kh2">
+                <div class="khoahoc container-kh kh2">
+                    <div class="row">
 
-            <div class="row">
-                <div class="col-md-6 anh">
-                    <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
-                </div>
-                <div class="col-md-6 content">
-                    <div class="khoahoc-content">
-                        <div>
+                        <div class="col-md-6 order-0">
                             <h3>KHOÁ GỐC</h3>
                             <h4>Pre-IELTS level 1</h4>
                             <ol>
@@ -303,16 +300,19 @@
                                 </li>
                             </ol>
                         </div>
+                        <div class="col-md-6 order-1">
+                            <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
-                </div>
-                <div class="col-md-6">
-                    <div class="khoahoc-content">
-                        <div>
+            <div class="container-fluid container-kh">
+                <div class="khoahoc">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
+                        </div>
+                        <div class="col-md-6">
                             <h3>KHOÁ THÂN</h3>
                             <h4>Pre-IELTS level 2</h4>
                             <ol>
@@ -353,13 +353,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 anh">
-                    <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
-                </div>
-                <div class="col-md-6 content">
-                    <div class="khoahoc-content">
-                        <div>
+            <div class="container-fluid kh2">
+                <div class="khoahoc container-kh kh2">
+                    <div class="row">
+
+                        <div class="col-md-6 order-0">
                             <h3>KHOÁ NGỌN</h3>
                             <h4>Pre-IELTS Chuyên sâu</h4>
                             <ol>
@@ -398,10 +396,13 @@
                                 </li>
                             </ol>
                         </div>
+                        <div class="col-md-6 order-1">
+                            <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
     </section>
     {{--  <section class="landing-khoahoc">
         <div id="khoa-re" class="khoahoc">
@@ -597,7 +598,7 @@
     </section>
     <section id="teacher">
         <div class="container">
-            <h3>OUR TEACHER</h3>
+            <h3 class="title-ss">OUR TEACHER</h3>
             <div class="home-demo">
                 <div class="row">
                     <div class="large-12 columns">
@@ -674,7 +675,7 @@
     </section>
     <section id="khoahoc-now">
         <div class="container">
-            <h3 style="text-align: center">Khoá học đang tuyển sinh</h3>
+            <h3 class="title-ss">Khoá học đang tuyển sinh</h3>
             <div class="home-demo">
                 <div class="row">
                     <div class="large-12 columns">
@@ -682,7 +683,7 @@
                             <div class="item">
                                 <div class="teacher-infor">
                                     <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="">
-                                    <div class="">
+                                    <div class="name-ts">
                                         <h4>Lớp Ngọn Tháng 10/2019</h4>
                                     </div>
                                 </div>
@@ -699,102 +700,108 @@
         </div>
     </section>
     <section class="section-7">
-            <div class="back-ground"></div>
-            <div class="container-fluid">
-                <div class="container danhgia">
-                    <h3 class="section-title text-dark">Cảm nhận của học viên về Xuan Phi Ielst</h3>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="coment-box">
-                                <div class="comment-title">
-                                    Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ muốn đi
-                                    học cô tiếp
-                                    :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa, cô
-                                    cũng buồn cười nữa =)
+        <div class="back-ground"></div>
+        <div class="container-fluid">
+            <div class="container danhgia">
+            <h3 class="title-ss" style="z-index : 20 ;position: relative;">Cảm nhận của học viên về Xuan Phi Ielst</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="coment-box">
+                            <div class="comment-title">
+                                Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ
+                                muốn đi
+                                học cô tiếp
+                                :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa,
+                                cô
+                                cũng buồn cười nữa =)
+                            </div>
+                            <div class="coment-member">
+                                <div class="comment-avt">
+                                    <img src="https://photo-3-baomoi.zadn.vn/w1000_r1/2018_10_03_180_28002521/27ad3ab469f580abd9e4.jpg"
+                                        alt="">
                                 </div>
-                                <div class="coment-member">
-                                    <div class="comment-avt">
-                                        <img src="https://photo-3-baomoi.zadn.vn/w1000_r1/2018_10_03_180_28002521/27ad3ab469f580abd9e4.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="coment-name">
-                                        <a href="">Hoàng Thu Hà</a> <br>
-                                        <span>Khóa Ielst-01</span>
-                                        <div class="star">
-                                            <i class="fa fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                        </div>
+                                <div class="coment-name">
+                                    <a href="">Hoàng Thu Hà</a> <br>
+                                    <span>Khóa Ielst-01</span>
+                                    <div class="star">
+                                        <i class="fa fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-                        <div class="col-md-4">
-                            <div class="coment-box">
-                                <div class="comment-title">
-                                    Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ muốn đi
-                                    học cô tiếp
-                                    :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa, cô
-                                    cũng buồn cười nữa =)
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="coment-box">
+                            <div class="comment-title">
+                                Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ
+                                muốn đi
+                                học cô tiếp
+                                :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa,
+                                cô
+                                cũng buồn cười nữa =)
+                            </div>
+                            <div class="coment-member">
+                                <div class="comment-avt">
+                                    <img src="https://photo-3-baomoi.zadn.vn/w1000_r1/2018_10_03_180_28002521/27ad3ab469f580abd9e4.jpg"
+                                        alt="">
                                 </div>
-                                <div class="coment-member">
-                                    <div class="comment-avt">
-                                        <img src="https://photo-3-baomoi.zadn.vn/w1000_r1/2018_10_03_180_28002521/27ad3ab469f580abd9e4.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="coment-name">
-                                        <a href="">Hoàng Thu Hà</a> <br>
-                                        <span>Khóa Ielst-01</span>
-                                        <div class="star">
-                                            <i class="fa fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                        </div>
+                                <div class="coment-name">
+                                    <a href="">Hoàng Thu Hà</a> <br>
+                                    <span>Khóa Ielst-01</span>
+                                    <div class="star">
+                                        <i class="fa fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-                        <div class="col-md-4">
-                            <div class="coment-box">
-                                <div class="comment-title">
-                                    Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ muốn đi
-                                    học cô tiếp
-                                    :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa, cô
-                                    cũng buồn cười nữa =)
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="coment-box">
+                            <div class="comment-title">
+                                Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ
+                                muốn đi
+                                học cô tiếp
+                                :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa,
+                                cô
+                                cũng buồn cười nữa =)
+                            </div>
+                            <div class="coment-member">
+                                <div class="comment-avt">
+                                    <img src="https://photo-3-baomoi.zadn.vn/w1000_r1/2018_10_03_180_28002521/27ad3ab469f580abd9e4.jpg"
+                                        alt="">
                                 </div>
-                                <div class="coment-member">
-                                    <div class="comment-avt">
-                                        <img src="https://photo-3-baomoi.zadn.vn/w1000_r1/2018_10_03_180_28002521/27ad3ab469f580abd9e4.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="coment-name">
-                                        <a href="">Hoàng Thu Hà</a> <br>
-                                        <span>Khóa Ielst-01</span>
-                                        <div class="star">
-                                            <i class="fa fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                            <i class="fas fa-star star-check"></i>
-                                        </div>
+                                <div class="coment-name">
+                                    <a href="">Hoàng Thu Hà</a> <br>
+                                    <span>Khóa Ielst-01</span>
+                                    <div class="star">
+                                        <i class="fa fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
+                                        <i class="fas fa-star star-check"></i>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
+
+
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <section id="lienhe">
         <div class="container">
             <div class="row">

@@ -32,7 +32,8 @@
     <div class="container-fluid">
         <div class="container work-shop">
             <div >
-                
+                <span>The Ielts</span>
+                <span>Work Shop</span>
                 {{--  <a href="">Xem Thêm</a>  --}}
             </div>
 
