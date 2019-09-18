@@ -214,6 +214,8 @@
     letter-spacing: 3px;
     position: relative;
     z-index: 29;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
 }
 .section-1 {
     margin-top: -70px ;
@@ -354,9 +356,10 @@
     border-right: 1px dashed  gray;
 }
 .tree {
-    width: 350px;
+    width: 400px;
     position: relative;
     z-index: 99;
+    margin-left: -25%;
 }
 .tree-skill{
     position: relative;
@@ -369,6 +372,7 @@
     background: #000;
     right: -100px;
     z-index: 9;
+    margin-top: -12px;
 }
 .skill-2 {
     bottom: 100px;
@@ -394,6 +398,7 @@
     right: 0;
     bottom: -5px;
     color: #000;
+    font-family: 'Playfair Display', serif;
 }
 .skill a:hover{
     -webkit-transform: scale(1.5,1.5);
@@ -565,8 +570,11 @@ a:hover {
 }
 .time-blog {
     text-transform: uppercase;
-    font-weight: 600;
+    /*font-weight: 600;*/
     color: #000;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+    font-size: 15px;
 }
 .blog-img {
     max-width: 320px;
@@ -678,9 +686,16 @@ a:hover {
  .library-box img {
      width: 150px;
  }
+.library-box span{
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
 .library-box{
     height: 250px;
     width: 250px;
+
+
+
     /* opacity: 100%; */
     border-radius: 100%;
     padding: 10px;
@@ -690,7 +705,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     background: #ebd64f;
     color: #000;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -709,6 +724,8 @@ a:hover {
 }
 .library-box span {
     z-index: 10;
+    font-weight: bold;
+    font-style: italic;
     display: none;
     /* margin-top: 10px; */
 }

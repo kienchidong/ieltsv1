@@ -11,12 +11,15 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-Route::get('landing', function () {
+Route::get('/gate', function () {
+    return view('welcome');
+});
+Route::get('landing', function (){
     return view('landingpage');
 })->name('landing');
+Route::get('landing2', function (){
+    return view('landingpage2');
+})->name('landing2');
 
 Auth::routes();
 Route::prefix('blogs')->group(function () {

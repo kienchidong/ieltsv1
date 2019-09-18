@@ -35,7 +35,7 @@
 	        </div>
 	    </div>  --}}
 	    <div class="container-fluid footer-2">
-	        <div class="container">
+	        <div class="container" id="contact">
 	            <div class="row">
 	                <div class="col-md-3 logo-footer">
 	                    <a href="">

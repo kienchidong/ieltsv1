@@ -21,6 +21,8 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="lib/bootstrap_4.0.0/js/bootstrap.min.js"></script>
+{{--Font--}}
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap&subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
 
 </head>
 <body>
@@ -28,6 +30,25 @@
 @include('header')
 @yield('content')
 @include('footer')
-
+<script>
+	$(document).ready(function () {
+		$('.menu #contact-li').on('click', function(event) {
+			event.preventDefault();
+			$('html,body').animate({scrollTop: $('#contact').offset().top}, 1500);
+		});
+		$('.menu #khoahoc-li').on('click', function(event) {
+			event.preventDefault();
+			$('html,body').animate({scrollTop: $('#khoahoc').offset().top}, 1500);
+		});
+		$('.menu #blog-li').on('click', function(event) {
+			event.preventDefault();
+			$('html,body').animate({scrollTop: $('#blog').offset().top}, 1500);
+		});
+		$('.menu #library-li').on('click', function(event) {
+			event.preventDefault();
+			$('html,body').animate({scrollTop: $('#library').offset().top}, 1500);
+		});
+	});
+</script>
 </body>
 </html>
