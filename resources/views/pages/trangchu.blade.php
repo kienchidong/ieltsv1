@@ -32,7 +32,7 @@
     <div class="container-fluid">
         <div class="container work-shop">
             <div >
-                <span>The Ilest</span><span>Work Shop</span><br>
+                
                 {{--  <a href="">Xem Thêm</a>  --}}
             </div>
 
@@ -42,7 +42,7 @@
 <section class="section-2">
     <div class="container-fluid">
         <div class="container">
-            <h3 class="section-title pt-4">Host Pot</h3>
+            <h3 class="section-title pt-4">Host Post</h3>
             <div class="row pb-5">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="course-box">
@@ -109,7 +109,7 @@
     </div>
 </section>
 <section id="thuvien" class="section-thuvien">
-    <div class="container-fluid">
+    <div class="container-fluid" id="library">
         <div class="container">
             <h3 class="section-title text-white">Thư viện</h3>
             <div class="library">
@@ -158,7 +158,7 @@
 </section>
 <section class="section-3">
     <div class="container-fluid">
-        <div class="container">
+        <div class="container" id="khoahoc">
             <h3 class="section-title">Khóa học</h3>
             <div class="row pb-5">
 
@@ -511,6 +511,7 @@
             count($(this))
         })
     })(jQuery);
+
 
 </script>
 

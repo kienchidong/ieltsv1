@@ -28,6 +28,21 @@
 @include('header')
 @yield('content')
 @include('footer')
-
+<script>
+	$(document).ready(function () {
+		$('.menu #contact-li').on('click', function(event) {
+			event.preventDefault();
+			$('html,body').animate({scrollTop: $('#contact').offset().top}, 1500);
+		});
+		$('.menu #khoahoc-li').on('click', function(event) {
+			event.preventDefault();
+			$('html,body').animate({scrollTop: $('#khoahoc').offset().top}, 1500);
+		});
+		$('.menu #library-li').on('click', function(event) {
+			event.preventDefault();
+			$('html,body').animate({scrollTop: $('#library').offset().top}, 1500);
+		});
+	});
+</script>
 </body>
 </html>

@@ -354,9 +354,10 @@
     border-right: 1px dashed  gray;
 }
 .tree {
-    width: 350px;
+    width: 400px;
     position: relative;
     z-index: 99;
+    margin-left: -25%;
 }
 .tree-skill{
     position: relative;
@@ -369,6 +370,7 @@
     background: #000;
     right: -100px;
     z-index: 9;
+    margin-top: -12px;
 }
 .skill-2 {
     bottom: 100px;
@@ -709,6 +711,8 @@ a:hover {
 }
 .library-box span {
     z-index: 10;
+    font-weight: bold;
+    font-style: italic;
     display: none;
     /* margin-top: 10px; */
 }
