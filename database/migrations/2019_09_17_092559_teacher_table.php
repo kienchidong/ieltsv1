@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ContactTable extends Migration
+class TeacherTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,15 @@ class ContactTable extends Migration
      */
     public function up()
     {
-        /*
-         * Liên hệ ở phần bên phải giao diện chính
-         */
-        Schema::create('contacts', function (Blueprint $table) {
+        Schema::create('teachers',function (Blueprint $table)
+        {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('icon');
-            $table->text('link');
+            $table->string('position');
+            $table->string('image');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
-
     }
 
     /**

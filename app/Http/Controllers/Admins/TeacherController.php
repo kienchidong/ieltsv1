@@ -2,22 +2,15 @@
 
 namespace App\Http\Controllers\Admins;
 
-use CKSource\CKFinder\Filesystem\File\File;
-use function GuzzleHttp\Psr7\str;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
-class SliderController extends Controller
+class TeacherController extends Controller
 {
-    /*
-     * View Share
-     */
     public function __construct()
     {
-        $data['slider_count'] = DB::table('sliders')->count();
+        $data['teacher_count'] = DB::table('teachers')->count();
         view()->share($data);
     }
 
@@ -28,8 +21,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $data['sliders'] = DB::table('sliders')->orderByDesc('id')->get();
-        return view('admin.pages.sliders.index', $data);
+        $data['teachers'] = DB::table('teachers')->orderByDesc('id')->get();
+        return view('admin.pages.teachers.index', $data);
     }
 
     /**
@@ -39,7 +32,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.sliders.create');
+        return view('admin.pages.teachers.create');
     }
 
     /**
@@ -62,10 +55,10 @@ class SliderController extends Controller
 
             $name = $file->getClientOriginalName();
             $image = Str::random(7) . "_image_" . $name;
-            while (file_exists('images/sliders/' . $image)) {
+            while (file_exists('images/teachers/' . $image)) {
                 $image = Str::random(7) . "_image_" . $name;
             }
-            $file->move('images/sliders/', $image);
+            $file->move('images/teachers/', $image);
             $file_name = $image;
 
         } else {
@@ -73,7 +66,7 @@ class SliderController extends Controller
         }
 
 
-        DB::table('sliders')->insert([
+        DB::table('teachers')->insert([
             'title' => $request->title,
             'image' => $file_name,
             'status' => 1,
@@ -102,8 +95,8 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        $data['slider'] = DB::table('sliders')->find($id);
-        return view('admin.pages.sliders.edit', $data);
+        $data['teacher'] = DB::table('teachers')->find($id);
+        return view('admin.pages.teachers.edit', $data);
     }
 
     /**
@@ -115,7 +108,7 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $image_update = DB::table('sliders')->where('id', '=', $id)->pluck('image');
+        $image_update = DB::table('teachers')->where('id', '=', $id)->pluck('image');
 
         $this->validate($request, [
             'title' => 'min:3',
@@ -129,26 +122,26 @@ class SliderController extends Controller
 
             $name = $file->getClientOriginalName();
             $image = Str::random(4) . "_image_" . $name;
-            while (file_exists('images/sliders/' . $image)) {
+            while (file_exists('images/teachers/' . $image)) {
                 $image = Str::random(4) . "_image_" . $name;
             }
-            $file->move('images/sliders/', $image);
+            $file->move('images/teachers/', $image);
             $file_name = $image;
-            if (file_exists('images/sliders/' . $image_update[0]) && $image_update[0] != '') {
-                unlink('images/sliders/' . $image_update[0]);
+            if (file_exists('images/teachers/' . $image_update[0]) && $image_update[0] != '') {
+                unlink('images/teachers/' . $image_update[0]);
             }
 
         } else {
-            $file_name = DB::table('sliders')->where('id', $id)->pluck('image')->first();
+            $file_name = DB::table('teachers')->where('id', $id)->pluck('image')->first();
         }
 
-        DB::table('sliders')->where('id', $id)->update([
+        DB::table('teachers')->where('id', $id)->update([
             'title' => $request->title,
             'image' => $file_name,
             'updated_at' => now()
         ]);
 
-        return redirect()->route('slider.index')->with('thongbao', 'Sửa thành công');
+        return redirect()->route('teacher.index')->with('thongbao', 'Sửa thành công');
     }
 
     /**
@@ -159,27 +152,27 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        $image = DB::table('sliders')->where('id', '=', $id)->pluck('image')->first();
+        $image = DB::table('teachers')->where('id', '=', $id)->pluck('image')->first();
         if ($image == "logo.png")
         {
-            DB::table('sliders')->where('id', '=', $id)->delete();
+            DB::table('teachers')->where('id', '=', $id)->delete();
             return redirect()->back()->with('thongbao', 'Xóa thành công');
         }
-        if (file_exists('images/sliders/' . $image)) {
-            unlink('images/sliders/' . $image);
+        if (file_exists('images/teachers/' . $image)) {
+            unlink('images/teachers/' . $image);
         }
-        DB::table('sliders')->where('id', '=', $id)->delete();
+        DB::table('teachers')->where('id', '=', $id)->delete();
 
         return redirect()->back()->with('thongbao', 'Xóa thành công');
     }
 
     /*
-     * Thực hiện ẩn hay hiện cái slider
+     * Thực hiện ẩn hay hiện cái teacher
      */
 
     public function setactive($id, $status)
     {
-        DB::table('sliders')->where('id', '=', $id)->update([
+        DB::table('teachers')->where('id', '=', $id)->update([
             'status' => $status,
         ]);
         return redirect()->back()->with('thongbao', 'Thành công');

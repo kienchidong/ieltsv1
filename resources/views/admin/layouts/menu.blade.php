@@ -53,6 +53,38 @@
 
                 </ul>
             </li>
+            {{--Librarys --}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Thư viện</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('library.create')}}"><i class="fa fa-circle-o"></i> Thêm thư viện</a></li>
+                    <li><a href="{{route('library.index')}}"><i class="fa fa-circle-o"></i> Danh sách thư viện </a></li>
+                    <li><a href="{{route('cate_library.create')}}"><i class="fa fa-circle-o"></i> Thêm thể loại</a></li>
+
+                </ul>
+            </li>
+            {{--Blogs --}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Tin tức</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('blog.create')}}"><i class="fa fa-circle-o"></i> Thêm tin tức</a></li>
+                    <li><a href="{{route('blog.index')}}"><i class="fa fa-circle-o"></i> Danh sách tin tức </a></li>
+                    <li><a href="{{route('cate_blog.create')}}"><i class="fa fa-circle-o"></i> Thêm thể loại</a></li>
+
+                </ul>
+            </li>
             {{--Slider ở trang chủ --}}
             <li class="treeview">
                 <a href="#">
@@ -65,6 +97,37 @@
                 <ul class="treeview-menu">
                     <li><a href="{{route('slider.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
                     <li><a href="{{route('slider.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
+
+                </ul>
+            </li>
+            {{--Liên hệ--}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Liên hệ </span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('contact.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
+                    <li><a href="{{route('contact.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
+
+                </ul>
+            </li>
+
+            {{--Khóa học--}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Khóa học offline </span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('course_offline.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
+                    <li><a href="{{route('course_offline.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
 
                 </ul>
             </li>

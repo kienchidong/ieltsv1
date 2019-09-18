@@ -2,25 +2,18 @@
 
 namespace App\Http\Controllers\Admins;
 
-use CKSource\CKFinder\Filesystem\File\File;
-use function GuzzleHttp\Psr7\str;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class SliderController extends Controller
+class ContactController extends Controller
 {
-    /*
-     * View Share
-     */
     public function __construct()
     {
-        $data['slider_count'] = DB::table('sliders')->count();
+        $data['contact_count'] = DB::table('contacts')->count();
         view()->share($data);
     }
-
     /**
      * Display a listing of the resource.
      *
@@ -28,8 +21,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $data['sliders'] = DB::table('sliders')->orderByDesc('id')->get();
-        return view('admin.pages.sliders.index', $data);
+        $data['contact'] = DB::table('contacts')->orderByDesc('id')->get();
+        return view('admin.pages.contacts.index', $data);
     }
 
     /**
@@ -39,21 +32,25 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.sliders.create');
+        return view('admin.pages.contacts.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
+        $regex = '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/';
         $this->validate($request, [
-            'title' => 'min:3',
+            'name' => 'min:3',
+            'link' => 'required|regex:' . $regex,
         ], [
-            'title.min' => 'Tên không được ít hơn 3 kí tự',
+            'name.min' => 'Tên không được ít hơn 3 kí tự',
+            'link.required' => 'Đường dẫn không được để trống',
+            'link.regex' => 'Chưa đúng định dạng',
         ]);
         //Kiểm tra định dạng ảnh
         if ($request->hasFile('image')) {
@@ -62,10 +59,10 @@ class SliderController extends Controller
 
             $name = $file->getClientOriginalName();
             $image = Str::random(7) . "_image_" . $name;
-            while (file_exists('images/sliders/' . $image)) {
+            while (file_exists('images/contacts/' . $image)) {
                 $image = Str::random(7) . "_image_" . $name;
             }
-            $file->move('images/sliders/', $image);
+            $file->move('images/contacts/', $image);
             $file_name = $image;
 
         } else {
@@ -73,9 +70,10 @@ class SliderController extends Controller
         }
 
 
-        DB::table('sliders')->insert([
-            'title' => $request->title,
-            'image' => $file_name,
+        DB::table('contacts')->insert([
+            'name' => $request->name,
+            'icon' => $file_name,
+            'link' => $request->link,
             'status' => 1,
             'created_at' => now()
         ]);
@@ -86,7 +84,7 @@ class SliderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -97,30 +95,33 @@ class SliderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $data['slider'] = DB::table('sliders')->find($id);
-        return view('admin.pages.sliders.edit', $data);
+        $data['contact'] = DB::table('contacts')->find($id);
+        return view('admin.pages.contacts.edit', $data);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $image_update = DB::table('sliders')->where('id', '=', $id)->pluck('image');
-
+        $image_update = DB::table('contacts')->where('id', '=', $id)->pluck('icon');
+        $regex = '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/';
         $this->validate($request, [
-            'title' => 'min:3',
+            'name' => 'min:3',
+            'link' => 'required|regex:' . $regex,
         ], [
-            'title.min' => 'Tên không được ít hơn 3 kí tự',
+            'name.min' => 'Tên không được ít hơn 3 kí tự',
+            'link.required' => 'Đường dẫn không được để trống',
+            'link.regex' => 'Chưa đúng định dạng',
         ]);
 
         if ($request->hasFile('image')) {
@@ -129,46 +130,47 @@ class SliderController extends Controller
 
             $name = $file->getClientOriginalName();
             $image = Str::random(4) . "_image_" . $name;
-            while (file_exists('images/sliders/' . $image)) {
+            while (file_exists('images/contacts/' . $image)) {
                 $image = Str::random(4) . "_image_" . $name;
             }
-            $file->move('images/sliders/', $image);
+            $file->move('images/contacts/', $image);
             $file_name = $image;
-            if (file_exists('images/sliders/' . $image_update[0]) && $image_update[0] != '') {
-                unlink('images/sliders/' . $image_update[0]);
+            if (file_exists('images/contacts/' . $image_update[0]) && $image_update[0] != '') {
+                unlink('images/contacts/' . $image_update[0]);
             }
 
         } else {
-            $file_name = DB::table('sliders')->where('id', $id)->pluck('image')->first();
+            $file_name = DB::table('contacts')->where('id', $id)->pluck('icon')->first();
         }
 
-        DB::table('sliders')->where('id', $id)->update([
-            'title' => $request->title,
-            'image' => $file_name,
+        DB::table('contacts')->where('id', $id)->update([
+            'name' => $request->name,
+            'link' => $request->link,
+            'icon' => $file_name,
             'updated_at' => now()
         ]);
 
-        return redirect()->route('slider.index')->with('thongbao', 'Sửa thành công');
+        return redirect()->route('contact.index')->with('thongbao', 'Sửa thành công');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $image = DB::table('sliders')->where('id', '=', $id)->pluck('image')->first();
+        $image = DB::table('contacts')->where('id', '=', $id)->pluck('icon')->first();
         if ($image == "logo.png")
         {
-            DB::table('sliders')->where('id', '=', $id)->delete();
+            DB::table('contacts')->where('id', '=', $id)->delete();
             return redirect()->back()->with('thongbao', 'Xóa thành công');
         }
-        if (file_exists('images/sliders/' . $image)) {
-            unlink('images/sliders/' . $image);
+        if (file_exists('images/contacts/' . $image)) {
+            unlink('images/contacts/' . $image);
         }
-        DB::table('sliders')->where('id', '=', $id)->delete();
+        DB::table('contacts')->where('id', '=', $id)->delete();
 
         return redirect()->back()->with('thongbao', 'Xóa thành công');
     }
@@ -179,10 +181,9 @@ class SliderController extends Controller
 
     public function setactive($id, $status)
     {
-        DB::table('sliders')->where('id', '=', $id)->update([
+        DB::table('contacts')->where('id', '=', $id)->update([
             'status' => $status,
         ]);
         return redirect()->back()->with('thongbao', 'Thành công');
     }
-
 }

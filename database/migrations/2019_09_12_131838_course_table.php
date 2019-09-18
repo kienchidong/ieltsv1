@@ -13,6 +13,7 @@ class CourseTable extends Migration
      */
     public function up()
     {
+
         //Khoá học offline
         Schema::create('course_offlines',function (Blueprint $table)
         {
@@ -20,12 +21,22 @@ class CourseTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('image');
-            $table->text('detail')->nullable();
+
             $table->text('content');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
+        //Khóa học đang tuyển
 
+        Schema::create('course_enrolling',function (Blueprint $table)
+        {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('image');
+
+            $table->tinyInteger('status')->default(1);
+            $table->timestamps();
+        });
         //Khóa học online
         Schema::create('course_onlines',function (Blueprint $table)
         {

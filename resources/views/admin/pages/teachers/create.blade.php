@@ -1,16 +1,16 @@
 @extends('admin.layouts.master-layout')
 @section('title')
-    Thêm sliders
+    Thêm giáo viên
 @endsection
 @section('content')
 
     <section class="content-header">
         <h1>
-            Thêm sliders
+            Thêm giáo viên
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{{route('slider.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Thêm sliders</li>
+            <li><a href="{{route('teacher.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Thêm giáo viên</li>
         </ol>
     </section>
     <br>
@@ -51,12 +51,12 @@
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
 
-                            <li><a href="{{route('slider.create')}}"><i class="fa fa-envelope-o"></i> Thêm slider
+                            <li><a href="{{route('teacher.create')}}"><i class="fa fa-envelope-o"></i> Thêm giáo viên
                                 </a></li>
                             </a>
                             </li>
-                            <li><a href="{{route('slider.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách<span class="label label-primary pull-right">{{$slider_count}}</span></a></li>
+                            <li><a href="{{route('teacher.index')}}"><i class="fa fa-file-text-o"></i> Danh
+                                    sách<span class="label label-primary pull-right">{{$teacher_count}}</span></a></li>
 
                         </ul>
                     </div>
@@ -70,20 +70,25 @@
             <!-- /.col -->
             <div class="col-md-9">
                 <div class="box box-primary">
-                    <h3 style="text-align: left; padding-left: 5px">Thêm sliders</h3>
-                    <form role="form" method="POST" action="{{route('slider.store')}}"
+                    <h3 style="text-align: left; padding-left: 5px">Thêm giáo viên</h3>
+                    <form role="form" method="POST" action="{{route('teacher.store')}}"
                           enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tiêu đề</label>
-                                <input type="text" class="form-control" placeholder="Nhập vào đây... " name="title"
-                                       value="{{ old('title') }}">
+                                <label for="exampleInputEmail1">Họ và tên </label>
+                                <input type="text" class="form-control" placeholder="Nhập vào đây... " name="name"
+                                       value="{{ old('name') }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Chức vụ </label>
+                                <input type="text" class="form-control" placeholder="Nhập vào đây... " name="position"
+                                       value="{{ old('position') }}">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputFile">Slider </label>
+                                <label for="exampleInputFile">Hình ảnh </label>
                                 <input type="file" id="image" name="image" onchange="showIMG()">
                             </div>
                             <div class="form-group">

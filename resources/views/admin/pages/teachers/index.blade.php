@@ -1,6 +1,6 @@
 @extends('admin.layouts.master-layout')
 @section('title')
-    Danh sách silder
+    Danh sách giáo viên
 @endsection
 
 @section('content')
@@ -17,14 +17,14 @@
 
         <section class="content-header">
             <h1>
-                Danh sách slider
+                Danh sách giáo viên
             </h1>
             <ol class="breadcrumb">
-                <li><a href="{{route('slider.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active">Slider</li>
+                <li><a href="{{route('teacher.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Giáo viên</li>
             </ol>
         </section>
-        <div >
+        <div>
             @if(count($errors) > 0)
                 <div class="alert alert-danger">
                     @foreach($errors->all() as $err)
@@ -46,7 +46,7 @@
                     <div class="box">
 
                         <div class="box-header">
-                            <a href="{{route('slider.create')}}" class="btn btn-success">Thêm</a>
+                            <a href="{{route('teacher.create')}}" class="btn btn-success">Thêm</a>
                         </div>
 
                         <!-- /.box-header -->
@@ -56,19 +56,21 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Tên</th>
+                                    <th>Chức vụ</th>
                                     <th>Hình ảnh</th>
                                     <th>Trạng thái</th>
                                     <th class="col-md-3">Hành động</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($sliders as $value)
+                                @foreach($teachers as $value)
                                     <tr class="odd gradeX" align="center">
                                         <td>{{$value->id}}</td>
-                                        <td>{!! $value->title !!}</td>
+                                        <td>{!! $value->name !!}</td>
+                                        <td>{{$value->position}}</td>
 
                                         <td><img width="100px" height="100px"
-                                                 src="{{asset('')}}images/sliders/{{$value->image}}">
+                                                 src="{{asset('')}}images/giáo viên/{{$value->image}}">
                                         </td>
 
                                         <td>
@@ -80,7 +82,7 @@
                                         </td>
                                         <td>
                                             {{--<a class="btn btn-primary" id="bt{{$value->id}}" style="display: block"--}}
-                                               {{--onclick="thaotac({{$value->id}})">Thao tác</a>--}}
+                                            {{--onclick="thaotac({{$value->id}})">Thao tác</a>--}}
                                             <div>
                                                 <a class="btn btn-primary" id="edit"
                                                    href="{{ url('admin/slider/edit/'.$value->id) }}"
@@ -92,7 +94,7 @@
                                                 @if($value->status==1)
                                                     <a class="btn btn-info"
                                                        href="{{ url('admin/slider/setactive/'.$value->id.'/0') }}"
-                                                       onclick="return confirm('Hành động sẽ ẩn sliders này! bạn có muốn tiếp tục?')">Ẩn</a>
+                                                       onclick="return confirm('Hành động sẽ ẩn giáo viên này! bạn có muốn tiếp tục?')">Ẩn</a>
                                                 @else
                                                     <a class="btn btn-warning"
                                                        href="{{ url('admin/slider/setactive/'.$value->id.'/1') }}"
@@ -101,9 +103,6 @@
 
                                                 @endif
                                             </div>
-
-
-
 
 
                                     </tr>

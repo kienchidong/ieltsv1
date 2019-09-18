@@ -1,16 +1,16 @@
 @extends('admin.layouts.master-layout')
 @section('title')
-    Thêm sliders
+    Thêm thư viện
 @endsection
 @section('content')
 
     <section class="content-header">
         <h1>
-            Thêm sliders
+            Thêm tin tức
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{{route('slider.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Thêm sliders</li>
+            <li><a href="{{route('blog.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Thêm tin tức</li>
         </ol>
     </section>
     <br>
@@ -50,13 +50,13 @@
 
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
-
-                            <li><a href="{{route('slider.create')}}"><i class="fa fa-envelope-o"></i> Thêm slider
+                            <li><a href="{{route('blog.create')}}"><i class="fa fa-envelope-o"></i> Thêm tin tức
                                 </a></li>
-                            </a>
-                            </li>
-                            <li><a href="{{route('slider.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách<span class="label label-primary pull-right">{{$slider_count}}</span></a></li>
+                            <li><a href="{{route('blog.index')}}"><i class="fa fa-file-text-o"></i> Danh
+                                    sách tin tức<span class="label label-primary pull-right">{{$blog_count}}</span></a></li>
+                            <li><a href="{{route('cate_blog.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại
+                                    <span class="label label-primary pull-right">{{$cate_blog_count}}</span></a></li>
+
 
                         </ul>
                     </div>
@@ -70,20 +70,37 @@
             <!-- /.col -->
             <div class="col-md-9">
                 <div class="box box-primary">
-                    <h3 style="text-align: left; padding-left: 5px">Thêm sliders</h3>
-                    <form role="form" method="POST" action="{{route('slider.store')}}"
+                    <h3 style="text-align: left; padding-left: 5px">Thêm bài viết</h3>
+                    <form role="form" method="POST" action="{{route('blog.store')}}"
                           enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tiêu đề</label>
-                                <input type="text" class="form-control" placeholder="Nhập vào đây... " name="title"
-                                       value="{{ old('title') }}">
+                                <label>Thể loại bài viết (*)</label>
+                                <select class="form-control" name="cate_id">
+                                    @foreach($cate_blogs as $value)
+                                        <option value="{{$value->id}}">{{$value->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tên bài viết (*)</label>
+                                <input type="text" class="form-control" placeholder="Nhập vào đây" name="name"
+                                       value="{{ old('name') }}">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputFile">Slider </label>
+                                <label for="exampleInputEmail1">Nội dung (*)</label>
+                                <div class="form-group">
+                                        <textarea name="contentt" rows="10" placeholder="Nhập nội dung"
+                                                  class="form-control">{{ old('contentt') }}</textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="exampleInputFile">Hình ảnh </label>
                                 <input type="file" id="image" name="image" onchange="showIMG()">
                             </div>
                             <div class="form-group">
@@ -94,27 +111,7 @@
                             </div>
 
 
-                            {{--<div class="form-group">--}}
-                                {{--<label>Hiển thị</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input name="active" value="1" checked="" type="radio">Có--}}
-                                {{--</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input name="active" value="0" type="radio">Không--}}
-                                {{--</label>--}}
-                            {{--</div>--}}
-                            {{--Hết tiêu điểm--}}
-                            {{--Nổi bật--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label>Nổi bật</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input name="footer_hot" value="1" checked="" type="radio">Có--}}
-                                {{--</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input name="footer_hot" value="0" type="radio">Không--}}
-                                {{--</label>--}}
-                            {{--</div>--}}
-                            {{--Hết nối bật--}}
+
                             <div class="box-footer">
                                 <button type="submit" class="btn btn-primary">Thêm</button>
                             </div>

@@ -42,7 +42,7 @@
 <section class="section-2">
     <div class="container-fluid">
         <div class="container">
-            <h3 class="section-title pt-4">Host Post</h3>
+            <h3 class="section-title pt-4">Hot Posts</h3>
             <div class="row pb-5">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="course-box">
@@ -128,7 +128,7 @@
                         <div class="box-chu">
 
                         </div>
-                        <span>Nói</span>
+                        <span>Nói </span>
                         {{--  <i class="fa fa-book fa-3x text-center"></i>  --}}
                         <img src="image/noi.png" alt="">
                     </div>
@@ -138,7 +138,7 @@
                         <div class="box-chu">
 
                         </div>
-                        <span>Đọc</span>
+                        <span>Đọc </span>
                         {{--  <i class="fa fa-comment-dots  fa-3x"></i>  --}}
                         <img src="image/doc.png" alt="">
                     </div>
@@ -180,7 +180,7 @@
                             <div class="skill skill-3">
                                 <a href="{{ url('landing') }}">
                                     Khóa thân
-                                </a href="{{ url('landing') }}">
+                                </a>
                             </div>
                             <div class="skill skill-4">
                                 <a href="{{ url('landing') }}">

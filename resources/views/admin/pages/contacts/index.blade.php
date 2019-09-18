@@ -1,6 +1,6 @@
 @extends('admin.layouts.master-layout')
 @section('title')
-    Danh sách silder
+    Danh sách liên hệ
 @endsection
 
 @section('content')
@@ -17,11 +17,11 @@
 
         <section class="content-header">
             <h1>
-                Danh sách slider
+                Danh sách liên hệ
             </h1>
             <ol class="breadcrumb">
-                <li><a href="{{route('slider.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active">Slider</li>
+                <li><a href="{{route('contact.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Liên hệ</li>
             </ol>
         </section>
         <div >
@@ -46,7 +46,7 @@
                     <div class="box">
 
                         <div class="box-header">
-                            <a href="{{route('slider.create')}}" class="btn btn-success">Thêm</a>
+                            <a href="{{route('contact.create')}}" class="btn btn-success">Thêm</a>
                         </div>
 
                         <!-- /.box-header -->
@@ -56,19 +56,23 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Tên</th>
-                                    <th>Hình ảnh</th>
+                                    <th>Icon</th>
+                                    <th>Đường dẫn</th>
                                     <th>Trạng thái</th>
                                     <th class="col-md-3">Hành động</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($sliders as $value)
+                                @foreach($contact as $value)
                                     <tr class="odd gradeX" align="center">
                                         <td>{{$value->id}}</td>
-                                        <td>{!! $value->title !!}</td>
+                                        <td>{!! $value->name !!}</td>
 
                                         <td><img width="100px" height="100px"
-                                                 src="{{asset('')}}images/sliders/{{$value->image}}">
+                                                 src="{{asset('')}}images/contacts/{{$value->icon}}">
+                                        </td>
+                                        <td>
+                                            {{$value->link}}
                                         </td>
 
                                         <td>
@@ -79,24 +83,23 @@
                                             @endif
                                         </td>
                                         <td>
-                                            {{--<a class="btn btn-primary" id="bt{{$value->id}}" style="display: block"--}}
-                                               {{--onclick="thaotac({{$value->id}})">Thao tác</a>--}}
+
                                             <div>
                                                 <a class="btn btn-primary" id="edit"
-                                                   href="{{ url('admin/slider/edit/'.$value->id) }}"
+                                                   href="{{ url('admin/contact/edit/'.$value->id) }}"
                                                    onclick="">Sửa</a>
 
                                                 <a class="btn btn-danger"
-                                                   href="{{ url('admin/slider/destroy/'.$value->id) }}"
-                                                   onclick="return confirm('Hành động sẽ xóa slider này! bạn có muốn tiếp tục?')">Xóa</a>
+                                                   href="{{ url('admin/contact/destroy/'.$value->id) }}"
+                                                   onclick="return confirm('Hành động sẽ xóa liên hệ này! bạn có muốn tiếp tục?')">Xóa</a>
                                                 @if($value->status==1)
                                                     <a class="btn btn-info"
-                                                       href="{{ url('admin/slider/setactive/'.$value->id.'/0') }}"
-                                                       onclick="return confirm('Hành động sẽ ẩn sliders này! bạn có muốn tiếp tục?')">Ẩn</a>
+                                                       href="{{ url('admin/contact/setactive/'.$value->id.'/0') }}"
+                                                       onclick="return confirm('Hành động sẽ ẩn liên hệ này! bạn có muốn tiếp tục?')">Ẩn</a>
                                                 @else
                                                     <a class="btn btn-warning"
-                                                       href="{{ url('admin/slider/setactive/'.$value->id.'/1') }}"
-                                                       onclick="return confirm('Hành động sẽ hiển thị slider mục này! bạn có muốn tiếp tục?')">Hiển
+                                                       href="{{ url('admin/contact/setactive/'.$value->id.'/1') }}"
+                                                       onclick="return confirm('Hành động sẽ hiển thị liên hệ mục này! bạn có muốn tiếp tục?')">Hiển
                                                         thị</a>
 
                                                 @endif
