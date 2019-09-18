@@ -26,8 +26,6 @@
             </div>
         </div>
     </div>
-</section>
-<section class="section-11">owl-item
 </section>  --}}
 <section class="section-11">
     <div class="back-ground" style="background : #000"></div>
@@ -44,7 +42,7 @@
 <section class="section-2">
     <div class="container-fluid">
         <div class="container">
-            <h3 class="section-title pt-4">Host Pot</h3>
+            <h3 class="section-title pt-4">Hot Post</h3>
             <div class="row pb-5">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="course-box">
@@ -181,15 +179,14 @@
                             </div>
                             <div class="skill skill-3">
                                 <a href="{{ url('landing') }}">
-                                    Khóa thân</a>
-
+                                    Khóa thân
+                                </a>
                             </div>
                             <div class="skill skill-4">
                                 <a href="{{ url('landing') }}">
                                     Khóa ngọn
                                 </a>
                             </div>
-                        </div>
                     </a>
                 </div>
 
