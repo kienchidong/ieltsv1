@@ -51,7 +51,7 @@
     font-weight: 700;
     line-height: 22px;
     border-radius: 2px;
-    font-size: 14px;
+    font-size: 20px;
     border: none;
     padding: 8px 5px;
     text-align: center;
@@ -92,12 +92,14 @@
         border-radius: 8px;
         padding: 18% 20% 20% 20%;
         background: #a99a1c;
+        margin-left: 10px;
     }
     .landing-offline{
-        padding-bottom: 10%;
+        padding-bottom: 3%;
+        margin-top: 55px;
     }
-    .landing-offline h3{
-
+    .landing-offline .title-ss{
+        margin-top: 20px !important;
     }
     .landing-offline span{
         font-family: 'Montserrat', sans-serif;
@@ -124,6 +126,7 @@
     }
     .landing-dangky h3{
         color: #ffffff;
+        text-align: center;
     }
     .landing-dangky .btn-dangky{
         border: #FFEB3B solid 2px;
@@ -134,8 +137,12 @@
         color: #000000;
         font-weight: 700;
         line-height: 22px;
+        font-size: 20px;
         letter-spacing: 2px;
 
+    }
+    .khoahoc h3{
+        text-align: center;
     }
     .landing-infor{
         margin: 5% auto 1%;
@@ -270,7 +277,7 @@
     }
     .form-dk input[type='submit']{
         margin: 1% auto;
-        background-color: #54BD9B;
+        background-color: #000;
         color: white;
         padding: 1% 10%;
         border: none;

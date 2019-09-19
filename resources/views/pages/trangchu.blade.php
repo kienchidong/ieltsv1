@@ -32,8 +32,8 @@
     <div class="container-fluid">
         <div class="container work-shop">
             <div >
-                <span>The Ielts</span>
-                <span>Work Shop</span>
+                {{--  <span>The Ielts</span>
+                <span>Work Shop</span>  --}}
                 {{--  <a href="">Xem Thêm</a>  --}}
             </div>
 
@@ -200,7 +200,7 @@
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <a class="dk-online btn btn-outline-secondary" href="">Đăng ký ngay</a>
+                        <a class="dk-online btn btn-outline-secondary" href="">Tìm Hiểu Thêm</a>
                     </div>
                 </div>
             </div>

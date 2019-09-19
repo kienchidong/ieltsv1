@@ -92,7 +92,7 @@
                         <div class="landing-count">
 
                             <div class="row count-content">
-                                <h4 class="text-landing text-uppercase">Nhanh tay lên<br> Bạn muốn nhận được Ưu đãi</h4>
+                                <h4 class="text-landing text-uppercase">Nhanh tay lên để nhận được Ưu đãi</h4>
                                 <div class="col-3 col-lg-3 col-sm-3 col-md-3">
                                     <h5 class="text-landing">Ngày</h5>
                                     <span id="day-count" class="number-count" title="ngày">Ngày</span>
@@ -134,7 +134,7 @@
                         </div>
                         <hr>
                         <div class="landing-dangky">
-                            <h3>Hà Đức Kiên</h3>
+                            {{--  <h3>Hà Đức Kiên</h3>  --}}
 
                             <a class="btn btn-dangky" href="#">Đăng Ký</a>
                         </div>
@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="right">
                                     <span>
-                                        <strong>HotLine:</strong><br>
+                                        <strong>Hotline:</strong><br>
                                         <span>096 8907276</span>
                                     </span>
                                 </div>
@@ -159,8 +159,8 @@
                                 </div>
                                 <div class="right">
                                     <span>
-                                        <strong>Địa Điểm:</strong><br>
-                                        <span>Số 9A, Ngõ 9, Hoàng cầu</span>
+                                        <strong>Địa chỉ :</strong><br>
+                                        <span>Số 63, ngõ 136 Chùa Láng,Đống Đa,Hà Nội </span>
                                     </span>
                                 </div>
 
@@ -184,7 +184,7 @@
         </div>
     </section>
     <section class="landing-lydo">
-        <h1>5 Lý do chọn Xuân Phi IELTS</h1>
+        <h1>4 Lý do chọn Xuân Phi IELTS</h1>
         <div class="container">
             <div class="row" style="text-align: center">
                 <div class="col-md-3 item-lydo">
@@ -598,7 +598,7 @@
     </section>
     <section id="teacher">
         <div class="container">
-            <h3 class="title-ss">OUR TEACHER</h3>
+            <h3 class="title-ss">Đội Ngũ Giảng Dạy</h3>
             <div class="home-demo">
                 <div class="row">
                     <div class="large-12 columns">
@@ -703,7 +703,7 @@
         <div class="back-ground"></div>
         <div class="container-fluid">
             <div class="container danhgia">
-            <h3 class="title-ss" style="z-index : 20 ;position: relative;">Cảm nhận của học viên về Xuan Phi Ielst</h3>
+            <h3 class="title-ss" style="z-index : 20 ;position: relative;">Cảm nhận của học viên về Xuan Phi IeLTS</h3>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="coment-box">
@@ -722,7 +722,7 @@
                                 </div>
                                 <div class="coment-name">
                                     <a href="">Hoàng Thu Hà</a> <br>
-                                    <span>Khóa Ielst-01</span>
+                                    <span>Khóa IeLTS-01</span>
                                     <div class="star">
                                         <i class="fa fa-star star-check"></i>
                                         <i class="fas fa-star star-check"></i>
@@ -753,7 +753,7 @@
                                 </div>
                                 <div class="coment-name">
                                     <a href="">Hoàng Thu Hà</a> <br>
-                                    <span>Khóa Ielst-01</span>
+                                    <span>Khóa IeLTS-01</span>
                                     <div class="star">
                                         <i class="fa fa-star star-check"></i>
                                         <i class="fas fa-star star-check"></i>
@@ -784,7 +784,7 @@
                                 </div>
                                 <div class="coment-name">
                                     <a href="">Hoàng Thu Hà</a> <br>
-                                    <span>Khóa Ielst-01</span>
+                                    <span>Khóa IeLTS-01</span>
                                     <div class="star">
                                         <i class="fa fa-star star-check"></i>
                                         <i class="fas fa-star star-check"></i>
@@ -812,15 +812,14 @@
                 d3724.2375398297418!2d105.80500911457912!3d21.02317939334537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab687560f3ad%3A0xa5522c45c9015e23!2zS2jDoWNoIHPhuqFuIERyZWFtIEhvdXNl!5e0!3m2!1svi!2s!4v1568473282304!5m2!1svi!2s"
                         width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     <p style="line-height: 35px">
-                        <span> Địa chỉ: tầng 6A, Số 9A, Hoàng Cầu, Hà
-                            Nội</span><br>
+                        <span>Địa chỉ : Tòa nhà Dream House, số 63, ngõ 136 Chùa Láng, Hà Nội </span><br>
                         <span> Hotline: 0972 220 777</span><br>
                         <span> Email:
                             kienchidong@gmail.com</span><br>
                     </p>
                 </div>
                 <div class="col-6 col-lg-6 col-sm-6 col-md-6">
-                    <h2>Đăng ký để nhận ưu đãi sớm nhất</h2>
+                    <h2 style="margin-left : 8px">Đăng ký để nhận ưu đãi sớm nhất</h2>
                     <div class="form-dk">
                         <form action="" method="post">
                             @csrf

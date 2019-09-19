@@ -34,7 +34,7 @@
 							{{--  <li><a href="{{ url('thuvien/total') }}">For new Member</a></li>  --}}
 						</ul>
 					</li>
-					<li><a href="#blog" id="blog-li">blog</a>
+					<li><a href="#blog" id="blog-li">chia sẻ</a>
 					</li>
 					<li id="contact-li"><a href="#">liên hệ</a></li>
 				</ul>
