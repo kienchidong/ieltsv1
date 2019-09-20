@@ -187,6 +187,18 @@
     .img-book img {
         box-shadow: none;
     }
+    .library-right {
+        margin-top: 80px;
+    }
+    .library-left .section-title {
+        padding-bottom: 50px;
+    }
+    .blog-content {
+        align-items: center;
+    }
+    .nav.nav-horizontal-active-2 {
+        top: 17px;
+    }
 }
 @media only screen and (max-width: 687px) {
     .course-box {
@@ -220,6 +232,19 @@
     .blog-content span{
         margin-bottom: 75px;
     }
+    .library {
+        justify-content: center;
+    }
+    .logo-footer {
+        display: flex;
+        justify-content: center;
+    }
+    /* .text {
+        font-size: 16px;
+    }
+    .text span {
+        font-size: 16px;
+    } */
 }
 @media only screen and (max-width: 475px) {
     .course-box {
@@ -233,7 +258,6 @@
     .box-contact {
         min-height: 800px
     }
-
 }
 @media only screen and (max-width: 440px) {
     .skill {
@@ -247,6 +271,24 @@
     .library {
         justify-content: center;
     }
+    .library-left {
+        margin-top: 20px;
+    }
+    .skill {
+        right: -170px;
+    }
+    .tree {
+        left: 40px;
+        width: 320px;
+        height: 340px;
+    }
+    .skill a {
+        right: -100px;
+    }
+    .form-dk form button {
+        margin-left: -10px;
+    }
+
 }
 @media only screen and (max-width : 400px){
     .course-box {
@@ -261,6 +303,12 @@
         height: 240px;
         width: 100%;
         margin: 10px 0;
+    }
+    .skill a {
+        right: -75px;
+    }
+    .form-dk form button {
+        margin-left: -15px;
     }
 
 }
