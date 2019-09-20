@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="library-img">
             {{--  <img src="image/library_img.jpg" alt="">  --}}
-            <div class="col-md-12 banner-title2">
+            {{--  <div class="col-md-12 banner-title2">
                 <span class="delay-1">t</span>
                 <span class="delay-2">h</span>
                 <span class="delay-3">ư</span>&nbsp
@@ -38,7 +38,7 @@
                 <span class="delay-4">l</span>
                 <span class="delay-5">s</span>
                 <span class="delay-1">t</span>
-            </div>
+            </div>  --}}
         </div>
         <div class="container pt-4">
             <h3 class="text-uppercase">Thư viện đọc - Reading</h3>

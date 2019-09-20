@@ -54,7 +54,7 @@
 	                        <form>
 	                            <div class="form-group">
 	                                <input type="text" class="form-control" id="" aria-describedby="text"
-	                                    placeholder="Nhập vào email">
+	                                    placeholder="Nhập vào số điện thoại">
 	                            </div>
 	                            <button type="button" class="btn btn-warning">Đăng Ký</button>
 	                        </form>
