@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+        URL::forceScheme('https');
         Schema::defaultStringLength(191);
         if(! $this->app->runningInConsole()) {
 
@@ -35,6 +35,6 @@ class AppServiceProvider extends ServiceProvider
 
             view()->share($data);
         }
-        URL::forceScheme('https');
+        
     }
 }
