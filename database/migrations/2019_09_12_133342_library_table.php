@@ -36,9 +36,9 @@ class LibraryTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('image');
-//            $table->text('detail')->nullable();
+            $table->text('summary');
             $table->text('content');
-
+            $table->bigInteger('view')->default(1);
             $table->bigInteger('cate_id')->unsigned();
             $table->foreign('cate_id')
                 ->references('id')
