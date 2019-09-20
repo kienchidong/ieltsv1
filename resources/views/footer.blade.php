@@ -93,9 +93,9 @@
 	        <div class="right-icon">
 	            <a href="">
 	                <div class="box-menu-right">
-	                    <i class="fa fa-envelope-open-text fa-2x"></i>
+                            <i class="fab fa-facebook fa-2x"></i>
 	                </div>
-	                <span class="right-icon-content">xuanphiielst@gmail.com</span>
+	                <a href="https://www.facebook.com" class="right-icon-content">Mr . Xuân Phi</a>
 	            </a>
 
 	        </div>
