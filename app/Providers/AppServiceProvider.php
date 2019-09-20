@@ -34,8 +34,7 @@ class AppServiceProvider extends ServiceProvider
             $data['cate_librarys'] = DB::table('cate_librarys')->orderBy('id', 'DESC')->get();
 
             view()->share($data);
-
-
         }
+        URL::forceScheme('https');
     }
 }
