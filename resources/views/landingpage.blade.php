@@ -237,7 +237,7 @@
                         </div>
                         <hr>
                         <div class="landing-dangky">
-                            <a class="btn btn-dangky" href="#">Đăng Ký</a>
+                            <a target="_blank" class="btn btn-dangky" href="http://bit.ly/IELTSofflineXuanPhi">Đăng Ký</a>
                         </div>
                     </div>
                 </div>
@@ -693,67 +693,60 @@
                 <div class="row">
                     <div class="large-12 columns">
                         <div class="owl-carousel">
-                            <div class="item">
-                                <div class="teacher-infor">
-                                    <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="">
-                                    <div class="">
-                                        <h4>Hà Đức Kiên</h4>
-                                        <span>CEO</span>
-                                    </div>
+                            <div class="item container-image">
+
+                                <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="" class="image">
+                                <div class="middle">
+                                    <h4>Hà Đức Kiên</h4>
+                                    <span>CEO</span>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="teacher-infor">
-                                    <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="">
-                                    <div class="">
+                            <div class="item container-image">
+
+                                    <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="" class="image">
+                                    <div class="middle">
                                         <h4>Hà Đức Kiên</h4>
                                         <span>CEO</span>
                                     </div>
+                            </div>
+                            <div class="item container-image">
+
+                                <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="" class="image">
+                                <div class="middle">
+                                    <h4>Hà Đức Kiên</h4>
+                                    <span>CEO</span>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="teacher-infor">
-                                    <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="">
-                                    <div class="">
-                                        <h4>Hà Đức Kiên</h4>
-                                        <span>CEO</span>
-                                    </div>
+                            <div class="item container-image">
+
+                                <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="" class="image">
+                                <div class="middle">
+                                    <h4>Hà Đức Kiên</h4>
+                                    <span>CEO</span>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="teacher-infor">
-                                    <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="">
-                                    <div class="">
-                                        <h4>Hà Đức Kiên</h4>
-                                        <span>CEO</span>
-                                    </div>
+                            <div class="item container-image">
+
+                                <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="" class="image">
+                                <div class="middle">
+                                    <h4>Hà Đức Kiên</h4>
+                                    <span>CEO</span>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="teacher-infor">
-                                    <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="">
-                                    <div class="">
-                                        <h4>Hà Đức Kiên</h4>
-                                        <span>CEO</span>
-                                    </div>
+                            <div class="item container-image">
+
+                                <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="" class="image">
+                                <div class="middle">
+                                    <h4>Hà Đức Kiên</h4>
+                                    <span>CEO</span>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="teacher-infor">
-                                    <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="">
-                                    <div class="">
-                                        <h4>Hà Đức Kiên</h4>
-                                        <span>CEO</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="teacher-infor">
-                                    <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="">
-                                    <div class="">
-                                        <h4>Hà Đức Kiên</h4>
-                                        <span>CEO</span>
-                                    </div>
+                            <div class="item container-image">
+
+                                <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt="" class="image">
+                                <div class="middle">
+                                    <h4>Hà Đức Kiên</h4>
+                                    <span>CEO</span>
                                 </div>
                             </div>
                         </div>
@@ -786,7 +779,7 @@
 
         </div>
         <div class="text-center">
-            <a class="btn btn-trinhdo">Đăng ký kiểm tra trình độ</a>
+            <a target="_blank" class="btn btn-trinhdo" href="http://bit.ly/IELTSofflineXuanPhi">Đăng ký kiểm tra trình độ</a>
         </div>
     </section>
     <section class="section-7">

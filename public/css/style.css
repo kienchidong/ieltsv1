@@ -1,3 +1,15 @@
+.btn-xuanphi {
+    border: #ebd64f solid 2px;
+    border-radius: 5px;
+    color: black;
+    padding: 0% 10%;
+    font-size: 25px;
+}
+.btn-xuanphi:hover{
+    background-color: #ebd64f;
+    color: black;
+}
+
 .owl-theme .owl-nav {
     position: absolute!important;
     top: 40% !important;

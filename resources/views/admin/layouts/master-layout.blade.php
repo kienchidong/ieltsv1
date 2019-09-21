@@ -101,6 +101,8 @@
 <script src="{{asset('')}}admin_example/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('')}}admin_example/dist/js/demo.js"></script>
+<script type="text/javascript" src="{{ asset('js/filevalidation.js') }}"></script>
+
 
 
 
