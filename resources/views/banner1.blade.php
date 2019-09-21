@@ -7,11 +7,10 @@
                             alt="First slide">
                     </div>
                     <div class="col-md-12 banner-title">
-                            <div class="text">English</div>
-                            <div class="text ml-3">
-                              <span>cùng Xuân Phi Ielts</span>
-                            </div class="text">
-                            </body>
+                            <span class="text text-1">English</span>
+                            <span class="text text-2 ml-3">
+                              cùng Xuân Phi Ielts
+                            </span>
                     </div>
                 </div>
                 <div class="item">
@@ -34,4 +33,4 @@
 </section>
 <script type="text/javascript" src="lib/jquery.min.js"></script>
 <script type="text/javascript" src="lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/doitac-carousel-config.js"></script>
+<script type="text/javascript" src="js/banner-carousel-config.js"></script>

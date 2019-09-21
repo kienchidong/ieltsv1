@@ -215,7 +215,19 @@
 }
 
 @media only screen and (max-width: 580px) {
-
+    .text-1 {
+        margin-top : 50px !important;
+        /* font-size: 15px ; */
+        text-align: center;
+    }
+    .text-2{
+        margin-bottom: 80px !important;
+        font-size: 15px ;
+        text-align: center;
+    }
+    .owl-theme .owl-dots{
+        left: 40%;
+    }
 }
 @media only screen and (max-width: 576px) {
     .course-box {
@@ -227,7 +239,7 @@
     .skill {
         right: -200px;
         width: 250px;
-        z-index: 999;
+        z-index: 99;
     }
     .blog-content span{
         margin-bottom: 75px;
@@ -245,6 +257,20 @@
     .text span {
         font-size: 16px;
     } */
+    .owl-carousel .owl-nav .owl-prev {
+        width: 30px;
+        height: 30px;
+    }
+    .owl-carousel .owl-nav .owl-next {
+        width: 30px;
+        height: 30px;
+    }
+    .owl-prev span {
+        font-size: 14px;
+    }
+    .owl-next span {
+        font-size: 14px;
+    }
 }
 @media only screen and (max-width: 475px) {
     .course-box {
