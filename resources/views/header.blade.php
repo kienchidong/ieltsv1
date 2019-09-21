@@ -65,7 +65,7 @@
 				<div class="menu-left-content">
 
 					<ul class="menu-left-ul-lv-1">
-						<li><a href="/">Giới thiệu</a></li>
+						<li><a href="{{ url('/') }}">Giới thiệu</a></li>
 						<li>
 							<a href="#khoahoc">khóa học</a>
 
@@ -77,7 +77,7 @@
 						<li><a href="#blog">blog</a>
 
 						</li>
-						<li><a href="{{ url('lienhe') }}">liên hệ</a></li>
+						<li><a href="#">liên hệ</a></li>
 					</ul>
 
 				</div>

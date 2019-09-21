@@ -4,8 +4,8 @@ $('.banner').owlCarousel({
     responsiveClass:true,
     dots:true,
     nav:true,
-    autoplay:false,
-    autoplayTimeout : 6000,
+    autoplay:true,
+    autoplayTimeout : 8000,
     responsive:{
         0:{
             items:1,
