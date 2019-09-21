@@ -56,6 +56,7 @@ class LibraryController extends Controller
 
         $this->validate($request, [
             'name' => 'required|min:10',
+            'summary'=>'required|max:100',
             'contentt' => 'required|min:100',
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
@@ -85,6 +86,7 @@ class LibraryController extends Controller
             'name' => $request->name,
             'slug' => Str::slug($request->name . "-" . time()),
             'image' => $file_name,
+            'summary'=>$request->summary,
             'content' => $request->contentt,
             'cate_id' => $request->cate_id,
             'status' => 1,
@@ -134,9 +136,11 @@ class LibraryController extends Controller
 
         $this->validate($request, [
             'name' => 'required|min:10',
+            'summary' => 'required|max:100',
             'contentt' => 'required|min:100',
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
+            'summary.max' => 'Tóm tắt không được quá 100 kí tự',
             'contentt.min' => 'Tên không được ít hơn 100 kí tự',
             'name.required' => 'Tên bài viết không được để trống',
             'contentt.required' => 'Nội dung bài viết không được để trống',
@@ -165,6 +169,7 @@ class LibraryController extends Controller
             'name' => $request->name,
             'slug' => Str::slug($request->name . "-" . time()),
             'image' => $file_name,
+            'summary' => $request->summary,
             'content' => $request->contentt,
             'cate_id' => $request->cate_id,
             'status' => 1,

@@ -11,7 +11,7 @@ class BlogController extends Controller
 {
     public function __construct()
     {
-        $data['cate_blog_count'] = DB::table('cate_blogs')->count();
+//        $data['cate_blog_count'] = DB::table('cate_blogs')->count();
         $data['blog_count'] = DB::table('blogs')->count();
 
         view()->share($data);
@@ -25,11 +25,11 @@ class BlogController extends Controller
     public function index()
     {
 
-        $data['blogs'] = DB::table('blogs')
-            ->select('blogs.*', 'cate_blogs.name as cate_blog')
-            ->join('cate_blogs', 'blogs.cate_id', '=', 'cate_blogs.id')
-            ->orderByDesc('id')->get();
-
+//        $data['blogs'] = DB::table('blogs')
+//            ->select('blogs.*', 'cate_blogs.name as cate_blog')
+//            ->join('cate_blogs', 'blogs.cate_id', '=', 'cate_blogs.id')
+//            ->orderByDesc('id')->get();
+        $data['blogs'] = DB::table('blogs')->orderByDesc('id')->get();
         return view('admin.pages.blogs.index', $data);
     }
 
@@ -41,8 +41,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $data['cate_blogs'] = DB::table('cate_blogs')->orderByDesc('id')->get();
-        return view('admin.pages.blogs.create', $data);
+//        $data['cate_blogs'] = DB::table('cate_blogs')->orderByDesc('id')->get();
+        return view('admin.pages.blogs.create');
     }
 
     /**
@@ -56,6 +56,7 @@ class BlogController extends Controller
 
         $this->validate($request, [
             'name' => 'required|min:10',
+            'summary'=>'required|max:256',
             'contentt' => 'required|min:100',
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
@@ -85,8 +86,10 @@ class BlogController extends Controller
             'name' => $request->name,
             'slug' => Str::slug($request->name . "-" . time()),
             'image' => $file_name,
+            'summary' => $request->summary,
+
             'content' => $request->contentt,
-            'cate_id' => $request->cate_id,
+
             'status' => 1,
             'created_at' => now()
         ]);
@@ -113,11 +116,11 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $data['cate_blogs'] = DB::table('cate_blogs')->orderByDesc('id')->get();
-        $data['blog'] = DB::table('blogs')
-            ->select('blogs.*', 'cate_blogs.name as cate_name','cate_blogs.id as cate_idd' )
-            ->join('cate_blogs','blogs.cate_id','=','cate_blogs.id')->where('blogs.id',$id)->first();
-
+//        $data['cate_blogs'] = DB::table('cate_blogs')->orderByDesc('id')->get();
+//        $data['blog'] = DB::table('blogs')
+//            ->select('blogs.*', 'cate_blogs.name as cate_name','cate_blogs.id as cate_idd' )
+//            ->join('cate_blogs','blogs.cate_id','=','cate_blogs.id')->where('blogs.id',$id)->first();
+        $data['blog'] = DB::table('blogs')->where('id',$id)->first();
 
         return view('admin.pages.blogs.edit', $data);
     }
@@ -137,6 +140,7 @@ class BlogController extends Controller
         $this->validate($request, [
             'name' => 'required|min:10',
             'contentt' => 'required|min:100',
+            'summary'=>'required|max:256',
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
             'contentt.min' => 'Nội dung không được ít hơn 100 kí tự',
@@ -167,8 +171,8 @@ class BlogController extends Controller
             'name' => $request->name,
             'slug' => Str::slug($request->name . "-" . time()),
             'image' => $file_name,
+            'summary' => $request->summary,
             'content' => $request->contentt,
-            'cate_id' => $request->cate_id,
             'status' => 1,
             'created_at' => now()
         ]);
@@ -214,11 +218,11 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function cate_create()
-    {
-        $data['cate_blogs'] = DB::table('cate_blogs')->orderByDesc('id')->get();
-        return view('admin.pages.blogs.cate_create', $data);
-    }
+//    public function cate_create()
+//    {
+//        $data['cate_blogs'] = DB::table('cate_blogs')->orderByDesc('id')->get();
+//        return view('admin.pages.blogs.cate_create', $data);
+//    }
 
     /**
      * Store a newly created resource in storage.
@@ -226,24 +230,24 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function cate_store(Request $request)
-    {
-        $this->validate($request, [
-            'name' => 'min:5',
-        ], [
-            'name.min' => 'Tên không được ít hơn 10 kí tự',
-        ]);
-
-
-        DB::table('cate_blogs')->insert([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name),
-            'status' => 1,
-            'created_at' => now()
-        ]);
-
-        return redirect()->back()->with('thongbao', 'Thành công');
-    }
+//    public function cate_store(Request $request)
+//    {
+//        $this->validate($request, [
+//            'name' => 'min:5',
+//        ], [
+//            'name.min' => 'Tên không được ít hơn 10 kí tự',
+//        ]);
+//
+//
+//        DB::table('cate_blogs')->insert([
+//            'name' => $request->name,
+//            'slug' => Str::slug($request->name),
+//            'status' => 1,
+//            'created_at' => now()
+//        ]);
+//
+//        return redirect()->back()->with('thongbao', 'Thành công');
+//    }
 
     /**
      * Remove the specified resource from storage.
@@ -251,23 +255,23 @@ class BlogController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function cate_destroy($id)
-    {
-        DB::table('cate_blogs')->where('id', '=', $id)->delete();
-
-        return redirect()->back()->with('thongbao', 'Xóa thành công');
-    }
+//    public function cate_destroy($id)
+//    {
+//        DB::table('cate_blogs')->where('id', '=', $id)->delete();
+//
+//        return redirect()->back()->with('thongbao', 'Xóa thành công');
+//    }
 
     /*
      * Thực hiện ẩn hay hiện cái slider
      */
 
-    public function cate_setactive($id, $status)
-    {
-        DB::table('cate_blogs')->where('id', '=', $id)->update([
-            'status' => $status,
-        ]);
-        return redirect()->back()->with('thongbao', 'Thành công');
-    }
+//    public function cate_setactive($id, $status)
+//    {
+//        DB::table('cate_blogs')->where('id', '=', $id)->update([
+//            'status' => $status,
+//        ]);
+//        return redirect()->back()->with('thongbao', 'Thành công');
+//    }
 
 }

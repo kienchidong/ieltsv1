@@ -1,10 +1,6 @@
-@extends('master-layout')
-@section('title')
-    Trang Chủ
-@endsection
+@extends('client.layouts.master-layout')
 @section('content')
-
-@include('banner1')
+@include('client.layouts.banner1')
 {{--  <section class="section-1">
     <div class="container">
         <h3 class="section-title">4 bước để chinh phục kỳ thi ielst</h3>

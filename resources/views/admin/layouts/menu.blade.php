@@ -81,7 +81,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{{route('blog.create')}}"><i class="fa fa-circle-o"></i> Thêm tin tức</a></li>
                     <li><a href="{{route('blog.index')}}"><i class="fa fa-circle-o"></i> Danh sách tin tức </a></li>
-                    <li><a href="{{route('cate_blog.create')}}"><i class="fa fa-circle-o"></i> Thêm thể loại</a></li>
+                    {{--<li><a href="{{route('cate_blog.create')}}"><i class="fa fa-circle-o"></i> Thêm thể loại</a></li>--}}
 
                 </ul>
             </li>
@@ -131,20 +131,11 @@
 
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-files-o"></i>
-                    <span>Layout Options</span>
-                    <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
+            <li class="">
+                <a href="{{ route('introduce.list') }}">
+                    <i class="fa fa-info-circle"></i>
+                    <span>Giới thiệu </span>
                 </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                    <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                    <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-                </ul>
             </li>
             <li>
                 <a href="pages/widgets.html">

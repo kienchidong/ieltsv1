@@ -27,9 +27,9 @@
 </head>
 <body>
 
-@include('header')
+@include('client.layouts.header')
 @yield('content')
-@include('footer')
+@include('client.layouts.footer')
 <script>
 	$(document).ready(function () {
 		$('.menu #contact-li').on('click', function(event) {

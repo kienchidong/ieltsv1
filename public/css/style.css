@@ -42,10 +42,10 @@
 .section-banner {
     position: relative;
     top: -75px;
-    max-height: 700px;
+    max-height: 1080px;
 }
 .silder-image {
-    max-height: 700px;
+    max-height: 1080px;
 }
 .item {
     position: relative;

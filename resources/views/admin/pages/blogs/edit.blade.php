@@ -54,8 +54,8 @@
                                 </a></li>
                             <li><a href="{{route('blog.index')}}"><i class="fa fa-file-text-o"></i> Danh
                                     sách tin tức<span class="label label-primary pull-right">{{$blog_count}}</span></a></li>
-                            <li><a href="{{route('cate_blog.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại
-                                    <span class="label label-primary pull-right">{{$cate_blog_count}}</span></a></li>
+                            {{--<li><a href="{{route('cate_blog.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại--}}
+                                    {{--<span class="label label-primary pull-right">{{$cate_blog_count}}</span></a></li>--}}
 
 
                         </ul>
@@ -76,19 +76,27 @@
                         @csrf
                         <div class="box-body">
 
-                            <div class="form-group">
-                                <label>Thể loại tin tức(*)</label>
-                                <select class="form-control" name="cate_id">
-                                    <option value="{{$blog->cate_idd}}">{{$blog->cate_name}}</option>
-                                    @foreach($cate_blogs as $value)
-                                        <option value="{{$value->id}}">{{$value->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
+                            {{--<div class="form-group">--}}
+                                {{--<label>Thể loại tin tức(*)</label>--}}
+                                {{--<select class="form-control" name="cate_id">--}}
+                                    {{--<option value="{{$blog->cate_idd}}">{{$blog->cate_name}}</option>--}}
+                                    {{--@foreach($cate_blogs as $value)--}}
+                                        {{--<option value="{{$value->id}}">{{$value->name}}</option>--}}
+                                    {{--@endforeach--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Tên bài viết (*)</label>
                                 <input type="text" class="form-control" placeholder="Nhập vào đây" name="name"
                                        value="{{ $blog->name }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tóm tắt (*)</label>
+                                <div class="form-group">
+                                        <textarea name="summary" rows="4" placeholder="Nhập tóm tắt"
+                                                  class="form-control">{{ $blog->summary }}</textarea>
+                                </div>
                             </div>
 
                             <div class="form-group">

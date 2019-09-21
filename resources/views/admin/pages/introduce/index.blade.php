@@ -1,16 +1,16 @@
 @extends('admin.layouts.master-layout')
 @section('title')
-    Thêm thư viện
+    Giới thiệu
 @endsection
 @section('content')
 
     <section class="content-header">
         <h1>
-            Thêm thư viện
+            Thêm
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{{route('library.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Thêm thư viện</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Thêm</li>
         </ol>
     </section>
     <br>
@@ -35,74 +35,28 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            <div class="col-md-3">
-                <div class="box box-solid">
-                    <div class="box-header with-border">
-                        {{-- Mục lục --}}
-                        <h3 class="box-title">Danh mục</h3>
-
-                        <div class="box-tools">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                                        class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="box-body no-padding">
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện
-                                </a></li>
-                            <li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>
-                            <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại
-                                    <span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>
-
-
-                        </ul>
-                    </div>
-
-                    <!-- /.box-body -->
-                </div>
-                <!-- /. box -->
-                {{-- End mục luc --}}
-
-            </div>
-            <!-- /.col -->
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="box box-primary">
-                    <h3 style="text-align: left; padding-left: 5px">Thêm bài viết</h3>
-                    <form role="form" method="POST" action="{{route('library.store')}}"
-                          enctype="multipart/form-data">
+                    <h3 style="text-align: left; padding-left: 5px">Giới thiệu về Xuân Phi Ielts</h3>
+                    <form role="form" method="POST" action="" enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
-
                             <div class="form-group">
-                                <label>Thể loại bài viết (*)</label>
-                                <select class="form-control" name="cate_id">
-                                    @foreach($cate_librarys as $value)
-                                        <option value="{{$value->id}}">{{$value->name}}</option>
-                                    @endforeach
-                                </select>
+                                <label>Địa chỉ:</label>
+                                <textarea class="form-control" name="address" rows="5" placeholder="Địa chỉ"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tên bài viết (*)</label>
-                                <input type="text" class="form-control" placeholder="Nhập vào đây" name="name"
-                                       value="{{ old('name') }}">
+                                <label >Số Điện thoại:</label>
+                                <input type="text" class="form-control" placeholder="Số Điện thoại" name="phone" value="{{ old('name') }}">
                             </div>
-
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tóm tắt (*)</label>
-                                <div class="form-group">
-                                        <textarea name="summary" rows="4" placeholder="Nhập tóm tắt"
-                                                  class="form-control">{{ old('summary') }}</textarea>
-                                </div>
+                                <label >Email:</label>
+                                <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}">
                             </div>
-
-
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nội dung (*)</label>
                                 <div class="form-group">
-                                        <textarea name="contentt" rows="10" placeholder="Nhập nội dung"
+                                        <textarea name="content" rows="10" placeholder="Nhập nội dung"
                                                   class="form-control">{{ old('contentt') }}</textarea>
                                 </div>
                             </div>
@@ -113,14 +67,34 @@
                                 <input type="file" id="image" name="image" onchange="showIMG()">
                             </div>
                             <div class="form-group">
-                                <label for="" style="margin-left: 10px"> Hiển thị : </label>
+                                <label for="" style="margin-left: 10px"> Ảnh hiển thị : </label>
                                 <div id="viewImg">
 
                                 </div>
                             </div>
 
 
-
+                            <div class="form-group">
+                                <label>Hiển thị</label>
+                                <label class="radio-inline">
+                                    <input name="active" value="1" checked="" type="radio">Có
+                                </label>
+                                <label class="radio-inline">
+                                    <input name="active" value="0" type="radio">Không
+                                </label>
+                            </div>
+                            {{--Hết tiêu điểm--}}
+                            {{--Nổi bật--}}
+                            <div class="form-group">
+                                <label>Nổi bật</label>
+                                <label class="radio-inline">
+                                    <input name="footer_hot" value="1" checked="" type="radio">Có
+                                </label>
+                                <label class="radio-inline">
+                                    <input name="footer_hot" value="0" type="radio">Không
+                                </label>
+                            </div>
+                            {{--Hết nối bật--}}
                             <div class="box-footer">
                                 <button type="submit" class="btn btn-primary">Thêm</button>
                             </div>
@@ -139,7 +113,14 @@
 
 
     <script>
-
+        CKEDITOR.replace('content', {
+            filebrowserBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Images',
+            filebrowserFlashBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Flash',
+            filebrowserUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+            filebrowserFlashUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+        });
         function showIMG() {
             var fileInput = document.getElementById('image');
             var filePath = fileInput.value; //lấy giá trị input theo id
