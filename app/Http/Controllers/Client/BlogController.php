@@ -4,25 +4,22 @@ namespace App\Http\Controllers\Client;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
-    // public function loaitintuc($slug)
-    public function loaitintuc($slug)
+
+    public function index()
     {
 
-        $cate_id = DB::table('cate_news')->where('slug', $slug)->pluck('id')->first();
-        $data['cate_name'] = DB::table('cate_news')->where('slug', $slug)->first();
-        $data['news'] = DB::table('news')->where('cate_id', $cate_id)->paginate(5);
-        return view('page.tintuc', $data);
+        $data['blogs'] = DB::table('blogs')->where('status', 1)->orderByDesc('id')->paginate(5);
+        return view('client.pages.blogs.blog', $data);
     }
 
-    public function chitiettintuc($cate, $slug)
+    public function detail($slug)
     {
-        $news_id = DB::table('news')->where('slug', $slug)->pluck('id');
-        $cate_id = DB::table('cate_news')->where('slug', $cate)->pluck('id')->first();
-        $data['news'] = DB::table('news')->where('cate_id', $cate_id)->first();
-        $data['news_tags'] = DB::table('news_tags')->where('news_id', '=', $news_id)->get();
-        return view('page.tintucchitiet', $data);
+        $data['blog'] = DB::table('blogs')->where('slug', $slug)->first();
+
+        return view('client.pages.blogs.blog-detai', $data);
     }
 }

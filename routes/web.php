@@ -29,10 +29,10 @@ Auth::routes();
 Route::get('/', 'Client\HomeController@index')->name('trang-chu');
 
 // Chia sẻ
-Route::prefix('blogs')->group(function () {
+Route::prefix('chia-se')->group(function () {
 
-    Route::get('/{slug}', 'Client\BlogController@loaitintuc')->name('chi-tiet-tin-tuc');
-    Route::get('{cate}/{slug}', 'Client\BlogController@chitiettintuc')->name('chi-tiet-tin-tuc');
+    Route::get('/{slug}', 'Client\BlogController@detail')->name('blogs.detail');
+    Route::get('/', 'Client\BlogController@index')->name('blogs.index');
 });
 // Thư viện
 Route::prefix('library')->group(function () {

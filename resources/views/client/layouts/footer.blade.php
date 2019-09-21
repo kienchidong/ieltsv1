@@ -39,7 +39,7 @@
 	            <div class="row">
 	                <div class="col-md-3 logo-footer">
 	                    <a href="">
-	                        <img src="{{asset('')}}image/logo.png" alt="">
+	                        <img src="image/logo.png" alt="">
 	                    </a>
 	                </div>
 	                <div class="col-md-4 link-lk">
@@ -93,9 +93,9 @@
 	        <div class="right-icon">
 	            <a href="">
 	                <div class="box-menu-right">
-	                    <i class="fa fa-envelope-open-text fa-2x"></i>
+                            <i class="fab fa-facebook fa-2x"></i>
 	                </div>
-	                <span class="right-icon-content">xuanphiielst@gmail.com</span>
+	                <a href="https://www.facebook.com" class="right-icon-content">Mr . Xuân Phi</a>
 	            </a>
 
 	        </div>

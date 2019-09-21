@@ -23,13 +23,13 @@
 	<script type="text/javascript" src="lib/bootstrap_4.0.0/js/bootstrap.min.js"></script>
 {{--Font--}}
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap&subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
-
+    {{--  <script src="https://kit.fontawesome.com/2476b12f4d.js"></script>  --}}
 </head>
 <body>
 
-@include('header')
+@include('client.layouts.header')
 @yield('content')
-@include('footer')
+@include('client.layouts.footer')
 <script>
 	$(document).ready(function () {
 		$('.menu #contact-li').on('click', function(event) {
