@@ -5,11 +5,12 @@
     <title>Landing page</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-kien.png') }}" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="{{asset('')}}admin_example/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    {{--  <link rel="stylesheet" href="{{asset('')}}admin_example/bower_components/font-awesome/css/font-awesome.min.css">  --}}
+    {{--  <link rel="stylesheet" href="{{asset('')}}admin_example/bower_components/font-awesome/css/font-awesome.min.css">
+    --}}
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{asset('')}}admin_example/bower_components/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="{{asset('')}}css/landing-page.css">
@@ -81,106 +82,195 @@
 <body style="background-color: #f4f6f8">
     <section class="header-landing" style="background-image: url('{{ asset('image/bg1.jpg') }}') !important;">
         <div style="background: rgba(0,0,0,0.3)">
-            <div class="container-landing">
+            {{--  <div class="container-landing">
                 <div class="row">
-                    <div class="col-12 col-lg-12 col-sm-12 col-md-12">
+                    <div class="logo" style="margin-left : 10px">
                         <a href="{{ url('') }}">
-                            <img src="{{ asset('image/logo11.png') }}" width="100px" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="landing-count">
+            <img src="{{ asset('image/logo11.png') }}" width="100px" alt="">
+            </a>
+        </div>
+        <div class="col-md-6">
+            <div class="landing-count">
 
-                            <div class="row count-content">
-                                <h4 class="text-landing text-uppercase">Nhanh tay lên để nhận được Ưu đãi</h4>
-                                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                <div class="row count-content">
+                    <h4 class="text-landing text-uppercase">Nhanh tay lên để nhận được Ưu đãi</h4>
+                    <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                        <h5 class="text-landing">Ngày</h5>
+                        <span id="day-count" class="number-count" title="ngày">Ngày</span>
+                    </div>
+                    <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                        <h5 class="text-landing">Giờ</h5>
+                        <span id="hour-count" class="number-count" title="giờ">Giờ</span>
+                    </div>
+                    <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                        <h5 class="text-landing">Phút</h5>
+                        <span id="minute-count" class="number-count" title="phút">Phút</span>
+                    </div>
+                    <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                        <h5 class="text-landing">Giây</h5>
+                        <span id="second-count" class="number-count" title="giây">Giây</span>
+                    </div>
+                    <div class="count-form col-12 col-lg-12 col-sm-12 col-md-12">
+                        <form action="" method="post">
+                            @csrf
+                            <input type="text" class="count-input" name="name" required placeholder="Họ và tên" />
+                            <input type="text" class="count-input" name="email" required placeholder="Nhập Email" />
+                            <input type="text" class="count-input" name="phone" required
+                                placeholder="Nhập Sô điện thoại" />
+                            <input type="submit" value="GỬI LIÊN HỆ TỚI CHÚNG TÔI">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="landing-offline">
+                <h3 class="title-ss" style="color: white">HỌC OFFLINE TRỰC TIẾP<br> <span
+                        style="text-align: center">CÙNG
+                        XUÂN PHI IELTS</span>
+                </h3>
+
+            </div>
+            <hr>
+            <div class="landing-dangky">
+                <h3>Hà Đức Kiên</h3>
+
+                <a class="btn btn-dangky" href="#">Đăng Ký</a>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-lg-12 col-md-12 landing-infor">
+            <div class="row">
+                <div class="col-4 col-md-4 col-lg-4 col-sm-4">
+                    <div class="left">
+                        <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="right">
+                        <span>
+                            <strong>Hotline:</strong><br>
+                            <span>096 8907276</span>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-sm-4">
+                    <div class="left">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="right">
+                        <span>
+                            <strong>Địa chỉ :</strong><br>
+                            <span>Số 63, ngõ 136 Chùa Láng,Đống Đa,Hà Nội </span>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-sm-4">
+                    <div class="left">
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
+                    <div class="right">
+                        <span>
+                            <strong>Facebook:</strong><br>
+                            <span><a style="color : black" href="">Xuân Phi</a></span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        </div> --}}
+        <div class="container-fluid">
+            <div class="container">
+                <div class="logo" style="padding: 10px">
+                    <a href="{{ url('') }}">
+                        <img src="{{ asset('image/logo11.png') }}" width="100px" alt="">
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row landing-count">
+                            <h4 class="text-landing text-uppercase">Nhanh tay lên để nhận được Ưu đãi</h4>
+                            <div class="count-count">
+                                <div class="vu">
                                     <h5 class="text-landing">Ngày</h5>
                                     <span id="day-count" class="number-count" title="ngày">Ngày</span>
                                 </div>
-                                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                                <div class="vu">
                                     <h5 class="text-landing">Giờ</h5>
                                     <span id="hour-count" class="number-count" title="giờ">Giờ</span>
                                 </div>
-                                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                                <div class="vu">
                                     <h5 class="text-landing">Phút</h5>
                                     <span id="minute-count" class="number-count" title="phút">Phút</span>
                                 </div>
-                                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
+                                <div class="vu">
                                     <h5 class="text-landing">Giây</h5>
                                     <span id="second-count" class="number-count" title="giây">Giây</span>
                                 </div>
-                                <div class="count-form col-12 col-lg-12 col-sm-12 col-md-12">
-                                    <form action="" method="post">
-                                        @csrf
-                                        <input type="text" class="count-input" name="name" required
-                                            placeholder="Họ và tên" />
-                                        <input type="text" class="count-input" name="email" required
-                                            placeholder="Nhập Email" />
-                                        <input type="text" class="count-input" name="phone" required
-                                            placeholder="Nhập Sô điện thoại" />
-                                        <input type="submit" value="GỬI LIÊN HỆ TỚI CHÚNG TÔI">
-                                    </form>
-                                </div>
                             </div>
+                            <div class="count-form col-12 col-lg-12 col-sm-12 col-md-12">
+                                <form action="" method="post">
+                                    @csrf
+                                    <input type="text" class="count-input" name="name" required
+                                        placeholder="Họ và tên" />
+                                    <input type="text" class="count-input" name="email" required
+                                        placeholder="Nhập Email" />
+                                    <input type="text" class="count-input" name="phone" required
+                                        placeholder="Nhập Sô điện thoại" />
+                                    <input type="submit" value="GỬI LIÊN HỆ TỚI CHÚNG TÔI">
+                                </form>
+                            </div>
+
+
                         </div>
 
                     </div>
                     <div class="col-md-6">
                         <div class="landing-offline">
-                            <h3 class="title-ss" style="color: white">HỌC OFFLINE TRỰC TIẾP<br> <span style="text-align: center">CÙNG
+                            <h3 class="title-ss" style="color: white">HỌC OFFLINE TRỰC TIẾP<br> <span
+                                    style="text-align: center">CÙNG
                                     XUÂN PHI IELTS</span>
                             </h3>
 
                         </div>
                         <hr>
                         <div class="landing-dangky">
-                            {{--  <h3>Hà Đức Kiên</h3>  --}}
-
                             <a class="btn btn-dangky" href="#">Đăng Ký</a>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-lg-12 col-md-12 landing-infor">
-                        <div class="row">
-                            <div class="col-4 col-md-4 col-lg-4 col-sm-4">
-                                <div class="left">
-                                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
-                                </div>
-                                <div class="right">
-                                    <span>
-                                        <strong>Hotline:</strong><br>
-                                        <span>096 8907276</span>
-                                    </span>
-                                </div>
+                </div>
 
-                            </div>
-                            <div class="col-4 col-md-4 col-lg-4 col-sm-4">
-                                <div class="left">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                </div>
-                                <div class="right">
-                                    <span>
-                                        <strong>Địa chỉ :</strong><br>
-                                        <span>Số 63, ngõ 136 Chùa Láng,Đống Đa,Hà Nội </span>
-                                    </span>
-                                </div>
-
-                            </div>
-                            <div class="col-4 col-md-4 col-lg-4 col-sm-4">
-                                <div class="left">
-                                    <i class="fab fa-facebook-square"></i>
-                                </div>
-                                <div class="right">
-                                    <span>
-                                        <strong>Facebook:</strong><br>
-                                        <span><a style="color : black" href="">Xuân Phi</a></span>
-                                    </span>
-                                </div>
-
-                            </div>
+                <div class="col-12 col-sm-12 col-lg-12 col-md-12 landing-infor">
+                    <div class="row">
+                        <div class="col-md-3 hihi d-flex">
+                            <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                            <span>
+                                <strong>Hotline:</strong><br>
+                                <span>096 8907276</span>
+                            </span>
+                        </div>
+                        <div class="col-md-6 hihi d-flex">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>
+                                <strong>Địa chỉ :</strong><br>
+                                <span>Số 63, ngõ 136 Chùa Láng,Đống Đa,Hà Nội </span>
+                            </span>
+                        </div>
+                        <div class="col-md-3 hihi d-flex">
+                            <i class="fab fa-facebook-square"></i>
+                            <span>
+                                <strong>Facebook:</strong><br>
+                                <span><a style="color : black" href="">Xuân Phi</a></span>
+                            </span>
                         </div>
                     </div>
                 </div>
+
             </div>
+        </div>
+
         </div>
     </section>
     <section class="landing-lydo">
@@ -703,7 +793,8 @@
         <div class="back-ground"></div>
         <div class="container-fluid">
             <div class="container danhgia">
-            <h3 class="title-ss" style="z-index : 20 ;position: relative;">Cảm nhận của học viên về Xuan Phi IeLTS</h3>
+                <h3 class="title-ss" style="z-index : 20 ;position: relative;">Cảm nhận của học viên về Xuan Phi IeLTS
+                </h3>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="coment-box">
