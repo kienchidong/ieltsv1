@@ -95,7 +95,7 @@
 	                <div class="box-menu-right">
                             <i class="fab fa-facebook fa-2x"></i>
 	                </div>
-	                <a href="https://www.facebook.com" class="right-icon-content">Mr . Xuân Phi</a>
+	                <a href="https://www.facebook.com/phamxuan.phi" class="right-icon-content">Mr . Xuân Phi</a>
 	            </a>
 
 	        </div>

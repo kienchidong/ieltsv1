@@ -899,7 +899,7 @@
                         <span>Địa chỉ : Tòa nhà Dream House, số 63, ngõ 136 Chùa Láng, Hà Nội </span><br>
                         <span> Hotline: 0972 220 777</span><br>
                         <span> Email:
-                            kienchidong@gmail.com</span><br>
+                            xuanphi@gmail.com</span><br>
                     </p>
                 </div>
                 <div class="col-6 col-lg-6 col-sm-6 col-md-6">
