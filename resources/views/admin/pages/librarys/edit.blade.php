@@ -95,6 +95,14 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Tóm tắt (*)</label>
+                                <div class="form-group">
+                                        <textarea name="summary" rows="4" placeholder="Nhập tóm tắt"
+                                                  class="form-control">{{ $blog->summary }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Nội dung (*)</label>
                                 <div class="form-group">
                                         <textarea name="contentt" rows="10" placeholder="Nhập nội dung"

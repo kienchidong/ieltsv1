@@ -17,14 +17,7 @@ class BlogsTable extends Migration
          * Blogs
          * Thể loại tin tức
          */
-        Schema::create('cate_blogs',function (Blueprint $table)
-        {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('slug');
-            $table->tinyInteger('status')->default(1);
-            $table->timestamps();
-        });
+
 
         //Bài viết phần blogs
         Schema::create('blogs',function (Blueprint $table)
@@ -33,13 +26,9 @@ class BlogsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('image');
+            $table->text('summary');
             $table->text('content');
-
-            $table->bigInteger('cate_id')->unsigned();
-            $table->foreign('cate_id')
-                ->references('id')
-                ->on('cate_blogs')
-                ->onDelete('cascade');
+            $table->bigInteger('view')->default(1);
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
