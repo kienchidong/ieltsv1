@@ -55,7 +55,7 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Thể loại</th>
+                                    {{--<th>Thể loại</th>--}}
                                     <th>Bài viết</th>
                                     <th>Hình ảnh</th>
                                     <th>Trạng thái</th>
@@ -66,7 +66,7 @@
                                 @foreach($blogs as $value)
                                     <tr class="odd gradeX" align="center">
                                         <td>{{$value->id}}</td>
-                                        <td>{{$value->cate_blog}}</td>
+{{--                                        <td>{{$value->cate_blog}}</td>--}}
                                         <td>{!! substr($value->name,0,255) !!}</td>
 
                                         <td><img width="100px" height="100px"

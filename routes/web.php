@@ -22,17 +22,49 @@ Route::get('landing2', function (){
 })->name('landing2');
 
 Auth::routes();
-Route::prefix('blogs')->group(function () {
+/*
+ * Phần giao diện bên ngoài public
+ */
+//Trang chủ
+Route::get('/', 'Client\HomeController@index')->name('trang-chu');
 
-    Route::get('/{slug}', 'Client\BlogController@loaitintuc')->name('chi-tiet-tin-tuc');
-    Route::get('{cate}/{slug}', 'Client\BlogController@chitiettintuc')->name('chi-tiet-tin-tuc');
+// Chia sẻ
+Route::prefix('chia-se')->group(function () {
+
+    Route::get('/{slug}', 'Client\BlogController@detail')->name('blogs.detail');
+    Route::get('/', 'Client\BlogController@index')->name('blogs.index');
 });
-
+// Thư viện
 Route::prefix('library')->group(function () {
 
     Route::get('{slug}', 'Client\LibraryController@loaithuvien')->name('loai-thu-vien');
     Route::get('{cate}/{slug}', 'Client\LibraryController@chitietthuvien')->name('chi-tiet-thu-vien');
 });
+
+//Route::prefix('thuvien')->group(function () {
+//    Route::get('/nghe', function () {
+//        return view('pages.reading');
+//    });
+//    Route::get('/noi', function () {
+//        return view('pages.speaking');
+//    });
+//    Route::get('/doc', function () {
+//        return view('pages.reading');
+//    });
+//    Route::get('/viet', function () {
+//        return view('pages.writing');
+//    });
+//    Route::get('/total', function () {
+//        return view('pages.tonghop');
+//    });
+//});
+//Khóa học
+Route::get('/course', function () {
+    return view('pages.course');
+});
+/*
+ * Admin quản trị
+ */
 
 Route::prefix('admin')->group(function () {
     /*
@@ -150,12 +182,12 @@ Route::prefix('admin')->group(function () {
          * Blog
          */
         Route::prefix('blog')->group(function () {
-            Route::get('/add-cate', 'Admins\BlogController@cate_create')->name('cate_blog.create');
-            Route::post('/add-cate', 'Admins\BlogController@cate_store')->name('cate_blog.store');
+//            Route::get('/add-cate', 'Admins\BlogController@cate_create')->name('cate_blog.create');
+//            Route::post('/add-cate', 'Admins\BlogController@cate_store')->name('cate_blog.store');
 
-            Route::get('/destroy-cate/{id}', 'Admins\BlogController@cate_destroy')->name('cate_blog.destroy');
+//            Route::get('/destroy-cate/{id}', 'Admins\BlogController@cate_destroy')->name('cate_blog.destroy');
 
-            Route::get('/setactive-cate/{id}/{status}', 'Admins\BlogController@cate_setactive')->name('cate_blog.setactive');
+//            Route::get('/setactive-cate/{id}/{status}', 'Admins\BlogController@cate_setactive')->name('cate_blog.setactive');
 
             Route::get('/list', 'Admins\BlogController@index')->name('blog.index');
             Route::get('/add', 'Admins\BlogController@create')->name('blog.create');
@@ -171,45 +203,28 @@ Route::prefix('admin')->group(function () {
     });
 });
 Route::get('test', 'test@index');
-Route::get('/', function () {
-    return view('pages.trangchu');
-});
-Route::get('/course', function () {
-    return view('pages.course');
-});
+
+
 Route::get('/dangky', function () {
     return view('pages.dangky');
 });
+//Liên hệ
+Route::get('/lienhe', function () {
+    return view('pages.lienhe');
+});
+
+
 // Route::get('/thuvien',function(){
 //     return view('pages.thuvien');
 // });
 
+//
+//Route::get('/blog', function () {
+//    return view('pages.blog');
+//});
+//
+//Route::get('/blog-detai', function () {
+//    return view('pages.blog-detai');
+//});
 
-Route::get('/blog', function () {
-    return view('pages.blog');
-});
 
-Route::get('/blog-detai', function () {
-    return view('pages.blog-detai');
-});
-
-Route::get('/lienhe', function () {
-    return view('pages.lienhe');
-});
-Route::prefix('thuvien')->group(function () {
-    Route::get('/nghe', function () {
-        return view('pages.reading');
-    });
-    Route::get('/noi', function () {
-        return view('pages.speaking');
-    });
-    Route::get('/doc', function () {
-        return view('pages.reading');
-    });
-    Route::get('/viet', function () {
-        return view('pages.writing');
-    });
-    Route::get('/total', function () {
-        return view('pages.tonghop');
-    });
-});
