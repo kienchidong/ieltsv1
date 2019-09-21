@@ -391,9 +391,12 @@
                     </a>
                 </div>
                 <div class="border-bottom">
-
                 </div>
             </div>
+            <div style="text-align: center">
+            <a class="btn btn-xuanphi" href="{{ route('blog') }}">Xem Thêm</a>
+            </div>
+
         </div>
     </div>
     </div>

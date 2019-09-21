@@ -54,47 +54,21 @@
                                 <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}">
                             </div>
                             <div class="form-group">
+                                <label >Tiêu dề:</label>
+                                <input type="text" class="form-control" placeholder="Tiêu Đề" name="title" value="{{ old('title') }}">
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Nội dung (*)</label>
                                 <div class="form-group">
                                         <textarea name="content" rows="10" placeholder="Nhập nội dung"
                                                   class="form-control">{{ old('contentt') }}</textarea>
                                 </div>
                             </div>
-
-
                             <div class="form-group">
-                                <label for="exampleInputFile">Hình ảnh </label>
-                                <input type="file" id="image" name="image" onchange="showIMG()">
+                                <label for="exampleInputFile">Logo: </label>
+                                <input type="file" id="logo" name="logo" onchange="fileValidation(this)">
+                                <div id="imagePreviewlogo"></div>
                             </div>
-                            <div class="form-group">
-                                <label for="" style="margin-left: 10px"> Ảnh hiển thị : </label>
-                                <div id="viewImg">
-
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <label>Hiển thị</label>
-                                <label class="radio-inline">
-                                    <input name="active" value="1" checked="" type="radio">Có
-                                </label>
-                                <label class="radio-inline">
-                                    <input name="active" value="0" type="radio">Không
-                                </label>
-                            </div>
-                            {{--Hết tiêu điểm--}}
-                            {{--Nổi bật--}}
-                            <div class="form-group">
-                                <label>Nổi bật</label>
-                                <label class="radio-inline">
-                                    <input name="footer_hot" value="1" checked="" type="radio">Có
-                                </label>
-                                <label class="radio-inline">
-                                    <input name="footer_hot" value="0" type="radio">Không
-                                </label>
-                            </div>
-                            {{--Hết nối bật--}}
                             <div class="box-footer">
                                 <button type="submit" class="btn btn-primary">Thêm</button>
                             </div>
@@ -121,27 +95,6 @@
             filebrowserImageUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
             filebrowserFlashUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
         });
-        function showIMG() {
-            var fileInput = document.getElementById('image');
-            var filePath = fileInput.value; //lấy giá trị input theo id
-            var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i; //các tập tin cho phép
-            //Kiểm tra định dạng
-            if (!allowedExtensions.exec(filePath)) {
-                alert('Bạn chỉ có thể dùng ảnh dưới định dạng .jpeg/.jpg/.png/.gif extension.');
-                fileInput.value = '';
-                return false;
-            } else {
-                //Image preview
-                if (fileInput.files && fileInput.files[0]) {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        document.getElementById('viewImg').innerHTML = '<img style="width:100px; height: 100px;" src="' + e.target.result + '"/>';
-                    };
-                    reader.readAsDataURL(fileInput.files[0]);
-                }
-            }
-        }
-
     </script>
 
 @endsection
