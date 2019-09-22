@@ -57,12 +57,12 @@ class LibraryController extends Controller
         $this->validate($request, [
             'name' => 'required|min:10',
             'summary'=>'required|max:100',
-            'contentt' => 'required|min:100',
+            'content' => 'required|min:100',
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
             'contentt.min' => 'Tên không được ít hơn 100 kí tự',
             'name.required' => 'Tên bài viết không được để trống',
-            'contentt.required' => 'Nội dung bài viết không được để trống',
+            'content.required' => 'Nội dung bài viết không được để trống',
         ]);
         //Kiểm tra định dạng ảnh
         if ($request->hasFile('image')) {
@@ -87,7 +87,7 @@ class LibraryController extends Controller
             'slug' => Str::slug($request->name . "-" . time()),
             'image' => $file_name,
             'summary'=>$request->summary,
-            'content' => $request->contentt,
+            'content' => $request->content,
             'cate_id' => $request->cate_id,
             'status' => 1,
             'created_at' => now()
@@ -143,7 +143,7 @@ class LibraryController extends Controller
             'summary.max' => 'Tóm tắt không được quá 100 kí tự',
             'contentt.min' => 'Tên không được ít hơn 100 kí tự',
             'name.required' => 'Tên bài viết không được để trống',
-            'contentt.required' => 'Nội dung bài viết không được để trống',
+            'content.required' => 'Nội dung bài viết không được để trống',
         ]);
 
         if ($request->hasFile('image')) {
@@ -170,7 +170,7 @@ class LibraryController extends Controller
             'slug' => Str::slug($request->name . "-" . time()),
             'image' => $file_name,
             'summary' => $request->summary,
-            'content' => $request->contentt,
+            'content' => $request->content,
             'cate_id' => $request->cate_id,
             'status' => 1,
             'created_at' => now()

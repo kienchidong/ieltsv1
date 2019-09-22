@@ -32,13 +32,16 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{asset('')}}admin_example/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('alertify/alertify.bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('alertify/alertify.core.css') }}">
+    <link rel="stylesheet" href="{{ asset('alertify/alertify.default.css') }}">
+    <script src="{{ asset('alertify/alertify.min.js') }}"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <link rel="stylesheet" href="{{ asset('toastr/css/toastr.css') }}">
 
     <![endif]-->
 
@@ -48,7 +51,16 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
+    @if(session('thongbao'))
+        <script type="text/javascript">
+            alertify.success('{{ session('thongbao') }}');
+        </script>
+    @endif
+    @if(session('error'))
+        <script type="text/javascript">
+            alertify.error('{{ session('error') }}');
+        </script>
+    @endif
     @include('admin.layouts.header')
     <!-- Left side column. contains the logo and sidebar -->
     @include('admin.layouts.menu')
@@ -64,6 +76,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
+<script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
 <script src="{{asset('')}}admin_example/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset('')}}admin_example/bower_components/jquery-ui/jquery-ui.min.js"></script>
@@ -104,19 +117,9 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('')}}admin_example/dist/js/demo.js"></script>
 <script type="text/javascript" src="{{ asset('js/filevalidation.js') }}"></script>
-<script src="{{ asset('toastr/js/toastr.min.js') }}"></script>
 
-@if(session('thongbao'))
-    <script type="text/javascript">
-        toastr.success('{{ session('thongbao') }}', 'Thông báo', {timeOut: 3000});
-        toastr.options.progressBar = true;
-    </script>
-@endif
-@if(session('error'))
-    <script type="text/javascript">
-        toastr.error('{{ session('error') }}', 'Thông báo', {timeOut: 3000});
-    </script>
-@endif
+
+
 
 
 
@@ -133,34 +136,15 @@
             'autoWidth'   : false
         })
     })
+    CKEDITOR.replace('content', {
+        filebrowserBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        filebrowserImageUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+    });
 </script>
 
-{{--Ckeditor--}}
-<script>
-    CKEDITOR.replace('contentt', {
-        filebrowserBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html',
-        filebrowserImageBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Images',
-        filebrowserFlashBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Flash',
-        filebrowserUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-        filebrowserImageUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-        filebrowserFlashUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
-    });
-    {{--CKEDITOR.replace('summary', {--}}
-        {{--filebrowserBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html',--}}
-        {{--filebrowserImageBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Images',--}}
-        {{--filebrowserFlashBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Flash',--}}
-        {{--filebrowserUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',--}}
-        {{--filebrowserImageUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',--}}
-        {{--filebrowserFlashUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'--}}
-    {{--});--}}
-    CKEDITOR.replace('contentt2', {
-        filebrowserBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html',
-        filebrowserImageBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Images',
-        filebrowserFlashBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Flash',
-        filebrowserUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-        filebrowserImageUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-        filebrowserFlashUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
-    });
-</script>
 </body>
 </html>

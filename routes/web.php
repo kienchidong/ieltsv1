@@ -265,7 +265,7 @@ Route::prefix('admin')->group(function () {
            /*
             * sửa
             * */
-           Route::post('update', 'Admins\IntroduceController@update')->name('introduce.update');
+           Route::post('update/{id}', 'Admins\IntroduceController@update')->name('introduce.update');
         });
     });
 });

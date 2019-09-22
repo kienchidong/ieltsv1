@@ -39,14 +39,14 @@
 	            <div class="row">
 	                <div class="col-md-3 logo-footer">
 	                    <a href="">
-	                        <img src="image/logo.png" alt="">
+	                        <img src="{{ asset('images/logo/'.$introduces->logo) }}" alt="">
 	                    </a>
 	                </div>
 	                <div class="col-md-4 link-lk">
 	                    <h4>LIÊN HỆ</h4>
-	                    <a href="">Địa chỉ : Tòa nhà Dream House, số 63, ngõ 136 Chùa Láng, Hà Nội </a>
-	                    <a href="">Số Điện Thoại : 096 890 7276</a>
-	                    <a href="">Email : XuanPhiIelst@gmail.com</a>
+	                    <a href="">Địa chỉ : {{ $introduces->address }}</a>
+	                    <a href="tel:{{ $introduces->phone }}">Số Điện Thoại : {{ $introduces->phone }}</a>
+	                    <a href="mailto:{{ $introduces->email }}">Email : {{ $introduces->email }}</a>
 	                </div>
 	                <div class="col-md-5 link-lk">
 	                    <h4>ĐĂNG KÝ NHẬN THÔNG TIN </h4>
@@ -75,18 +75,18 @@
 	        <div class="right-icon">
 	            <a href="">
 	                <div class="box-menu-right">
-	                    <img src="image/logo.png" alt="">
+	                    <img src="{{ asset('images/logo/'.$introduces->logo) }}" alt="">
 	                </div>
 	                <span class="right-icon-content">Xuân Phi IELTS</span>
 	            </a>
 
 	        </div>
 	        <div class="right-icon">
-	            <a href="">
+	            <a href="tel:{{ $introduces->phone }}">
 	                <div class="box-menu-right">
 	                    <i class="fas fa-phone-square fa-2x" style="transform: rotate(90deg);"></i>
 	                </div>
-	                <span class="right-icon-content">096 890 7276</span>
+	                <span class="right-icon-content">{{ $introduces->phone }}</span>
 	            </a>
 
 	        </div>
@@ -95,7 +95,7 @@
 	                <div class="box-menu-right">
                             <i class="fab fa-facebook fa-2x"></i>
 	                </div>
-	                <a href="https://www.facebook.com/phamxuan.phi" class="right-icon-content">Mr . Xuân Phi</a>
+	                <a href="{{ $introduces->facebook }}" target="_blank" class="right-icon-content">Mr . Xuân Phi</a>
 	            </a>
 
 	        </div>

@@ -19,6 +19,7 @@ class CreateIntroduceTable extends Migration
             $table->string('address');
             $table->string('phone');
             $table->string('email');
+            $table->string('facebook');
             $table->string('title');
             $table->text('content');
             $table->timestamps();

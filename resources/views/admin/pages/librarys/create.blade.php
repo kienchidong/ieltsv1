@@ -102,7 +102,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nội dung (*)</label>
                                 <div class="form-group">
-                                        <textarea name="contentt" rows="10" placeholder="Nhập nội dung"
+                                        <textarea name="content" rows="10" placeholder="Nhập nội dung"
                                                   class="form-control">{{ old('contentt') }}</textarea>
                                 </div>
                             </div>
