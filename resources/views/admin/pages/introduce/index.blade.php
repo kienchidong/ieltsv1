@@ -3,7 +3,12 @@
     Giới thiệu
 @endsection
 @section('content')
-
+<style>
+    .inputnone{
+        border: none !important;
+        background:none !important;
+    }
+</style>
     <section class="content-header">
         <h1>
             Thêm
@@ -26,40 +31,41 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <label>Địa chỉ:</label>
-                                <textarea class="form-control" name="address" rows="5" placeholder="Địa chỉ">{{ $introduces->address }}</textarea>
+                                <textarea class="form-control" name="address" rows="5" placeholder="Địa chỉ" >{{ $introduces->address }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label >Số Điện thoại:</label>
-                                <input type="text" class="form-control" placeholder="Số Điện thoại" name="phone" value="{{ $introduces->phone  }}">
+                                <input type="text" class="form-control" placeholder="Số Điện thoại" name="phone" value="{{ $introduces->phone  }}" >
                             </div>
                             <div class="form-group">
                                 <label >Email:</label>
-                                <input type="email" class="form-control" placeholder="Email" name="email" value="{{ $introduces->email }}">
+                                <input type="email" class="form-control" placeholder="Email" name="email" value="{{ $introduces->email }}" >
                             </div>
                             <div class="form-group">
                                 <label >Link Facebook:</label>
-                                <input type="text" class="form-control" placeholder="Email" name="facebook" value="{{ $introduces->facebook }}">
+                                <input type="text" class="form-control" placeholder="Email" name="facebook" value="{{ $introduces->facebook }}" >
                             </div>
                             <div class="form-group">
                                 <label >Tiêu dề:</label>
-                                <input type="text" class="form-control" placeholder="Tiêu Đề" name="title" value="{{ $introduces->title }}">
+                                <input type="text" class="form-control" placeholder="Tiêu Đề" name="title" value="{{ $introduces->title }}" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nội dung (*)</label>
                                 <div class="form-group">
-                                        <textarea name="content" rows="10" placeholder="Nhập nội dung"
+                                        <textarea name="content" rows="10" placeholder="Nhập nội dung" 
                                                   class="form-control">{{ $introduces->content }}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile">Logo: </label>
-                                <input type="file" id="logo" name="logo" onchange="fileValidation(this)">
+                                <input type="file" id="logo" class="form-control hide" name="logo" onchange="fileValidation(this)">
                                 <div id="imagePreviewlogo">
                                     <img src="{{ asset('images/logo/'.$introduces->logo) }}" alt="" width="200px">
                                 </div>
                             </div>
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Sửa</button>
+
+                                <button type="submit" class="btn btn-success " id="submit-sua">Sửa</button>
                             </div>
 
                         </div>
@@ -73,7 +79,5 @@
         <!-- /.row -->
     </section>
     <!-- /.content -->
-
-
 @endsection
 

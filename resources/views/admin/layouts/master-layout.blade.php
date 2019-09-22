@@ -61,6 +61,16 @@
             alertify.error('{{ session('error') }}');
         </script>
     @endif
+        @if(count($errors) > 0)
+            <script type="text/javascript">
+
+
+                @foreach($errors->all() as $err)
+                alertify.error('{{ $err }}');
+                @endforeach
+            </script>
+
+        @endif
     @include('admin.layouts.header')
     <!-- Left side column. contains the logo and sidebar -->
     @include('admin.layouts.menu')
