@@ -38,6 +38,8 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('toastr/css/toastr.css') }}">
+
     <![endif]-->
 
     <!-- Google Font -->
@@ -102,7 +104,19 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('')}}admin_example/dist/js/demo.js"></script>
 <script type="text/javascript" src="{{ asset('js/filevalidation.js') }}"></script>
+<script src="{{ asset('toastr/js/toastr.min.js') }}"></script>
 
+@if(session('thongbao'))
+    <script type="text/javascript">
+        toastr.success('{{ session('thongbao') }}', 'Thông báo', {timeOut: 3000});
+        toastr.options.progressBar = true;
+    </script>
+@endif
+@if(session('error'))
+    <script type="text/javascript">
+        toastr.error('{{ session('error') }}', 'Thông báo', {timeOut: 3000});
+    </script>
+@endif
 
 
 

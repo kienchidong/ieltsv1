@@ -260,10 +260,16 @@ Route::prefix('admin')->group(function () {
             * list
             * */
            Route::get('list.html', 'Admins\IntroduceController@index')->name('introduce.list');
+
+
+           /*
+            * sửa
+            * */
+           Route::post('update', 'Admins\IntroduceController@update')->name('introduce.update');
         });
     });
 });
-Route::get('test', 'test@index');
+
 
 
 Route::get('/dangky', function () {
