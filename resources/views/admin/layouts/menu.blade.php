@@ -131,12 +131,7 @@
 
                 </ul>
             </li>
-            <li class="">
-                <a href="{{ route('introduce.list') }}">
-                    <i class="fa fa-info-circle"></i>
-                    <span>Giới thiệu </span>
-                </a>
-            </li>
+           
             <li>
                 <a href="pages/widgets.html">
                     <i class="fa fa-th"></i> <span>Widgets</span>
@@ -274,11 +269,14 @@
                 </ul>
             </li>
             <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-            <li class="header">LABELS</li>
-            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-        </ul>
+            <li class="header">Quản Trị Viên</li>
+            <li><a href="{{ route('admin.account.list') }}"><i class="fa fa-user text-red"></i> <span>Danh Sách Tài khoản Quản trị Viên</span></a></li>
+            <li class="">
+                <a href="{{ route('introduce.list') }}">
+                    <i class="fa fa-info-circle"></i>
+                    <span>Giới thiệu </span>
+                </a>
+            </li>
     </section>
     <!-- /.sidebar -->
 </aside>

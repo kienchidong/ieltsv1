@@ -255,6 +255,10 @@ Route::prefix('admin')->group(function () {
 
         });
 
+        /*
+            Giới thiệu chung
+        */
+
         Route::prefix('introduce')->group(function(){
            /*
             * list
@@ -265,7 +269,15 @@ Route::prefix('admin')->group(function () {
            /*
             * sửa
             * */
-           Route::post('update', 'Admins\IntroduceController@update')->name('introduce.update');
+           Route::post('update/{id}', 'Admins\IntroduceController@update')->name('introduce.update');
+        });
+
+        /*
+            Tài khoản admin
+        */
+
+        Route::prefix('adminAccount')->group(function(){
+            Route::get('list.html', 'Admins\AdminAccountController@index')->name('admin.account.list');
         });
     });
 });
