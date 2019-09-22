@@ -15,12 +15,12 @@ class CreateIntroduceTable extends Migration
     {
         Schema::create('introduce', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('logo')->nullable();
-            $table->string('address')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('email')->nullable();
-            $table->string('title')->nullable();
-            $table->text('content')->nullable();
+            $table->string('logo');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('title');
+            $table->text('content');
             $table->timestamps();
         });
     }

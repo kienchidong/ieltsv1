@@ -38,7 +38,7 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <h3 style="text-align: left; padding-left: 5px">Giới thiệu về Xuân Phi Ielts</h3>
-                    <form role="form" method="POST" action="" enctype="multipart/form-data">
+                    <form role="form" method="POST" action="{{ route('introduce.update') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
                             <div class="form-group">
@@ -70,7 +70,7 @@
                                 <div id="imagePreviewlogo"></div>
                             </div>
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Thêm</button>
+                                <button type="submit" class="btn btn-primary">Sửa</button>
                             </div>
 
                         </div>
