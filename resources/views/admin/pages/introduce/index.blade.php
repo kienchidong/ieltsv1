@@ -3,7 +3,12 @@
     Giới thiệu
 @endsection
 @section('content')
-
+<style>
+    .inputnone{
+        border: none !important;
+        background:none !important;
+    }
+</style>
     <section class="content-header">
         <h1>
             Thêm
@@ -14,6 +19,10 @@
         </ol>
     </section>
     <br>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ed48ef4beff16dd279d00d783784c4b5b8728e9
     <!-- Main content -->
     <section class="content">
         <div class="row">
@@ -58,7 +67,8 @@
                                 </div>
                             </div>
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Sửa</button>
+
+                                <button type="submit" class="btn btn-success " id="submit-sua">Sửa</button>
                             </div>
 
                         </div>
@@ -72,18 +82,5 @@
         <!-- /.row -->
     </section>
     <!-- /.content -->
-
-
-    <script>
-        CKEDITOR.replace('content', {
-            filebrowserBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html',
-            filebrowserImageBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Images',
-            filebrowserFlashBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Flash',
-            filebrowserUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-            filebrowserImageUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-            filebrowserFlashUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
-        });
-    </script>
-
 @endsection
 

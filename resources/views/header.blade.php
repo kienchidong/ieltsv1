@@ -10,7 +10,7 @@
 
 				<div class="logo">
 					<a href="{{ url('/') }}">
-						<img src="image/logo11.png" alt="">
+						<img src="{{ asset('images/logo/'.$introduces->logo) }}" alt="">
 					</a>
 
 				</div>

@@ -50,6 +50,7 @@ class IntroduceController extends Controller
             $intro->email = $request->email;
             $intro->facebook = $request->facebook;
             $intro->title = $request->title;
+            $intro->facebook = $request->facebook;
             $intro->content = $request->content;
 
             $intro->save();
