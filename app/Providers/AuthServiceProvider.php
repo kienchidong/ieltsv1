@@ -31,7 +31,14 @@ class AuthServiceProvider extends ServiceProvider
     public function only($options)
     {
         $permission = Auth::user()->level;
-        return in_array(array_search($permission,$this->role),array_wrap($options)) ? 1 : 0;
+        //dd($this->role[$options]);
+        if($permission == $this->role[$options]){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+        //return in_array(array_search($permission,$this->role),array_wrap($options)) ? 1 : 0;
     }
     public function except($options)
     {
@@ -55,7 +62,7 @@ class AuthServiceProvider extends ServiceProvider
          * Admin - Manager account
          */
         Gate::define('admin.view.admin.account',function($user){
-            return $this->only(['admin']);
+            return $this->only('admin');
         });
         Gate::define('admin.view-create.admin.account',function ($user){
             return $this->only('admin');

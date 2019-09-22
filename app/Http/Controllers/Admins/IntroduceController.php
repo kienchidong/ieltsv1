@@ -6,6 +6,7 @@ use App\Model\IntroduceModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class IntroduceController extends Controller
 {
@@ -13,13 +14,18 @@ class IntroduceController extends Controller
 
     public function index()
     {
-        return view('admin.pages.introduce.index');
+        if (Gate::allows('admin.view.admin.account'))
+        {
+            $data['introduces'] = DB::table('introduce')->first();
+
+            return view('admin.pages.introduce.index', $data);
+        }
+        abort(403);
     }
 
     public function update(Request $request, $id){
         //dd($request->all());
         $intro = IntroduceModel::find($id);
-
         if ($request->hasFile('logo')) {
             $file = $request->file('logo');
             $name = $this->imagename($file->getClientOriginalName());
@@ -28,7 +34,7 @@ class IntroduceController extends Controller
                 $avatar = time() . "_logo_" . $name;
             }
             $file->move('images/logo/', $avatar);
-            if($intro->logo !='' && file_exists('images/logo/'.$intro->logo)){
+            if($intro->logo != 'logo.png' && file_exists('images/logo/'.$intro->logo)){
                 unlink('images/logo/'.$intro->logo);
             }
             $logo = $avatar;
@@ -36,11 +42,13 @@ class IntroduceController extends Controller
         else{
             $logo= $intro->logo;
         }
+        
 
            $intro->logo = $logo;
             $intro->address = $request->address;
             $intro->phone = $request->phone;
             $intro->email = $request->email;
+            $intro->facebook = $request->facebook;
             $intro->title = $request->title;
             $intro->facebook = $request->facebook;
             $intro->content = $request->content;

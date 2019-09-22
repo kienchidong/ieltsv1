@@ -19,7 +19,10 @@
         </ol>
     </section>
     <br>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3ed48ef4beff16dd279d00d783784c4b5b8728e9
     <!-- Main content -->
     <section class="content">
         <div class="row">
@@ -31,36 +34,36 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <label>Địa chỉ:</label>
-                                <textarea class="form-control" name="address" rows="5" placeholder="Địa chỉ" >{{ $introduces->address }}</textarea>
+                                <textarea class="form-control" name="address" rows="5" placeholder="Địa chỉ">{{ $introduces->address }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label >Số Điện thoại:</label>
-                                <input type="text" class="form-control" placeholder="Số Điện thoại" name="phone" value="{{ $introduces->phone  }}" >
+                                <input type="text" class="form-control" placeholder="Số Điện thoại" name="phone" value="{{ $introduces->phone }}">
                             </div>
                             <div class="form-group">
                                 <label >Email:</label>
-                                <input type="email" class="form-control" placeholder="Email" name="email" value="{{ $introduces->email }}" >
+                                <input type="email" class="form-control" placeholder="Email" name="email" value="{{ $introduces->email }}">
                             </div>
                             <div class="form-group">
-                                <label >Link Facebook:</label>
-                                <input type="text" class="form-control" placeholder="Email" name="facebook" value="{{ $introduces->facebook }}" >
+                                <label >Link facebook:</label>
+                                <input type="text" class="form-control" placeholder="Link facbook" name="facebook" value="{{ $introduces->facebook }}">
                             </div>
                             <div class="form-group">
                                 <label >Tiêu dề:</label>
-                                <input type="text" class="form-control" placeholder="Tiêu Đề" name="title" value="{{ $introduces->title }}" >
+                                <input type="text" class="form-control" placeholder="Tiêu Đề" name="title" value="{{ $introduces->title }}">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nội dung (*)</label>
                                 <div class="form-group">
-                                        <textarea name="content" rows="10" placeholder="Nhập nội dung" 
+                                        <textarea name="content" rows="10" placeholder="Nhập nội dung"
                                                   class="form-control">{{ $introduces->content }}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile">Logo: </label>
-                                <input type="file" id="logo" class="form-control hide" name="logo" onchange="fileValidation(this)">
+                                <input type="file" id="logo" name="logo" onchange="fileValidation(this)">
                                 <div id="imagePreviewlogo">
-                                    <img src="{{ asset('images/logo/'.$introduces->logo) }}" alt="" width="200px">
+                                <img src="{{ asset('images/logo/'.$introduces->logo) }}" width='200px' alt="">
                                 </div>
                             </div>
                             <div class="box-footer">
