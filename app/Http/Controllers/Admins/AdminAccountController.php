@@ -11,7 +11,7 @@ class AdminAccountController extends Controller
 {
     //
     public function index(){
-        if (Gate::allows('admin.view.admin.account'))
+        if (Gate::allows('admin'))
         {
             $data['admins'] =  DB::table('admins')->orderBy('id', 'desc')->get();
 
