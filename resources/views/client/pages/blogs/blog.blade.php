@@ -26,7 +26,7 @@
             @foreach($blogs as $value)
 
                 <div class="blog">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between blog-title">
                         <a href="#" class="title-blog">{{$value->name}}</a>
                         <div class="time-blog">
                             <i class="fa fa-calendar-alt"></i>
