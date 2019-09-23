@@ -289,7 +289,7 @@
     .skill {
         right: -155px;
         width: 100px;
-        z-index: 999;
+        z-index: 99;
     }
     .tree {
         width: 300px;
@@ -314,6 +314,15 @@
     .form-dk form button {
         margin-left: -10px;
     }
+    .menu-right {
+        right: 15px;
+    }
+    .library-img {
+        height: 215px;
+    }
+    .blog-title {
+        flex-direction: column;
+    }
 
 }
 @media only screen and (max-width : 400px){
@@ -331,12 +340,28 @@
         margin: 10px 0;
     }
     .skill a {
-        right: -75px;
+        right: -55px;
     }
     .form-dk form button {
         margin-left: -15px;
     }
-
+    .library-box {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+    .skill-4 {
+        bottom: 210px;
+    }
+    .skill-3 {
+        bottom: 110px;
+    }
+    .skill-2 {
+        bottom: 50px;
+    }
+    .skill a {
+        font-size: 15px;
+    }
 }
 @media only screen and (max-width: 332px) {
 	.nav-horizontal-search form input{
