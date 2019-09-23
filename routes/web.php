@@ -37,10 +37,10 @@ Route::prefix('/')->group(function () {
         Route::get('/', 'Client\BlogController@index')->name('client.blogs.index');
     });
     // Thư viện
-    Route::prefix('library')->group(function () {
+    Route::prefix('thu-vien')->group(function () {
 
-        Route::get('{slug}', 'Client\LibraryController@loaithuvien')->name('loai-thu-vien');
-        Route::get('{cate}/{slug}', 'Client\LibraryController@chitietthuvien')->name('chi-tiet-thu-vien');
+        Route::get('{slug}', 'Client\LibraryController@index')->name('client.librarys.index');
+        Route::get('{cate}/{slug}', 'Client\LibraryController@detail')->name('client.librarys.detail');
     });
 //    //Khóa học
 //    Route::get('/course', function () {

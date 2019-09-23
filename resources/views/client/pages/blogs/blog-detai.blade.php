@@ -1,4 +1,4 @@
-@extends('master-layout')
+@extends('client.layouts.master-layout')
 @section('title')
     Chi Tiết Blog
 @endsection

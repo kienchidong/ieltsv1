@@ -1,4 +1,4 @@
-@extends('master-layout')
+@extends('client.layouts.master-layout')
 @section('title')
     Chi Tiết Bài Viết
 @endsection
@@ -22,9 +22,9 @@
                                      alt="First slide">
                             </div>
                             <div class="home-tt-text">
-                                <a href="">{{$value->name}}}</a><br>
+                                <a href="{{url('thu-vien').'/'.$cate.'/'.$value->slug}}">{{Str::substr($value->name,0,25)}}</a><br>
                             </div>
-                            <span style="font-size:10px">{{$value->created_at}}}</span>
+                            <span style="font-size:10px">{{$value->created_at}}</span>
 
                         </div>
                     @endforeach

@@ -60,7 +60,7 @@ class BlogController extends Controller
             'contentt' => 'required|min:100',
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
-            'contentt.min' => 'Tên không được ít hơn 100 kí tự',
+            'contentt.min' => 'Nội dung không được ít hơn 100 kí tự',
             'name.required' => 'Tên bài viết không được để trống',
             'contentt.required' => 'Nội dung bài viết không được để trống',
         ]);
@@ -159,7 +159,7 @@ class BlogController extends Controller
             }
             $file->move('images/blogs/', $image);
             $file_name = $image;
-            if (file_exists('images/blogs/' . $image_update[0]) && $image_update[0] != '') {
+            if (file_exists('images/blogs/' . $image_update[0]) && $image_update[0] != '' && $image_update[0] != 'logo.png') {
                 unlink('images/blogs/' . $image_update[0]);
             }
 
