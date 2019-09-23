@@ -1,4 +1,4 @@
-@extends('master-layout')
+@extends('client.layouts.master-layout')
 @section('title')
     Nghe
 @endsection
@@ -70,7 +70,7 @@
                         <div class="content-book">
                             <div class="content-content-book">
                                 <h4>{{$value->name}}</h4>
-                                <span>{!! substr($value->content,0,255) !!}</span>
+                                <span>{!! substr($value->summary,0,255) !!}</span>
                                 <a href="{{ url('library').'/'.$cate_name->slug.'/'.$value->slug}}"
                                    class="btn btn-danger book-button">Đọc tiếp</a>
                             </div>
