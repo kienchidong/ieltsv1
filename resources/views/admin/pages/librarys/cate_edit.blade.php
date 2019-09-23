@@ -1,16 +1,16 @@
 @extends('admin.layouts.master-layout')
 @section('title')
-    Sửa liên hệ
+    Sửa chủ đề thư viện
 @endsection
 @section('content')
 
     <section class="content-header">
         <h1>
-            Sửa liên hệ
+            Sửa chủ đề thư viện
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{{route('contact.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">liên hệ </li>
+            <li><a href="{{route('cate_library.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">chủ đề thư viện</li>
         </ol>
     </section>
     <br>
@@ -35,13 +35,13 @@
 
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
+                            <li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh
+                                    sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>
+                            <li><a href="{{route('cate_library.index')}}"><i class="fa fa-file-text-o"></i> Danh
+                                    sách thể loại thư viện<span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>
+                            <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện</a></li>
+                            <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại</a></li>
 
-                            <li><a href="{{route('contact.create')}}"><i class="fa fa-envelope-o"></i> Thêm slider
-                                </a></li>
-                            </a>
-                            </li>
-                            <li><a href="{{route('contact.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách<span class="label label-primary pull-right">{{$contact_count}}</span></a></li>
 
                         </ul>
                     </div>
@@ -55,22 +55,16 @@
             <!-- /.col -->
             <div class="col-md-9">
                 <div class="box box-primary">
-                    <h3 style="text-align: left; padding-left: 5px">Sửa liên hệ </h3>
-                    <form role="form" method="POST" action="{{route('contact.update',$contact->id)}}"
+                    <h3 style="text-align: left; padding-left: 5px">Sửa chủ đề bài viết</h3>
+                    <form role="form" method="POST" action="{{route('cate_library.update',$cate_library->id)}}"
                           enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tiêu đề</label>
-                                <input type="text" class="form-control" placeholder="Web bán hàng" name="name"
-                                       value="{{$contact->name }}">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Đường dẫn</label>
-                                <input type="text" class="form-control" placeholder="https://www.facebook.com/phamxuan.phi" name="link"
-                                       value="{{ $contact->link }}">
+                                <label for="exampleInputEmail1">Tên chủ đề (*)</label>
+                                <input type="text" class="form-control" placeholder="Nhập vào đây" name="name"
+                                       value="{{$cate_library->name}}">
                             </div>
 
                             <div class="form-group">
@@ -80,14 +74,13 @@
                             <div class="form-group">
                                 <label for="" style="margin-left: 10px"> Hiển thị : </label>
                                 <div id="viewImg">
-                                    <img width="100px" height="150px" src="{{asset('')}}images/contacts/{{$contact->icon}}">
+                                    <img width="100px" height="100px"
+                                         src="{{asset('')}}images/cate-librarys/{{$cate_library->icon}}">
                                 </div>
                             </div>
 
-
-
                             <div class="box-footer">
-                                <a href="{{route('contact.index')}}" class="btn btn-warning">Quay lại</a>
+                                <a href="{{route('cate_library.index')}}" class="btn btn-warning">Quay lại</a>
                                 <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
 

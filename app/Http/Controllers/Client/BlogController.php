@@ -18,6 +18,7 @@ class BlogController extends Controller
     public function detail($slug)
     {
         $data['blog'] = DB::table('blogs')->where('slug', $slug)->first();
+        $data['blogs'] = DB::table('blogs')->where('status', 1)->orderByDesc('id')->get();
 
         return view('client.pages.blogs.blog-detai', $data);
     }

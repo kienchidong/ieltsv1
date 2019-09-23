@@ -14,22 +14,7 @@
         </ol>
     </section>
     <br>
-    <div>
-        @if(count($errors) > 0)
-            <div class="alert alert-danger">
-                @foreach($errors->all() as $err)
-                    {{$err}}<br>
-                @endforeach
 
-            </div>
-
-        @endif
-        @if(session('thongbao'))
-            <div class="alert alert-success">
-                {{session('thongbao')}}
-            </div>
-        @endif
-    </div>
 
 
     <!-- Main content -->
@@ -50,12 +35,13 @@
 
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện
-                                </a></li>
+
                             <li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh
                                     sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>
-                            <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại
-                                    <span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>
+                            <li><a href="{{route('cate_library.index')}}"><i class="fa fa-file-text-o"></i> Danh
+                                    sách thể loại thư viện<span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>
+                            <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện</a></li>
+                            <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại</a></li>
 
 
                         </ul>
@@ -103,7 +89,7 @@
                                 <label for="exampleInputEmail1">Nội dung (*)</label>
                                 <div class="form-group">
                                         <textarea name="content" rows="10" placeholder="Nhập nội dung"
-                                                  class="form-control">{{ old('contentt') }}</textarea>
+                                                  class="form-control">{{ old('content') }}</textarea>
                                 </div>
                             </div>
 
