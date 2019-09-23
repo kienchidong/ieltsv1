@@ -18,7 +18,6 @@ class CreateIntroduceTable extends Migration
             $table->string('logo');
             $table->string('address');
             $table->string('phone');
-            $table->string('facebook');
             $table->string('email');
             $table->string('facebook');
             $table->string('title');

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Xuân Phi | @yield('title')</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-kien.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo/'.$introduces->logo) }}" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="{{asset('')}}admin_example/bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -63,8 +63,6 @@
     @endif
         @if(count($errors) > 0)
             <script type="text/javascript">
-
-
                 @foreach($errors->all() as $err)
                 alertify.error('{{ $err }}');
                 @endforeach

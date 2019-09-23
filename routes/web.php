@@ -278,12 +278,33 @@ Route::prefix('admin')->group(function () {
 
         Route::prefix('adminAccount')->group(function(){
             Route::get('list.html', 'Admins\AdminAccountController@index')->name('admin.account.list');
+
+            /*
+             * tạo tài khoản admin
+             * */
+            Route::get('create.html', 'Admins\AdminAccountController@create')->name('admin.account.create');
+            Route::post('create.html', 'Admins\AdminAccountController@store')->name('admin.account.store');
+
+            /* Sửa tài khoản admin */
+
+
+
+            /* Xóa tài khoản admin */
+            Route::get('delete/{id}', 'Admins\AdminAccountController@delete')->name('admin.account.delete');
+
+            /* Khóa tài khoản admin */
+            Route::get('status/{id}/{status}','Admins\AdminAccountController@status')->name('admin.account.status');
+            /* sửa quyền */
+            Route::post('editrole', 'Admins\AdminAccountController@editrole')->name('admin.account.eidt.role');
+
+            /* profile */
+            Route::get('profile.html', 'Admins\AdminAccountController@profile')->name('admin.account.profile');
+            Route::post('checkpass', 'Admins\AdminAccountController@checkpass')->name('admin.account.checkpass');
+
+            Route::post('editprofile', 'Admins\AdminAccountController@editprofile')->name('admin.account.profile.edit');
         });
     });
 });
-
-
-
 Route::get('/dangky', function () {
     return view('pages.dangky');
 });

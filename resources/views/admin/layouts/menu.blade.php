@@ -4,7 +4,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{{ asset('images/logo-kien.png') }}" class="img-circle" alt="User Image">
+                <img src="{{ asset('images/logo/'.$introduces->logo) }}" style="background: white" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p>{{ Auth::user()->name }}</p>
@@ -270,7 +270,7 @@
             </li>
             <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
             <li class="header">Quản Trị Viên</li>
-            <li><a href="{{ route('admin.account.list') }}"><i class="fa fa-user text-red"></i> <span>Danh Sách Tài khoản Quản trị Viên</span></a></li>
+            <li><a href="{{ route('admin.account.list') }}"><i class="fa fa-user text-red"></i> <span>Tài khoản Quản trị Viên</span></a></li>
             <li class="">
                 <a href="{{ route('introduce.list') }}">
                     <i class="fa fa-info-circle"></i>
