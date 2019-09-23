@@ -20,7 +20,7 @@ class ContactTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('icon');
-            $table->text('link');
+            $table->text('link')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });

@@ -14,7 +14,6 @@ class AdminAccountController extends Controller
         if (Gate::allows('admin'))
         {
             $data['admins'] =  DB::table('admins')->orderBy('id', 'desc')->get();
-
             return view('admin.pages.admin-account.index', $data);
         }
         abort(403);

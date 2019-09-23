@@ -31,7 +31,8 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         if(! $this->app->runningInConsole()) {
 
-            // $data['cate_blogs'] = DB::table('cate_blogs')->orderBy('id', 'DESC')->get();
+             $data['blogs'] = DB::table('blogs')->where('status',1)
+                 ->orderBy('id', 'DESC')->limit(3)->get();
             // $data['cate_librarys'] = DB::table('cate_librarys')->orderBy('id', 'DESC')->get();
             $data['introduces'] = IntroduceModel::find(1);
             view()->share($data);
