@@ -20,14 +20,21 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@gmail.com',
             'password' => bcrypt('12345678')
         ]);
-        $location = "Cộng tác viên,Quản trị viên,Admin";
-        $explode = explode(',',$location);
-        foreach($explode as $ex)
-        {
+
             DB::table('role')->insert([
-                'name' => $ex
+                [
+                    'name' => 'Cộng tác viên',
+                    'describe' => 'Tài khoản Cộng tác viên chỉ có quyền đăng và sửa bài viết của mình',
+                ],[
+                    'name' => 'Quản trị viên',
+                    'describe' => 'Tài khoản Quản trị viên có quyền đăng và sửa bài viết của mình và xét duyệt bài viết của cộng tác viên',
+                ],[
+                    'name' => 'Admin',
+                    'describe' => 'Tài khoản admin có toàn quyền chỉnh sửa nội dung, tài khoản trong trang web',
+                ],
             ]);
-        }
+
+            /* tài khoản admin */
         DB::table('admins')->insert([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
