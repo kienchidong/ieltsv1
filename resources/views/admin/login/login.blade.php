@@ -16,7 +16,7 @@
             window.scrollTo(0, 1);
         }
     </script>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-kien.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo/'.$introduces->logo) }}" />
     <!-- //Meta-Tags -->
     <!-- Index-Page-CSS -->
     <link rel="stylesheet" href="{{ asset('admin_asset/login/css/style.css') }}" type="text/css" media="all">
@@ -32,7 +32,7 @@
 <h1 class="title-agile text-center">Login Admin</h1>
 <div class="content-w3ls">
     <div class="content-top-agile">
-        <a target="_blank" href="{{ url('') }}"><img src="{{ asset('images/logo-kien.png') }}" alt="" width="40%"></a>
+        <a target="_blank" href="{{ url('') }}"><img src="{{ asset('images/logo/'.$introduces->logo) }}" alt="" width="40%"></a>
     </div>
     <div class="content-bottom">
         <form method="POST" action="{{ route('admin.login.post') }}">

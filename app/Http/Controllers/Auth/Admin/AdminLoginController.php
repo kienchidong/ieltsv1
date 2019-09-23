@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth\Admin;
 
+use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -40,10 +41,10 @@ class AdminLoginController extends Controller
 
 
         //đăng nhập
-        if(Auth::guard('admin')-> attempt(['email' => $request->email, 'password' => $request->password], $request -> remember)){
+        if(Auth::guard('admin')-> attempt(['email' => $request->email, 'password' => $request->password, 'status' => 1], $request -> remember)){
 
             //nếu thành công thì chuyển hướng về view dashboard của admin
-            return redirect()-> intended(route('admin.index'));
+            return redirect()-> intended(route('admin.index'))->with('thongbao', 'Đăng nhập thành công');
 
         }
         else {
