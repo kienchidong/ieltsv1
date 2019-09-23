@@ -72,33 +72,18 @@
 	</section>
 	<section class="menu-right">
 	    <div class="d-flex flex-column">
-	        <div class="right-icon">
-	            <a href="">
-	                <div class="box-menu-right">
-	                    <img src="image/logo.png" alt="">
-	                </div>
-	                <span class="right-icon-content">Xuân Phi IELTS</span>
-	            </a>
 
-	        </div>
-	        <div class="right-icon">
-	            <a href="">
-	                <div class="box-menu-right">
-	                    <i class="fas fa-phone-square fa-2x" style="transform: rotate(90deg);"></i>
-	                </div>
-	                <span class="right-icon-content">096 890 7276</span>
-	            </a>
+	        @foreach($contacts as $value)
+				<div class="right-icon">
+					<a target="_blank" href="{{$value->link}}">
+						<div class="box-menu-right">
+							<img src="{{asset('images/contacts').'/'.$value->icon}}" alt="">
+						</div>
+						<span class="right-icon-content">{{$value->name}}</span>
+					</a>
 
-	        </div>
-	        <div class="right-icon">
-	            <a href="">
-	                <div class="box-menu-right">
-                            <i class="fab fa-facebook fa-2x"></i>
-	                </div>
-	                <a href="https://www.facebook.com" class="right-icon-content">Mr . Xuân Phi</a>
-	            </a>
-
-	        </div>
+				</div>
+			@endforeach
 
 	    </div>
 	</section>
