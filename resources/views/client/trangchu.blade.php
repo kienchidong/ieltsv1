@@ -315,81 +315,32 @@
             <h3 class="section-title">
                 Blog Chia Sẻ
             </h3>
-            <div class="blog">
-                <div class="d-flex justify-content-between">
-                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
-                    <div class="time-blog">
-                        <i class="fa fa-calendar-alt"></i>
-                        <span>13 Stb 2019</span>
+            @foreach($blogs as $value)
+                <div class="blog">
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ route('client.blogs.detail',$value->slug)}}" class="title-blog">{{Str::substr($value->name,0,100)}}</a>
+                        <div class="time-blog">
+                            <i class="fa fa-calendar-alt"></i>
+                            <span>{{Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $value->created_at)->format('d-m-Y')}}</span>
+                        </div>
                     </div>
-                </div>
-                <div class="blog-content">
-                    <div class="blog-img">
-                        <img src="image/blog1.png" class="img-reponsive" alt="">
-                    </div>
-                    <span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst
-                        ? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu
-                        chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
-                        nào về Ielst
+                    <div class="blog-content">
+                        <div class="blog-img">
+                            <img src="{{asset('images/blogs').'/'.$value->image}}" class="img-reponsive" alt="">
+                        </div>
+                        <span>{{Str::substr($value->summary,0,256)}}
                     </span>
-                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
-                        Đọc tiếp
-                    </a>
-                </div>
-                <div class="border-bottom">
+                        <a href="{{ route('client.blogs.detail',$value->slug) }}" class="doctiep btn btn-outline-danger">
+                            Đọc tiếp
+                        </a>
+                    </div>
+                    <div class="border-bottom">
 
-                </div>
-            </div>
-            <div class="blog">
-                <div class="d-flex justify-content-between">
-                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
-                    <div class="time-blog">
-                        <i class="fa fa-calendar-alt"></i>
-                        <span>13 Stb 2019</span>
                     </div>
                 </div>
-                <div class="blog-content">
-                    <div class="blog-img">
-                        <img src="image/blog1.png" class="img-reponsive" alt="">
-                    </div>
-                    <span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst
-                        ? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu
-                        chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
-                        nào về Ielst
-                    </span>
-                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
-                        Đọc tiếp
-                    </a>
-                </div>
-                <div class="border-bottom">
+            @endforeach
 
-                </div>
-            </div>
-            <div class="blog">
-                <div class="d-flex justify-content-between">
-                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
-                    <div class="time-blog">
-                        <i class="fa fa-calendar-alt"></i>
-                        <span>13 Stb 2019</span>
-                    </div>
-                </div>
-                <div class="blog-content">
-                    <div class="blog-img">
-                        <img src="image/blog1.png" class="img-reponsive" alt="">
-                    </div>
-                    <span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst
-                        ? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu
-                        chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
-                        nào về Ielst
-                    </span>
-                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
-                        Đọc tiếp
-                    </a>
-                </div>
-                <div class="border-bottom">
 
-                </div>
-            </div>
         </div>
     </div>
     </div>

@@ -24,22 +24,8 @@
                 <li class="active">tin tức</li>
             </ol>
         </section>
-        <div>
-            @if(count($errors) > 0)
-                <div class="alert alert-danger">
-                    @foreach($errors->all() as $err)
-                        {{$err}}<br>
-                    @endforeach
 
-                </div>
 
-            @endif
-            @if(session('thongbao'))
-                <div class="alert alert-success">
-                    {{session('thongbao')}}
-                </div>
-            @endif
-        </div>
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">

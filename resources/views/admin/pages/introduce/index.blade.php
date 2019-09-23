@@ -19,13 +19,7 @@
         </ol>
     </section>
     <br>
-<<<<<<< HEAD
-=======
-
->>>>>>> 3ed48ef4beff16dd279d00d783784c4b5b8728e9
-    <!-- Main content -->
     <section class="content">
-        <div class="row">
             <div class="col-md-12">
                 <div class="box box-primary">
                     <h3 style="text-align: left; padding-left: 5px">Giới thiệu về Xuân Phi Ielts</h3>

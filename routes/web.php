@@ -29,12 +29,12 @@ Auth::routes();
 //Trang chủ
 
 Route::prefix('/')->group(function () {
-    Route::get('/', 'Client\HomeController@index')->name('trang-chu');
+    Route::get('/', 'Client\HomeController@index')->name('client.home');
     // Chia sẻ
     Route::prefix('chia-se')->group(function () {
 
-        Route::get('/{slug}', 'Client\BlogController@detail')->name('blogs.detail');
-        Route::get('/', 'Client\BlogController@index')->name('blogs.index');
+        Route::get('/{slug}', 'Client\BlogController@detail')->name('client.blogs.detail');
+        Route::get('/', 'Client\BlogController@index')->name('client.blogs.index');
     });
     // Thư viện
     Route::prefix('library')->group(function () {
@@ -42,58 +42,58 @@ Route::prefix('/')->group(function () {
         Route::get('{slug}', 'Client\LibraryController@loaithuvien')->name('loai-thu-vien');
         Route::get('{cate}/{slug}', 'Client\LibraryController@chitietthuvien')->name('chi-tiet-thu-vien');
     });
-    //Khóa học
-    Route::get('/course', function () {
-        return view('pages.course');
-    });
-    //Liên hệ
-    Route::get('/lienhe', function () {
-        return view('pages.lienhe');
-    });
-
-
-    Route::get('test', 'test@index');
-    Route::get('/' , function(){
-        return view('pages.trangchu');
-    });
-    Route::get('/course',function(){
-        return view('pages.course');
-    });
-    Route::get('/dangky',function(){
-        return view('pages.dangky');
-    });
-// Route::get('/thuvien',function(){
-//     return view('pages.thuvien');
-// });
-    Route::get('/blog',function(){
-        return view('pages.blog');
-    })->name('blog');
-    Route::get('/blog-detai',function(){
-        return view('pages.blog-detai');
-    });
-    Route::get('/lienhe' , function(){
-        return view('pages.lienhe');
-    });
-    Route::prefix('thuvien')->group(function () {
-        Route::get('/nghe', function(){
-            return view('pages.reading');
-        });
-        Route::get('/noi', function(){
-            return view('pages.speaking');
-        });
-        Route::get('/doc', function(){
-            return view('pages.reading');
-        });
-        Route::get('/viet', function(){
-            return view('pages.writing');
-        });
-        Route::get('/total', function(){
-            return view('pages.tonghop');
-        });
-    });
-    Route::get('landing', function (){
-        return view('landingpage');
-    })->name('landing');
+//    //Khóa học
+//    Route::get('/course', function () {
+//        return view('pages.course');
+//    });
+//    //Liên hệ
+//    Route::get('/lienhe', function () {
+//        return view('pages.lienhe');
+//    });
+//
+//
+//    Route::get('test', 'test@index');
+//    Route::get('/' , function(){
+//        return view('pages.trangchu');
+//    });
+//    Route::get('/course',function(){
+//        return view('pages.course');
+//    });
+//    Route::get('/dangky',function(){
+//        return view('pages.dangky');
+//    });
+//// Route::get('/thuvien',function(){
+////     return view('pages.thuvien');
+//// });
+//    Route::get('/blog',function(){
+//        return view('pages.blog');
+//    })->name('blog');
+//    Route::get('/blog-detai',function(){
+//        return view('pages.blog-detai');
+//    });
+//    Route::get('/lienhe' , function(){
+//        return view('pages.lienhe');
+//    });
+//    Route::prefix('thuvien')->group(function () {
+//        Route::get('/nghe', function(){
+//            return view('pages.reading');
+//        });
+//        Route::get('/noi', function(){
+//            return view('pages.speaking');
+//        });
+//        Route::get('/doc', function(){
+//            return view('pages.reading');
+//        });
+//        Route::get('/viet', function(){
+//            return view('pages.writing');
+//        });
+//        Route::get('/total', function(){
+//            return view('pages.tonghop');
+//        });
+//    });
+//    Route::get('landing', function (){
+//        return view('landingpage');
+//    })->name('landing');
 });
 
 
@@ -214,9 +214,13 @@ Route::prefix('admin')->group(function () {
          * Thư viện
          */
         Route::prefix('library')->group(function () {
+            Route::get('/list-cate', 'Admins\LibraryController@cate_index')->name('cate_library.index');
+
             Route::get('/add-cate', 'Admins\LibraryController@cate_create')->name('cate_library.create');
             Route::post('/add-cate', 'Admins\LibraryController@cate_store')->name('cate_library.store');
 
+            Route::get('/edit-cate/{id}', 'Admins\LibraryController@cate_edit')->name('cate_library.edit');
+            Route::post('/edit-cate/{id}', 'Admins\LibraryController@cate_update')->name('cate_library.update');
             Route::get('/destroy-cate/{id}', 'Admins\LibraryController@cate_destroy')->name('cate_library.destroy');
 
             Route::get('/setactive-cate/{id}/{status}', 'Admins\LibraryController@cate_setactive')->name('cate_library.setactive');

@@ -84,7 +84,7 @@ class BlogController extends Controller
 
         DB::table('blogs')->insert([
             'name' => $request->name,
-            'slug' => Str::slug($request->name . "-" . time()),
+            'slug' => Str::slug($request->name . "-" . time()).'.html',
             'image' => $file_name,
             'summary' => $request->summary,
 
@@ -94,7 +94,7 @@ class BlogController extends Controller
             'created_at' => now()
         ]);
 
-        return redirect()->back()->with('thongbao', 'Thành công');
+        return redirect()->back()->with('thongbao', 'Thêm thành công');
     }
 
     /**
@@ -169,7 +169,7 @@ class BlogController extends Controller
 
         DB::table('blogs')->where('id', $id)->update([
             'name' => $request->name,
-            'slug' => Str::slug($request->name . "-" . time()),
+            'slug' => Str::slug($request->name . "-" . time()).'.html',
             'image' => $file_name,
             'summary' => $request->summary,
             'content' => $request->contentt,
