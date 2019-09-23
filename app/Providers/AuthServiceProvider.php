@@ -43,7 +43,12 @@ class AuthServiceProvider extends ServiceProvider
     public function except($options)
     {
         $permission = Auth::user()->level;
-        return !in_array(array_search($permission,$this->role),array_wrap($options)) ? 1 : 0;
+        if($permission == $this->role[$options]){
+            return 0;
+        }
+        else{
+            return 1;
+        }
     }
     public function all()
     {
@@ -61,41 +66,11 @@ class AuthServiceProvider extends ServiceProvider
         /*
          * Admin - Manager account
          */
-        Gate::define('admin.view.admin.account',function($user){
+        Gate::define('admin',function($user){
             return $this->only('admin');
         });
-        Gate::define('admin.view-create.admin.account',function ($user){
-            return $this->only('admin');
-        });
-        Gate::define('admin.create.admin.account',function($user){
-            return $this->only('admin');
-        });
-        Gate::define('admin.view-edit.admin.account',function ($user){
-            return $this->only('admin');
-        });
-        Gate::define('admin.edit.admin.account',function ($user){
-            return $this->only('admin');
-        });
-        Gate::define('admin.delete.admin.account',function ($user){
-            return $this->only('admin');
-        });
-        /*
-         * User - Manager account
-         */
-        Gate::define('admin.view.user.account',function($user){
-            return $this->only('admin');
-        });
-        Gate::define('admin.view-create.user.account',function ($user){
-            return $this->only('admin');
-        });
-        Gate::define('admin.create.user.account',function($user){
-            return $this->only('admin');
-        });
-        Gate::define('admin.view-edit.user.account',function ($user){
-            return $this->only('admin');
-        });
-        Gate::define('admin.edit.user.account',function ($user){
-            return $this->only('admin');
+        Gate::define('collaborator', function($user){
+           return $this->except('collaborator');
         });
     }
 }
