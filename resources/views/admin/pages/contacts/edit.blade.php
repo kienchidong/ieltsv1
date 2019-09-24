@@ -80,7 +80,7 @@
                             <div class="form-group">
                                 <label for="" style="margin-left: 10px"> Hiển thị : </label>
                                 <div id="viewImg">
-                                    <img width="100px" height="150px" src="{{asset('')}}images/contacts/{{$contact->icon}}">
+                                    <img width="100px" height="100px" src="{{asset('')}}images/contacts/{{$contact->icon}}">
                                 </div>
                             </div>
 

@@ -283,7 +283,7 @@ class LibraryController extends Controller
     public function cate_edit($id)
     {
 
-        $data['cate_library'] = DB::table('cate_librarys')->orderByDesc('id')->first();
+        $data['cate_library'] = DB::table('cate_librarys')->where('id',$id)->first();
 
         return view('admin.pages.librarys.cate_edit', $data);
     }

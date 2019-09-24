@@ -43,14 +43,14 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $regex = '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/';
+//        $regex = '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/';
         $this->validate($request, [
             'name' => 'min:3',
-            'link' => 'required|regex:' . $regex,
+//            'link' => 'required|regex:' . $regex,
         ], [
             'name.min' => 'Tên không được ít hơn 3 kí tự',
-            'link.required' => 'Đường dẫn không được để trống',
-            'link.regex' => 'Chưa đúng định dạng',
+//            'link.required' => 'Đường dẫn không được để trống',
+//            'link.regex' => 'Chưa đúng định dạng',
         ]);
         //Kiểm tra định dạng ảnh
         if ($request->hasFile('image')) {
@@ -114,14 +114,14 @@ class ContactController extends Controller
     public function update(Request $request, $id)
     {
         $image_update = DB::table('contacts')->where('id', '=', $id)->pluck('icon');
-        $regex = '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/';
+//        $regex = '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/';
         $this->validate($request, [
             'name' => 'min:3',
-            'link' => 'required|regex:' . $regex,
+//            'link' => 'required|regex:' . $regex,
         ], [
             'name.min' => 'Tên không được ít hơn 3 kí tự',
-            'link.required' => 'Đường dẫn không được để trống',
-            'link.regex' => 'Chưa đúng định dạng',
+//            'link.required' => 'Đường dẫn không được để trống',
+//            'link.regex' => 'Chưa đúng định dạng',
         ]);
 
         if ($request->hasFile('image')) {
@@ -135,7 +135,7 @@ class ContactController extends Controller
             }
             $file->move('images/contacts/', $image);
             $file_name = $image;
-            if (file_exists('images/contacts/' . $image_update[0]) && $image_update[0] != '') {
+            if (file_exists('images/contacts/' . $image_update[0]) && $image_update[0] != ''&& $image_update[0] != 'logo.png') {
                 unlink('images/contacts/' . $image_update[0]);
             }
 
