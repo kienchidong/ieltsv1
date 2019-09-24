@@ -56,7 +56,7 @@ class BlogController extends Controller
 
         $this->validate($request, [
             'name' => 'required|min:10',
-            'summary'=>'required|max:256',
+            'summary' => 'required|max:256',
             'contentt' => 'required|min:100',
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
@@ -84,7 +84,7 @@ class BlogController extends Controller
 
         DB::table('blogs')->insert([
             'name' => $request->name,
-            'slug' => Str::slug($request->name . "-" . time()).'.html',
+            'slug' => Str::slug($request->name . "-" . time()) . '.html',
             'image' => $file_name,
             'summary' => $request->summary,
 
@@ -120,7 +120,7 @@ class BlogController extends Controller
 //        $data['blog'] = DB::table('blogs')
 //            ->select('blogs.*', 'cate_blogs.name as cate_name','cate_blogs.id as cate_idd' )
 //            ->join('cate_blogs','blogs.cate_id','=','cate_blogs.id')->where('blogs.id',$id)->first();
-        $data['blog'] = DB::table('blogs')->where('id',$id)->first();
+        $data['blog'] = DB::table('blogs')->where('id', $id)->first();
 
         return view('admin.pages.blogs.edit', $data);
     }
@@ -140,7 +140,7 @@ class BlogController extends Controller
         $this->validate($request, [
             'name' => 'required|min:10',
             'contentt' => 'required|min:100',
-            'summary'=>'required|max:256',
+            'summary' => 'required|max:256',
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
             'contentt.min' => 'Nội dung không được ít hơn 100 kí tự',
@@ -169,7 +169,7 @@ class BlogController extends Controller
 
         DB::table('blogs')->where('id', $id)->update([
             'name' => $request->name,
-            'slug' => Str::slug($request->name . "-" . time()).'.html',
+            'slug' => Str::slug($request->name . "-" . time()) . '.html',
             'image' => $file_name,
             'summary' => $request->summary,
             'content' => $request->contentt,

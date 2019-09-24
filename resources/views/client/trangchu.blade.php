@@ -1,4 +1,5 @@
 @extends('client.layouts.master-layout')
+
 @section('content')
     @include('client.layouts.banner1')
     {{--  <section class="section-1">

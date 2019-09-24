@@ -195,152 +195,240 @@
                     {{--</a>--}}
                 {{--</div>--}}
 
-            {{--</div>--}}
-            {{--<div class="col-md-6 library-right">--}}
-                {{--<h5 class="section-title">Online</h5>--}}
-                {{--<div class="row">--}}
-                    {{--<div class="col-md-12 mt-5">--}}
-                        {{--<iframe width="100%" height="315" src="https://www.youtube.com/embed/VBBrkpDp_3U"--}}
-                            {{--frameborder="0"--}}
-                            {{--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"--}}
-                            {{--allowfullscreen></iframe>--}}
-                        {{--<a class="dk-online btn btn-outline-secondary" href="">Tìm Hiểu Thêm</a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-{{--  <section class="section-4">--}}
-    {{--<div class="container-fluid">--}}
-        {{--<div class="container">--}}
-            {{--<div class="row">--}}
-                {{--<div class="col-md-3 statistic">--}}
-                    {{--<i class="fa fa-book fa-5x"></i>--}}
-                    {{--<span class="stat-count">2228</span>--}}
-                    {{--<span>E-Book Được bán</span>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-3 statistic">--}}
-                    {{--<i class="fa fa-briefcase fa-5x"></i>--}}
-                    {{--<span class="stat-count">20</span>--}}
-                    {{--<span>Khóa học</span>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-3 statistic">--}}
-                    {{--<i class="fa fa-calendar-check fa-5x"></i>--}}
-                    {{--<span class="stat-count">2228</span>--}}
-                    {{--<span>Học viên</span>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-3 statistic">--}}
-                    {{--<i class="fa fa-graduation-cap fa-5x"></i>--}}
-                    {{--<span class="stat-count">2228</span>--}}
-                    {{--<span>Học viên đạt 6.5 Ilest</span>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>  --}}
-{{--  <section class="section-5">--}}
-    {{--<div class="container-fluid">--}}
-        {{--<div class="container">--}}
-            {{--<h3 class="section-title">Giáo Viên Ielst</h3>--}}
-            {{--<div class="row teacher">--}}
-                {{--<div class="col-md-3">--}}
-                    {{--<div class="avatar-teacher">--}}
-                        {{--<img src="image/1.png" alt="">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-9 d-flex flex-column">--}}
-                    {{--<span class="teacher-name">--}}
-                        {{--<span> Thầy : Trần Hồng Dũng</span>--}}
-                    {{--</span>--}}
-                    {{--<span class="teacher-info">--}}
-                        {{--Đạt điểm Ielst 8.5 Năm 2019--}}
-                    {{--</span>--}}
-                    {{--<span class="teacher-info">--}}
-                        {{--Giảng viên đại học quốc gia Việt Nam--}}
-                    {{--</span>--}}
-                    {{--<span class="teacher-info">--}}
-                        {{--Du học Anh từ 2010 - 2018--}}
-                    {{--</span>--}}
-                    {{--<span>Thông tin thêm Facebook : <a href="">Trần Hồng Dũng</a></span>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="row teacher">--}}
-                {{--<div class="col-md-3 order-2">--}}
-                    {{--<div class="avatar-teacher">--}}
-                        {{--<img src="image/1.png" alt="">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-9 order-1 d-flex flex-column">--}}
-                    {{--<span class="teacher-name">--}}
-                        {{--<span> Thầy : Trần Hồng Dũng</span>--}}
-                    {{--</span>--}}
-                    {{--<span class="teacher-info">--}}
-                        {{--Đạt điểm Ielst 8.5 Năm 2019--}}
-                    {{--</span>--}}
-                    {{--<span class="teacher-info">--}}
-                        {{--Giảng viên đại học quốc gia Việt Nam--}}
-                    {{--</span>--}}
-                    {{--<span class="teacher-info">--}}
-                        {{--Du học Anh từ 2010 - 2018--}}
-                    {{--</span>--}}
-                    {{--<span>Thông tin thêm Facebook : <a href="">Trần Hồng Dũng</a></span>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="row teacher">--}}
-                {{--<div class="col-md-3">--}}
-                    {{--<div class="avatar-teacher">--}}
-                        {{--<img src="image/1.png" alt="">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-9 d-flex flex-column">--}}
-                    {{--<span class="teacher-name">--}}
-                        {{--<span> Thầy : Trần Hồng Dũng</span>--}}
-                    {{--</span>--}}
-                    {{--<span class="teacher-info">--}}
-                        {{--Đạt điểm Ielst 8.5 Năm 2019--}}
-                    {{--</span>--}}
-                    {{--<span class="teacher-info">--}}
-                        {{--Giảng viên đại học quốc gia Việt Nam--}}
-                    {{--</span>--}}
-                    {{--<span class="teacher-info">--}}
-                        {{--Du học Anh từ 2010 - 2018--}}
-                    {{--</span>--}}
-                    {{--<span>Thông tin thêm Facebook : <a href="">Trần Hồng Dũng</a></span>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</section>  --}}
-{{--<section id="blog" class="section-6 pb-4">--}}
-    {{--<div class="container-fluid">--}}
-        {{--<div class="container">--}}
-            {{--<h3 class="section-title">--}}
-                {{--Blog Chia Sẻ--}}
-            {{--</h3>--}}
-            {{--<div class="blog">--}}
-                {{--<div class="d-flex justify-content-between">--}}
-                    {{--<a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>--}}
-                    {{--<div class="time-blog">--}}
-                        {{--<i class="fa fa-calendar-alt"></i>--}}
-                        {{--<span>13 Stb 2019</span>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="blog-content">--}}
-                    {{--<div class="blog-img">--}}
-                        {{--<img src="image/blog1.png" class="img-reponsive" alt="">--}}
-                    {{--</div>--}}
-                    {{--<span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst--}}
-                        {{--? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu--}}
-                        {{--chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần--}}
-                        {{--nào về Ielst--}}
-                    {{--</span>--}}
-                    {{--<a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">--}}
-                        {{--Đọc tiếp--}}
-                    {{--</a>--}}
-                {{--</div>--}}
-                {{--<div class="border-bottom">--}}
+            </div>
+            <div class="col-md-6 library-right">
+                <h5 class="section-title">Online</h5>
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VBBrkpDp_3U"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <a class="dk-online btn btn-outline-secondary" href="">Tìm Hiểu Thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+{{--  <section class="section-4">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 statistic">
+                    <i class="fa fa-book fa-5x"></i>
+                    <span class="stat-count">2228</span>
+                    <span>E-Book Được bán</span>
+                </div>
+                <div class="col-md-3 statistic">
+                    <i class="fa fa-briefcase fa-5x"></i>
+                    <span class="stat-count">20</span>
+                    <span>Khóa học</span>
+                </div>
+                <div class="col-md-3 statistic">
+                    <i class="fa fa-calendar-check fa-5x"></i>
+                    <span class="stat-count">2228</span>
+                    <span>Học viên</span>
+                </div>
+                <div class="col-md-3 statistic">
+                    <i class="fa fa-graduation-cap fa-5x"></i>
+                    <span class="stat-count">2228</span>
+                    <span>Học viên đạt 6.5 Ilest</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  --}}
+{{--  <section class="section-5">
+    <div class="container-fluid">
+        <div class="container">
+            <h3 class="section-title">Giáo Viên Ielst</h3>
+            <div class="row teacher">
+                <div class="col-md-3">
+                    <div class="avatar-teacher">
+                        <img src="image/1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9 d-flex flex-column">
+                    <span class="teacher-name">
+                        <span> Thầy : Trần Hồng Dũng</span>
+                    </span>
+                    <span class="teacher-info">
+                        Đạt điểm Ielst 8.5 Năm 2019
+                    </span>
+                    <span class="teacher-info">
+                        Giảng viên đại học quốc gia Việt Nam
+                    </span>
+                    <span class="teacher-info">
+                        Du học Anh từ 2010 - 2018
+                    </span>
+                    <span>Thông tin thêm Facebook : <a href="">Trần Hồng Dũng</a></span>
+                </div>
+            </div>
+            <div class="row teacher">
+                <div class="col-md-3 order-2">
+                    <div class="avatar-teacher">
+                        <img src="image/1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9 order-1 d-flex flex-column">
+                    <span class="teacher-name">
+                        <span> Thầy : Trần Hồng Dũng</span>
+                    </span>
+                    <span class="teacher-info">
+                        Đạt điểm Ielst 8.5 Năm 2019
+                    </span>
+                    <span class="teacher-info">
+                        Giảng viên đại học quốc gia Việt Nam
+                    </span>
+                    <span class="teacher-info">
+                        Du học Anh từ 2010 - 2018
+                    </span>
+                    <span>Thông tin thêm Facebook : <a href="">Trần Hồng Dũng</a></span>
+                </div>
+            </div>
+            <div class="row teacher">
+                <div class="col-md-3">
+                    <div class="avatar-teacher">
+                        <img src="image/1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9 d-flex flex-column">
+                    <span class="teacher-name">
+                        <span> Thầy : Trần Hồng Dũng</span>
+                    </span>
+                    <span class="teacher-info">
+                        Đạt điểm Ielst 8.5 Năm 2019
+                    </span>
+                    <span class="teacher-info">
+                        Giảng viên đại học quốc gia Việt Nam
+                    </span>
+                    <span class="teacher-info">
+                        Du học Anh từ 2010 - 2018
+                    </span>
+                    <span>Thông tin thêm Facebook : <a href="">Trần Hồng Dũng</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  --}}
+<section id="blog" class="section-6 pb-4">
+    <div class="container-fluid">
+        <div class="container">
+            <h3 class="section-title">
+                Blog Chia Sẻ
+            </h3>
+            <div class="blog">
+                <div class="d-flex justify-content-between blog-title">
+                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
+                    <div class="time-blog">
+                        <i class="fa fa-calendar-alt"></i>
+                        <span>13 Stb 2019</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-img">
+                        <img src="image/blog1.png" class="img-reponsive" alt="">
+                    </div>
+                    <span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst
+                        ? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu
+                        chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
+                        nào về Ielst
+                    </span>
+                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
+                        Đọc tiếp
+                    </a>
+                </div>
+                <div class="border-bottom">
+
+                </div>
+            </div>
+            <div class="blog">
+                <div class="d-flex justify-content-between blog-title">
+                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
+                    <div class="time-blog">
+                        <i class="fa fa-calendar-alt"></i>
+                        <span>13 Stb 2019</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-img">
+                        <img src="image/blog1.png" class="img-reponsive" alt="">
+                    </div>
+                    <span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst
+                        ? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu
+                        chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
+                        nào về Ielst
+                    </span>
+                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
+                        Đọc tiếp
+                    </a>
+                </div>
+                <div class="border-bottom">
+
+                </div>
+            </div>
+            <div class="blog">
+                <div class="d-flex justify-content-between blog-title">
+                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
+                    <div class="time-blog">
+                        <i class="fa fa-calendar-alt"></i>
+                        <span>13 Stb 2019</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-img">
+                        <img src="image/blog1.png" class="img-reponsive" alt="">
+                    </div>
+                    <span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst
+                        ? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu
+                        chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
+                        nào về Ielst
+                    </span>
+                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
+                        Đọc tiếp
+                    </a>
+                </div>
+                <div class="border-bottom">
+                </div>
+            </div>
+            <div style="text-align: center">
+            <a class="btn btn-xuanphi" href="{{ route('blog') }}">Xem Thêm</a>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</section>
+<section id="blog" class="section-6 pb-4">
+    <div class="container-fluid">
+        <div class="container">
+            <h3 class="section-title">
+                Blog Chia Sẻ
+            </h3>
+            <div class="blog">
+                <div class="d-flex justify-content-between">
+                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
+                    <div class="time-blog">
+                        <i class="fa fa-calendar-alt"></i>
+                        <span>13 Stb 2019</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-img">
+                        <img src="image/blog1.png" class="img-reponsive" alt="">
+                    </div>
+                    <span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst
+                        ? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu
+                        chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
+                        nào về Ielst
+                    </span>
+                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
+                        Đọc tiếp
+                    </a>
+                </div>
+                <div class="border-bottom">
 
                 {{--</div>--}}
             {{--</div>--}}

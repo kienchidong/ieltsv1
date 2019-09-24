@@ -1,6 +1,6 @@
 @extends('client.layouts.master-layout')
 @section('title')
-    Nghe
+
 @endsection
 @section('content')
     <section class="section-library pb-5" style="background-color : #f4f6f8">
@@ -36,8 +36,8 @@
                     <span class="delay-2">i</span>
                     <span class="delay-3">e</span>
                     <span class="delay-4">l</span>
-                    <span class="delay-5">s</span>
-                    <span class="delay-1">t</span>
+                    <span class="delay-5">t</span>
+                    <span class="delay-1">s</span>
                 </div>
             </div>
             <div class="container pt-4">
@@ -70,6 +70,10 @@
                         <div class="content-book">
                             <div class="content-content-book">
                                 <h4>{{$value->name}}</h4>
+                                <div class="time-blog">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <span>{{Carbon\Carbon::parse($value->created_at)->format('d-m-Y')}}</span>
+                                </div>
                                 <span>{!! substr($value->summary,0,255) !!}</span>
                                 <a href="{{ url('library').'/'.$cate_name->slug.'/'.$value->slug}}"
                                    class="btn btn-danger book-button">Đọc tiếp</a>
