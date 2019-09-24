@@ -14,7 +14,7 @@ class IntroduceController extends Controller
 
     public function index()
     {
-        if (Gate::allows('admin.view.admin.account'))
+        if (Gate::allows('admin'))
         {
             $data['introduces'] = DB::table('introduce')->first();
 
