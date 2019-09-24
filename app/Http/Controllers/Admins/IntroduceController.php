@@ -29,7 +29,7 @@ class IntroduceController extends Controller
         if ($request->hasFile('logo')) {
             $file = $request->file('logo');
             $name = $this->imagename($file->getClientOriginalName());
-            $avatar = time() . "_logo_" . $name;
+            $avatar = time() . "_slider_" . $name;
             while (file_exists('images/logo/' . $avatar)) {
                 $avatar = time() . "_logo_" . $name;
             }

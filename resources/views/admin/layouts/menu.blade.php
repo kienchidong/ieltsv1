@@ -134,6 +134,21 @@
                     <span>Giới thiệu </span>
                 </a>
             </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-picture-o"></i>
+                    <span>Hình Ảnh </span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('home.slider')}}"><i class="fa fa-circle-o"></i> Home Slider</a></li>
+                    <li><a href="{{route('home.background')}}"><i class="fa fa-circle-o"></i> Home Background</a></li>
+                    <li><a href="{{route('library.background')}}"><i class="fa fa-circle-o"></i> Hình Nền Thư Viện</a></li>
+                    <li><a href="{{route('library.slider')}}"><i class="fa fa-circle-o"></i> Slider Thư Viện</a></li>
+                </ul>
+            </li>
     </section>
     <!-- /.sidebar -->
 </aside>
