@@ -8,7 +8,7 @@
         <div class="container">
             <h3 class="text-center border-bot">{{ $introduces->title }}</h3>
             <div class="d-flex flex-column course-content">
-                {{--<span>Mình từng là một đứa mắc bệnh cứ ”gặp Tây là đóng băng cửa khẩu” bởi đã xuất thân từ ban A thì chớ
+                <span>Mình từng là một đứa mắc bệnh cứ ”gặp Tây là đóng băng cửa khẩu” bởi đã xuất thân từ ban A thì chớ
                     lại
                     còn mãi tới tận sắp tốt nghiệp Đại học mới chịu học Tiếng Anh tử tế.
                     Vậy nên mình luôn tìm tòi những cách học đơn giản, dễ áp dụng mà vẫn đạt được hiệu quả tốt. </span>
@@ -57,8 +57,8 @@
 
                 <span>Comment “XP” để nhận bộ Tài liệu 30 bài nghe cơ bản để áp dụng phương pháp này ngay và luôn nhé </span>
                 <a href="http://bit.ly/30baiListeningcoban">Link tải: http://bit.ly/30baiListeningcoban </a>
-                <a href="http://bit.ly/30baiListeningcoban-key">Key: http://bit.ly/30baiListeningcoban-key</a>--}}
-                {!! $introduces->content !!}
+                <a href="http://bit.ly/30baiListeningcoban-key">Key: http://bit.ly/30baiListeningcoban-key</a>
+
             </div>
             <h3 class="text-center border-bot">Thông tin khóa học</h3>
             <div class="d-flex flex-column">

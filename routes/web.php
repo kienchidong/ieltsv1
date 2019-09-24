@@ -42,6 +42,14 @@ Route::prefix('/')->group(function () {
         Route::get('{slug}', 'Client\LibraryController@index')->name('client.librarys.index');
         Route::get('{cate}/{slug}', 'Client\LibraryController@detail')->name('client.librarys.detail');
     });
+
+//    giới thiệu
+    Route::get('/introduce.html',function(){
+        return view('client.pages.introduce.introduce');
+    })->name('introduce');
+    Route::get('landing', function (){
+        return view('landingpage');
+    })->name('landing');
 //    //Khóa học
 //    Route::get('/course', function () {
 //        return view('pages.course');
@@ -56,9 +64,7 @@ Route::prefix('/')->group(function () {
 //    Route::get('/' , function(){
 //        return view('pages.trangchu');
 //    });
-//    Route::get('/course',function(){
-//        return view('pages.course');
-//    });
+//
 //    Route::get('/dangky',function(){
 //        return view('pages.dangky');
 //    });
@@ -91,9 +97,6 @@ Route::prefix('/')->group(function () {
 //            return view('pages.tonghop');
 //        });
 //    });
-//    Route::get('landing', function (){
-//        return view('landingpage');
-//    })->name('landing');
 });
 
 

@@ -1,4 +1,7 @@
 @extends('client.layouts.master-layout')
+@section('title')
+    Trang Chủ
+@endsection
 @section('content')
     @include('client.layouts.banner1')
     {{--  <section class="section-1">
@@ -290,8 +293,9 @@
                     Blog Chia Sẻ
                 </h3>
                 @foreach($blogs as $value)
+
                     <div class="blog">
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between blog-title">
                             <a href="{{ route('client.blogs.detail',$value->slug)}}"
                                class="title-blog">{{Str::substr($value->name,0,100)}}</a>
                             <div class="time-blog">
@@ -301,9 +305,9 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-img">
-                                <img src="{{asset('images/blogs').'/'.$value->image}}" class="img-reponsive" alt="">
+                                <img src="{{asset('images/blogs/'.$value->image)}}" class="img-reponsive" alt="">
                             </div>
-                            <span>{{Str::substr($value->summary,0,256)}}
+                            <span>{{ Str::substr($value->summary,0,256) }}
                     </span>
                             <a href="{{ route('client.blogs.detail',$value->slug) }}"
                                class="doctiep btn btn-outline-danger">
