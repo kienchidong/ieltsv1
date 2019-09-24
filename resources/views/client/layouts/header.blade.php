@@ -15,7 +15,7 @@
 
 				</div>
 				<ul class="nav-ul-lv-1">
-					<li><a href="{{ url('/course') }}">Giới thiệu</a></li>
+					<li><a href="{{ route('introduce') }}">Giới thiệu</a></li>
 					<li >
 						<a href="#khoahoc" id="khoahoc-li">khóa học<i class="fa fa-sort-down"></i></a>
 						<ul class="nav-ul-lv-2">
@@ -40,7 +40,7 @@
 					<li id="contact-li"><a href="#">liên hệ</a></li>
 				</ul>
 				<ul class="nav-ul-lv-1">
-					<li><a href="{{ url('dangky') }}"
+					<li><a target="_blank" href="http://bit.ly/IELTSofflineXuanPhi"
 						   style="    border: 3px solid #19687D;
                             border-radius: 5px;"
 						>Đăng ký</a></li>
@@ -66,7 +66,7 @@
 				<div class="menu-left-content">
 
 					<ul class="menu-left-ul-lv-1">
-						<li><a href="/">Giới thiệu</a></li>
+						<li><a href="{{ route('introduce') }}">Giới thiệu</a></li>
 						<li>
 							<a href="#khoahoc">khóa học</a>
 

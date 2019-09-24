@@ -18,7 +18,9 @@ class HomeController extends Controller
     }
     public function index()
     {
+        $data['blogs'] = DB::table('blogs')->where('status', 1)
+            ->orderBy('id', 'DESC')->limit(3)->get();
 
-        return view('client.trangchu');
+        return view('client.trangchu', $data);
     }
 }
