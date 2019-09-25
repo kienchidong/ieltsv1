@@ -41,9 +41,8 @@ class CourseTable extends Migration
         Schema::create('course_onlines',function (Blueprint $table)
         {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('video');
             $table->text('link')  ;
-            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
 

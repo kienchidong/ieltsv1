@@ -360,13 +360,37 @@ class DatabaseSeeder extends Seeder
 
         DB::table('images')->insert([
             [
-                'image' => 'background.jpg',
-                'location' => '2'
+                'image' => 'default.jpg',
+                'title' => 'Ielts cùng Xuân Phi',
+                'location' => '1',
+
+            ],[
+                'image' => 'default.jpg',
+                'title' => '',
+                'location' => '1',
+            ],[
+                'image' => 'default.jpg',
+                'title' => '',
+                'location' => '1',
             ],
             [
+                'image' => 'background.jpg',
+                'title' => '',
+                'location' => '2'
+            ], [
                 'image' => 'Library_img.jpg',
+                'title' => '',
                 'location' => '3'
+            ], [
+                'image' => 'coment.jpg',
+                'title' => '',
+                'location' => '4'
             ],
+        ]);
+
+        DB::table('course_onlines')->insert([
+           'video' => '7jkVGDPnewo',
+           'link' =>'https://google.com.vn'
         ]);
     }
 }

@@ -15,6 +15,8 @@ class LibraryController extends Controller
         $data['cate_name'] = DB::table('cate_librarys')->where('slug', $slug)->first();
         $data['library'] = DB::table('librarys')->where('cate_id', $cate_id)
             ->where('status', 1)->paginate(5);
+        $data['librarybackground'] = DB::table('images')->where('location', 3)->first();
+
 
         return view('client.pages.librarys.library', $data);
     }

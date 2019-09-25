@@ -106,13 +106,13 @@
                                         <div>
                                             @if($value->status ==1)
                                                 <a href="{{ route('admin.account.status', [$value->id,0]) }}" class="btn btn-danger" onclick="return confirm('Hành Động này sẽ khóa tài khoản được chọn! bạn có muốn tiếp tục?')">Khóa</a>
+                                                <button class="btn btn-success" onclick="suarole({{ $value->id }})">Sửa Quyền</button>
                                             @else
                                                 <a href="{{ route('admin.account.status', [$value->id,1]) }}" class="btn btn-primary" onclick="return confirm('Hành Động này sẽ kích hoạt tài khoản được chọn! bạn có muốn tiếp tục?')">Kích Hoạt</a>
                                                 <a href="{{ route('admin.account.delete', $value->id) }}" class="btn btn-danger" onclick="return confirm('Hành Động này sẽ xóa tài khoản được chọn! bạn có muốn tiếp tục?')">Xóa</a>
                                             @endif
                                                 <input type="hidden" id="name-{{ $value->id }}" value="{{ $value->name }}" />
                                                 <input type="hidden" id="level-{{ $value->id }}" value="{{ $value->level }}" />
-                                                <button class="btn btn-success" onclick="suarole({{ $value->id }})">Sửa Quyền</button>
                                         </div>
                                     </tr>
                                 @endforeach

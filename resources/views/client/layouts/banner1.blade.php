@@ -1,20 +1,21 @@
 <section class="section-banner">
     <div class="container-fluid title-background">
             <div class="banner owl-carousel owl-theme">
-                <div class="item">
-                    <div class="silder-image">
-                        <img src="image/bg1.jpg"
-                            alt="First slide">
+                @foreach($homesliders as $value)
+                    <div class="item">
+                        <div class="silder-image">
+                            <img src="{{ asset('images/sliders/'.$value->image) }}"
+                                alt="First slide">
+                        </div>
+                        <div class="col-md-12 banner-title">
+                                {{--<div class="text">English</div>--}}
+                                <div class="text ml-3">
+                                  <span>{{ $value->title }}</span>
+                                </div class="text">
+                        </div>
                     </div>
-                    <div class="col-md-12 banner-title">
-                            <div class="text">English</div>
-                            <div class="text ml-3">
-                              <span>cùng Xuân Phi Ielts</span>
-                            </div class="text">
-                            </body>
-                    </div>
-                </div>
-                <div class="item">
+                @endforeach
+             {{--   <div class="item">
                     <div class="silder-image">
                         <img src="image/bg1.jpg"
                             alt="First slide">
@@ -26,7 +27,7 @@
                         <img src="image/bg1.jpg"
                             alt="First slide">
                     </div>
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>
