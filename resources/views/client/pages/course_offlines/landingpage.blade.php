@@ -3,7 +3,7 @@
 
 <head>
     <title>Khóa học offline</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-kien.png') }}"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('image/logo11.png') }}"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Bootstrap 3.3.7 -->
@@ -565,69 +565,21 @@
             <div class="row">
                 <div class="large-12 columns">
                     <div class="owl-carousel">
-                        <div class="item container-image">
+                        @foreach($teacher as $value)
+                            <div class="item container-image">
 
-                            <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt=""
-                                 class="image">
-                            <div class="middle">
-                                <h4>Hà Đức Kiên</h4>
-                                <span>CEO</span>
+                                <img src="{{ asset('images/teachers').'/'.$value->image }}" style="width: 100%; height: 350px" alt=""
+                                     class="image">
+                                <div class="middle">
+                                    <h4>{{$value->name}}</h4>
+                                    <span>{{$value->position}}</span>
+                                    <br>
+                                    {{$value->content}}
+                                </div>
                             </div>
-                        </div>
-                        <div class="item container-image">
+                        @endforeach
 
-                            <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt=""
-                                 class="image">
-                            <div class="middle">
-                                <h4>Hà Đức Kiên</h4>
-                                <span>CEO</span>
-                            </div>
-                        </div>
-                        <div class="item container-image">
 
-                            <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt=""
-                                 class="image">
-                            <div class="middle">
-                                <h4>Hà Đức Kiên</h4>
-                                <span>CEO</span>
-                            </div>
-                        </div>
-                        <div class="item container-image">
-
-                            <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt=""
-                                 class="image">
-                            <div class="middle">
-                                <h4>Hà Đức Kiên</h4>
-                                <span>CEO</span>
-                            </div>
-                        </div>
-                        <div class="item container-image">
-
-                            <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt=""
-                                 class="image">
-                            <div class="middle">
-                                <h4>Hà Đức Kiên</h4>
-                                <span>CEO</span>
-                            </div>
-                        </div>
-                        <div class="item container-image">
-
-                            <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt=""
-                                 class="image">
-                            <div class="middle">
-                                <h4>Hà Đức Kiên</h4>
-                                <span>CEO</span>
-                            </div>
-                        </div>
-                        <div class="item container-image">
-
-                            <img src="{{ asset('image/1.png') }}" style="width: 100%; height: 350px" alt=""
-                                 class="image">
-                            <div class="middle">
-                                <h4>Hà Đức Kiên</h4>
-                                <span>CEO</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

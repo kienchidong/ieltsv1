@@ -18,6 +18,7 @@ class TeacherTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('position');
+            $table->string('content')->nullable();
             $table->string('image');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

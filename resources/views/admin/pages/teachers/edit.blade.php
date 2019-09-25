@@ -14,22 +14,7 @@
         </ol>
     </section>
     <br>
-    <div>
-        @if(count($errors) > 0)
-            <div class="alert alert-danger">
-                @foreach($errors->all() as $err)
-                    {{$err}}<br>
-                @endforeach
 
-            </div>
-
-        @endif
-        @if(session('thongbao'))
-            <div class="alert alert-success">
-                {{session('thongbao')}}
-            </div>
-        @endif
-    </div>
 
 
     <!-- Main content -->
@@ -85,6 +70,11 @@
                                 <label for="exampleInputEmail1">Chức vụ </label>
                                 <input type="text" class="form-control" placeholder="Nhập vào đây... " name="position"
                                        value="{{ $teacher->position }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Thông tin</label>
+                                <input type="text" class="form-control" placeholder="Nhập vào đây... " name="contenttt"
+                                       value="{{$teacher->content}}">
                             </div>
 
                             <div class="form-group">

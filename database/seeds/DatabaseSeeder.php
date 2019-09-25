@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        $this->call('Teacher');
         $this->call('CourseOfflines');
         $this->call('CateLibrarys');
         $this->call('Contacts');
@@ -361,13 +362,37 @@ class DatabaseSeeder extends Seeder
 
         DB::table('images')->insert([
             [
-                'image' => 'background.jpg',
-                'location' => '2'
+                'image' => 'default.jpg',
+                'title' => 'Ielts cùng Xuân Phi',
+                'location' => '1',
+
+            ],[
+                'image' => 'default.jpg',
+                'title' => '',
+                'location' => '1',
+            ],[
+                'image' => 'default.jpg',
+                'title' => '',
+                'location' => '1',
             ],
             [
+                'image' => 'background.jpg',
+                'title' => '',
+                'location' => '2'
+            ], [
                 'image' => 'Library_img.jpg',
+                'title' => '',
                 'location' => '3'
+            ], [
+                'image' => 'coment.jpg',
+                'title' => '',
+                'location' => '4'
             ],
+        ]);
+
+        DB::table('course_onlines')->insert([
+           'video' => '7jkVGDPnewo',
+           'link' =>'https://google.com.vn'
         ]);
     }
 }
@@ -786,7 +811,67 @@ class CourseOfflines extends Seeder
                 'created_at' => now(),
             ],
         ]);
+        DB::table('course_enrolling')->insert([
+            [
+                'name' => 'Lớp ngọn tháng 10/2019',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Lớp ngọn tháng 11/2019',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Lớp ngọn tháng 9/2019',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Lớp ngọn tháng 10/2019',
+                'image' => 'xuanphi1.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+
+        ]);
     }
 
+}
+class Teacher extends Seeder
+{
+    public function run()
+    {
+        DB::table('teachers')->insert([
+            [
+                'name' => 'Xuân phi',
+                'position' => 'Giảng viên',
+                'content' =>'Có kinh nghiệm 9 năm trong lĩnh vực giảng dạy ',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Thảo Linh',
+                'position' => 'Giảng viên',
+                'content' =>'Có kinh nghiệm 4 năm trong lĩnh vực giảng dạy ',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Linh Linh',
+                'position' => 'Giảng viên',
+                'content' =>'Có kinh nghiệm 3 năm trong lĩnh vực giảng dạy ',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+
+        ]);
+    }
 }
 

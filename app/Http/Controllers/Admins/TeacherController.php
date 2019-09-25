@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admins;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class TeacherController extends Controller
 {
@@ -21,6 +22,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
+
         $data['teachers'] = DB::table('teachers')->orderByDesc('id')->get();
         return view('admin.pages.teachers.index', $data);
     }
@@ -43,10 +45,12 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request, [
-            'title' => 'min:3',
+            'name' => 'min:3',
+
         ], [
-            'title.min' => 'Tên không được ít hơn 3 kí tự',
+            'name.min' => 'Tên không được ít hơn 3 kí tự',
         ]);
         //Kiểm tra định dạng ảnh
         if ($request->hasFile('image')) {
@@ -67,7 +71,9 @@ class TeacherController extends Controller
 
 
         DB::table('teachers')->insert([
-            'title' => $request->title,
+            'name' => $request->name,
+            'position' => $request->position,
+            'content' =>$request->contenttt,
             'image' => $file_name,
             'status' => 1,
             'created_at' => now()
@@ -111,9 +117,9 @@ class TeacherController extends Controller
         $image_update = DB::table('teachers')->where('id', '=', $id)->pluck('image');
 
         $this->validate($request, [
-            'title' => 'min:3',
+            'name' => 'min:3',
         ], [
-            'title.min' => 'Tên không được ít hơn 3 kí tự',
+            'name.min' => 'Tên không được ít hơn 3 kí tự',
         ]);
 
         if ($request->hasFile('image')) {
@@ -127,7 +133,7 @@ class TeacherController extends Controller
             }
             $file->move('images/teachers/', $image);
             $file_name = $image;
-            if (file_exists('images/teachers/' . $image_update[0]) && $image_update[0] != '') {
+            if (file_exists('images/teachers/' . $image_update[0]) && $image_update[0] != '' && $image_update[0] != 'logo.png') {
                 unlink('images/teachers/' . $image_update[0]);
             }
 
@@ -136,9 +142,12 @@ class TeacherController extends Controller
         }
 
         DB::table('teachers')->where('id', $id)->update([
-            'title' => $request->title,
+            'name' => $request->name,
+            'position' => $request->position,
+            'content' =>$request->contenttt,
             'image' => $file_name,
-            'updated_at' => now()
+            'status' => 1,
+            'created_at' => now()
         ]);
 
         return redirect()->route('teacher.index')->with('thongbao', 'Sửa thành công');

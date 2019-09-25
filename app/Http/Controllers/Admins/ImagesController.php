@@ -45,14 +45,14 @@ class ImagesController extends Controller
         abort(403);
     }
 
-    //library slider
-    public function librarysilder(){
+    //comment background
+    public function commentbackground()
+    {
         if (Gate::allows('admin'))
         {
-            $data['images'] = DB::table('images')
-            ->select('images.*',DB::raw('if(images.status = 1, "Hiện", "Ẩn") as hienthi'))
-            ->where('location', 4)->get();
-            return view('admin.pages.images.libraryslider', $data);
+            $data['title'] = 'Hình nền của Thư Viện';
+            $data['images'] = DB::table('images')->where('location', 4)->first();
+            return view('admin.pages.images.background', $data);
 
         }
         abort(403);

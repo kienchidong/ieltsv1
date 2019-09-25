@@ -157,21 +157,7 @@ Route::prefix('admin')->group(function () {
             Route::get('index', 'Admins\FormController@index')->name('form.index');
             Route::get('create', 'Admins\FormController@create')->name('form.add');
         });
-        /*
-         * Phần slider của trang chủ
-         */
-        Route::prefix('slider')->group(function () {
-            Route::get('/list', 'Admins\SliderController@index')->name('slider.index');
-            Route::get('/add', 'Admins\SliderController@create')->name('slider.create');
-            Route::post('/add', 'Admins\SliderController@store')->name('slider.store');
 
-            Route::get('/edit/{id}', 'Admins\SliderController@edit')->name('slider.edit');
-            Route::post('/edit/{id}', 'Admins\SliderController@update')->name('slider.update');
-            Route::get('/destroy/{id}', 'Admins\SliderController@destroy')->name('slider.destroy');
-
-            Route::get('/setactive/{id}/{status}', 'Admins\SliderController@setactive')->name('slider.setactive');
-
-        });
         /*
          * Phần liên hệ trang chủ
          */
@@ -338,8 +324,8 @@ Route::prefix('admin')->group(function () {
             Route::get('home-background.html', 'Admins\ImagesController@homebackground')->name('home.background');
             // library background
             Route::get('library-background.html', 'Admins\ImagesController@librarybackground')->name('library.background');
-            //library slider
-            Route::get('library-slider.html', 'Admins\ImagesController@librarysilder')->name('library.slider');
+            //comment background
+            Route::get('comment-background.html', 'Admins\ImagesController@commentbackground')->name('comment.background');
 
             // action
             Route::post('create', 'Admins\ImagesController@store')->name('images.store');
@@ -348,6 +334,12 @@ Route::prefix('admin')->group(function () {
             Route::get('delete/{id}', 'Admins\ImagesController@delete')->name('images.delete');
             Route::get('status/{id}/{status}', 'Admins\ImagesController@status')->name('images.status');
 
+        });
+
+        Route::prefix('online')->group(function(){
+           Route::get('/', 'Admins\OnlineController@index')->name('course.online');
+
+           Route::post('update/{id}', 'Admins\OnlineController@update')->name('course.update');
         });
     });
 });

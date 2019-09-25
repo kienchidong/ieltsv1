@@ -31,7 +31,10 @@
             </div>
         </div>
     </section>  --}}
-    <section class="section-11" style="background-image: url(http://localhost/ieltsv1/public/image/workshop.jpg) !important">
+    <section class="section-11" style="
+        @if($homebackground->image != null)
+            background-image: url({{ asset('images/sliders/'.$homebackground->image)}}) !important
+         @endif   ">
         <div class="back-ground" style="background : #000"></div>
         <div class="container-fluid">
             <div class="container work-shop">
@@ -113,7 +116,10 @@
             </div>
         </div>
     </section>
-    <section id="thuvien" class="section-thuvien" style="    background-image: url(http://localhost/ieltsv1/public/image/library.jpg) !important">
+    <section id="thuvien" class="section-thuvien" style="
+            @if($librarybackground->image != null)
+                background-image: url({{ asset('images/sliders/'.$librarybackground->image) }}) !important
+            @endif">
         <div class="container-fluid" id="library">
             <div class="container">
                 <h3 class="section-title text-white">Thư viện</h3>
@@ -143,7 +149,7 @@
 
                     <div class="col-md-6 library-left">
                         <h5 id="khoahoc" class="section-title">Offline</h5>
-                        <a href="{{ url('landing') }}">
+                        <a href="{{ route('client.course.index') }}">
                             <div class="tree-skill">
                                 <img class="tree" src="image/tree1.png" alt="">
                                 <div class="skill">
@@ -152,17 +158,17 @@
                                     </a>
                                 </div>
                                 <div class="skill skill-2">
-                                    <a href="{{ url('landing') }}">
+                                    <a href="{{ route('client.course.index') }}">
                                         Khóa gốc
                                     </a>
                                 </div>
                                 <div class="skill skill-3">
-                                    <a href="{{ url('landing') }}">
+                                    <a href="{{ route('client.course.index') }}">
                                         Khóa thân
                                     </a>
                                 </div>
                                 <div class="skill skill-4">
-                                    <a href="{{ url('landing') }}">
+                                    <a href="{{ route('client.course.index') }}">
                                         Khóa ngọn
                                     </a>
                                 </div>
@@ -174,11 +180,8 @@
                     <h5 class="section-title">Online</h5>
                     <div class="row">
                         <div class="col-md-12 mt-5">
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VBBrkpDp_3U"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            <a class="dk-online btn btn-outline-secondary" href="">Tìm Hiểu Thêm</a>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $online->video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a target="_blank" class="dk-online btn btn-outline-secondary" href="{{ $online->link }}">Tìm Hiểu Thêm</a>
                         </div>
                     </div>
                 </div>
@@ -328,7 +331,10 @@
         </div>
         </div>
     </section>
-    <section class="section-7">
+    <section class="section-7"  style="
+            @if($commentbackground->image != null)
+            background-image: url({{ asset('images/sliders/'.$commentbackground->image) }}) !important;
+            @endif" >
         <div class="back-ground"></div>
         <div class="container-fluid">
             <div class="container danhgia">
