@@ -24,22 +24,7 @@
                 <li class="active">Giáo viên</li>
             </ol>
         </section>
-        <div>
-            @if(count($errors) > 0)
-                <div class="alert alert-danger">
-                    @foreach($errors->all() as $err)
-                        {{$err}}<br>
-                    @endforeach
 
-                </div>
-
-            @endif
-            @if(session('thongbao'))
-                <div class="alert alert-success">
-                    {{session('thongbao')}}
-                </div>
-            @endif
-        </div>
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
@@ -56,8 +41,9 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Tên</th>
-                                    <th>Chức vụ</th>
                                     <th>Hình ảnh</th>
+                                    <th>Chức vụ</th>
+                                    <th>Thông tin</th>
                                     <th>Trạng thái</th>
                                     <th class="col-md-3">Hành động</th>
                                 </tr>
@@ -67,11 +53,11 @@
                                     <tr class="odd gradeX" align="center">
                                         <td>{{$value->id}}</td>
                                         <td>{!! $value->name !!}</td>
-                                        <td>{{$value->position}}</td>
-
-                                        <td><img width="100px" height="100px"
-                                                 src="{{asset('')}}images/giáo viên/{{$value->image}}">
+                                        <td><img width="100px" height="150px"
+                                                 src="{{asset('')}}images/teachers/{{$value->image}}">
                                         </td>
+                                        <td>{{$value->position}}</td>
+                                        <td>{{$value->content}}</td>
 
                                         <td>
                                             @if($value->status==1)
@@ -85,19 +71,19 @@
                                             {{--onclick="thaotac({{$value->id}})">Thao tác</a>--}}
                                             <div>
                                                 <a class="btn btn-primary" id="edit"
-                                                   href="{{ url('admin/slider/edit/'.$value->id) }}"
+                                                   href="{{ url('admin/teacher/edit/'.$value->id) }}"
                                                    onclick="">Sửa</a>
 
                                                 <a class="btn btn-danger"
-                                                   href="{{ url('admin/slider/destroy/'.$value->id) }}"
-                                                   onclick="return confirm('Hành động sẽ xóa slider này! bạn có muốn tiếp tục?')">Xóa</a>
+                                                   href="{{ url('admin/teacher/destroy/'.$value->id) }}"
+                                                   onclick="return confirm('Hành động sẽ xóa teacher này! bạn có muốn tiếp tục?')">Xóa</a>
                                                 @if($value->status==1)
                                                     <a class="btn btn-info"
-                                                       href="{{ url('admin/slider/setactive/'.$value->id.'/0') }}"
+                                                       href="{{ url('admin/teacher/setactive/'.$value->id.'/0') }}"
                                                        onclick="return confirm('Hành động sẽ ẩn giáo viên này! bạn có muốn tiếp tục?')">Ẩn</a>
                                                 @else
                                                     <a class="btn btn-warning"
-                                                       href="{{ url('admin/slider/setactive/'.$value->id.'/1') }}"
+                                                       href="{{ url('admin/teacher/setactive/'.$value->id.'/1') }}"
                                                        onclick="return confirm('Hành động sẽ hiển thị slider mục này! bạn có muốn tiếp tục?')">Hiển
                                                         thị</a>
 

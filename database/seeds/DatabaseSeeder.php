@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        $this->call('Teacher');
+        $this->call('CourseOfflines');
         $this->call('CateLibrarys');
         $this->call('Contacts');
         DB::table('users')->insert([
@@ -437,7 +439,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 1,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -445,7 +447,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 1,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -453,7 +455,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 1,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -461,7 +463,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 1,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -469,7 +471,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 1,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -477,7 +479,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 1,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -485,7 +487,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 2,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -493,7 +495,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 2,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -501,7 +503,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 2,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -509,7 +511,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 2,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -517,7 +519,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 2,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -525,7 +527,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 2,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -533,7 +535,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 3,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -541,7 +543,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 3,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -549,7 +551,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 3,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -557,7 +559,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 3,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -565,7 +567,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 3,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -573,7 +575,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 3,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -581,7 +583,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 4,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -589,7 +591,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 4,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -597,7 +599,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 4,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -605,7 +607,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 4,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -613,7 +615,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 4,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -621,7 +623,7 @@ class CateLibrarys extends Seeder
                 'content' => 'Tôi thích sách, thích hít hà mùi thơm của từng trang giấy, thích nằm hằng giờ mân mê quyển sách yêu thích của mình, để rồi nhiều ngày sau đó là những suy nghĩ, cảm xúc vẫn chẳng thể nào dứt ra được. Còn nhớ hồi trước, có một số sách muốn đọc nhưng lại chưa có bản dịch sang tiếng Việt, tôi đành liều mình chạy đi mua/ tải sách bản tiếng Anh để “đọc trước” vì không thể ngồi yên chờ sách được dịch (dù tiếng Anh vẫn chưa sõi, vốn từ vựng thì chẳng bằng ai). Nhưng cũng chính nhờ việc đọc nhiều sách tiếng Anh hồi đó mà vốn tiếng Anh của tôi cải thiện rõ rệt (có lẽ một phần vì tôi không còn thấy sợ đọc những bài viết dài ngoằng ngoẵng hay sợ học những từ lạ hoắc, khó hiểu, có vẻ khô khan). Tôi nghĩ nếu bạn chưa từng đọc sách tiếng Anh thì nên một lần thử. Đừng nghĩ rằng nó quá khó, đừng nghĩ bản thân không thể, bởi “Only those who dare may fly”. Còn với những ai đang băn khoăn không biết nên đọc cuốn sách tiếng Anh nào, bạn có thể bắt đầu với một trong những cuốn sách tôi có gợi ý dưới đây. Chúng là những cuốn sách tôi đã từng đọc, một hay bao nhiêu lần chẳng nhớ. Bạn có thể đọc thử, hoặc tự chọn cho mình cuốn sách phù hợp với sở thích của bạn. (Hãy luôn luôn bắt đầu bằng những gì bạn quan tâm và hứng thú!)',
                 'cate_id' => 4,
                 'created_at' => now(),
-            ],[
+            ], [
                 'name' => 'Sách IELTS Writing Task 2 2019',
                 'slug' => Str::slug('Sách IELTS Writing Task 2 2019') . '-' . time() . '.html',
                 'image' => 'default.jpg',
@@ -661,4 +663,215 @@ class Contacts extends Seeder
             'created_at' => now(),
         ]);
     }
+
 }
+class CourseOfflines extends Seeder
+{
+    public function run()
+    {
+        DB::table('course_offlines')->insert([
+            [
+                'name' => 'KHOÁ RỄ',
+                'slug' => Str::slug("KHOÁ RỄ"."-".time()),
+                'image' => 'Q3Ly_image_bg3.jpg',
+                'content'=>'<h4>Pre-IELTS level 0</h4>'
+
+.'<ol>'
+	.'<li>ĐỐI TƯỢNG:'
+	.'<ul>'
+		.'<li>Đ&atilde; c&oacute; khả năng tiếng Anh cơ bản</li>'
+		.'<li>C&aacute;c kỹ năng Nghe - Đọc c&ograve;n chậm, vốn từ hạn chế</li>'
+		.'<li>Phản xạ N&oacute;i chậm, chưa biết c&aacute;ch viết luận tiếng Anh</li>'
+	.'</ul>'
+	.'</li>'
+	.'<li>MỤC TI&Ecirc;U:'
+	.'<ul>'
+		.'<li>C&oacute; phản xạ Nghe - N&oacute;i trực tiếp tiếng Anh kh&ocirc;ng th&ocirc;ng qua tiếng Việt</li>'
+		.'<li>Tự tin giao tiếp sử dụng tiếng Anh trong m&ocirc;i trường l&agrave;m việc, trả lời phỏng vấn</li>'
+		.'<li>C&oacute; khả năng n&oacute;i - viết c&acirc;u tiếng Anh r&otilde; &yacute;, đ&uacute;ng ngữ ph&aacute;p</li>'
+		.'<li>C&oacute; khả năng sử dụng linh hoạt vốn từ vựng trong c&aacute;c kỹ năng</li>'
+		.'<li>Tự tin &ocirc;n luyện IELTS mục ti&ecirc;u 6.0+ trong v&ograve;ng 3-4 th&aacute;ng tiếp theo</li>'
+	.'</ul>'
+	.'</li>'
+	.'<li>TH&Ocirc;NG TIN KH&Oacute;A HỌC:'
+	.'<ul>'
+		.'<li>Thời lượng: 20 buổi (15 buổi kỹ năng + 5 buổi chuy&ecirc;n s&acirc;u ph&aacute;t &acirc;m v&agrave; phản xạ n&oacute;i)</li>'
+		.'<li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 &ndash; 21.00 c&aacute;c buổi tối</li>'
+		.'<li>Địa điểm: T&ograve;a nh&agrave; Dream house, ng&otilde; 136 phố Ch&ugrave;a L&aacute;ng, H&agrave; Nội</li>'
+		.'<li>Học ph&iacute;: 4,800,000</li>'
+	.'</ul>'
+	.'</li>'
+.'</ol>',
+                'status' => 1,
+                'created_at' => now(),
+            ],
+            [
+                'name' => 'KHOÁ GỐC',
+                'slug' => Str::slug("KHOÁ GỐC"."-".time()),
+                'image' => 'Q3Ly_image_bg3.jpg',
+                'content'=>'<h4>Pre-IELTS level 0</h4>'
+
+                    .'<ol>'
+                    .'<li>ĐỐI TƯỢNG:'
+                    .'<ul>'
+                    .'<li>Đ&atilde; c&oacute; khả năng tiếng Anh cơ bản</li>'
+                    .'<li>C&aacute;c kỹ năng Nghe - Đọc c&ograve;n chậm, vốn từ hạn chế</li>'
+                    .'<li>Phản xạ N&oacute;i chậm, chưa biết c&aacute;ch viết luận tiếng Anh</li>'
+                    .'</ul>'
+                    .'</li>'
+                    .'<li>MỤC TI&Ecirc;U:'
+                    .'<ul>'
+                    .'<li>C&oacute; phản xạ Nghe - N&oacute;i trực tiếp tiếng Anh kh&ocirc;ng th&ocirc;ng qua tiếng Việt</li>'
+                    .'<li>Tự tin giao tiếp sử dụng tiếng Anh trong m&ocirc;i trường l&agrave;m việc, trả lời phỏng vấn</li>'
+                    .'<li>C&oacute; khả năng n&oacute;i - viết c&acirc;u tiếng Anh r&otilde; &yacute;, đ&uacute;ng ngữ ph&aacute;p</li>'
+                    .'<li>C&oacute; khả năng sử dụng linh hoạt vốn từ vựng trong c&aacute;c kỹ năng</li>'
+                    .'<li>Tự tin &ocirc;n luyện IELTS mục ti&ecirc;u 6.0+ trong v&ograve;ng 3-4 th&aacute;ng tiếp theo</li>'
+                    .'</ul>'
+                    .'</li>'
+                    .'<li>TH&Ocirc;NG TIN KH&Oacute;A HỌC:'
+                    .'<ul>'
+                    .'<li>Thời lượng: 20 buổi (15 buổi kỹ năng + 5 buổi chuy&ecirc;n s&acirc;u ph&aacute;t &acirc;m v&agrave; phản xạ n&oacute;i)</li>'
+                    .'<li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 &ndash; 21.00 c&aacute;c buổi tối</li>'
+                    .'<li>Địa điểm: T&ograve;a nh&agrave; Dream house, ng&otilde; 136 phố Ch&ugrave;a L&aacute;ng, H&agrave; Nội</li>'
+                    .'<li>Học ph&iacute;: 4,800,000</li>'
+                    .'</ul>'
+                    .'</li>'
+                    .'</ol>',
+                'status' => 1,
+                'created_at' => now(),
+            ],
+            [
+                'name' => 'KHOÁ THÂN',
+                'slug' => Str::slug("KHOÁ THÂN"."-".time()),
+                'image' => 'Q3Ly_image_bg3.jpg',
+                'content'=>'<h4>Pre-IELTS level 0</h4>'
+
+                    .'<ol>'
+                    .'<li>ĐỐI TƯỢNG:'
+                    .'<ul>'
+                    .'<li>Đ&atilde; c&oacute; khả năng tiếng Anh cơ bản</li>'
+                    .'<li>C&aacute;c kỹ năng Nghe - Đọc c&ograve;n chậm, vốn từ hạn chế</li>'
+                    .'<li>Phản xạ N&oacute;i chậm, chưa biết c&aacute;ch viết luận tiếng Anh</li>'
+                    .'</ul>'
+                    .'</li>'
+                    .'<li>MỤC TI&Ecirc;U:'
+                    .'<ul>'
+                    .'<li>C&oacute; phản xạ Nghe - N&oacute;i trực tiếp tiếng Anh kh&ocirc;ng th&ocirc;ng qua tiếng Việt</li>'
+                    .'<li>Tự tin giao tiếp sử dụng tiếng Anh trong m&ocirc;i trường l&agrave;m việc, trả lời phỏng vấn</li>'
+                    .'<li>C&oacute; khả năng n&oacute;i - viết c&acirc;u tiếng Anh r&otilde; &yacute;, đ&uacute;ng ngữ ph&aacute;p</li>'
+                    .'<li>C&oacute; khả năng sử dụng linh hoạt vốn từ vựng trong c&aacute;c kỹ năng</li>'
+                    .'<li>Tự tin &ocirc;n luyện IELTS mục ti&ecirc;u 6.0+ trong v&ograve;ng 3-4 th&aacute;ng tiếp theo</li>'
+                    .'</ul>'
+                    .'</li>'
+                    .'<li>TH&Ocirc;NG TIN KH&Oacute;A HỌC:'
+                    .'<ul>'
+                    .'<li>Thời lượng: 20 buổi (15 buổi kỹ năng + 5 buổi chuy&ecirc;n s&acirc;u ph&aacute;t &acirc;m v&agrave; phản xạ n&oacute;i)</li>'
+                    .'<li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 &ndash; 21.00 c&aacute;c buổi tối</li>'
+                    .'<li>Địa điểm: T&ograve;a nh&agrave; Dream house, ng&otilde; 136 phố Ch&ugrave;a L&aacute;ng, H&agrave; Nội</li>'
+                    .'<li>Học ph&iacute;: 4,800,000</li>'
+                    .'</ul>'
+                    .'</li>'
+                    .'</ol>',
+                'status' => 1,
+                'created_at' => now(),
+            ],
+            [
+                'name' => 'KHOÁ NGỌN',
+                'slug' => Str::slug("KHOÁ NGỌN"."-".time()),
+                'image' => 'Q3Ly_image_bg3.jpg',
+                'content'=>'<h4>Pre-IELTS level 0</h4>'
+
+                    .'<ol>'
+                    .'<li>ĐỐI TƯỢNG:'
+                    .'<ul>'
+                    .'<li>Đ&atilde; c&oacute; khả năng tiếng Anh cơ bản</li>'
+                    .'<li>C&aacute;c kỹ năng Nghe - Đọc c&ograve;n chậm, vốn từ hạn chế</li>'
+                    .'<li>Phản xạ N&oacute;i chậm, chưa biết c&aacute;ch viết luận tiếng Anh</li>'
+                    .'</ul>'
+                    .'</li>'
+                    .'<li>MỤC TI&Ecirc;U:'
+                    .'<ul>'
+                    .'<li>C&oacute; phản xạ Nghe - N&oacute;i trực tiếp tiếng Anh kh&ocirc;ng th&ocirc;ng qua tiếng Việt</li>'
+                    .'<li>Tự tin giao tiếp sử dụng tiếng Anh trong m&ocirc;i trường l&agrave;m việc, trả lời phỏng vấn</li>'
+                    .'<li>C&oacute; khả năng n&oacute;i - viết c&acirc;u tiếng Anh r&otilde; &yacute;, đ&uacute;ng ngữ ph&aacute;p</li>'
+                    .'<li>C&oacute; khả năng sử dụng linh hoạt vốn từ vựng trong c&aacute;c kỹ năng</li>'
+                    .'<li>Tự tin &ocirc;n luyện IELTS mục ti&ecirc;u 6.0+ trong v&ograve;ng 3-4 th&aacute;ng tiếp theo</li>'
+                    .'</ul>'
+                    .'</li>'
+                    .'<li>TH&Ocirc;NG TIN KH&Oacute;A HỌC:'
+                    .'<ul>'
+                    .'<li>Thời lượng: 20 buổi (15 buổi kỹ năng + 5 buổi chuy&ecirc;n s&acirc;u ph&aacute;t &acirc;m v&agrave; phản xạ n&oacute;i)</li>'
+                    .'<li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 &ndash; 21.00 c&aacute;c buổi tối</li>'
+                    .'<li>Địa điểm: T&ograve;a nh&agrave; Dream house, ng&otilde; 136 phố Ch&ugrave;a L&aacute;ng, H&agrave; Nội</li>'
+                    .'<li>Học ph&iacute;: 4,800,000</li>'
+                    .'</ul>'
+                    .'</li>'
+                    .'</ol>',
+                'status' => 1,
+                'created_at' => now(),
+            ],
+        ]);
+        DB::table('course_enrolling')->insert([
+            [
+                'name' => 'Lớp ngọn tháng 10/2019',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Lớp ngọn tháng 11/2019',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Lớp ngọn tháng 9/2019',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Lớp ngọn tháng 10/2019',
+                'image' => 'xuanphi1.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+
+        ]);
+    }
+
+}
+class Teacher extends Seeder
+{
+    public function run()
+    {
+        DB::table('teachers')->insert([
+            [
+                'name' => 'Xuân phi',
+                'position' => 'Giảng viên',
+                'content' =>'Có kinh nghiệm 9 năm trong lĩnh vực giảng dạy ',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Thảo Linh',
+                'position' => 'Giảng viên',
+                'content' =>'Có kinh nghiệm 4 năm trong lĩnh vực giảng dạy ',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+            [
+                'name' => 'Linh Linh',
+                'position' => 'Giảng viên',
+                'content' =>'Có kinh nghiệm 3 năm trong lĩnh vực giảng dạy ',
+                'image' => 'xuanphi.png',
+                'status' => 1,
+                'created_at' => now()
+            ],
+
+        ]);
+    }
+}
+

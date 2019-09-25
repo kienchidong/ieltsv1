@@ -266,7 +266,7 @@ class LibraryController extends Controller
         }
         DB::table('cate_librarys')->insert([
             'name' => $request->name,
-            'slug' => Str::slug($request->name),
+            'slug' => Str::slug($request->name."-".time()),
             'icon' => $file_name,
             'status' => 1,
             'created_at' => now()
@@ -327,7 +327,7 @@ class LibraryController extends Controller
 
         DB::table('cate_librarys')->where('id', $id)->update([
             'name' => $request->name,
-            'slug' => Str::slug($request->name),
+            'slug' => Str::slug($request->name."-".time()),
             'icon' => $file_name,
             'status' => 1,
             'created_at' => now()

@@ -106,8 +106,30 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('course_offline.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
-                    <li><a href="{{route('course_offline.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
+
+                    <li><a href="{{route('course_offline.index')}}"><i class="fa fa-circle-o"></i> Danh sách chủ đề </a></li>
+                    <li><a href="{{route('course_enrolling.index')}}"><i class="fa fa-circle-o"></i> Danh sách đang tuyển</a></li>
+                    <li><a href="{{route('course_offline.create')}}"><i class="fa fa-circle-o"></i> Thêm chủ đề </a></li>
+                    <li><a href="{{route('course_enrolling.create')}}"><i class="fa fa-circle-o"></i> Thêm khóa đang tuyển</a></li>
+
+
+                </ul>
+            </li>
+            {{--Giáo viên --}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Giáo viên  </span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li><a href="{{route('teacher.index')}}"><i class="fa fa-circle-o"></i> Danh sách giáo viên </a></li>
+                    <li><a href="{{route('teacher.create')}}"><i class="fa fa-circle-o"></i> Thêm giáo viên</a></li>
+
+
                 </ul>
             </li>
             <li>
@@ -124,6 +146,7 @@
                     <span>Giới thiệu </span>
                 </a>
             </li>
+
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-picture-o"></i>

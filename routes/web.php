@@ -43,6 +43,12 @@ Route::prefix('/')->group(function () {
         Route::get('{cate}/{slug}', 'Client\LibraryController@detail')->name('client.librarys.detail');
     });
 
+    // Khóa học offline
+    Route::prefix('khoa-hoc')->group(function () {
+
+        Route::get('/', 'Client\CourseController@index')->name('client.course.index');
+    });
+
 //    giới thiệu
     Route::get('/introduce.html',function(){
         return view('client.pages.introduce.introduce');
@@ -187,6 +193,7 @@ Route::prefix('admin')->group(function () {
          * Khóa học offline
          */
         Route::prefix('course-offline')->group(function () {
+            //Khóa gốc rễ ngọn
             Route::get('/list', 'Admins\CourseOfflineController@index')->name('course_offline.index');
             Route::get('/add', 'Admins\CourseOfflineController@create')->name('course_offline.create');
             Route::post('/add', 'Admins\CourseOfflineController@store')->name('course_offline.store');
@@ -196,6 +203,17 @@ Route::prefix('admin')->group(function () {
             Route::get('/destroy/{id}', 'Admins\CourseOfflineController@destroy')->name('course_offline.destroy');
 
             Route::get('/setactive/{id}/{status}', 'Admins\CourseOfflineController@setactive')->name('course_offline.setactive');
+
+            //Khóa học đang tuyển
+            Route::get('/list-enrolling', 'Admins\CourseOfflineController@index1')->name('course_enrolling.index');
+            Route::get('/add-enrolling', 'Admins\CourseOfflineController@create1')->name('course_enrolling.create');
+            Route::post('/add-enrolling', 'Admins\CourseOfflineController@store1')->name('course_enrolling.store');
+
+            Route::get('/edit-enrolling/{id}', 'Admins\CourseOfflineController@edit1')->name('course_enrolling.edit');
+            Route::post('/edit-enrolling/{id}', 'Admins\CourseOfflineController@update1')->name('course_enrolling.update');
+            Route::get('/destroy-enrolling/{id}', 'Admins\CourseOfflineController@destroy1')->name('course_enrolling.destroy');
+
+            Route::get('/setactive-enrolling/{id}/{status}', 'Admins\CourseOfflineController@setactive1')->name('course_enrolling.setactive');
 
         });
 

@@ -1,4 +1,5 @@
 @extends('client.layouts.master-layout')
+
 @section('title')
     Trang Chủ
 @endsection
@@ -148,7 +149,7 @@
 
                     <div class="col-md-6 library-left">
                         <h5 id="khoahoc" class="section-title">Offline</h5>
-                        <a href="{{ url('landing') }}">
+                        <a href="{{ route('client.course.index') }}">
                             <div class="tree-skill">
                                 <img class="tree" src="image/tree1.png" alt="">
                                 <div class="skill">
@@ -157,17 +158,17 @@
                                     </a>
                                 </div>
                                 <div class="skill skill-2">
-                                    <a href="{{ url('landing') }}">
+                                    <a href="{{ route('client.course.index') }}">
                                         Khóa gốc
                                     </a>
                                 </div>
                                 <div class="skill skill-3">
-                                    <a href="{{ url('landing') }}">
+                                    <a href="{{ route('client.course.index') }}">
                                         Khóa thân
                                     </a>
                                 </div>
                                 <div class="skill skill-4">
-                                    <a href="{{ url('landing') }}">
+                                    <a href="{{ route('client.course.index') }}">
                                         Khóa ngọn
                                     </a>
                                 </div>
