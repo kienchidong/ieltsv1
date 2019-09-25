@@ -30,7 +30,7 @@
             </div>
         </div>
     </section>  --}}
-    <section class="section-11">
+    <section class="section-11" style="background-image: url(http://localhost/ieltsv1/public/image/workshop.jpg) !important">
         <div class="back-ground" style="background : #000"></div>
         <div class="container-fluid">
             <div class="container work-shop">
@@ -112,7 +112,7 @@
             </div>
         </div>
     </section>
-    <section id="thuvien" class="section-thuvien">
+    <section id="thuvien" class="section-thuvien" style="    background-image: url(http://localhost/ieltsv1/public/image/library.jpg) !important">
         <div class="container-fluid" id="library">
             <div class="container">
                 <h3 class="section-title text-white">Thư viện</h3>

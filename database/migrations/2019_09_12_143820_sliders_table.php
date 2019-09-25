@@ -17,11 +17,12 @@ class SlidersTable extends Migration
          * Sliders
          * Phần ảnh chạy trên trang chủ
          */
-         Schema::create('sliders',function (Blueprint $table)
+         Schema::create('images',function (Blueprint $table)
          {
              $table->bigIncrements('id');
              $table->string('image');
              $table->string('title')->nullable();
+             $table->tinyInteger('location');
              $table->tinyInteger('status')->default(1);
              $table->timestamps();
          });

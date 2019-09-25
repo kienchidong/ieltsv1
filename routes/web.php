@@ -310,6 +310,27 @@ Route::prefix('admin')->group(function () {
 
             Route::post('editprofile', 'Admins\AdminAccountController@editprofile')->name('admin.account.profile.edit');
         });
+
+        // hình ảnh
+        Route::prefix('images')->group(function(){
+            // home slider
+            Route::get('home-slider.html', 'Admins\ImagesController@homeslider')->name('home.slider');
+
+            // home background
+            Route::get('home-background.html', 'Admins\ImagesController@homebackground')->name('home.background');
+            // library background
+            Route::get('library-background.html', 'Admins\ImagesController@librarybackground')->name('library.background');
+            //library slider
+            Route::get('library-slider.html', 'Admins\ImagesController@librarysilder')->name('library.slider');
+
+            // action
+            Route::post('create', 'Admins\ImagesController@store')->name('images.store');
+            Route::post('edit', 'Admins\ImagesController@update')->name('images.update');
+
+            Route::get('delete/{id}', 'Admins\ImagesController@delete')->name('images.delete');
+            Route::get('status/{id}/{status}', 'Admins\ImagesController@status')->name('images.status');
+
+        });
     });
 });
 Route::get('/dangky', function () {
