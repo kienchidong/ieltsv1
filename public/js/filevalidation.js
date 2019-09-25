@@ -36,7 +36,7 @@ function getVideoYoutube(obj) {
     }else{
         alertify.alert('Bạn chưa nhập dúng link youtube!');
         obj.value = '';
-        document.getElementById('youtube-'+obj.id).innerHTML = '';
+        document.getElementById('youtube-'+obj.id).innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'+$('#value-'+obj.id).val()+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
         document.getElementById('value-'+obj.id).value = '';
 
     }
