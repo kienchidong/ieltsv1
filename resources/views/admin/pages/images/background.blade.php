@@ -5,16 +5,6 @@
 
 @section('content')
 
-    <div class="container-fluid">
-
-        <style>
-            .input {
-                background: none;
-                border: none;
-            }
-        </style>
-
-
         <section class="content-header">
             <h1>
             {{ $title }}

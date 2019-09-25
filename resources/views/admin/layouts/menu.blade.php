@@ -80,21 +80,6 @@
 
                 </ul>
             </li>
-            {{--Slider ở trang chủ --}}
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-pie-chart"></i>
-                    <span>Sliders</span>
-                    <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{route('slider.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
-                    <li><a href="{{route('slider.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
-
-                </ul>
-            </li>
             {{--Liên hệ--}}
             <li class="treeview">
                 <a href="#">
@@ -123,8 +108,13 @@
                 <ul class="treeview-menu">
                     <li><a href="{{route('course_offline.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
                     <li><a href="{{route('course_offline.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
-
                 </ul>
+            </li>
+            <li>
+                <a href="{{ route('course.online') }}">
+                    <i class="fa fa-internet-explorer"></i>
+                    <span> Khóa học Online </span>
+                </a>
             </li>
             <li class="header">Quản Trị Viên</li>
             <li><a href="{{ route('admin.account.list') }}"><i class="fa fa-user text-red"></i> <span>Tài khoản Quản trị Viên</span></a></li>
@@ -146,7 +136,7 @@
                     <li><a href="{{route('home.slider')}}"><i class="fa fa-circle-o"></i> Home Slider</a></li>
                     <li><a href="{{route('home.background')}}"><i class="fa fa-circle-o"></i> Home Background</a></li>
                     <li><a href="{{route('library.background')}}"><i class="fa fa-circle-o"></i> Hình Nền Thư Viện</a></li>
-                    <li><a href="{{route('library.slider')}}"><i class="fa fa-circle-o"></i> Slider Thư Viện</a></li>
+                    <li><a href="{{route('comment.background')}}"><i class="fa fa-circle-o"></i> Hình Nền Bình luận</a></li>
                 </ul>
             </li>
     </section>
