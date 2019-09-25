@@ -357,6 +357,17 @@ class DatabaseSeeder extends Seeder
                 'created_at' => now(),
             ],
         ]);
+
+        DB::table('images')->insert([
+            [
+                'image' => 'background.jpg',
+                'location' => '2'
+            ],
+            [
+                'image' => 'Library_img.jpg',
+                'location' => '3'
+            ],
+        ]);
     }
 }
 
