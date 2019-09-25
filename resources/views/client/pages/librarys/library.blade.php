@@ -1,6 +1,7 @@
 @extends('client.layouts.master-layout')
 @section('title')
 
+    {{$cate_name->name}}
 @endsection
 @section('content')
     <section class="section-library pb-5" style="background-color : #f4f6f8">
@@ -41,7 +42,7 @@
                 </div>
             </div>
             <div class="container pt-4">
-                <h3 style="text-align: center" class="text-uppercase">Library - {{$cate_name->name}}</h3>
+                <h3 style="text-align: center" class="text-uppercase">Thư viện - {{$cate_name->name}}</h3>
                 {{--  <div class="book-library">
                     <div class="book-img w-clearfix">
                         <img src="image/book.jpg" alt="">
@@ -74,8 +75,9 @@
                                     <i class="fa fa-calendar-alt"></i>
                                     <span>{{Carbon\Carbon::parse($value->created_at)->format('d-m-Y')}}</span>
                                 </div>
+                                <br>
                                 <span>{!! substr($value->summary,0,255) !!}</span>
-                                <a href="{{ url('library').'/'.$cate_name->slug.'/'.$value->slug}}"
+                                <a href="{{ url('thu-vien').'/'.$cate_name->slug.'/'.$value->slug}}"
                                    class="btn btn-danger book-button">Đọc tiếp</a>
                             </div>
                         </div>

@@ -14,22 +14,7 @@
         </ol>
     </section>
     <br>
-    <div>
-        @if(count($errors) > 0)
-            <div class="alert alert-danger">
-                @foreach($errors->all() as $err)
-                    {{$err}}<br>
-                @endforeach
 
-            </div>
-
-        @endif
-        @if(session('thongbao'))
-            <div class="alert alert-success">
-                {{session('thongbao')}}
-            </div>
-        @endif
-    </div>
 
 
     <!-- Main content -->
@@ -51,12 +36,15 @@
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
 
-                            <li><a href="{{route('course_offline.create')}}"><i class="fa fa-envelope-o"></i> Thêm khóa học offline
+                            <li><a href="{{route('course_offline.create')}}"><i class="fa fa-envelope-o"></i> Thêm chủ đề khóa học
                                 </a></li>
-                            </a>
-                            </li>
+
                             <li><a href="{{route('course_offline.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách<span class="label label-primary pull-right">{{$course_offline_count}}</span></a></li>
+                                    sách chủ đề <span class="label label-primary pull-right">{{$course_offline_count}}</span></a></li>
+                            <li><a href="{{route('course_enrolling.create')}}"><i class="fa fa-envelope-o"></i> Thêm tuyển khóa học
+                                </a></li>
+                            <li><a href="{{route('course_enrolling.index')}}"><i class="fa fa-file-text-o"></i> Danh
+                                    sách đang tuyển <span class="label label-primary pull-right">{{$course_enrolling_count}}</span></a></li>
 
                         </ul>
                     </div>

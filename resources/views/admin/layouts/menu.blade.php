@@ -121,8 +121,12 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('course_offline.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
-                    <li><a href="{{route('course_offline.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
+
+                    <li><a href="{{route('course_offline.index')}}"><i class="fa fa-circle-o"></i> Danh sách chủ đề </a></li>
+                    <li><a href="{{route('course_enrolling.index')}}"><i class="fa fa-circle-o"></i> Danh sách đang tuyển</a></li>
+                    <li><a href="{{route('course_offline.create')}}"><i class="fa fa-circle-o"></i> Thêm chủ đề </a></li>
+                    <li><a href="{{route('course_enrolling.create')}}"><i class="fa fa-circle-o"></i> Thêm khóa đang tuyển</a></li>
+
 
                 </ul>
             </li>
@@ -134,6 +138,7 @@
                     <span>Giới thiệu </span>
                 </a>
             </li>
+        </ul>
     </section>
     <!-- /.sidebar -->
 </aside>

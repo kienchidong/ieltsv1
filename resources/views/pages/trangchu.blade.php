@@ -393,9 +393,9 @@
                 <div class="border-bottom">
                 </div>
             </div>
-            <div style="text-align: center">
-            <a class="btn btn-xuanphi" href="{{ route('blog') }}">Xem Thêm</a>
-            </div>
+            {{--<div style="text-align: center">--}}
+            {{--<a class="btn btn-xuanphi" href="{{ route('blog') }}">Xem Thêm</a>--}}
+            {{--</div>--}}
 
         </div>
     </div>
@@ -481,6 +481,32 @@
                 {{--<div class="border-bottom">--}}
                 {{--</div>--}}
             {{--</div>--}}
+                </div>
+            </div>
+            <div class="blog">
+                <div class="d-flex justify-content-between">
+                    <a href="{{ url('blog-detai') }}" class="title-blog">giải đáp thắc mắc về kỳ thi Ielst</a>
+                    <div class="time-blog">
+                        <i class="fa fa-calendar-alt"></i>
+                        <span>13 Stb 2019</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-img">
+                        <img src="image/blog1.png" class="img-reponsive" alt="">
+                    </div>
+                    <span>Có bao giờ bạn tự hỏi Ielst là gì ? Làm thế nào để thi ielst
+                        ? Điểm trong ielset được tính như thế nào .... nếu bạn là người mới bắt đầu
+                        chắc chắn sẽ gặp những thắc mắc như vậy . Bài viết này sẽ giúp bạn hiểu phần
+                        nào về Ielst
+                    </span>
+                    <a href="{{ url('blog-detai') }}" class="doctiep btn btn-outline-danger">
+                        Đọc tiếp
+                    </a>
+                </div>
+                <div class="border-bottom">
+                </div>
+            </div>
             {{--<div style="text-align: center">--}}
             {{--<a class="btn btn-xuanphi" href="{{ route('blog') }}">Xem Thêm</a>--}}
             {{--</div>--}}
