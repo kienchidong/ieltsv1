@@ -47,7 +47,7 @@ class CourseOfflineController extends Controller
     {
 
         $this->validate($request, [
-            'name' => 'required|min:15',
+            'name' => 'required|min:5',
             'contentt' => 'required|min:100',
 
         ], [
@@ -124,7 +124,7 @@ class CourseOfflineController extends Controller
         $image_update = DB::table('course_offlines')->where('id', '=', $id)->pluck('image');
 
         $this->validate($request, [
-            'name' => 'required|min:15',
+            'name' => 'required|min:5',
             'contentt' => 'required|min:100',
 
         ], [

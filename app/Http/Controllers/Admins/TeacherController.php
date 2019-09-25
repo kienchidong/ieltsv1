@@ -177,5 +177,4 @@ class TeacherController extends Controller
         ]);
         return redirect()->back()->with('thongbao', 'Thành công');
     }
-
 }

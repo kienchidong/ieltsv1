@@ -43,6 +43,12 @@ Route::prefix('/')->group(function () {
         Route::get('{cate}/{slug}', 'Client\LibraryController@detail')->name('client.librarys.detail');
     });
 
+    // Khóa học offline
+    Route::prefix('khoa-hoc')->group(function () {
+
+        Route::get('/', 'Client\CourseController@index')->name('client.course.index');
+    });
+
 //    giới thiệu
     Route::get('/introduce.html',function(){
         return view('client.pages.introduce.introduce');

@@ -138,7 +138,7 @@
                     <span>Giới thiệu </span>
                 </a>
             </li>
-        </ul>
+
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-picture-o"></i>
