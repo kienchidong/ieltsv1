@@ -50,7 +50,7 @@ class ImagesController extends Controller
     {
         if (Gate::allows('admin'))
         {
-            $data['title'] = 'Hình nền của Thư Viện';
+            $data['title'] = 'Hình nền của bình luận';
             $data['images'] = DB::table('images')->where('location', 4)->first();
             return view('admin.pages.images.background', $data);
 
