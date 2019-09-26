@@ -363,7 +363,7 @@ Route::prefix('admin')->group(function () {
 
             Route::post('update/{id}', 'Admins\RegistrationController@update')->name('registration.update');
         });
-
+        Route::post('time/{id}', 'Auth\Admin\HomeAdminController@edittime')->name('edit.time');
 
 
     });

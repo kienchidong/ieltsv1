@@ -17,6 +17,7 @@ class CourseController extends Controller
         $data['course_offlines'] = DB::table('course_offlines')->where('status', 1)->get();
         $data['course_enrolling'] = DB::table('course_enrolling')->where('status',1)->orderByDesc('id')->get();
         $data['teacher'] = DB::table('teachers')->where('status',1)->orderByDesc('id')->get();
+        $data['time'] = DB::table('time')->first();
         return view('client.pages.course_offlines.landingpage', $data);
     }
 }

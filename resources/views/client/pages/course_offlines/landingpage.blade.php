@@ -27,7 +27,10 @@
             start();
         });
         var date = new Date();
-        var d = 31 - parseInt(date.getDate()); // ngày
+        var time = new Date('{{ $time->date }}').getTime();
+        var distance = time-date.getTime();
+        var d = Math.floor(distance / (1000 * 60 * 60 * 24))+1; //ngày
+
         var h = 24 - parseInt(date.getHours()); // Giờ
         var m = 60 - parseInt(date.getMinutes()); // Phút
         var s = 60 - parseInt(date.getSeconds()); // Giây

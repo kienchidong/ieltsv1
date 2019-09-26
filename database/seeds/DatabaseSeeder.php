@@ -400,6 +400,10 @@ class DatabaseSeeder extends Seeder
            'video' => '7jkVGDPnewo',
            'link' =>'https://google.com.vn'
         ]);
+
+        DB::table('time')->insert([
+           'date' => '2019-9-30',
+        ]);
     }
 }
 
