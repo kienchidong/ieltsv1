@@ -26,9 +26,18 @@
     <!-- //fonts -->
     <!-- Font-Awesome-File-Links -->
     <link rel="stylesheet" href="{{ asset('admin_example/login/css/font-awesome.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('alertify/alertify.bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('alertify/alertify.core.css') }}">
+    <link rel="stylesheet" href="{{ asset('alertify/alertify.default.css') }}">
+    <script src="{{ asset('alertify/alertify.min.js') }}"></script>
 </head>
 
 <body>
+@if(session('error'))
+        <script type="text/javascript">
+            alertify.error('{{ session('error') }}');
+        </script>
+    @endif
 <h1 class="title-agile text-center">Login Admin</h1>
 <div class="content-w3ls">
     <div class="content-top-agile">

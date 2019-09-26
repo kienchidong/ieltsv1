@@ -20,7 +20,10 @@ class HomeController extends Controller
     {
         $data['blogs'] = DB::table('blogs')->where('status', 1)
             ->orderBy('id', 'DESC')->limit(3)->get();
-        $data['homesliders'] = DB::table('images')->where('location', 1)->get();
+        $data['homesliders'] = DB::table('images')->where([
+            ['location', 1],
+            ['status', 1]
+            ])->get();
         $data['homebackground'] = DB::table('images')->where('location', 2)->first();
         $data['librarybackground'] = DB::table('images')->where('location', 3)->first();
         $data['commentbackground'] = DB::table('images')->where('location', 4)->first();

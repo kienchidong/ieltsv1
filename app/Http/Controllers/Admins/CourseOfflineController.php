@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Gate;
 
 class CourseOfflineController extends Controller
 {
@@ -23,8 +24,11 @@ class CourseOfflineController extends Controller
      */
     public function index()
     {
-        $data['course_offlines'] = DB::table('course_offlines')->orderByDesc('id')->get();
-        return view('admin.pages.course_offlines.index', $data);
+        if (Gate::allows('admin'))
+        {
+            $data['course_offlines'] = DB::table('course_offlines')->orderByDesc('id')->get();
+            return view('admin.pages.course_offlines.index', $data);
+        }abort(403);
     }
 
     /**

@@ -14,6 +14,10 @@ class HomeAdminController extends Controller
     public function index(){
 
         $data['count_time'] = DB::table('time')->first();
+        $data['count_information'] = DB::table('informations')->where('status', 0)->count();
+        $data['count_blog'] = DB::table('blogs')->count();
+        $data['count_library'] = DB::table('librarys')->count();
+        $data['count_course'] = DB::table('course_offlines')->count();
         return view('admin.index', $data);
     }
 

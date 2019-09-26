@@ -174,21 +174,21 @@
                             <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
                             <span>
                                 <strong>Hotline:</strong><br>
-                                <span>096 8907276</span>
+                                <span>{{ $introduces->phone }}</span>
                             </span>
                         </div>
                         <div class="col-md-6 hihi d-flex">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <span>
                                 <strong>Địa chỉ :</strong><br>
-                                <span>Số 63, ngõ 136 Chùa Láng,Đống Đa,Hà Nội </span>
+                                <span>{{ $introduces->address }}</span>
                             </span>
                         </div>
                         <div class="col-md-3 hihi d-flex">
                             <i class="fab fa-facebook-square"></i>
                             <span>
                                 <strong>Facebook:</strong><br>
-                                <span><a style="color : black" href="">Xuân Phi</a></span>
+                                <span><a style="color : black" target="_blank" href="{{ $introduces->facebook }}">Xuân Phi</a></span>
                             </span>
                         </div>
                     </div>
@@ -205,25 +205,25 @@
         <div class="row" style="text-align: center">
             <div class="col-md-3 item-lydo">
                 <div class="lydo">
-                    <img src="image/offline1.png" width="150px" alt="">
+                    <img src="{{ asset('') }}/image/offline1.png" width="150px" alt="">
                     <h4>Chương trình cá nhân hoá</h4>
                 </div>
             </div>
             <div class="col-md-3 item-lydo">
                 <div class="lydo">
-                    <img src="image/offline2.png" width="150px" alt="">
+                    <img src="{{ asset('') }}/image/offline2.png" width="150px" alt="">
                     <h4>Giảng viên tận tâm</h4>
                 </div>
             </div>
             <div class="col-md-3 item-lydo">
                 <div class="lydo">
-                    <img src="image/offline3.png" width="150px" alt="">
+                    <img src="{{ asset('') }}/image/offline3.png" width="150px" alt="">
                     <h4>Tài liệu cập nhật</h4>
                 </div>
             </div>
             <div class="col-md-3 item-lydo">
                 <div class="lydo">
-                    <img src="image/offline4.png" width="150px" alt="">
+                    <img src="{{ asset('') }}/image/offline4.png" width="150px" alt="">
                     <h4>Truyền đạt dễ hiểu</h4>
                 </div>
             </div>

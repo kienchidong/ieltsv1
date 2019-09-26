@@ -6,13 +6,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Gate;
 
 class ContactController extends Controller
 {
     public function __construct()
     {
-        $data['contact_count'] = DB::table('contacts')->count();
-        view()->share($data);
+        
+            $data['contact_count'] = DB::table('contacts')->count();
+            view()->share($data);
+       
     }
     /**
      * Display a listing of the resource.
@@ -21,8 +24,11 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $data['contact'] = DB::table('contacts')->orderByDesc('id')->get();
-        return view('admin.pages.contacts.index', $data);
+        if (Gate::allows('admin'))
+        {
+            $data['contact'] = DB::table('contacts')->orderByDesc('id')->get();
+            return view('admin.pages.contacts.index', $data);
+        }abort(403);
     }
 
     /**
@@ -32,7 +38,10 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.contacts.create');
+        if (Gate::allows('admin'))
+        {
+            return view('admin.pages.contacts.create');
+        }abort(403);
     }
 
     /**
