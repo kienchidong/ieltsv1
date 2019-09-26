@@ -34,6 +34,8 @@ class CreateIntroduceTable extends Migration
            $table->string('email')->nullable();
            $table->string('phone')->nullable();
            $table->string('message')->nullable();
+           $table->tinyInteger('status')->default(0);
+           $table->timestamps();
         });
 
         /*

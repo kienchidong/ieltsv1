@@ -22,6 +22,11 @@
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <script src="{{asset('owl-carousel/owlcarousel/owl.carousel.js')}}"></script>
     <script src="https://kit.fontawesome.com/2476b12f4d.js"></script>
+
+    <link rel="stylesheet" href="{{ asset('alertify/alertify.bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('alertify/alertify.core.css') }}">
+    <link rel="stylesheet" href="{{ asset('alertify/alertify.default.css') }}">
+    <script src="{{ asset('alertify/alertify.min.js') }}"></script>
     <script language="javascript">
         $(document).ready(function () {
             start();
@@ -83,113 +88,32 @@
 </head>
 
 <body style="background-color: #f4f6f8">
+@if(session('thongbao'))
+    <script type="text/javascript">
+        alertify.success('{{ session('thongbao') }}');
+    </script>
+@endif
+@if(session('error'))
+    <script type="text/javascript">
+        alertify.error('{{ session('error') }}');
+    </script>
+@endif
+@if(count($errors) > 0)
+    <script type="text/javascript">
+        @foreach($errors->all() as $err)
+        alertify.error('{{ $err }}');
+        @endforeach
+    </script>
+
+@endif
 <section class="header-landing" style="background-image: url('{{ asset('image/bg1.jpg') }}') !important;">
     <div style="background: rgba(0,0,0,0.3)">
 
-        {{--  <div class="container-landing">
-            <div class="row">
-                <div class="logo" style="margin-left : 10px">
-                    <a href="{{ url('') }}">
-        <img src="{{ asset('image/logo11.png') }}" width="100px" alt="">
-        </a>
-    </div>
-    <div class="col-md-6">
-        <div class="landing-count">
-
-            <div class="row count-content">
-                <h4 class="text-landing text-uppercase">Nhanh tay lên để nhận được Ưu đãi</h4>
-                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
-                    <h5 class="text-landing">Ngày</h5>
-                    <span id="day-count" class="number-count" title="ngày">Ngày</span>
-                </div>
-                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
-                    <h5 class="text-landing">Giờ</h5>
-                    <span id="hour-count" class="number-count" title="giờ">Giờ</span>
-                </div>
-                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
-                    <h5 class="text-landing">Phút</h5>
-                    <span id="minute-count" class="number-count" title="phút">Phút</span>
-                </div>
-                <div class="col-3 col-lg-3 col-sm-3 col-md-3">
-                    <h5 class="text-landing">Giây</h5>
-                    <span id="second-count" class="number-count" title="giây">Giây</span>
-                </div>
-                <div class="count-form col-12 col-lg-12 col-sm-12 col-md-12">
-                    <form action="" method="post">
-                        @csrf
-                        <input type="text" class="count-input" name="name" required placeholder="Họ và tên" />
-                        <input type="text" class="count-input" name="email" required placeholder="Nhập Email" />
-                        <input type="text" class="count-input" name="phone" required
-                            placeholder="Nhập Sô điện thoại" />
-                        <input type="submit" value="GỬI LIÊN HỆ TỚI CHÚNG TÔI">
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="col-md-6">
-        <div class="landing-offline">
-            <h3 class="title-ss" style="color: white">HỌC OFFLINE TRỰC TIẾP<br> <span
-                    style="text-align: center">CÙNG
-                    XUÂN PHI IELTS</span>
-            </h3>
-
-        </div>
-        <hr>
-        <div class="landing-dangky">
-            <h3>Hà Đức Kiên</h3>
-
-            <a class="btn btn-dangky" href="#">Đăng Ký</a>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-lg-12 col-md-12 landing-infor">
-        <div class="row">
-            <div class="col-4 col-md-4 col-lg-4 col-sm-4">
-                <div class="left">
-                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
-                </div>
-                <div class="right">
-                    <span>
-                        <strong>Hotline:</strong><br>
-                        <span>096 8907276</span>
-                    </span>
-                </div>
-
-            </div>
-            <div class="col-4 col-md-4 col-lg-4 col-sm-4">
-                <div class="left">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                </div>
-                <div class="right">
-                    <span>
-                        <strong>Địa chỉ :</strong><br>
-                        <span>Số 63, ngõ 136 Chùa Láng,Đống Đa,Hà Nội </span>
-                    </span>
-                </div>
-
-            </div>
-            <div class="col-4 col-md-4 col-lg-4 col-sm-4">
-                <div class="left">
-                    <i class="fab fa-facebook-square"></i>
-                </div>
-                <div class="right">
-                    <span>
-                        <strong>Facebook:</strong><br>
-                        <span><a style="color : black" href="">Xuân Phi</a></span>
-                    </span>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    </div>
-    </div> --}}
         <div class="container-fluid">
             <div class="container">
                 <div class="logo" style="padding: 10px">
                     <a href="{{ url('') }}">
-                        <img src="{{ asset('image/logo11.png') }}" width="100px" alt="">
+                        <img src="{{ asset('images/logo/'.$introduces->logo) }}" width="100px" alt="">
                     </a>
                 </div>
                 <div class="row">
@@ -215,14 +139,11 @@
                                 </div>
                             </div>
                             <div class="count-form col-12 col-lg-12 col-sm-12 col-md-12">
-                                <form action="" method="post">
-                                    @csrf
-                                    <input type="text" class="count-input" name="name" required
-                                           placeholder="Họ và tên"/>
-                                    <input type="text" class="count-input" name="email" required
-                                           placeholder="Nhập Email"/>
-                                    <input type="text" class="count-input" name="phone" required
-                                           placeholder="Nhập Sô điện thoại"/>
+                                <form action="{{ route('information') }}" method="post">
+                                @csrf
+                                    <input type="text" class="count-input" name="name" required placeholder="Họ và tên" value="{{ old('name') }}"/>
+                                    <input type="text" class="count-input" name="email" required placeholder="Nhập Email" value="{{ old('email') }}"/>
+                                    <input type="text" class="count-input" name="phone" required placeholder="Nhập Sô điện thoại" value="{{ old('phone') }}"/>
                                     <input type="submit" value="GỬI LIÊN HỆ TỚI CHÚNG TÔI">
                                 </form>
                             </div>
@@ -369,198 +290,7 @@
         </div>
 
 </section>
-{{--  <section class="landing-khoahoc">
-    <div id="khoa-re" class="khoahoc">
-        <div class="row">
-
-        </div>
-        <div class="col-md-6 oahoc-left">
-            <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
-</div>
-<div class="col-md-6  khoahoc-right">
-    <div class="khoahoc-content">
-        <div>
-            <h3>KHOÁ RỄ</h3>
-            <h4>Pre-IELTS level 0</h4>
-            <ol>
-
-                <li>
-                    <span>ĐỐI TƯỢNG:</span>
-                    <ul>
-                        <li>Đã có khả năng tiếng Anh cơ bản</li>
-                        <li>Các kỹ năng Nghe - Đọc còn chậm, vốn từ hạn chế</li>
-                        <li>Phản xạ Nói chậm, chưa biết cách viết luận tiếng Anh</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>MỤC TIÊU:</span>
-                    <ul>
-                        <li>Có phản xạ Nghe - Nói trực tiếp tiếng Anh không thông qua tiếng Việt</li>
-                        <li>Tự tin giao tiếp sử dụng tiếng Anh trong môi trường làm việc, trả lời phỏng vấn
-                        </li>
-                        <li>Có khả năng nói - viết câu tiếng Anh rõ ý, đúng ngữ pháp</li>
-                        <li>Có khả năng sử dụng linh hoạt vốn từ vựng trong các kỹ năng</li>
-                        <li>Tự tin ôn luyện IELTS mục tiêu 6.0+ trong vòng 3-4 tháng tiếp theo</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>THÔNG TIN KHÓA HỌC:</span>
-                    <ul>
-                        <li>Thời lượng: 20 buổi (15 buổi kỹ năng + 5 buổi chuyên sâu phát âm và phản xạ nói)
-                        </li>
-                        <li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 – 21.00 các buổi tối</li>
-                        <li>Địa điểm: Tòa nhà Dream house, ngõ 136 phố Chùa Láng, Hà Nội</li>
-                        <li>Học phí: 4,800,000</li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
-    </div>
-</div>
-</div>
-
-<div id="khoa-goc" class="khoahoc">
-    <div class="row">
-        <div class="khoahoc-left">
-            <div class="khoahoc-content">
-                <div>
-                    <h3>KHOÁ GỐC</h3>
-                    <h4>Pre-IELTS level 1</h4>
-                    <ol>
-
-                        <li>
-                            <span>ĐỐI TƯỢNG:</span>
-                            <ul>
-                                <li>Trình độ tương đương Beginner - Elementary</li>
-                                <li>Ngữ pháp và phát âm còn yếu</li>
-                                <li>Vốn từ vựng còn rất hạn chế</li>
-                                <li>Phản xạ nói chậm</li>
-                                <li>Chưa có khả năng sử dụng cấu trúc câu, phát triển ý một cách hợp lý</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>MỤC TIÊU:</span>
-                            <ul>
-                                <li>Có khả năng Nghe – Nói tiếng Anh khá</li>
-                                <li>Có thể nói được các câu liền mạch theo phản xạ</li>
-                                <li>Nắm và sử dụng được ngữ pháp cơ bản</li>
-                                <li>Trình độ tương đương 5.0 – 5.5 IELTS</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>THÔNG TIN KHÓA HỌC:</span>
-                            <ul>
-                                <li>Thời lượng: 22 buổi (17 buổi kỹ năng + 5 buổi chuyên sâu phát âm và phản xạ nói)
-                                </li>
-                                <li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 – 21.00 các buổi tối</li>
-                                <li>Địa điểm: Tòa nhà Dream house, ngõ 136 phố Chùa Láng, Hà Nội</li>
-                                <li>Học phí: 4,800,000</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-
-        </div>
-        <div class="khoahoc-right">
-            <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
-        </div>
-    </div> --}}
-{{--  <div id="khoa-than" class="khoahoc">
-    <div class="khoahoc-left">
-        <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
-</div>
-<div class="khoahoc-right">
-<div class="khoahoc-content">
-    <div>
-        <h3>KHOÁ THÂN</h3>
-        <h4>Pre-IELTS level 2</h4>
-        <ol>
-
-            <li>
-                <span>ĐỐI TƯỢNG:</span>
-                <ul>
-                    <li>Đã có khả năng tiếng Anh cơ bản</li>
-                    <li>Các kỹ năng Nghe - Đọc còn chậm, vốn từ hạn chế</li>
-                    <li>Phản xạ Nói chậm, chưa biết cách viết luận tiếng Anh</li>
-                </ul>
-            </li>
-            <li>
-                <span>MỤC TIÊU:</span>
-                <ul>
-                    <li>Có phản xạ Nghe - Nói trực tiếp tiếng Anh không thông qua tiếng Việt</li>
-                    <li>Tự tin giao tiếp sử dụng tiếng Anh trong môi trường làm việc, trả lời phỏng vấn
-                    </li>
-                    <li>Có khả năng nói - viết câu tiếng Anh rõ ý, đúng ngữ pháp</li>
-                    <li>Có khả năng sử dụng linh hoạt vốn từ vựng trong các kỹ năng</li>
-                    <li>Tự tin ôn luyện IELTS mục tiêu 6.0+ trong vòng 3-4 tháng tiếp theo</li>
-                </ul>
-            </li>
-            <li>
-                <span>THÔNG TIN KHÓA HỌC:</span>
-                <ul>
-                    <li>Thời lượng: 20 buổi (15 buổi kỹ năng + 5 buổi chuyên sâu phát âm và phản xạ nói)
-                    </li>
-                    <li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 – 21.00 các buổi tối</li>
-                    <li>Địa điểm: Tòa nhà Dream house, ngõ 136 phố Chùa Láng, Hà Nội</li>
-                    <li>Học phí: 4,800,000</li>
-                </ul>
-            </li>
-        </ol>
-    </div>
-</div>
-</div>
-</div> --}}
-{{--  <div id="khoa-ngon" class="khoahoc">
-
-        <div class="khoahoc-left">
-            <div class="khoahoc-content">
-                <div>
-                    <h3>KHOÁ NGỌN</h3>
-                    <h4>Pre-IELTS Chuyên sâu</h4>
-                    <ol>
-
-                        <li>
-                            <span>ĐỐI TƯỢNG:</span>
-                            <ul>
-                                <li>Đã có thể giao tiếp cơ bản bằng tiếng Anh</li>
-                                <li>Kỹ năng viết còn chậm, chưa viết được bài luận học thuật hoàn chỉnh</li>
-                                <li>Vốn từ vựng học thuật và nâng cao còn hạn chế</li>
-                                <li>Có định hướng thi IELTS rõ ràng</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>MỤC TIÊU:</span>
-                            <ul>
-                                <li>Nắm được cách làm các dạng bài IELTS Reading và Listening</li>
-                                <li>Có khả năng phát triển ý và sử dụng từ ngữ ghi điểm cho IELTS Speaking</li>
-                                <li>Có khả năng giao tiếp, thảo luận, tranh luận tiếng Anh</li>
-                                <li>Có khả năng viết bài luận 250 từ rõ ràng, mạch lạc</li>
-                                <li>Có khả năng sử dụng linh hoạt vốn từ vựng trong các kỹ năng</li>
-                                <li>Tự tin ôn luyện IELTS mục tiêu 6.5+ trong vòng 3-4 tháng tiếp theo</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>THÔNG TIN KHÓA HỌC:</span>
-                            <ul>
-                                <li>Thời lượng: 20 buổi (15 buổi kỹ năng + 5 buổi chuyên sâu phát âm và phản xạ nói)
-                                </li>
-                                <li>Thời gian: 2 buổi/ tuần; 2 giờ/ buổi; 19.00 – 21.00 các buổi tối</li>
-                                <li>Địa điểm: Tòa nhà Dream house, ngõ 136 phố Chùa Láng, Hà Nội</li>
-                                <li>Học phí: 4,800,000</li>
-
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-
-        </div>
-        <div class="khoahoc-right">
-            <img src="{{ asset('image/bg3.jpg') }}" alt="" width="100%" height="100%">
-</div>
-</div> --}}
-</section>
+c</section>
 <section id="teacher">
     <div class="container">
         <h3 class="title-ss">Đội Ngũ Giảng Dạy</h3>
@@ -675,22 +405,21 @@
                 d3724.2375398297418!2d105.80500911457912!3d21.02317939334537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab687560f3ad%3A0xa5522c45c9015e23!2zS2jDoWNoIHPhuqFuIERyZWFtIEhvdXNl!5e0!3m2!1svi!2s!4v1568473282304!5m2!1svi!2s"
                         width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 <p style="line-height: 35px">
-                    <span>Địa chỉ : Tòa nhà Dream House, số 63, ngõ 136 Chùa Láng, Hà Nội </span><br>
-                    <span> Hotline: 0972 220 777</span><br>
-                    <span> Email:
-                            xuanphi@gmail.com</span><br>
+                    <span>Địa chỉ : {{ $introduces->address }}</span><br>
+                    <span> Hotline: {{ $introduces->phone }}</span><br>
+                    <span> Email: {{ $introduces->email }}</span><br>
                 </p>
             </div>
             <div class="col-6 col-lg-6 col-sm-6 col-md-6">
                 <h2 style="margin-left : 8px">Đăng ký để nhận ưu đãi sớm nhất</h2>
                 <div class="form-dk">
-                    <form action="" method="post">
-                        @csrf
-                        <input type="text" name="name" required placeholder="Họ Và Tên"/>
-                        <input type="email" name="email" required placeholder="Nhập Email"/>
-                        <input type="text" name="phone" required placeholder="Nhập Số Điện Thoại"/>
-                        <textarea name="content" required id="" cols="15" rows="5"
-                                  placeholder="Để lại lời nhắn cho chúng tôi"></textarea>
+                    <form action="{{ route('information') }}" method="post">
+                    @csrf
+                        <input type="text" name="name" required placeholder="Họ Và Tên" value="{{ old('name') }}"/>
+                        <input type="email" name="email" required placeholder="Nhập Email" value="{{ old('email') }}"/>
+                        <input type="text" name="phone" required placeholder="Nhập Số Điện Thoại" value="{{ old('phone') }}"/>
+                        <textarea name="message" required id="" cols="15" rows="5"
+                                  placeholder="Để lại lời nhắn cho chúng tôi">{{ old('message') }}</textarea>
                         <input type="submit" value="GỬI ĐI">
                     </form>
                 </div>
