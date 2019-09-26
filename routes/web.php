@@ -265,6 +265,21 @@ Route::prefix('admin')->group(function () {
             Route::get('/setactive/{id}/{status}', 'Admins\BlogController@setactive')->name('blog.setactive');
 
         });
+        /*
+         * Student
+         */
+        Route::prefix('student')->group(function () {
+            Route::get('/list', 'Admins\StudentController@index')->name('student.index');
+            Route::get('/add', 'Admins\StudentController@create')->name('student.create');
+            Route::post('/add', 'Admins\StudentController@store')->name('student.store');
+
+            Route::get('/edit/{id}', 'Admins\StudentController@edit')->name('student.edit');
+            Route::post('/edit/{id}', 'Admins\StudentController@update')->name('student.update');
+            Route::get('/destroy/{id}', 'Admins\StudentController@destroy')->name('student.destroy');
+
+            Route::get('/setactive/{id}/{status}', 'Admins\StudentController@setactive')->name('student.setactive');
+
+        });
 
         /*
             Giới thiệu chung

@@ -13,10 +13,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        $this->call('Student');
         $this->call('Teacher');
         $this->call('CourseOfflines');
         $this->call('CateLibrarys');
         $this->call('Contacts');
+//        Link Đăng ký
+        DB::table('registration')->insert([
+
+            'link' =>'http://bit.ly/IELTSofflineXuanPhi',
+        ]);
         DB::table('users')->insert([
             'name' => 'user',
             'email' => 'user@gmail.com',
@@ -874,4 +880,35 @@ class Teacher extends Seeder
         ]);
     }
 }
+class Student extends Seeder
+{
+    public function run()
+    {
+        DB::table('student')->insert([
+            'name' => 'Hoàng Thu Hà',
+            'image' => 'anh.png',
+            'course' => 'Khóa rễ',
+            'content' => 'Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ muốn đi học cô tiếp :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa, cô cũng buồn cười nữa =)',
+            'status' => 1,
+            'created_at' => now()
+        ]);
+        DB::table('student')->insert([
+            'name' => 'Nguyễn Hữu Tiến ',
+            'image' => 'anh.png',
+            'course' => 'Khóa ngọn',
+            'content' => 'Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ muốn đi học cô tiếp :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa, cô cũng buồn cười nữa =)',
+            'status' => 1,
+            'created_at' => now()
+        ]);
+        DB::table('student')->insert([
+            'name' => 'Hoàng Văn Việt',
+            'image' => 'anh.png',
+            'course' => 'Khóa thân',
+            'content' => 'Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ muốn đi học cô tiếp :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa, cô cũng buồn cười nữa =)',
+            'status' => 1,
+            'created_at' => now()
+        ]);
+    }
+}
+
 

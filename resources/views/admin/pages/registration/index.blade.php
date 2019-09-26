@@ -25,20 +25,12 @@
                         @csrf
                         <div class="box-body">
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Link Video youtube (*)</label>
-                                <input type="text" class="form-control" placeholder="Link video youtbe" name="" id="video" value="{{ old('link') }}" onchange="getVideoYoutube(this)">
-                                <input type="hidden" required name="video" id="value-video" value="{{ $online->video }}">
-                                <h4>Video:</h4>
-                                <div id="youtube-video">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $online->video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            </div>
+
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Link khóa học (*)</label>
+                                <label for="exampleInputEmail1">Link đăng kí (*)</label>
                                 <div class="form-group">
-                                    <input type="text" name="link" placeholder="Link khóa học" class="form-control" value="{{ $online->link }}" />
+                                    <input type="text" name="link" placeholder="Link khóa học" class="form-control" value="{{ $registration->link }}" />
                                 </div>
                             </div>
 

@@ -68,7 +68,7 @@
                     <span>Nội dung khoá học:</span>
                     <span>Địa điểm lớp học: Toad nhà Deam Housesoos 63, ngõ 136 Chùa Láng, HN</span>
                 </div>
-                <a target="_blank" href="http://bit.ly/IELTSofflineXuanPhi" class="btn btn-primary mt-5">Đăng ký học ngay</a>
+                <a target="_blank" href="{{$registration->link}}" class="btn btn-primary mt-5">Đăng ký học ngay</a>
             </div>
         </div>
     </section>

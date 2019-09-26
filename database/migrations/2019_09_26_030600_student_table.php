@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RegistrationTable extends Migration
+class StudentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class RegistrationTable extends Migration
      */
     public function up()
     {
-        Schema::create('registration',function (Blueprint $table)
+        Schema::create('student',function (Blueprint $table)
         {
             $table->bigIncrements('id');
-            $table->string('link');
+            $table->string('name');
+            $table->string('course');
+            $table->text('content');
+            $table->string('image');
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

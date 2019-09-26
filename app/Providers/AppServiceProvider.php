@@ -30,8 +30,9 @@ class AppServiceProvider extends ServiceProvider
         //URL::forceScheme('https');
         Schema::defaultStringLength(191);
         if (!$this->app->runningInConsole()) {
+            $data['student'] = DB::table('student')->limit(3)->get();
 
-
+            $data['registration'] = DB::table('registration')->first();
             $data['contacts'] = DB::table('contacts')->where('status', 1)->get();
             $data['cate_librarys'] = DB::table('cate_librarys')->where('status', 1)->take(4)->get();
             $data['introduces'] = IntroduceModel::find(1);

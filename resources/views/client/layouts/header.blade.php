@@ -40,7 +40,7 @@
 					<li id="contact-li"><a href="#">liên hệ</a></li>
 				</ul>
 				<ul class="nav-ul-lv-1">
-					<li><a target="_blank" href="http://bit.ly/IELTSofflineXuanPhi"
+					<li><a target="_blank" href="{{$registration->link}}"
 						   style="    border: 3px solid #19687D;
                             border-radius: 5px;"
 						>Đăng ký</a></li>

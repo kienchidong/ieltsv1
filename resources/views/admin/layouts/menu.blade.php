@@ -137,6 +137,13 @@
                     <span>Chủ đề khóa học offline </span>
                 </a>
             </li>
+            {{--Khóa học--}}
+            <li >
+                <a href="{{route('registration.index')}}">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Đăng ký  </span>
+                </a>
+            </li>
             {{--Liên hệ--}}
             <li class="treeview">
                 <a href="#">

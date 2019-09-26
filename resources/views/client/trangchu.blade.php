@@ -153,7 +153,7 @@
                             <div class="tree-skill">
                                 <img class="tree" src="image/tree1.png" alt="">
                                 <div class="skill">
-                                    <a href="{{ url('landing') }}">
+                                    <a href="{{ route('client.course.index') }}">
                                         Khóa rễ
                                     </a>
                                 </div>
@@ -340,99 +340,36 @@
             <div class="container danhgia">
                 <h3 class="section-title text-dark">Cảm nhận của học viên về Xuan Phi Ielst</h3>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="coment-box">
-                            <div class="comment-title">
-                                Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ
-                                muốn đi
-                                học cô tiếp
-                                :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa,
-                                cô
-                                cũng buồn cười nữa =)
-                            </div>
-                            <div class="coment-member">
-                                <div class="comment-avt">
-                                    <img src="https://photo-3-baomoi.zadn.vn/w1000_r1/2018_10_03_180_28002521/27ad3ab469f580abd9e4.jpg"
-                                         alt="">
+                    @foreach($student as $value)
+                        <div class="col-md-4">
+                            <div class="coment-box">
+                                <div class="comment-title">
+                                    {!! $value->content !!}
                                 </div>
-                                <div class="coment-name">
-                                    <a href="">Hoàng Thu Hà</a> <br>
-                                    <span>Khóa Ielst-01</span>
-                                    <div class="star">
-                                        <i class="fa fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
+                                <div class="coment-member">
+                                    <div class="comment-avt">
+                                        <img src="{{asset('images/student').'/'.$value->image}}"
+                                             alt="">
+                                    </div>
+                                    <div class="coment-name">
+                                        <a href="">{{$value->name}}</a> <br>
+                                        <span>{{$value->course}}</span>
+                                        <div class="star">
+                                            <i class="fa fa-star star-check"></i>
+                                            <i class="fas fa-star star-check"></i>
+                                            <i class="fas fa-star star-check"></i>
+                                            <i class="fas fa-star star-check"></i>
+                                            <i class="fas fa-star star-check"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
+                    @endforeach
 
 
-                    </div>
-                    <div class="col-md-4">
-                        <div class="coment-box">
-                            <div class="comment-title">
-                                Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ
-                                muốn đi
-                                học cô tiếp
-                                :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa,
-                                cô
-                                cũng buồn cười nữa =)
-                            </div>
-                            <div class="coment-member">
-                                <div class="comment-avt">
-                                    <img src="https://photo-3-baomoi.zadn.vn/w1000_r1/2018_10_03_180_28002521/27ad3ab469f580abd9e4.jpg"
-                                         alt="">
-                                </div>
-                                <div class="coment-name">
-                                    <a href="">Hoàng Thu Hà</a> <br>
-                                    <span>Khóa Ielst-01</span>
-                                    <div class="star">
-                                        <i class="fa fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="col-md-4">
-                        <div class="coment-box">
-                            <div class="comment-title">
-                                Em chả biết nói gì ngoài việc e rất yêu cô Thủy :)) học hết khóa đầu rất nhớ cô, chỉ
-                                muốn đi
-                                học cô tiếp
-                                :( Cô rất tận tình nè, hiền nè, xinh nè, giảng hay dễ hiểu nè, khiến e ko sợ đi học nữa,
-                                cô
-                                cũng buồn cười nữa =)
-                            </div>
-                            <div class="coment-member">
-                                <div class="comment-avt">
-                                    <img src="https://photo-3-baomoi.zadn.vn/w1000_r1/2018_10_03_180_28002521/27ad3ab469f580abd9e4.jpg"
-                                         alt="">
-                                </div>
-                                <div class="coment-name">
-                                    <a href="">Hoàng Thu Hà</a> <br>
-                                    <span>Khóa Ielst-01</span>
-                                    <div class="star">
-                                        <i class="fa fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                        <i class="fas fa-star star-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
                 </div>
             </div>
         </div>
