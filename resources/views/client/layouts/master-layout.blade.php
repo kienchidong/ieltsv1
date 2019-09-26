@@ -21,11 +21,35 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="lib/bootstrap_4.0.0/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="{{ asset('alertify/alertify.bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ asset('alertify/alertify.core.css') }}">
+	<link rel="stylesheet" href="{{ asset('alertify/alertify.default.css') }}">
+	<script src="{{ asset('alertify/alertify.min.js') }}"></script>
 {{--Font--}}
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap&subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
     {{--  <script src="https://kit.fontawesome.com/2476b12f4d.js"></script>  --}}
 </head>
 <body>
+
+@if(session('thongbao'))
+	<script type="text/javascript">
+		alertify.success('{{ session('thongbao') }}');
+	</script>
+@endif
+@if(session('error'))
+	<script type="text/javascript">
+		alertify.error('{{ session('error') }}');
+	</script>
+@endif
+@if(count($errors) > 0)
+	<script type="text/javascript">
+		@foreach($errors->all() as $err)
+		alertify.error('{{ $err }}');
+		@endforeach
+	</script>
+
+@endif
 
 @include('client.layouts.header')
 @yield('content')

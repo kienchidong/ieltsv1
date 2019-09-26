@@ -1,39 +1,5 @@
 	<footer class="container-fluid">
-	    {{--  <div class="container-fluid footer-1">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-md-4">
-	                    <h5>LIÊN KẾT</h5>
-	                    <div class="d-flex">
-	                        <div class="icon-lk">
-	                            <img src="image/icon-fb.jpg" alt="facebook">
-	                        </div>
-	                        <div class="icon-lk">
-	                            <img src="image/icon-zalo.png" alt="zalo">
-	                        </div>
-	                        <div class="icon-lk">
-	                            <img src="image/youtube-icon.png" alt="youtube">
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="col-md-8">
-	                    <h5>ĐĂNG KÝ NHẬN THÔNG TIN </h5>
-	                    <div class="form-dk">
-	                        <form>
-	                            <div class="form-group">
-	                                <input type="text" class="form-control" id="" aria-describedby="text"
-	                                    placeholder="Nhập vào email">
-	                            </div>
-	                            <button type="button" class="btn btn-warning">Đăng Ký</button>
-	                        </form>
 
-	                    </div>
-
-	                </div>
-	            </div>
-
-	        </div>
-	    </div>  --}}
 	    <div class="container-fluid footer-2">
 	        <div class="container" id="contact">
 	            <div class="row">
@@ -51,12 +17,12 @@
 	                <div class="col-md-5 link-lk">
 	                    <h4>ĐĂNG KÝ NHẬN THÔNG TIN </h4>
 	                    <div class="form-dk">
-	                        <form>
+	                        <form action="{{ route('information') }}" method="post">
+								@csrf
 	                            <div class="form-group">
-	                                <input type="text" class="form-control" id="" aria-describedby="text"
-	                                    placeholder="Nhập vào số điện thoại">
+	                                <input type="text" class="form-control" id="" aria-describedby="text" name='phone' placeholder="Nhập vào số điện thoại">
 	                            </div>
-	                            <button type="button" class="btn btn-warning">Đăng Ký</button>
+	                            <button type="submit" class="btn btn-warning">Đăng Ký</button>
 	                        </form>
 
 	                    </div>
