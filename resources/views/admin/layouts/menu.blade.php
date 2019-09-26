@@ -162,8 +162,8 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('home.slider')}}"><i class="fa fa-circle-o"></i> Home Slider</a></li>
-                    <li><a href="{{route('home.background')}}"><i class="fa fa-circle-o"></i> Home Background</a></li>
+                    <li><a href="{{route('home.slider')}}"><i class="fa fa-circle-o"></i> Slider Trang chủ</a></li>
+                    <li><a href="{{route('home.background')}}"><i class="fa fa-circle-o"></i> Hình Nền Trang Chủ</a></li>
                     <li><a href="{{route('library.background')}}"><i class="fa fa-circle-o"></i> Hình Nền Thư Viện</a></li>
                     <li><a href="{{route('comment.background')}}"><i class="fa fa-circle-o"></i> Hình Nền Bình luận</a></li>
                 </ul>

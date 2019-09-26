@@ -24,6 +24,25 @@ class CreateIntroduceTable extends Migration
             $table->text('content');
             $table->timestamps();
         });
+
+        /*
+         * Thông tin người đăng ký
+         * */
+        Schema::create('informations', function (Blueprint $table){
+           $table->bigIncrements('id');
+           $table->string('name')->nullable();
+           $table->string('email')->nullable();
+           $table->string('phone')->nullable();
+           $table->string('message')->nullable();
+        });
+
+        /*
+         * thời gian
+         * */
+        Schema::create('time', function (Blueprint $table){
+           $table->bigIncrements('id');
+           $table->date('date');
+        });
     }
 
     /**
@@ -33,6 +52,6 @@ class CreateIntroduceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('introduce');
+
     }
 }

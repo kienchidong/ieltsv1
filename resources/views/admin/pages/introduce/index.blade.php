@@ -20,6 +20,7 @@
     </section>
     <br>
     <section class="content">
+        <div class="row">
             <div class="col-md-12">
                 <div class="box box-primary">
                     <h3 style="text-align: left; padding-left: 5px">Giới thiệu về Xuân Phi Ielts</h3>

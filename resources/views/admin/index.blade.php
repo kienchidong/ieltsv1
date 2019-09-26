@@ -12,7 +12,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Trang chủ</li>
         </ol>
     </section>
 
@@ -82,128 +82,60 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="box">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Monthly Recap Report</h3>
+                    <form action="{{ route('edit.time', $count_time->id) }}" method="post">
+                        @csrf
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Thời Gian Nhận Ưu Đãi</h3>
 
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                            </button>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-wrench"></i></button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                        </div>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <p class="text-center">
-                                    <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
-                                </p>
-
-                                <div class="chart">
-                                    <!-- Sales Chart Canvas -->
-                                    <canvas id="salesChart" style="height: 180px;"></canvas>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-wrench"></i></button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
                                 </div>
-                                <!-- /.chart-responsive -->
-                            </div>
-                            <!-- /.col -->
-                            <div class="col-md-4">
-                                <p class="text-center">
-                                    <strong>Goal Completion</strong>
-                                </p>
-
-                                <div class="progress-group">
-                                    <span class="progress-text">Add Products to Cart</span>
-                                    <span class="progress-number"><b>160</b>/200</span>
-
-                                    <div class="progress sm">
-                                        <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                                <!-- /.progress-group -->
-                                <div class="progress-group">
-                                    <span class="progress-text">Complete Purchase</span>
-                                    <span class="progress-number"><b>310</b>/400</span>
-
-                                    <div class="progress sm">
-                                        <div class="progress-bar progress-bar-red" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                                <!-- /.progress-group -->
-                                <div class="progress-group">
-                                    <span class="progress-text">Visit Premium Page</span>
-                                    <span class="progress-number"><b>480</b>/800</span>
-
-                                    <div class="progress sm">
-                                        <div class="progress-bar progress-bar-green" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                                <!-- /.progress-group -->
-                                <div class="progress-group">
-                                    <span class="progress-text">Send Inquiries</span>
-                                    <span class="progress-number"><b>250</b>/500</span>
-
-                                    <div class="progress sm">
-                                        <div class="progress-bar progress-bar-yellow" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                                <!-- /.progress-group -->
-                            </div>
-                            <!-- /.col -->
-                        </div>
-                        <!-- /.row -->
-                    </div>
-                    <!-- ./box-body -->
-                    <div class="box-footer">
-                        <div class="row">
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="description-block border-right">
-                                    <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 17%</span>
-                                    <h5 class="description-header">$35,210.43</h5>
-                                    <span class="description-text">TOTAL REVENUE</span>
-                                </div>
-                                <!-- /.description-block -->
-                            </div>
-                            <!-- /.col -->
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="description-block border-right">
-                                    <span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> 0%</span>
-                                    <h5 class="description-header">$10,390.90</h5>
-                                    <span class="description-text">TOTAL COST</span>
-                                </div>
-                                <!-- /.description-block -->
-                            </div>
-                            <!-- /.col -->
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="description-block border-right">
-                                    <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 20%</span>
-                                    <h5 class="description-header">$24,813.53</h5>
-                                    <span class="description-text">TOTAL PROFIT</span>
-                                </div>
-                                <!-- /.description-block -->
-                            </div>
-                            <!-- /.col -->
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="description-block">
-                                    <span class="description-percentage text-red"><i class="fa fa-caret-down"></i> 18%</span>
-                                    <h5 class="description-header">1200</h5>
-                                    <span class="description-text">GOAL COMPLETIONS</span>
-                                </div>
-                                <!-- /.description-block -->
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                             </div>
                         </div>
-                        <!-- /.row -->
-                    </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+
+                                <div class="col-md-8">
+                                    <input type="date" name="date" class="form-control" value="{{ $count_time->date }}" onchange="selecttime(this)"/>
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-md-4">
+                                    <div id="count-time" class="">
+                                        <h3>Thời gian còn lại</h3>
+                                        <div>
+                                            <span id="day"></span> Ngày :
+                                            <span id="hour"></span> Giờ :
+                                            <span id="minute"></span> Phút :
+                                            <span id="second"></span> Giây
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+
+                        </div>
+                        <!-- ./box-body -->
+                        <div class="box-footer">
+                            <div class="">
+                                <input type="submit" value="Thay đổi" class="btn btn-success">
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                    </form>
                     <!-- /.box-footer -->
                 </div>
                 <!-- /.box -->
@@ -839,5 +771,75 @@
         <!-- /.row -->
     </section>
     <!-- /.content -->
+    <script>
+
+        function selecttime(obj) {
+            var date = new Date().getTime();
+            var time = new Date(obj.value).getTime();
+            var distance = time-date;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24))+1;
+
+            if(days >=0){
+                document.getElementById('day').innerText = days.toString();
+                document.getElementById('count-time').classList.remove('hide');
+            }
+            else{
+                alert('Ngày '+obj.value+ ' Đã qua! bạn không thể chọn ngày này');
+                obj.value = '{{ $count_time->date }}';
+            }
+        }
+        $(document).ready(function () {
+            start();
+        });
+        var date = new Date();
+        var time = new Date('{{ $count_time->date }}').getTime();
+        var distance = time-date.getTime();
+        var d = Math.floor(distance / (1000 * 60 * 60 * 24))+1; //ngày
+        document.getElementById('day').innerText = d.toString();
+
+        var h = 24 - parseInt(date.getHours()); // Giờ
+        var m = 60 - parseInt(date.getMinutes()); // Phút
+        var s = 60 - parseInt(date.getSeconds()); // Giây
+
+        var timeout = null; // Timeout
+
+        function start() {
+            if (h === null) {
+                h = 0;
+                m = 0;
+                s = 0;
+            }
+
+            if (s === -1) {
+                m -= 1;
+                s = 59;
+            }
+            if (m === -1) {
+                h -= 1;
+                m = 59;
+            }
+
+            if (h === -1) {
+                clearTimeout(timeout);
+                alert('Hết giờ');
+                return false;
+            }
+
+
+            document.getElementById('hour').innerText = h.toString();
+            document.getElementById('minute').innerText = m.toString();
+            document.getElementById('second').innerText = s.toString();
+
+            timeout = setTimeout(function () {
+                s--;
+                start();
+            }, 1000);
+        }
+
+        function stop() {
+            clearTimeout(timeout);
+        }
+
+    </script>
 
 @endsection
