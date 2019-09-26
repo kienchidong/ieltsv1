@@ -16,14 +16,13 @@
 					<div class="col-md-5 link-lk">
 						<h4>ĐĂNG KÝ NHẬN THÔNG TIN </h4>
 						<div class="form-dk">
-							<form>
+							<form action="{{ route('information') }}" method="post">
+								@csrf
 								<div class="form-group">
-									<input type="text" class="form-control" id="" aria-describedby="text"
-										   placeholder="Nhập vào số điện thoại">
+									<input type="text" class="form-control" id="" aria-describedby="text" name='phone' placeholder="Nhập vào số điện thoại">
 								</div>
-								<button type="button" class="btn btn-warning">Đăng Ký</button>
+								<button type="submit" class="btn btn-warning">Đăng Ký</button>
 							</form>
-
 						</div>
 					</div>
 				</div>

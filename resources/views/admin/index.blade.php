@@ -784,7 +784,7 @@
                 document.getElementById('count-time').classList.remove('hide');
             }
             else{
-                alert('Ngày '+obj.value+ ' Đã qua! bạn không thể chọn ngày này');
+                alertify.alert('Ngày '+obj.value+ ' Đã qua! bạn không thể chọn ngày này');
                 obj.value = '{{ $count_time->date }}';
             }
         }
