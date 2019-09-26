@@ -24,30 +24,15 @@
                 <li class="active">khóa học offline</li>
             </ol>
         </section>
-        <div >
-            @if(count($errors) > 0)
-                <div class="alert alert-danger">
-                    @foreach($errors->all() as $err)
-                        {{$err}}<br>
-                    @endforeach
 
-                </div>
-
-            @endif
-            @if(session('thongbao'))
-                <div class="alert alert-success">
-                    {{session('thongbao')}}
-                </div>
-            @endif
-        </div>
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="box">
 
-                        <div class="box-header">
-                            <a href="{{route('course_offline.create')}}" class="btn btn-success">Thêm</a>
-                        </div>
+                        {{--<div class="box-header">--}}
+                            {{--<a href="{{route('course_offline.create')}}" class="btn btn-success">Thêm</a>--}}
+                        {{--</div>--}}
 
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -58,7 +43,7 @@
                                     <th>Khóa học </th>
                                     <th>Hình ảnh</th>
 
-                                    <th>Trạng thái</th>
+                                    {{--<th>Trạng thái</th>--}}
                                     <th class="col-md-3">Hành động</th>
                                 </tr>
                                 </thead>
@@ -73,13 +58,13 @@
                                         </td>
 
 
-                                        <td>
-                                            @if($value->status==1)
-                                                Hiển thị
-                                            @else
-                                                Ẩn
-                                            @endif
-                                        </td>
+                                        {{--<td>--}}
+                                            {{--@if($value->status==1)--}}
+                                                {{--Hiển thị--}}
+                                            {{--@else--}}
+                                                {{--Ẩn--}}
+                                            {{--@endif--}}
+                                        {{--</td>--}}
                                         <td>
 
                                             <div>
@@ -87,20 +72,20 @@
                                                    href="{{ url('admin/course-offline/edit/'.$value->id) }}"
                                                    onclick="">Sửa</a>
 
-                                                <a class="btn btn-danger"
-                                                   href="{{ url('admin/course-offline/destroy/'.$value->id) }}"
-                                                   onclick="return confirm('Hành động sẽ xóa khóa học offline này! bạn có muốn tiếp tục?')">Xóa</a>
-                                                @if($value->status==1)
-                                                    <a class="btn btn-info"
-                                                       href="{{ url('admin/course-offline/setactive/'.$value->id.'/0') }}"
-                                                       onclick="return confirm('Hành động sẽ ẩn khóa học offline này! bạn có muốn tiếp tục?')">Ẩn</a>
-                                                @else
-                                                    <a class="btn btn-warning"
-                                                       href="{{ url('admin/course-offline/setactive/'.$value->id.'/1') }}"
-                                                       onclick="return confirm('Hành động sẽ hiển thị khóa học offline mục này! bạn có muốn tiếp tục?')">Hiển
-                                                        thị</a>
+                                                {{--<a class="btn btn-danger"--}}
+                                                   {{--href="{{ url('admin/course-offline/destroy/'.$value->id) }}"--}}
+                                                   {{--onclick="return confirm('Hành động sẽ xóa khóa học offline này! bạn có muốn tiếp tục?')">Xóa</a>--}}
+                                                {{--@if($value->status==1)--}}
+                                                    {{--<a class="btn btn-info"--}}
+                                                       {{--href="{{ url('admin/course-offline/setactive/'.$value->id.'/0') }}"--}}
+                                                       {{--onclick="return confirm('Hành động sẽ ẩn khóa học offline này! bạn có muốn tiếp tục?')">Ẩn</a>--}}
+                                                {{--@else--}}
+                                                    {{--<a class="btn btn-warning"--}}
+                                                       {{--href="{{ url('admin/course-offline/setactive/'.$value->id.'/1') }}"--}}
+                                                       {{--onclick="return confirm('Hành động sẽ hiển thị khóa học offline mục này! bạn có muốn tiếp tục?')">Hiển--}}
+                                                        {{--thị</a>--}}
 
-                                                @endif
+                                                {{--@endif--}}
                                             </div>
                                     </tr>
                                 @endforeach

@@ -341,6 +341,16 @@ Route::prefix('admin')->group(function () {
 
            Route::post('update/{id}', 'Admins\OnlineController@update')->name('course.update');
         });
+
+
+        Route::prefix('registration')->group(function(){
+            Route::get('/', 'Admins\RegistrationController@index')->name('registration.index');
+
+            Route::post('update/{id}', 'Admins\RegistrationController@update')->name('registration.update');
+        });
+
+
+
     });
 });
 Route::get('/dangky', function () {

@@ -80,21 +80,7 @@
 
                 </ul>
             </li>
-            {{--Liên hệ--}}
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-pie-chart"></i>
-                    <span>Liên hệ </span>
-                    <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{route('contact.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
-                    <li><a href="{{route('contact.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
 
-                </ul>
-            </li>
 
             {{--Khóa học--}}
             <li class="treeview">
@@ -107,9 +93,7 @@
                 </a>
                 <ul class="treeview-menu">
 
-                    <li><a href="{{route('course_offline.index')}}"><i class="fa fa-circle-o"></i> Danh sách chủ đề </a></li>
                     <li><a href="{{route('course_enrolling.index')}}"><i class="fa fa-circle-o"></i> Danh sách đang tuyển</a></li>
-                    <li><a href="{{route('course_offline.create')}}"><i class="fa fa-circle-o"></i> Thêm chủ đề </a></li>
                     <li><a href="{{route('course_enrolling.create')}}"><i class="fa fa-circle-o"></i> Thêm khóa đang tuyển</a></li>
 
 
@@ -145,6 +129,28 @@
                     <i class="fa fa-info-circle"></i>
                     <span>Giới thiệu </span>
                 </a>
+            </li>
+            {{--Khóa học--}}
+            <li >
+                <a href="{{route('course_offline.index')}}">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Chủ đề khóa học offline </span>
+                </a>
+            </li>
+            {{--Liên hệ--}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Liên hệ </span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('contact.create')}}"><i class="fa fa-circle-o"></i> Thêm</a></li>
+                    <li><a href="{{route('contact.index')}}"><i class="fa fa-circle-o"></i> Danh Sách</a></li>
+
+                </ul>
             </li>
 
             <li class="treeview">
