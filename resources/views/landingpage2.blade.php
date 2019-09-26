@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -6973,4 +6973,4 @@
         run();
     })();</script>
 </body>
-</html>
+</html> --}}
