@@ -129,7 +129,7 @@
                 if (fileInput.files && fileInput.files[0]) {
                     var reader = new FileReader();
                     reader.onload = function (e) {
-                        document.getElementById('viewImg').innerHTML = '<img style="width:100px; height: 100px;" src="' + e.target.result + '"/>';
+                        document.getElementById('viewImg').innerHTML = '<img style="width:400px;" src="' + e.target.result + '"/>';
                     };
                     reader.readAsDataURL(fileInput.files[0]);
                 }

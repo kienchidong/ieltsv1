@@ -20,7 +20,7 @@
 						<a href="#khoahoc" id="khoahoc-li">khóa học<i class="fa fa-sort-down"></i></a>
 						<ul class="nav-ul-lv-2">
 							<li><a href="{{ route('client.course.index') }}">Offline</a></li>
-							<li><a href="#khoahoc">Online</a></li>
+							<li><a href="" id="khoahoc-online">Online</a></li>
 						</ul>
 					</li>
 					<li >
