@@ -439,13 +439,16 @@ over lay
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+    
 }
 
 .container-image:hover .image {
-    opacity: 0.3;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.1;
 }
 
 .container-image:hover .middle {
+    
     opacity: 1;
 }
 

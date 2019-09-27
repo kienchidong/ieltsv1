@@ -5,15 +5,20 @@ namespace App\Http\Controllers\Admins;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class RegistrationController extends Controller
 {
     //
     public function index()
     {
+        if (Gate::allows('admin'))
+        {
         $data['registration'] = DB::table('registration')->first();
 
         return view('admin.pages.registration.index', $data);
+        }
+        abort(403);
     }
 
     public function update(Request $request, $id)

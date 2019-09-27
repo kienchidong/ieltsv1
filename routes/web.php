@@ -291,6 +291,9 @@ Route::prefix('admin')->group(function () {
         });
         Route::post('time/{id}', 'Auth\Admin\HomeAdminController@edittime')->name('edit.time');
 
+        // danh sách đăng ký
+
+        Route::get('information.html','Admins\InformationController@index')->name('infor.list');
 
     });
 });

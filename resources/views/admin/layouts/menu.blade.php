@@ -122,6 +122,12 @@
                     <span> Khóa học Online </span>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('infor.list') }}">
+                    <i class="fa fa-list"></i>
+                    <span> Học viên đăng ký </span>
+                </a>
+            </li>
             <li class="header">Quản Trị Viên</li>
             <li><a href="{{ route('admin.account.list') }}"><i class="fa fa-user text-red"></i> <span>Tài khoản Quản trị Viên</span></a></li>
             <li class="">
