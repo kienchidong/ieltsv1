@@ -116,6 +116,23 @@
 
                 </ul>
             </li>
+            {{--CẢm nhận học viên --}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Cảm nhận học viên  </span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li><a href="{{route('student.index')}}"><i class="fa fa-circle-o"></i> Danh sách  </a></li>
+                    <li><a href="{{route('student.create')}}"><i class="fa fa-circle-o"></i> Thêm </a></li>
+
+
+                </ul>
+            </li>
             <li>
                 <a href="{{ route('course.online') }}">
                     <i class="fa fa-internet-explorer"></i>
