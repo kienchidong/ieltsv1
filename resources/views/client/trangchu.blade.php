@@ -52,66 +52,27 @@
             <div class="container">
                 <h3 class="section-title pt-4">Hot Posts</h3>
                 <div class="row pb-5">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="course-box">
-                            <img src="image/course.jpg" alt="">
-                            <div class="overlay">
-                                <div class="course-title">
+                    @foreach($hotpost as $value)
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="course-box">
+                                <img src="{{asset('images/blogs').'/'.$value->image}}" alt="">
+                                <div class="overlay">
+                                    <div class="course-title">
                                 <span>
-                                    Dành cho những bạn đặt mục tiêu 5.5 – 6.5+ IElst và cao hơn
-                                    Khoá học bao gồm 24 buổi học, tuyển tập tài liệu bổ trợ miễn phí, chấm bài essay và
-                                    kiểm
-                                    tra hàng tuần
+                                    {!! $value->name !!}
                                 </span>
-                                    <div class="d-flex justify-content-between mt-3">
-                                        <span class="text-uppercase pt-1">senior</span>
-                                        <span class="course-gia">6.500.000</span>
+                                        {{--<div class="d-flex justify-content-between mt-3">--}}
+                                        {{--<span class="text-uppercase pt-1">senior</span>--}}
+                                        {{--<span class="course-gia">6.500.000</span>--}}
+                                        {{--</div>--}}
+                                        <a class="view-more" href="{{route('client.blogs.detail',$value->slug)}}">Xem Thêm</a>
                                     </div>
-                                    <a class="view-more" href="">Xem Thêm</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="course-box">
-                            <img class="img-responsive" src="image/course.jpg" alt="">
-                            <div class="overlay">
-                                <div class="course-title">
-                                <span>
-                                    Dành cho những bạn đặt mục tiêu 5.5 – 6.5+ IElst và cao hơn
-                                    Khoá học bao gồm 24 buổi học, tuyển tập tài liệu bổ trợ miễn phí, chấm bài essay và
-                                    kiểm
-                                    tra hàng tuần
-                                </span>
-                                    <div class="d-flex justify-content-between mt-3">
-                                        <span class="text-uppercase pt-1">senior</span>
-                                        <span class="course-gia">6.500.000</span>
-                                    </div>
-                                    <a class="view-more" href="">Xem Thêm</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="course-box">
-                            <img class="img-responsive" src="image/course.jpg" alt="">
-                            <div class="overlay">
-                                <div class="course-title">
-                                <span>
-                                    Dành cho những bạn đặt mục tiêu 5.5 – 6.5+ IElst và cao hơn
-                                    Khoá học bao gồm 24 buổi học, tuyển tập tài liệu bổ trợ miễn phí, chấm bài essay và
-                                    kiểm
-                                    tra hàng tuần
-                                </span>
-                                    <div class="d-flex justify-content-between mt-3">
-                                        <span class="text-uppercase pt-1">senior</span>
-                                        <span class="course-gia">6.500.000</span>
-                                    </div>
-                                    <a class="view-more" href="">Xem Thêm</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
+
                 </div>
             </div>
         </div>

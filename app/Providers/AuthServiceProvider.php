@@ -24,8 +24,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->role = [
             'collaborator' => 1,
-            'editor' => 2,
-            'admin' => 3
+            'admin' => 2
         ];
     }
     public function only($options)
