@@ -34,9 +34,6 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Cộng tác viên',
                 'describe' => 'Tài khoản Cộng tác viên chỉ có quyền đăng và sửa bài viết của mình',
             ], [
-                'name' => 'Quản trị viên',
-                'describe' => 'Tài khoản Quản trị viên có quyền đăng và sửa bài viết của mình và xét duyệt bài viết của cộng tác viên',
-            ], [
                 'name' => 'Admin',
                 'describe' => 'Tài khoản admin có toàn quyền chỉnh sửa nội dung, tài khoản trong trang web',
             ],
@@ -47,7 +44,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@gmail.com',
             'status' => '1',
-            'level' => '3',
+            'level' => '2',
             'created_at' => now(),
             'password' => bcrypt('12345678') // password :12345678
         ]);

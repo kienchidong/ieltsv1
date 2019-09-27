@@ -43,6 +43,7 @@
                                     <th>Thể loại</th>
                                     <th>Bài viết</th>
                                     <th>Hình ảnh</th>
+                                    <th>Lượt xem</th>
                                     <th>Trạng thái</th>
                                     <th class="col-md-3">Hành động</th>
                                 </tr>
@@ -58,6 +59,9 @@
                                                  src="{{asset('')}}images/librarys/{{$value->image}}">
                                         </td>
 
+                                        <td>
+                                            {{$value->view}}
+                                        </td>
                                         <td>
                                             @if($value->status==1)
                                                 Hiển thị

@@ -136,7 +136,7 @@ class StudentController extends Controller
         $this->validate($request, [
             'name' => 'required|min:10',
             'course' => 'required|max:15',
-            'contenttt' => 'required|max:100',
+            'contenttt' => 'required|max:300',
         ], [
             'name.min' => 'Tên không được ít hơn 10 kí tự',
 

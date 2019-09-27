@@ -3,6 +3,7 @@
     Chi Tiết Blog
 @endsection
 @section('content')
+
 <div class="container-fluid">
     <div class="container py-5">
         <div class="col-md-10 offset-md-1">
