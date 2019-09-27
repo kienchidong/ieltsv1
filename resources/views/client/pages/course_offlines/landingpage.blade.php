@@ -304,7 +304,7 @@ c</section>
                                 <img src="{{ asset('images/teachers').'/'.$value->image }}" style="width: 100%; height: 350px" alt=""
                                      class="image">
                                 <div class="middle">
-                                    <h4>{{$value->name}}</h4>
+                                    <h2>{{$value->name}}</h2>
                                     <span>{{$value->position}}</span>
                                     <br>
 

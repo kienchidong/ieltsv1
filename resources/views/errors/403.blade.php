@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Không có quyền Truy cập</title>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-kien.png') }}" />
     <style>
         html {
   height: 100%;
