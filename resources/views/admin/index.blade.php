@@ -25,7 +25,7 @@
                     <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Bài Viết</span>
+                        <span class="info-box-text"><a href="{{ route('blog.index') }}">Bài Viết</a></span>
                         <span class="info-box-number">{{ $count_blog }}</span>
                     </div>
                     <!-- /.info-box-content -->
@@ -38,7 +38,7 @@
                     <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Sách</span>
+                        <span class="info-box-text"><a href="{{ route('library.index') }}">Sách</a></span>
                         <span class="info-box-number">{{ $count_library }}</span>
                     </div>
                     <!-- /.info-box-content -->
@@ -55,7 +55,7 @@
                     <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text"> Khóa Học</span>
+                        <span class="info-box-text"> <a href="{{ route('course_enrolling.index') }}">Khóa Học</a></span>
                         <span class="info-box-number">{{ $count_course }}</span>
                     </div>
                     <!-- /.info-box-content -->
