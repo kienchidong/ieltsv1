@@ -253,7 +253,7 @@
                         {!! $course_offlines[1]->content !!}
                     </div>
                     <div class="col-md-6 order-1">
-                        <img src="{{ asset('images/course_offlines').'/'.$course_offlines[0]->image }}" alt=""
+                        <img src="{{ asset('images/course_offlines').'/'.$course_offlines[1]->image }}" alt=""
                              width="100%" height="100%">
                     </div>
                 </div>
@@ -263,7 +263,7 @@
             <div class="khoahoc">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="{{ asset('images/course_offlines').'/'.$course_offlines[0]->image }}" alt=""
+                        <img src="{{ asset('images/course_offlines').'/'.$course_offlines[2]->image }}" alt=""
                              width="100%" height="100%">
                     </div>
                     <div class="col-md-6">
@@ -282,7 +282,7 @@
                         {!! $course_offlines[3]->content !!}
                     </div>
                     <div class="col-md-6 order-1">
-                        <img src="{{ asset('images/course_offlines').'/'.$course_offlines[0]->image }}" alt=""
+                        <img src="{{ asset('images/course_offlines').'/'.$course_offlines[3]->image }}" alt=""
                              width="100%" height="100%">
                     </div>
                 </div>

@@ -36,7 +36,7 @@
             {{--Librarys --}}
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-pie-chart"></i>
+                    <i class="fa fa-list"></i>
                     <span>Thư viện</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -54,7 +54,7 @@
             {{--Blogs --}}
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-pie-chart"></i>
+                    <i class="fa fa-share"></i>
                     <span>Tin tức</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -72,7 +72,7 @@
             {{--Khóa học--}}
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-pie-chart"></i>
+                    <i class="fa fa-book"></i>
                     <span>Khóa học offline </span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -89,7 +89,7 @@
             {{--Giáo viên --}}
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-pie-chart"></i>
+                    <i class="fa fa-hand-peace-o"></i>
                     <span>Giáo viên  </span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -106,7 +106,7 @@
             {{--CẢm nhận học viên --}}
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-pie-chart"></i>
+                    <i class="fa fa-users"></i>
                     <span>Cảm nhận học viên  </span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -128,7 +128,7 @@
             </li>
             <li>
                 <a href="{{ route('infor.list') }}">
-                    <i class="fa fa-list"></i>
+                    <i class="fa fa-handshake-o"></i>
                     <span> Học viên đăng ký </span>
                 </a>
             </li>
@@ -150,14 +150,14 @@
             {{--Khóa học--}}
             <li >
                 <a href="{{route('registration.index')}}">
-                    <i class="fa fa-pie-chart"></i>
+                    <i class="fa fa-user-circle"></i>
                     <span>Đăng ký  </span>
                 </a>
             </li>
             {{--Liên hệ--}}
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-pie-chart"></i>
+                    <i class="fa fa-compress"></i>
                     <span>Liên hệ </span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>

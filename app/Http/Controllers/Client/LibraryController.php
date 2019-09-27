@@ -21,9 +21,14 @@ class LibraryController extends Controller
         return view('client.pages.librarys.library', $data);
     }
 
-    public function detail($cate, $slug)
+    public function detail(Request $request,$cate, $slug)
     {
-
+        if(!$request->session()->has($slug))
+        {
+            $viewIncrements = DB::table('librarys')
+                ->where([['librarys.slug',$slug],['librarys.status','!=',0]])
+                ->increment('view',1);
+        }
         $data['librarys'] = DB::table('librarys')
             ->select('librarys.*')
             ->join('cate_librarys', 'librarys.cate_id', '=', 'cate_librarys.id')

@@ -44,6 +44,7 @@
                                     {{--<th>Thể loại</th>--}}
                                     <th>Bài viết</th>
                                     <th>Hình ảnh</th>
+                                    <th>Lượt xem</th>
                                     <th>Trạng thái</th>
                                     <th class="col-md-3">Hành động</th>
                                 </tr>
@@ -57,6 +58,9 @@
 
                                         <td><img width="100px" height="100px"
                                                  src="{{asset('')}}images/blogs/{{$value->image}}">
+                                        </td>
+                                        <td>
+                                            {{$value->view}}
                                         </td>
 
                                         <td>

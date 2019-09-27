@@ -28,6 +28,8 @@ class HomeController extends Controller
         $data['librarybackground'] = DB::table('images')->where('location', 3)->first();
         $data['commentbackground'] = DB::table('images')->where('location', 4)->first();
         $data['online'] = DB::table('course_onlines')->first();
+        $data['hotpost'] = DB::table('blogs')->where('status', 1)->orderByDesc('view')->limit(3)->get();
+
         return view('client.trangchu', $data);
     }
 }
