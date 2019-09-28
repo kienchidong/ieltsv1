@@ -16,11 +16,11 @@ class AdminAccountController extends Controller
         {
             $data['roles'] = DB::table('role')->get();
             $data['admins'] =  DB::table('admins')
-                ->select('admins.*',DB::raw('if(admins.status = 1, "Hoạt Động", "Khóa") as hienthi'), 'role.name as role')
+                ->select('admins.*', 'role.name as role')
                 ->join('role', 'role.id', '=', 'admins.level')
                 ->orderBy('admins.id', 'desc')->get();
 
-//            dd($data);
+            //dd($data);
             return view('admin.pages.admin-account.index', $data);
 
         }

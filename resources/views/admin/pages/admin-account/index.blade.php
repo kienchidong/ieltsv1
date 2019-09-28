@@ -101,7 +101,13 @@
                                         <td>{{ $value->name }}</td>
                                         <td>{{ $value->email }}</td>
                                         <td>{{ $value->role }}</td>
-                                        <td>{{ $value->hienthi }}</td>
+                                        <td>
+                                            @if($value->status==1)
+                                                Hiển Thị
+                                            @else
+                                                Ẩn
+                                            @endif
+                                        </td>
                                         <td>
                                         <div>
                                             @if($value->status ==1)
