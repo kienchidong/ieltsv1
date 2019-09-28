@@ -45,9 +45,6 @@
                 <ul class="treeview-menu">
                     <li><a href="{{route('library.create')}}"><i class="fa fa-circle-o"></i> Thêm thư viện</a></li>
                     <li><a href="{{route('library.index')}}"><i class="fa fa-circle-o"></i> Danh sách thư viện </a></li>
-                    <li><a href="{{route('cate_library.create')}}"><i class="fa fa-circle-o"></i> Thêm thể loại</a></li>
-                    <li><a href="{{route('cate_library.index')}}"><i class="fa fa-circle-o"></i> Danh sách thể loại thư viện </a></li>
-
 
                 </ul>
             </li>
@@ -154,6 +151,22 @@
                     <span>Đăng ký  </span>
                 </a>
             </li>
+            {{--Thư viện --}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-list"></i>
+                    <span>Thư viện</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('cate_library.create')}}"><i class="fa fa-circle-o"></i> Thêm thể loại</a></li>
+                    <li><a href="{{route('cate_library.index')}}"><i class="fa fa-circle-o"></i> Danh sách thể loại thư viện </a></li>
+
+                </ul>
+            </li>
+
             {{--Liên hệ--}}
             <li class="treeview">
                 <a href="#">

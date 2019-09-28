@@ -22,29 +22,29 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="box box-solid">
-                    <div class="box-header with-border">
+                    {{--<div class="box-header with-border">--}}
                         {{-- Mục lục --}}
-                        <h3 class="box-title">Danh mục</h3>
+                        {{--<h3 class="box-title">Danh mục</h3>--}}
 
-                        <div class="box-tools">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                                        class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                    </div>
+                        {{--<div class="box-tools">--}}
+                            {{--<button type="button" class="btn btn-box-tool" data-widget="collapse"><i--}}
+                                        {{--class="fa fa-minus"></i>--}}
+                            {{--</button>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                    <div class="box-body no-padding">
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>
-                            <li><a href="{{route('cate_library.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách thể loại thư viện<span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>
-                            <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện</a></li>
-                            <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại</a></li>
+                    {{--<div class="box-body no-padding">--}}
+                        {{--<ul class="nav nav-pills nav-stacked">--}}
+                            {{--<li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh--}}
+                                    {{--sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>--}}
+                            {{--<li><a href="{{route('cate_library.index')}}"><i class="fa fa-file-text-o"></i> Danh--}}
+                                    {{--sách thể loại thư viện<span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>--}}
+                            {{--<li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện</a></li>--}}
+                            {{--<li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại</a></li>--}}
 
 
-                        </ul>
-                    </div>
+                        {{--</ul>--}}
+                    {{--</div>--}}
 
                     <!-- /.box-body -->
                 </div>
@@ -53,7 +53,7 @@
 
             </div>
             <!-- /.col -->
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="box box-primary">
                     <h3 style="text-align: left; padding-left: 5px">Sửa chủ đề bài viết</h3>
                     <form role="form" method="POST" action="{{route('cate_library.update',$cate_library->id)}}"
