@@ -78,7 +78,7 @@
 						<li><a href="#blog">blog</a>
 
 						</li>
-						<li><a href="{{ url('lienhe') }}">liên hệ</a></li>
+						<li id=""><a href="#contact">liên hệ</a></li>
 					</ul>
 
 				</div>
