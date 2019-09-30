@@ -111,7 +111,13 @@
                                         <td>{{ $key+1 }}</td>
                                         <td>{{ $value->title }}</td>
                                         <td><img src="{{ asset('images/sliders/'.$value->image) }}" alt="" width='400px'></td>
-                                        <td>{{ $value->hienthi }}</td>
+                                        <td>
+                                            @if($value->status == 0)
+                                                Ẩn
+                                            @else
+                                                Hiện
+                                            @endif
+                                        </td>
                                         <td>
                                         <div>
                                             @if($value->status ==1)

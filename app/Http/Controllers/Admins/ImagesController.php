@@ -13,8 +13,7 @@ class ImagesController extends Controller
     public function homeslider(){
         if (Gate::allows('admin'))
         {
-            $data['images'] = DB::table('images')
-            ->select('images.*',DB::raw('if(images.status = 1, "Hiện", "Ẩn") as hienthi'))
+            $data['images'] = DB::table('images'))
             ->where('location', 1)->get();
             return view('admin.pages.images.homeslider', $data);
         }

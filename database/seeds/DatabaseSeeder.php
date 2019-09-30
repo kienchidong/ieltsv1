@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS',
                 'slug' => Str::slug('GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS') . '-' . time() . '.html',
-                'image' => 'bg1.jpg',
+                'image' => 'default.jpg',
                 'summary' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed quis quam ex accusamus!
                     Consequuntur fuga minus quo, itaque aspernatur, sint iure unde neque dicta amet, porro mollitia
                     veritatis tempora?',
@@ -111,7 +111,7 @@ class DatabaseSeeder extends Seeder
             ], [
                 'name' => 'GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS',
                 'slug' => Str::slug('GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS') . '-' . time() . '.html',
-                'image' => 'bg1.jpg',
+                'image' => 'default.jpg',
                 'summary' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed quis quam ex accusamus!
                     Consequuntur fuga minus quo, itaque aspernatur, sint iure unde neque dicta amet, porro mollitia
                     veritatis tempora?',
@@ -147,7 +147,7 @@ class DatabaseSeeder extends Seeder
             ], [
                 'name' => 'GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS',
                 'slug' => Str::slug('GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS') . '-' . time() . '.html',
-                'image' => 'bg1.jpg',
+                'image' => 'default.jpg',
                 'summary' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed quis quam ex accusamus!
                     Consequuntur fuga minus quo, itaque aspernatur, sint iure unde neque dicta amet, porro mollitia
                     veritatis tempora?',
@@ -183,7 +183,7 @@ class DatabaseSeeder extends Seeder
             ], [
                 'name' => 'GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS',
                 'slug' => Str::slug('GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS') . '-' . time() . '.html',
-                'image' => 'bg1.jpg',
+                'image' => 'default.jpg',
                 'summary' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed quis quam ex accusamus!
                     Consequuntur fuga minus quo, itaque aspernatur, sint iure unde neque dicta amet, porro mollitia
                     veritatis tempora?',
@@ -219,7 +219,7 @@ class DatabaseSeeder extends Seeder
             ], [
                 'name' => 'GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS',
                 'slug' => Str::slug('GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS') . '-' . time() . '.html',
-                'image' => 'bg1.jpg',
+                'image' => 'default.jpg',
                 'summary' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed quis quam ex accusamus!
                     Consequuntur fuga minus quo, itaque aspernatur, sint iure unde neque dicta amet, porro mollitia
                     veritatis tempora?',
@@ -255,7 +255,7 @@ class DatabaseSeeder extends Seeder
             ], [
                 'name' => 'GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS',
                 'slug' => Str::slug('GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS') . '-' . time() . '.html',
-                'image' => 'bg1.jpg',
+                'image' => 'default.jpg',
                 'summary' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed quis quam ex accusamus!
                     Consequuntur fuga minus quo, itaque aspernatur, sint iure unde neque dicta amet, porro mollitia
                     veritatis tempora?',
@@ -291,7 +291,7 @@ class DatabaseSeeder extends Seeder
             ], [
                 'name' => 'GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS',
                 'slug' => Str::slug('GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS') . '-' . time() . '.html',
-                'image' => 'bg1.jpg',
+                'image' => 'default.jpg',
                 'summary' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed quis quam ex accusamus!
                     Consequuntur fuga minus quo, itaque aspernatur, sint iure unde neque dicta amet, porro mollitia
                     veritatis tempora?',
@@ -327,7 +327,7 @@ class DatabaseSeeder extends Seeder
             ], [
                 'name' => 'GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS',
                 'slug' => Str::slug('GIẢI ĐÁP NHỮNG THẮC MẮC THƯỜNG GẶP VỀ KỲ THI IELTS') . '-' . time() . '.html',
-                'image' => 'bg1.jpg',
+                'image' => 'default.jpg',
                 'summary' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed quis quam ex accusamus!
                     Consequuntur fuga minus quo, itaque aspernatur, sint iure unde neque dicta amet, porro mollitia
                     veritatis tempora?',
