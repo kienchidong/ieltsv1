@@ -35,11 +35,11 @@
 
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh
-                                    sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>
+                            {{--<li><a href="{{route('library.index')}}"><i class="fa fa-file-text-o"></i> Danh--}}
+                                    {{--sách thư viện<span class="label label-primary pull-right">{{$library_count}}</span></a></li>--}}
                             <li><a href="{{route('cate_library.index')}}"><i class="fa fa-file-text-o"></i> Danh
                                     sách thể loại thư viện<span class="label label-primary pull-right">{{$cate_library_count}}</span></a></li>
-                            <li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện</a></li>
+                            {{--<li><a href="{{route('library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thư viện</a></li>--}}
                             <li><a href="{{route('cate_library.create')}}"><i class="fa fa-envelope-o"></i> Thêm thể loại</a></li>
 
 
