@@ -298,3 +298,5 @@ Route::prefix('admin')->group(function () {
     });
 });
 
+
+Route::get('test', 'Client\HomeController@test');
