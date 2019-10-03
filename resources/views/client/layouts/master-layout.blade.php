@@ -7,7 +7,7 @@
 	<base href="{{asset('')}}">
 	<link rel="stylesheet" href="">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo/'.$introduces->logo) }}" />
+	<link rel="shortcut icon" type="image/x-icon" style='background-color:yeallow;' href="{{ asset('images/logo/'.$introduces->logo) }}" />
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap_4.0.0/css/bootstrap.min.css">
 	{{-- <link rel="stylesheet" type="text/css" href="css/reset-browser.css"> --}}
 	<link rel="stylesheet" type="text/css" href="lib/fontawesome.5.7.2/css/all.min.css">
