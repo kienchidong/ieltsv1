@@ -136,7 +136,8 @@
 <script>
     $(function () {
         $('#example1').DataTable()
-        $('#example2').DataTable({
+        $('#example2').DataTable()
+        $('#example3').DataTable({
             'paging'      : true,
             'lengthChange': false,
             'searching'   : false,

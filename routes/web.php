@@ -294,6 +294,7 @@ Route::prefix('admin')->group(function () {
         // danh sách đăng ký
 
         Route::get('information.html','Admins\InformationController@index')->name('infor.list');
+        Route::get('status/{id}','Admins\InformationController@status')->name('infor.status');
 
     });
 });

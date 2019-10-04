@@ -200,7 +200,8 @@
     </div>
 </section>
 <section class="landing-lydo">
-    <h1>4 Lý do chọn Xuân Phi IELTS</h1>
+    <h1 class="desktop">4 Lý do chọn Xuân Phi IELTS</h1>
+    <h3 class="mobile">4 Lý do chọn Xuân Phi IELTS</h3>
     <div class="container">
         <div class="row" style="text-align: center">
             <div class="col-md-3 item-lydo">
