@@ -89,7 +89,8 @@ class LibraryController extends Controller
             'content' => $request->content,
             'cate_id' => $request->cate_id,
             'status' => 1,
-            'created_at' => now()
+            'created_at' => now(),
+            'folder' => 'librarys',
         ]);
 
         return redirect()->back()->with('thongbao', 'Thành công');

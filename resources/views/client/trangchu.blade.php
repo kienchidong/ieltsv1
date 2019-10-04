@@ -55,7 +55,7 @@
                     @foreach($hotpost as $value)
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="course-box">
-                                <img src="{{asset('images/blogs').'/'.$value->image}}" alt="">
+                                <img src="{{asset('images/'.$value->folder.'/'.$value->image)}}" alt="">
                                 <div class="overlay">
                                     <div class="course-title">
                                 <span>
@@ -65,7 +65,7 @@
                                         {{--<span class="text-uppercase pt-1">senior</span>--}}
                                         {{--<span class="course-gia">6.500.000</span>--}}
                                         {{--</div>--}}
-                                        <a class="view-more" href="{{route('client.blogs.detail',$value->slug)}}">Xem Thêm</a>
+                                        <a class="view-more" href="{{route('post',$value->slug)}}">Xem Thêm</a>
                                     </div>
                                 </div>
                             </div>
