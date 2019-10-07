@@ -13,6 +13,7 @@ class InformationController extends Controller
 
     public function index(){
         $data['informations'] = DB::table('informations')->orderBy('id','desc')->where('status', 0)->get();
+        $data['informations_dall'] = DB::table('informations')->orderBy('id','desc')->where('status', 1)->get();
 
         return view('admin.pages.informations.index', $data);
     }
@@ -49,7 +50,8 @@ class InformationController extends Controller
                 'name' => $name,
                 'phone' => $request->phone,
                 'email' => $email,
-                'message' => $message
+                'message' => $message,
+                'created_at' => now(),
             ]);
             $mess = 'Bạn đã đăng ký thành công! chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!';
         }
@@ -58,7 +60,8 @@ class InformationController extends Controller
             DB::table('informations')->where('phone', $request->phone)->update([
                 'name' => $request->name,
                 'email' => $request->email,
-                'message' => $message
+                'message' => $message,
+                'created_at' => now(),
             ]);
             $mess = 'Cập nhật thành công thông tin của số điện thoại: '.$request->phone;
         }
@@ -68,7 +71,8 @@ class InformationController extends Controller
                 ['email', $email]
             ])->update([
                 'name' => $request->name,
-                'message' => $message
+                'message' => $message,
+                'created_at' => now()
             ]);
             $mess = 'cập kiên nhật thành công thông tin của số điện thoại: '.$request->phone;
         }
@@ -77,5 +81,13 @@ class InformationController extends Controller
 
         }
         return redirect()->back()->with('thongbao', $mess);
+    }
+
+    public function status($id){
+        DB::table('informations')->where('id', $id)->update([
+            'status' => 1,
+        ]);
+
+        return redirect()->back()->with('thongbao', 'Đã liên lạc');
     }
 }

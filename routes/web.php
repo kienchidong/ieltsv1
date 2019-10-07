@@ -26,6 +26,10 @@ Route::prefix('/')->group(function () {
         Route::get('/{slug}', 'Client\BlogController@detail')->name('client.blogs.detail');
         Route::get('/', 'Client\BlogController@index')->name('client.blogs.index');
     });
+
+    //post
+    Route::get('post/{slug}', 'Client\HomeController@post')->name('post');
+
     // Thư viện
     Route::prefix('thu-vien')->group(function () {
 
@@ -294,6 +298,7 @@ Route::prefix('admin')->group(function () {
         // danh sách đăng ký
 
         Route::get('information.html','Admins\InformationController@index')->name('infor.list');
+        Route::get('status/{id}','Admins\InformationController@status')->name('infor.status');
 
     });
 });

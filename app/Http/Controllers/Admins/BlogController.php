@@ -91,7 +91,8 @@ class BlogController extends Controller
             'content' => $request->contentt,
 
             'status' => 1,
-            'created_at' => now()
+            'created_at' => now(),
+            'folder' => 'blogs',
         ]);
 
         return redirect()->back()->with('thongbao', 'Thêm thành công');

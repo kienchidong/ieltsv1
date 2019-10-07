@@ -25,6 +25,7 @@ class BlogsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('slug');
+            $table->string('folder')->default('blogs');
             $table->string('image');
             $table->text('summary');
             $table->text('content');

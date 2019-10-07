@@ -96,8 +96,8 @@
 <!-- Bootstrap 3.3.7 -->
 <script src="{{asset('')}}admin_example/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- DataTables -->
-<script src="{{asset('')}}admin_example/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="{{asset('')}}admin_example/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+{{--<script src="{{asset('')}}admin_example/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>--}}
+{{--<script src="{{asset('')}}admin_example/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>--}}
 <!-- Morris.js charts -->
 <script src="{{asset('')}}admin_example/bower_components/raphael/raphael.min.js"></script>
 <script src="{{asset('')}}admin_example/bower_components/morris.js/morris.min.js"></script>
@@ -121,30 +121,118 @@
 <script src="{{asset('')}}admin_example/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('')}}admin_example/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{asset('')}}admin_example/dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('')}}admin_example/dist/js/demo.js"></script>
+{{--<!-- AdminLTE dashboard demo (This is only for demo purposes) -->--}}
+{{--<script src="{{asset('')}}admin_example/dist/js/pages/dashboard.js"></script>--}}
+{{--<!-- AdminLTE for demo purposes -->--}}
+{{--<script src="{{asset('')}}admin_example/dist/js/demo.js"></script>--}}
 <script type="text/javascript" src="{{ asset('js/filevalidation.js') }}"></script>
 
+<link type="text/css" href="{{ asset('datatable/buttons.dataTables.min.css') }}">
+<link type="text/css" href="{{ asset('datatable/jquery.dataTables.min.css') }}">
 
-
+<script type="text/javascript" src="{{ asset('datatable/jquery-3.3.1.js') }}"></script>
+<script type="text/javascript" src="{{ asset('datatable/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('datatable/dataTables.buttons.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('datatable/jszip.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('datatable/buttons.flash.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('datatable/pdfmake.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('datatable/vfs_fonts.js') }}"></script>
+<script type="text/javascript" src="{{ asset('datatable/buttons.html5.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('datatable/buttons.print.min.js') }}"></script>
 
 
 
 {{--Datatable--}}
 <script>
-    $(function () {
-        $('#example1').DataTable()
-        $('#example2').DataTable({
-            'paging'      : true,
-            'lengthChange': false,
-            'searching'   : false,
-            'ordering'    : true,
-            'info'        : true,
-            'autoWidth'   : false
-        })
-    })
+    $(document).ready(function() {
+        $('#example1').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'copy',
+                    title: 'PDF',
+                    text: 'Copy',
+                    className: "btn btn-danger",
+                //Columns to export
+                //exportOptions: {
+                //     columns: [0, 1, 2, 3, 4, 5, 6]
+                //
+                }, {
+                    extend: 'excelHtml5',
+                    title: 'Excel',
+                    text:'Export to excel',
+                    className: "btn btn-success",
+                    //Columns to export
+                    //exportOptions: {
+                    //     columns: [0, 1, 2, 3,4,5,6]
+                    // }
+                },
+                {
+                    extend: 'pdfHtml5',
+                    title: 'PDF',
+                    text: 'Export to PDF',
+                    className: "btn btn-secondary",
+                    //Columns to export
+                    //exportOptions: {
+                    //     columns: [0, 1, 2, 3, 4, 5, 6]
+                    //  }
+                }, {
+                    extend: 'print',
+                    title: 'PDF',
+                    text: 'Print',
+                    className: "btn btn-warning",
+                    //Columns to export
+                    //exportOptions: {
+                    //     columns: [0, 1, 2, 3, 4, 5, 6]
+                    //  }
+                }
+            ]
+        } );
+
+        $('#example2').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'copy',
+                    title: 'PDF',
+                    text: 'Copy',
+                    className: "btn btn-danger",
+                    //Columns to export
+                    //exportOptions: {
+                    //     columns: [0, 1, 2, 3, 4, 5, 6]
+                    //
+                }, {
+                    extend: 'excelHtml5',
+                    title: 'Excel',
+                    text:'Export to excel',
+                    className: "btn btn-success",
+                    //Columns to export
+                    //exportOptions: {
+                    //     columns: [0, 1, 2, 3,4,5,6]
+                    // }
+                },
+                {
+                    extend: 'pdfHtml5',
+                    title: 'PDF',
+                    text: 'Export to PDF',
+                    className: "btn btn-secondary",
+                    //Columns to export
+                    //exportOptions: {
+                    //     columns: [0, 1, 2, 3, 4, 5, 6]
+                    //  }
+                }, {
+                    extend: 'print',
+                    title: 'PDF',
+                    text: 'Print',
+                    className: "btn btn-warning",
+                    //Columns to export
+                    //exportOptions: {
+                    //     columns: [0, 1, 2, 3, 4, 5, 6]
+                    //  }
+                }
+            ]
+        } );
+    } );
     CKEDITOR.replace('content', {
         filebrowserBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html',
         filebrowserImageBrowseUrl: '{{asset("")}}ckfinder/ckfinder.html?type=Images',
@@ -162,6 +250,8 @@
         filebrowserFlashUploadUrl: '{{asset("")}}ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
     });
 </script>
+
+//datatable
 
 </body>
 </html>

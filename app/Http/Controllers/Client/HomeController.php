@@ -28,37 +28,32 @@ class HomeController extends Controller
         $data['librarybackground'] = DB::table('images')->where('location', 3)->first();
         $data['commentbackground'] = DB::table('images')->where('location', 4)->first();
         $data['online'] = DB::table('course_onlines')->first();
-        $data['hotpost'] = DB::table('blogs')->where('status', 1)->orderByDesc('view')->limit(3)->get();
+        $blogs = DB::table('blogs')
+            ->select('blogs.name', 'blogs.slug', 'blogs.image', 'blogs.view', 'blogs.folder')
+            ->where('status', 1);
+        $data['hotpost'] = DB::table('librarys')
+            ->select('librarys.name', 'librarys.slug', 'librarys.image', 'librarys.view', 'librarys.folder')
+            ->where('status', 1)
+            ->union($blogs)
+            ->orderBy('view', 'desc')->limit(3)->get();
 
         return view('client.trangchu', $data);
     }
 
-    public function test()
-    {
-        $blogs = DB::table('blogs')->where('status', 1)->orderByDesc('view', 'desc')->limit(3)->get();
-        $librarys = DB::table('librarys')->where('status', 1)->orderByDesc('view', 'desc')->limit(3)->get();
-        //dd($librarys);
-        $hot = array();
-    
-        foreach($blogs as $key => $blog){
-           
-            $hot[$key] = array(
-                'name' => $blog->name,
-                'slug' => $blog->slug,
-                'image' => $blog->image,
-                'view' => $blog->view,
-            );
+    public function post($slug){
+
+        $blog = DB::table('blogs')->where('slug', $slug)->first();
+        $libraries = DB::table('librarys')
+            ->select('librarys.slug', 'cate_librarys.slug as cate_slug')
+            ->join('cate_librarys', 'cate_librarys.id', '=', 'librarys.cate_id')
+            ->where('librarys.slug', $slug)->first();
+
+        if($blog != null){
+            return redirect()->route('client.blogs.detail', $blog->slug);
+        } elseif($libraries != null){
+            return redirect()->route('client.librarys.detail', [$libraries->cate_slug, $libraries->slug]);
         }
-    
-        foreach($librarys as $key_lb => $library){
-                $hot[$key+$key_lb+1] = array(
-                    'name' => $library->name,
-                    'slug' => $library->slug,
-                    'image' => $library->image,
-                    'view' => $library->view,
-                );
-            }
-            arsort($hot['view']);
-        dd($hot);
+
     }
+
 }
