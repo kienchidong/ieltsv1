@@ -7,14 +7,6 @@
 
     <div class="container-fluid">
 
-        <style>
-            .input {
-                background: none;
-                border: none;
-            }
-        </style>
-
-
         <section class="content-header">
             <h1>
                 Danh sách Home Slider
@@ -46,7 +38,7 @@
                                 <input type="file" id="image" name="image" onchange="fileValidation(this)">
                                 <div id="imagePreviewimage"></div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <input type="submit" class="btn btn-primary" value="Thêm" />
                                     <input type="reset" class="btn btn-danger" value="Hủy" onclick="return huyslider('add')"/>
@@ -65,7 +57,7 @@
                         <div class="box-body">
                             <form action="{{ route('images.update') }}" method="post" id="form-edit" enctype="multipart/form-data">
                                 @csrf
-                        
+
                                 <input type="hidden" name="id" id='edit-id' value='1' />
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Tên Thêm (*)</label>
@@ -76,7 +68,7 @@
                                 <input type="file" id="edit-image" name="image" onchange="fileValidation(this)">
                                 <div id="imagePreviewedit-image"></div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <input type="submit" class="btn btn-primary" value="Sửa" />
                                     <input type="reset" class="btn btn-danger" value="Hủy" onclick="return huyslider('edit')"/>
@@ -89,7 +81,7 @@
                     <div class="box">
 
                         <div class="box-header">
-                    
+
                             <button class="btn btn-success" onclick="addhomeslider()">Thêm</button>
                         </div>
 
@@ -146,7 +138,7 @@
             </div>
             <!-- /.row -->`
         </section>
-    
+
     </div>
     <script>
         function addhomeslider() {

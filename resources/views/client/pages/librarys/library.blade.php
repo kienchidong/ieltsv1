@@ -4,6 +4,7 @@
     {{$cate_name->name}}
 @endsection
 @section('content')
+
     <section class="section-library pb-5" style="background-color : #f4f6f8">
         <div class="container-fluid">
             <div class="library-img" style="
