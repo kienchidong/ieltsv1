@@ -37,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
             $data['cate_librarys'] = DB::table('cate_librarys')->where('status', 1)->take(4)->get();
             $data['introduces'] = IntroduceModel::find(1);
             $data['roles'] = DB::table('role')->get();
+            
             view()->share($data);
         }
 

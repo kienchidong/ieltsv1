@@ -53,6 +53,7 @@ Route::prefix('/')->group(function () {
     });
 
     Route::post('information', 'Admins\InformationController@information')->name('information');
+    Route::post('search', 'Client\HomeController@search')->name('search');
 });
 
 /*
@@ -271,6 +272,8 @@ Route::prefix('admin')->group(function () {
             Route::get('library-background.html', 'Admins\ImagesController@librarybackground')->name('library.background');
             //comment background
             Route::get('comment-background.html', 'Admins\ImagesController@commentbackground')->name('comment.background');
+             //comment background
+             Route::get('blog-background.html', 'Admins\ImagesController@blogbackground')->name('blog.background');
 
             // action
             Route::post('create', 'Admins\ImagesController@store')->name('images.store');

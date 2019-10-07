@@ -11,6 +11,8 @@ class BlogController extends Controller
 
     public function index()
     {
+        
+        $data['blogbackground'] = DB::table('images')->where('location', 5)->first();
         $data['blogs'] = DB::table('blogs')->where('status', 1)->orderByDesc('id')->paginate(5);
         return view('client.pages.blogs.blog', $data);
     }

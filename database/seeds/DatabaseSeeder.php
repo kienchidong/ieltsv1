@@ -390,6 +390,10 @@ class DatabaseSeeder extends Seeder
                 'image' => 'coment.jpg',
                 'title' => '',
                 'location' => '4'
+            ],[
+                'image' => 'image_sach.jpg',
+                'title' => '',
+                'location' => '5'
             ],
         ]);
 
