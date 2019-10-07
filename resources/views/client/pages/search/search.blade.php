@@ -5,27 +5,40 @@
 @section('content')
     <div class="container-fluid">
         <div class="blog-page-img" style="
-            @if(isset($blogbackground) && $blogbackground->image != null)
-                    background-image: url('{{ asset('images/sliders/'.$blogbackground->image) }}') !important;
+            @if(isset($background) && $background->image != null)
+                    background-image: url('{{ asset('images/sliders/'.$background->image) }}') !important;
              @endif">
             <div class="col-md-12 banner-title2">
-                <span class="delay-1">B</span>
-                <span class="delay-2">L</span>
-                <span class="delay-3">O</span>
-                <span class="delay-4">G</span>&nbsp
-
-                <span class="delay-5">T</span>
-                <span class="delay-2">I</span>
-                <span class="delay-5">Ế</span>
-                <span class="delay-4">N</span>
-                <span class="delay-4">G</span>&nbsp
-
-                <span class="delay-1">A</span>
-                <span class="delay-3">N</span>
-                <span class="delay-1">H</span>
+               <span>Có {{ $count }} Kết quả tìm được với từ khóa: "{{ $key }}"</span>
             </div>
         </div>
         <div class="container">
+            @foreach($searchs as $value)
+
+                <div class="blog">
+                    <div class="d-flex justify-content-between blog-title">
+                        <a href="#" class="title-blog">{{$value->name}}</a>
+                        <div class="time-blog">
+                            <i class="fa fa-calendar-alt"></i>
+                            <span>{{Carbon\Carbon::parse($value->created_at)->format('d-m-Y')}}</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-img">
+                            <img src="{{asset('images/librarys').'/'.$value->image}}" class="img-reponsive" alt="">
+                        </div>
+                        <span>{!! substr($value->summary,0,256) !!}
+                </span>
+                        <a href="{{  url('thu-vien/'.$value->cate.'/'.$value->slug)}}" class="doctiep btn btn-outline-warning">
+                            Đọc tiếp
+                        </a>
+                    </div>
+                    <div class="border-bottom">
+
+                    </div>
+                </div>
+
+            @endforeach
             @foreach($blogs as $value)
 
                 <div class="blog">
@@ -42,7 +55,7 @@
                         </div>
                         <span>{!! substr($value->summary,0,256) !!}
                 </span>
-                        <a href="{{  url('chia-se'.'/'.$value->slug)}}" class="doctiep btn btn-outline-danger">
+                        <a href="{{ url('chia-se'.'/'.$value->slug) }}" class="doctiep btn btn-outline-warning">
                             Đọc tiếp
                         </a>
                     </div>
@@ -57,7 +70,7 @@
             <nav aria-label="Page navigation example" class="text-right">
                 <ul class="pagination">
                     <div style="float: right" align="right">
-                        {{$blogs->links()}}
+                     
                     </div>
                 </ul>
             </nav>

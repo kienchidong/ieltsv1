@@ -56,6 +56,16 @@ class ImagesController extends Controller
         }
         abort(403);
     }
+    public function blogbackground()
+    {
+        if (Gate::allows('admin'))
+        {
+            $data['title'] = 'Hình nền của bài viết';
+            $data['images'] = DB::table('images')->where('location', 5)->first();
+            return view('admin.pages.images.background', $data);
+        }
+        abort(403);
+    }
 
     public function store(Request $request){
         //dd($request->all());

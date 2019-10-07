@@ -10,7 +10,7 @@
             <div class="library-img" style="
             @if($librarybackground->image != null)
                     background-image: url('{{ asset('images/sliders/'.$librarybackground->image) }}') !important;
-             @endif       ">
+             @endif">
                 {{--  <img src="image/library_img.jpg" alt="">  --}}
                 <div class="col-md-12 banner-title2">
                     <span class="delay-1">t</span>

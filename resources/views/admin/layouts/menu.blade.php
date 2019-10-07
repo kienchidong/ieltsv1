@@ -190,6 +190,7 @@
                     <li><a href="{{route('home.background')}}"><i class="fa fa-circle-o"></i> Hình Nền Trang Chủ</a></li>
                     <li><a href="{{route('library.background')}}"><i class="fa fa-circle-o"></i> Hình Nền Thư Viện</a></li>
                     <li><a href="{{route('comment.background')}}"><i class="fa fa-circle-o"></i> Hình Nền Bình luận</a></li>
+                    <li><a href="{{route('blog.background')}}"><i class="fa fa-circle-o"></i> Hình ảnh bìa trang Bài Viết</a></li>
                 </ul>
             </li>
     </section>
