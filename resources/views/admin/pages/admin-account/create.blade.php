@@ -67,7 +67,7 @@
                             <div class="form-group">
                                 <label for="password" class="col-md-3 col-form-label text-md-right">{{ __('Mật khẩu') }}</label>
 
-                                <input id="password" type="password" class="form-control backgroundinput @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"  onchange="lengthPasswword(this)">
+                                <input id="password" type="password" class="form-control backgroundinput @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"  oninput="lengthPasswword(this)">
 
                                 <div id="lengthpass" style="color: red; font-size: 15px"></div>
                                 <script>
@@ -84,7 +84,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password-confirm" class="col-md-3 col-form-label text-md-right">{{ __('Nhập lại mật khẩu') }}</label>
-                                    <input id="password-confirm" type="password" class="form-control backgroundinput" name="password_confirmation" required autocomplete="new-password" onchange="confirmPasswword(this)">
+                                    <input id="password-confirm" type="password" class="form-control backgroundinput" name="password_confirmation" required autocomplete="new-password" oninput="confirmPasswword(this)">
                                     <p id="errorpass" style="color: red; font-size: 15px"></p>
                                     <script>
                                         function confirmPasswword(obj) {
